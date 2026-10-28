@@ -1,0 +1,296 @@
+'use client';
+
+import Link from 'next/link';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import type { Category, ProductSummary, Size } from '@/lib/types';
+import { ui, uiStore } from '@/lib/store';
+import { useDialogBehavior, useScrollLock } from '@/lib/hooks';
+import { CloseIcon, FilterIcon } from '@/components/ui/Icons';
+import { ProductCard } from './ProductCard';
+
+type Sort = 'newest' | 'price-asc' | 'price-desc';
+
+const SORTS: { value: Sort; label: string }[] = [
+  { value: 'newest', label: 'Newest' },
+  { value: 'price-asc', label: 'Price: low–high' },
+  { value: 'price-desc', label: 'Price: high–low' },
+];
+
+const SIZE_ORDER: Size[] = ['XS', 'S', 'M', 'L', 'XL', 'XXL', 'ONE SIZE'];
+
+const PRICES = [
+  { value: 'u20', label: 'Under €20', test: (c: number) => c < 2000 },
+  { value: '20-35', label: '€20–€35', test: (c: number) => c >= 2000 && c <= 3500 },
+  { value: 'o35', label: 'Over €35', test: (c: number) => c > 3500 },
+] as const;
+
+const FAMILIES: { value: string; label: string; hex: string; match: (slug: string) => boolean }[] = [
+  { value: 'black', label: 'Black', hex: '#0A0A0A', match: (s) => s === 'black' || s === 'washed-black' },
+  { value: 'grey', label: 'Grey', hex: '#8A8A8A', match: (s) => s.includes('grey') || s === 'concrete' },
+  { value: 'white', label: 'White', hex: '#FFFFFF', match: (s) => s === 'white' },
+  { value: 'off-white', label: 'Off-white', hex: '#F4F2EE', match: (s) => s === 'off-white' },
+];
+
+const CATEGORY_LABELS: Record<Category, string> = {
+  hoodies: 'Hoodies',
+  tees: 'Tees',
+  pants: 'Pants',
+  accessories: 'Accessories',
+};
+
+interface Filters {
+  category: string[];
+  size: string[];
+  color: string[];
+  price: string[];
+}
+
+const EMPTY: Filters = { category: [], size: [], color: [], price: [] };
+const KEYS = Object.keys(EMPTY) as (keyof Filters)[];
+
+function applyFilters(products: ProductSummary[], f: Filters) {
+  return products.filter((p) => {
+    if (f.category.length && !f.category.includes(p.category)) return false;
+    if (f.size.length && !f.size.some((s) => p.availableSizes.includes(s as Size))) return false;
+    if (f.color.length) {
+      const fams = FAMILIES.filter((fam) => f.color.includes(fam.value));
+      if (!p.colors.some((c) => fams.some((fam) => fam.match(c.slug)))) return false;
+    }
+    if (f.price.length && !PRICES.some((pr) => f.price.includes(pr.value) && pr.test(p.price))) return false;
+    return true;
+  });
+}
+
+function applySort(products: ProductSummary[], sort: Sort) {
+  const list = [...products];
+  if (sort === 'price-asc') list.sort((a, b) => a.price - b.price);
+  else if (sort === 'price-desc') list.sort((a, b) => b.price - a.price);
+  else list.sort((a, b) => b.releasedAt.localeCompare(a.releasedAt));
+  // Sold-out pieces always sit at the end.
+  return list.sort((a, b) => Number(a.soldOut) - Number(b.soldOut));
+}
+
+export function CollectionView({
+  products,
+  showCategoryFilter = true,
+}: {
+  products: ProductSummary[];
+  showCategoryFilter?: boolean;
+}) {
+  const [filters, setFilters] = useState<Filters>(EMPTY);
+  const [sort, setSort] = useState<Sort>('newest');
+  const open = uiStore.useStore((s) => s.panel === 'filters');
+  const panelRef = useRef<HTMLDivElement>(null);
+  const close = useCallback(() => ui.close(), []);
+  useScrollLock(open);
+  useDialogBehavior(panelRef, open, close);
+
+  // Read initial state from the URL once, then keep the URL in sync (shareable filtered views).
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const next = { ...EMPTY };
+    for (const key of KEYS) next[key] = params.get(key)?.split(',').filter(Boolean) ?? [];
+    setFilters(next);
+    const s = params.get('sort') as Sort | null;
+    if (s && SORTS.some((x) => x.value === s)) setSort(s);
+  }, []);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    for (const key of KEYS) {
+      if (filters[key].length) params.set(key, filters[key].join(','));
+      else params.delete(key);
+    }
+    if (sort !== 'newest') params.set('sort', sort);
+    else params.delete('sort');
+    const qs = params.toString();
+    window.history.replaceState(window.history.state, '', `${window.location.pathname}${qs ? `?${qs}` : ''}`);
+  }, [filters, sort]);
+
+  const visible = useMemo(() => applySort(applyFilters(products, filters), sort), [products, filters, sort]);
+  const activeCount = KEYS.reduce((n, k) => n + filters[k].length, 0);
+
+  const options = useMemo(() => {
+    const categories = Array.from(new Set(products.map((p) => p.category)));
+    const sizes = SIZE_ORDER.filter((s) => products.some((p) => p.sizes.includes(s)));
+    const colors = FAMILIES.filter((fam) => products.some((p) => p.colors.some((c) => fam.match(c.slug))));
+    return { categories, sizes, colors };
+  }, [products]);
+
+  const toggle = (key: keyof Filters, value: string) =>
+    setFilters((f) => ({
+      ...f,
+      [key]: f[key].includes(value) ? f[key].filter((v) => v !== value) : [...f[key], value],
+    }));
+
+  const chip = (active: boolean) =>
+    `label inline-flex h-10 min-w-12 items-center justify-center gap-2 border px-3 transition-colors ${
+      active ? 'border-ink bg-ink text-white' : 'border-line hover:border-ink'
+    }`;
+
+  return (
+    <>
+      <div className="container-site sticky top-header z-10 flex h-14 items-center justify-between gap-4 border-b border-line bg-white">
+        <button
+          type="button"
+          onClick={() => ui.open('filters')}
+          className="label -ml-1 inline-flex h-11 items-center gap-2 px-1"
+          aria-expanded={open}
+          aria-controls="filters-panel"
+        >
+          <FilterIcon size={18} />
+          Filter{activeCount > 0 && ` (${activeCount})`}
+        </button>
+        <p className="label hidden text-muted sm:block" aria-live="polite">
+          {visible.length} {visible.length === 1 ? 'product' : 'products'}
+        </p>
+        <label className="label flex items-center gap-2">
+          <span className="sr-only sm:not-sr-only text-muted">Sort</span>
+          <select
+            value={sort}
+            onChange={(e) => setSort(e.target.value as Sort)}
+            className="label h-11 cursor-pointer appearance-none bg-transparent pr-1 text-right focus:outline-none"
+          >
+            {SORTS.map((s) => (
+              <option key={s.value} value={s.value}>
+                {s.label}
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
+
+      <div className="container-site pb-20 pt-6 md:pb-28 md:pt-8">
+        {visible.length === 0 ? (
+          <div className="py-24 text-center">
+            <p className="text-muted">Nothing matches these filters.</p>
+            <button type="button" className="btn-secondary mt-6" onClick={() => setFilters(EMPTY)}>
+              Clear filters
+            </button>
+          </div>
+        ) : (
+          <ul className="grid grid-cols-2 gap-x-3 gap-y-10 md:gap-x-4 lg:grid-cols-4 lg:gap-y-14">
+            {visible.map((p, i) => (
+              <li key={p.handle}>
+                <ProductCard product={p} priority={i < 4} />
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+
+      {/* Filter panel */}
+      <div className={`fixed inset-0 z-drawer ${open ? 'visible' : 'invisible transition-[visibility] duration-300'}`} inert={!open}>
+        <button
+          type="button"
+          tabIndex={-1}
+          aria-hidden="true"
+          onClick={close}
+          className={`absolute inset-0 bg-ink/40 transition-opacity duration-300 ${open ? 'opacity-100' : 'opacity-0'}`}
+        />
+        <div
+          id="filters-panel"
+          ref={panelRef}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="filters-title"
+          className={`absolute inset-y-0 right-0 flex w-full max-w-[400px] flex-col bg-white transition-transform duration-300 ease-out ${
+            open ? 'translate-x-0' : 'translate-x-full'
+          }`}
+        >
+          <div className="flex h-header items-center justify-between border-b border-line px-5">
+            <h2 id="filters-title" className="label">Filter</h2>
+            <button type="button" onClick={close} className="-mr-3 inline-flex h-11 w-11 items-center justify-center" aria-label="Close filters">
+              <CloseIcon />
+            </button>
+          </div>
+
+          <div className="flex-1 space-y-8 overflow-y-auto px-5 py-6">
+            {showCategoryFilter && options.categories.length > 1 && (
+              <fieldset>
+                <legend className="label mb-3 text-muted">Category</legend>
+                <div className="flex flex-wrap gap-2">
+                  {options.categories.map((c) => (
+                    <button key={c} type="button" aria-pressed={filters.category.includes(c)} onClick={() => toggle('category', c)} className={chip(filters.category.includes(c))}>
+                      {CATEGORY_LABELS[c]}
+                    </button>
+                  ))}
+                </div>
+              </fieldset>
+            )}
+
+            <fieldset>
+              <legend className="label mb-3 text-muted">Size</legend>
+              <div className="flex flex-wrap gap-2">
+                {options.sizes.map((s) => (
+                  <button key={s} type="button" aria-pressed={filters.size.includes(s)} onClick={() => toggle('size', s)} className={chip(filters.size.includes(s))}>
+                    {s}
+                  </button>
+                ))}
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend className="label mb-3 text-muted">Colour</legend>
+              <div className="flex flex-wrap gap-2">
+                {options.colors.map((c) => (
+                  <button key={c.value} type="button" aria-pressed={filters.color.includes(c.value)} onClick={() => toggle('color', c.value)} className={chip(filters.color.includes(c.value))}>
+                    <span className="h-3 w-3 border border-concrete" style={{ backgroundColor: c.hex }} aria-hidden="true" />
+                    {c.label}
+                  </button>
+                ))}
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend className="label mb-3 text-muted">Price</legend>
+              <div className="flex flex-wrap gap-2">
+                {PRICES.map((p) => (
+                  <button key={p.value} type="button" aria-pressed={filters.price.includes(p.value)} onClick={() => toggle('price', p.value)} className={chip(filters.price.includes(p.value))}>
+                    {p.label}
+                  </button>
+                ))}
+              </div>
+            </fieldset>
+          </div>
+
+          <div className="grid grid-cols-2 gap-2 border-t border-line px-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] pt-4">
+            <button type="button" className="btn-secondary" onClick={() => setFilters(EMPTY)} disabled={activeCount === 0}>
+              Clear
+            </button>
+            <button type="button" className="btn-primary" onClick={close}>
+              Show {visible.length}
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export function CategoryNav({ current }: { current?: Category }) {
+  const items: { href: string; label: string; active: boolean }[] = [
+    { href: '/shop', label: 'All', active: !current },
+    ...(Object.keys(CATEGORY_LABELS) as Category[]).map((c) => ({
+      href: `/shop/${c}`,
+      label: CATEGORY_LABELS[c],
+      active: current === c,
+    })),
+  ];
+  return (
+    <nav aria-label="Categories" className="scroll-row -mx-4 px-4 md:mx-0 md:px-0">
+      {items.map((item) => (
+        <Link
+          key={item.href}
+          href={item.href}
+          aria-current={item.active ? 'page' : undefined}
+          className={`label shrink-0 snap-start border px-4 py-2.5 transition-colors ${
+            item.active ? 'border-ink bg-ink text-white' : 'border-line hover:border-ink'
+          }`}
+        >
+          {item.label}
+        </Link>
+      ))}
+    </nav>
+  );
+}
