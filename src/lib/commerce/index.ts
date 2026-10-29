@@ -1,14 +1,20 @@
 import 'server-only';
-import type { Category, Product, ProductSummary, Size } from '@/lib/types';
+import type { Category, Gender, Product, ProductSummary, Size } from '@/lib/types';
 import * as adapter from './local';
 
-export const { getAllProducts, getProductByHandle, getProductsByCategory, getStock } = adapter;
+export const { getAllProducts, getProductByHandle, getProductsByCategory, getProductsByGender, getStock } = adapter;
 
 export const CATEGORIES: { slug: Category; label: string; description: string }[] = [
-  { slug: 'hoodies', label: 'Hoodies', description: 'Heavyweight hoodies and crewnecks in 380–400gsm cotton fleece. Oversized and boxy cuts.' },
-  { slug: 'tees', label: 'Tees', description: 'Heavyweight tees from 220 to 250gsm. Blank, logo and graphic. Oversized fits.' },
-  { slug: 'pants', label: 'Pants', description: 'Wide-leg cargos, baggy sweatpants and track pants. Built to stack.' },
-  { slug: 'accessories', label: 'Accessories', description: 'Beanies and bags. The finishing layer.' },
+  { slug: 'coats', label: 'Coats & jackets', description: 'Trench coats, wool coats, blazers, puffers and denim jackets for the cold half of the year.' },
+  { slug: 'knitwear', label: 'Knitwear', description: 'Chunky turtlenecks, soft brushed jumpers and fine-gauge crew necks.' },
+  { slug: 'shirts', label: 'Shirts & tops', description: 'Poplin shirts, satin shirt dresses, overshirts and heavyweight T-shirts.' },
+  { slug: 'trousers', label: 'Jeans & trousers', description: 'Wide-leg, straight, mom and baggy jeans, plus corduroy trousers.' },
+  { slug: 'accessories', label: 'Bags', description: 'Leather bags to finish the look.' },
+];
+
+export const GENDERS: { slug: Gender; label: string; description: string }[] = [
+  { slug: 'women', label: 'Women', description: 'Coats, knitwear, shirts and denim for autumn–winter 2026.' },
+  { slug: 'men', label: 'Men', description: 'Jackets, knitwear, overshirts and denim for autumn–winter 2026.' },
 ];
 
 export function isCategory(value: string): value is Category {
@@ -37,6 +43,7 @@ export function toSummary(p: Product): ProductSummary {
   return {
     handle: p.handle,
     name: p.name,
+    gender: p.gender,
     category: p.category,
     price: p.price,
     drop: p.drop,

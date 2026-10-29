@@ -49,7 +49,7 @@ export default function ShippingPage() {
       <h2>Dispatch</h2>
       <p>
         Orders placed before 14:00 Vilnius time on a working day leave our warehouse the same day. Orders placed later, at
-        weekends or on Lithuanian public holidays leave the next working day. On drop days, allow one extra day.
+        weekends or on Lithuanian public holidays leave the next working day. During sales, allow one extra day.
       </p>
 
       <h2>Tracking</h2>

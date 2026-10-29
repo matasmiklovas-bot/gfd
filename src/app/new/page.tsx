@@ -5,7 +5,7 @@ import { CollectionView } from '@/components/product/CollectionView';
 
 export const metadata: Metadata = {
   title: 'New in',
-  description: 'The latest OSTREV pieces. Heavyweight basics and limited graphics, made in single runs.',
+  description: 'New in at OSTREV: the latest coats, knitwear, shirts and denim for women and men.',
   alternates: { canonical: '/new' },
 };
 
@@ -13,8 +13,8 @@ export default async function NewPage() {
   const products = (await getAllSummaries()).filter((p) => p.isNew);
   return (
     <>
-      <CollectionHeader title="New" description="Latest additions to Drop 01. Single runs." showNav={false} />
-      <CollectionView products={products} />
+      <CollectionHeader title="New in" description="The latest arrivals for Autumn–Winter 2026." showNav={false} />
+      <CollectionView products={products} quickCategories />
     </>
   );
 }

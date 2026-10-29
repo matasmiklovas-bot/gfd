@@ -10,7 +10,7 @@ export interface SizeTable {
 /** Garment measurements in cm, measured flat. Update from the factory spec sheet. */
 export const SIZE_TABLES: Record<'tops' | 'tees' | 'bottoms' | 'body', SizeTable> = {
   tops: {
-    title: 'Hoodies & crewnecks',
+    title: 'Coats, jackets & knitwear',
     note: 'Garment measured flat. Chest is armpit to armpit.',
     columns: ['Size', 'Chest', 'Length', 'Sleeve'],
     rows: [
@@ -23,7 +23,7 @@ export const SIZE_TABLES: Record<'tops' | 'tees' | 'bottoms' | 'body', SizeTable
     ],
   },
   tees: {
-    title: 'Tees',
+    title: 'Shirts & tops',
     note: 'Garment measured flat. Length is high point of shoulder to hem.',
     columns: ['Size', 'Chest', 'Length', 'Sleeve'],
     rows: [
@@ -36,7 +36,7 @@ export const SIZE_TABLES: Record<'tops' | 'tees' | 'bottoms' | 'body', SizeTable
     ],
   },
   bottoms: {
-    title: 'Pants',
+    title: 'Jeans & trousers',
     note: 'Waist measured relaxed, all the way round. Leg opening measured flat.',
     columns: ['Size', 'Waist', 'Hip', 'Inseam', 'Leg opening'],
     rows: [
@@ -50,7 +50,7 @@ export const SIZE_TABLES: Record<'tops' | 'tees' | 'bottoms' | 'body', SizeTable
   },
   body: {
     title: 'Find your size',
-    note: 'Your body measurements. Our tops are cut oversized — between sizes, size down for a regular fit.',
+    note: 'Your body measurements. Many of our pieces are cut oversized — check the fit note on each product. Between sizes, size down for a closer fit.',
     columns: ['Size', 'Chest', 'Waist', 'Height'],
     rows: [
       ['XS', '84–88', '68–72', '160–168'],
@@ -64,8 +64,8 @@ export const SIZE_TABLES: Record<'tops' | 'tees' | 'bottoms' | 'body', SizeTable
 };
 
 export function tablesFor(category: Category): SizeTable[] {
-  if (category === 'pants') return [SIZE_TABLES.bottoms, SIZE_TABLES.body];
-  if (category === 'tees') return [SIZE_TABLES.tees, SIZE_TABLES.body];
-  if (category === 'hoodies') return [SIZE_TABLES.tops, SIZE_TABLES.body];
+  if (category === 'trousers') return [SIZE_TABLES.bottoms, SIZE_TABLES.body];
+  if (category === 'shirts') return [SIZE_TABLES.tees, SIZE_TABLES.body];
+  if (category === 'coats' || category === 'knitwear') return [SIZE_TABLES.tops, SIZE_TABLES.body];
   return [];
 }

@@ -5,7 +5,7 @@ import { CollectionView } from '@/components/product/CollectionView';
 
 export const metadata: Metadata = {
   title: 'Shop all',
-  description: 'Shop all OSTREV streetwear: heavyweight hoodies, oversized tees, wide-leg cargos and sweatpants. Free EU shipping over €60.',
+  description: 'Shop all OSTREV women’s and men’s fashion: coats, knitwear, shirts and jeans. Free EU shipping over €60.',
   alternates: { canonical: '/shop' },
 };
 

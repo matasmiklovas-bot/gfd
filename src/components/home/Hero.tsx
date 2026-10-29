@@ -1,37 +1,54 @@
+import Image from 'next/image';
 import Link from 'next/link';
-import { getImageProps } from 'next/image';
 
-/** Full-bleed hero. Art-directed: landscape crop on desktop, portrait crop on phones. */
-export function Hero({ pieces }: { pieces: number }) {
-  const common = { alt: 'Illustration of an off-white OSTREV logo hoodie on black', priority: true, sizes: '100vw' };
-  const {
-    props: { srcSet: desktop },
-  } = getImageProps({ ...common, src: '/images/hero.webp', width: 2000, height: 1125, quality: 75 });
-  const {
-    props: { srcSet: mobile, ...rest },
-  } = getImageProps({ ...common, src: '/images/hero-mobile.webp', width: 1080, height: 1742, quality: 75 });
+const PANELS = [
+  {
+    href: '/women',
+    label: 'Women',
+    cta: 'Shop women',
+    image: '/images/hero-women.webp',
+    alt: 'Model in a beige oversized trench coat and light wide-leg jeans in a white studio',
+    position: 'object-[50%_30%]',
+  },
+  {
+    href: '/men',
+    label: 'Men',
+    cta: 'Shop men',
+    image: '/images/hero-men.webp',
+    alt: 'Model in an ecru puffer jacket against a sand-coloured wall',
+    position: 'object-[50%_25%]',
+  },
+];
 
+/** Split campaign hero: women and men side by side on desktop, stacked on phones. */
+export function Hero() {
   return (
-    <section className="on-dark relative -mt-header h-[calc(100svh-var(--announce-h))] min-h-[560px] w-full overflow-hidden bg-ink text-white">
-      <picture>
-        <source media="(min-width: 768px)" srcSet={desktop} />
-        <source media="(max-width: 767px)" srcSet={mobile} />
-        {/* eslint-disable-next-line jsx-a11y/alt-text -- alt is in rest */}
-        <img {...rest} className="absolute inset-0 h-full w-full object-cover object-[50%_40%]" />
-      </picture>
-      <div className="container-site relative flex h-full flex-col justify-end pb-10 md:pb-16">
-        <p className="label mb-4 text-white/85">Out now · {pieces} pieces · No restocks</p>
-        <h1 className="heading-display text-[22vw] md:text-[12vw] xl:text-[11rem]">Drop 01</h1>
-        <p className="mt-4 max-w-sm text-[15px] text-white/85 md:mt-6 md:text-base">Built heavy. Worn loose.</p>
-        <div className="mt-7 flex flex-wrap gap-3 md:mt-8">
-          <Link href="/shop" className="btn-inverse min-w-[180px]">
-            Shop now
-          </Link>
-          <Link href="/drops" className="btn-ghost-inverse">
-            Drop 02
-          </Link>
-        </div>
-      </div>
+    <section aria-label="Autumn–Winter 2026" className="-mt-header grid md:h-[calc(100svh-var(--announce-h))] md:min-h-[640px] md:grid-cols-2">
+      {PANELS.map((panel, i) => (
+        <Link
+          key={panel.href}
+          href={panel.href}
+          className="group relative block h-[82svh] min-h-[520px] overflow-hidden bg-bone md:h-full"
+        >
+          <Image
+            src={panel.image}
+            alt={panel.alt}
+            fill
+            priority
+            sizes="(min-width: 768px) 50vw, 100vw"
+            quality={78}
+            className={`object-cover ${panel.position} transition-transform duration-[1200ms] ease-out group-hover:scale-[1.02]`}
+          />
+          <div className="absolute inset-x-0 bottom-0 flex flex-col items-start px-4 pb-8 md:px-8 md:pb-12">
+            {i === 0 && <p className="label mb-3">Autumn–Winter 2026</p>}
+            <h2 className="heading-display text-[18vw] leading-[0.85] md:text-[7.5vw] xl:text-[8.5rem]">{panel.label}</h2>
+            <span className="label mt-5 inline-flex items-center gap-2 border-b border-ink pb-1 transition-[gap] duration-300 group-hover:gap-3">
+              {panel.cta} <span aria-hidden="true">→</span>
+            </span>
+          </div>
+        </Link>
+      ))}
+      <h1 className="sr-only">OSTREV — women’s and men’s fashion, Autumn–Winter 2026</h1>
     </section>
   );
 }

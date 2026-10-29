@@ -2,7 +2,7 @@ export const SITE = {
   name: 'OSTREV',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://ostrev.com',
   description:
-    'OSTREV is minimalist streetwear. Heavyweight hoodies, oversized tees and wide-leg pants in black, grey and white. EU delivery in 2–5 days.',
+    'OSTREV is women’s and men’s fashion from Vilnius: trench coats, knitwear, shirts and denim at high-street prices. EU delivery in 2–5 days.',
   email: 'hello@ostrev.com',
   supportEmail: 'support@ostrev.com',
   instagram: 'https://www.instagram.com/ostrev',
@@ -19,30 +19,24 @@ export const SITE = {
 
 export const ANNOUNCEMENTS = [
   'Free shipping over €60 · EU delivery 2–5 days',
-  'Drop 01 — out now',
+  'Autumn–Winter 2026 — new in',
   '14-day returns across the EU',
 ] as const;
 
 export const NAV = [
-  { href: '/shop', label: 'Shop', key: 'nav.shop' },
+  { href: '/women', label: 'Women', key: 'nav.women' },
+  { href: '/men', label: 'Men', key: 'nav.men' },
   { href: '/new', label: 'New', key: 'nav.new' },
-  { href: '/drops', label: 'Drops', key: 'nav.drops' },
   { href: '/about', label: 'About', key: 'nav.about' },
 ] as const;
 
-export const NEXT_DROP = {
-  name: 'Drop 02',
-  // Europe/Vilnius, 18:00 local time.
-  date: '2026-11-20T18:00:00+02:00',
-  teaser: 'Outerwear. Heavier than anything we have made. 300 pieces per style.',
-};
-
 export const FOOTER_LINKS = {
   shop: [
-    { href: '/shop/hoodies', label: 'Hoodies' },
-    { href: '/shop/tees', label: 'Tees' },
-    { href: '/shop/pants', label: 'Pants' },
-    { href: '/shop/accessories', label: 'Accessories' },
+    { href: '/women', label: 'Women' },
+    { href: '/men', label: 'Men' },
+    { href: '/shop/coats', label: 'Coats & jackets' },
+    { href: '/shop/knitwear', label: 'Knitwear' },
+    { href: '/shop/trousers', label: 'Jeans & trousers' },
     { href: '/new', label: 'New in' },
   ],
   help: [

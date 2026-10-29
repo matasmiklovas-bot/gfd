@@ -8,9 +8,9 @@ import { prefsStore, type Locale } from '@/lib/store';
  * Full Lithuanian content needs locale routes (/lt/...) and translated copy.
  */
 const DICT = {
-  'nav.shop': { en: 'Shop', lt: 'Parduotuvė' },
   'nav.new': { en: 'New', lt: 'Nauja' },
-  'nav.drops': { en: 'Drops', lt: 'Dropai' },
+  'nav.women': { en: 'Women', lt: 'Moterims' },
+  'nav.men': { en: 'Men', lt: 'Vyrams' },
   'nav.about': { en: 'About', lt: 'Apie' },
   'nav.menu': { en: 'Menu', lt: 'Meniu' },
   'nav.search': { en: 'Search', lt: 'Paieška' },
@@ -19,7 +19,7 @@ const DICT = {
   'nav.wishlist': { en: 'Wishlist', lt: 'Norų sąrašas' },
   'nav.close': { en: 'Close', lt: 'Uždaryti' },
   'ann.0': { en: 'Free shipping over €60 · EU delivery 2–5 days', lt: 'Nemokamas pristatymas nuo 60 € · ES pristatymas per 2–5 d.' },
-  'ann.1': { en: 'Drop 01 — out now', lt: 'Drop 01 — jau parduodamas' },
+  'ann.1': { en: 'Autumn–Winter 2026 — new in', lt: 'Ruduo–žiema 2026 — naujiena' },
   'ann.2': { en: '14-day returns across the EU', lt: '14 dienų grąžinimas visoje ES' },
   'product.add': { en: 'Add to bag', lt: 'Į krepšelį' },
   'product.added': { en: 'Added', lt: 'Pridėta' },

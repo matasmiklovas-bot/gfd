@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import type { Category, ProductSummary, Size } from '@/lib/types';
+import type { Category, Gender, ProductSummary, Size } from '@/lib/types';
 import { ui, uiStore } from '@/lib/store';
 import { useDialogBehavior, useScrollLock } from '@/lib/hooks';
 import { CloseIcon, FilterIcon } from '@/components/ui/Icons';
@@ -19,37 +19,43 @@ const SORTS: { value: Sort; label: string }[] = [
 const SIZE_ORDER: Size[] = ['XS', 'S', 'M', 'L', 'XL', 'XXL', 'ONE SIZE'];
 
 const PRICES = [
-  { value: 'u20', label: 'Under €20', test: (c: number) => c < 2000 },
-  { value: '20-35', label: '€20–€35', test: (c: number) => c >= 2000 && c <= 3500 },
-  { value: 'o35', label: 'Over €35', test: (c: number) => c > 3500 },
+  { value: 'u30', label: 'Under €30', test: (c: number) => c < 3000 },
+  { value: '30-60', label: '€30–€60', test: (c: number) => c >= 3000 && c <= 6000 },
+  { value: 'o60', label: 'Over €60', test: (c: number) => c > 6000 },
 ] as const;
 
 const FAMILIES: { value: string; label: string; hex: string; match: (slug: string) => boolean }[] = [
-  { value: 'black', label: 'Black', hex: '#0A0A0A', match: (s) => s === 'black' || s === 'washed-black' },
-  { value: 'grey', label: 'Grey', hex: '#8A8A8A', match: (s) => s.includes('grey') || s === 'concrete' },
-  { value: 'white', label: 'White', hex: '#FFFFFF', match: (s) => s === 'white' },
-  { value: 'off-white', label: 'Off-white', hex: '#F4F2EE', match: (s) => s === 'off-white' },
+  { value: 'black', label: 'Black', hex: '#111111', match: (s) => s === 'black' },
+  { value: 'white', label: 'White & ecru', hex: '#F1EBDF', match: (s) => ['white', 'ecru', 'cream'].includes(s) },
+  { value: 'neutral', label: 'Beige & brown', hex: '#C8B49A', match: (s) => ['beige', 'oat', 'tan'].includes(s) },
+  { value: 'blue', label: 'Blue', hex: '#7C9CC4', match: (s) => s.includes('blue') },
+  { value: 'green', label: 'Green', hex: '#A9BFA8', match: (s) => s.includes('green') || s === 'sage' },
 ];
 
-const CATEGORY_LABELS: Record<Category, string> = {
-  hoodies: 'Hoodies',
-  tees: 'Tees',
-  pants: 'Pants',
-  accessories: 'Accessories',
+export const CATEGORY_LABELS: Record<Category, string> = {
+  coats: 'Coats & jackets',
+  knitwear: 'Knitwear',
+  shirts: 'Shirts & tops',
+  trousers: 'Jeans & trousers',
+  accessories: 'Bags',
 };
 
+const GENDER_LABELS: Record<Gender, string> = { women: 'Women', men: 'Men' };
+
 interface Filters {
+  gender: string[];
   category: string[];
   size: string[];
   color: string[];
   price: string[];
 }
 
-const EMPTY: Filters = { category: [], size: [], color: [], price: [] };
+const EMPTY: Filters = { gender: [], category: [], size: [], color: [], price: [] };
 const KEYS = Object.keys(EMPTY) as (keyof Filters)[];
 
 function applyFilters(products: ProductSummary[], f: Filters) {
   return products.filter((p) => {
+    if (f.gender.length && !f.gender.includes(p.gender)) return false;
     if (f.category.length && !f.category.includes(p.category)) return false;
     if (f.size.length && !f.size.some((s) => p.availableSizes.includes(s as Size))) return false;
     if (f.color.length) {
@@ -73,9 +79,14 @@ function applySort(products: ProductSummary[], sort: Sort) {
 export function CollectionView({
   products,
   showCategoryFilter = true,
+  showGenderFilter = true,
+  quickCategories = false,
 }: {
   products: ProductSummary[];
   showCategoryFilter?: boolean;
+  showGenderFilter?: boolean;
+  /** Bershka-style row of category chips above the grid (single choice). */
+  quickCategories?: boolean;
 }) {
   const [filters, setFilters] = useState<Filters>(EMPTY);
   const [sort, setSort] = useState<Sort>('newest');
@@ -111,10 +122,11 @@ export function CollectionView({
   const activeCount = KEYS.reduce((n, k) => n + filters[k].length, 0);
 
   const options = useMemo(() => {
-    const categories = Array.from(new Set(products.map((p) => p.category)));
+    const categories = (Object.keys(CATEGORY_LABELS) as Category[]).filter((c) => products.some((p) => p.category === c));
+    const genders = (Object.keys(GENDER_LABELS) as Gender[]).filter((g) => products.some((p) => p.gender === g));
     const sizes = SIZE_ORDER.filter((s) => products.some((p) => p.sizes.includes(s)));
     const colors = FAMILIES.filter((fam) => products.some((p) => p.colors.some((c) => fam.match(c.slug))));
-    return { categories, sizes, colors };
+    return { categories, genders, sizes, colors };
   }, [products]);
 
   const toggle = (key: keyof Filters, value: string) =>
@@ -130,6 +142,28 @@ export function CollectionView({
 
   return (
     <>
+      {quickCategories && options.categories.length > 1 && (
+        <div className="container-site pb-4">
+          <div className="scroll-row -mx-4 px-4 md:mx-0 md:px-0" role="group" aria-label="Category">
+            {[{ value: '', label: 'All' }, ...options.categories.map((c) => ({ value: c, label: CATEGORY_LABELS[c] }))].map((item) => {
+              const active = item.value ? filters.category.length === 1 && filters.category[0] === item.value : filters.category.length === 0;
+              return (
+                <button
+                  key={item.value || 'all'}
+                  type="button"
+                  aria-pressed={active}
+                  onClick={() => setFilters((f) => ({ ...f, category: item.value ? [item.value] : [] }))}
+                  className={`label shrink-0 snap-start border px-4 py-2.5 transition-colors ${
+                    active ? 'border-ink bg-ink text-white' : 'border-line hover:border-ink'
+                  }`}
+                >
+                  {item.label}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
       <div className="container-site sticky top-header z-10 flex h-14 items-center justify-between gap-4 border-b border-line bg-white">
         <button
           type="button"
@@ -206,6 +240,19 @@ export function CollectionView({
           </div>
 
           <div className="flex-1 space-y-8 overflow-y-auto px-5 py-6">
+            {showGenderFilter && options.genders.length > 1 && (
+              <fieldset>
+                <legend className="label mb-3 text-muted">Women / Men</legend>
+                <div className="flex flex-wrap gap-2">
+                  {options.genders.map((g) => (
+                    <button key={g} type="button" aria-pressed={filters.gender.includes(g)} onClick={() => toggle('gender', g)} className={chip(filters.gender.includes(g))}>
+                      {GENDER_LABELS[g]}
+                    </button>
+                  ))}
+                </div>
+              </fieldset>
+            )}
+
             {showCategoryFilter && options.categories.length > 1 && (
               <fieldset>
                 <legend className="label mb-3 text-muted">Category</legend>

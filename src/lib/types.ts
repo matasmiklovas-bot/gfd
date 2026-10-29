@@ -1,4 +1,6 @@
-export type Category = 'hoodies' | 'tees' | 'pants' | 'accessories';
+export type Category = 'coats' | 'knitwear' | 'shirts' | 'trousers' | 'accessories';
+
+export type Gender = 'women' | 'men';
 
 export type Size = 'XS' | 'S' | 'M' | 'L' | 'XL' | 'XXL' | 'ONE SIZE';
 
@@ -17,6 +19,7 @@ export interface Product {
   id: string;
   handle: string;
   name: string;
+  gender: Gender;
   category: Category;
   /** Price in euro cents, VAT included. */
   price: number;
@@ -42,6 +45,7 @@ export interface Product {
 export interface ProductSummary {
   handle: string;
   name: string;
+  gender: Gender;
   category: Category;
   price: number;
   drop: string;

@@ -1,6 +1,6 @@
 import 'server-only';
 import raw from '@data/products.json';
-import type { Category, Product, Size } from '@/lib/types';
+import type { Category, Gender, Product, Size } from '@/lib/types';
 
 /**
  * Local JSON catalog. Edit data/products.json to change products.
@@ -15,7 +15,8 @@ const products = validate(raw as unknown as Product[]);
 /** Fails the build with a readable message if products.json is edited into an invalid state. */
 function validate(list: Product[]) {
   const handles = new Set<string>();
-  const categories = ['hoodies', 'tees', 'pants', 'accessories'];
+  const categories = ['coats', 'knitwear', 'shirts', 'trousers', 'accessories'];
+  const genders = ['women', 'men'];
   for (const p of list) {
     const fail = (msg: string) => {
       throw new Error(`data/products.json: "${p.handle ?? p.id}": ${msg}`);
@@ -24,6 +25,7 @@ function validate(list: Product[]) {
     if (handles.has(p.handle)) fail('duplicate handle');
     handles.add(p.handle);
     if (!categories.includes(p.category)) fail(`unknown category "${p.category}"`);
+    if (!genders.includes(p.gender)) fail(`gender must be "women" or "men", got "${p.gender}"`);
     if (!Number.isInteger(p.price) || p.price <= 0) fail('price must be a positive integer in cents');
     if (!p.images?.length) fail('needs at least one image');
     if (!p.colors?.length || !p.sizes?.length) fail('needs colors and sizes');
@@ -59,6 +61,10 @@ export async function getProductByHandle(handle: string): Promise<Product | unde
 
 export async function getProductsByCategory(category: Category): Promise<Product[]> {
   return products.filter((p) => p.category === category);
+}
+
+export async function getProductsByGender(gender: Gender): Promise<Product[]> {
+  return products.filter((p) => p.gender === gender);
 }
 
 export async function getStock(handle: string, color: string, size: Size): Promise<number> {

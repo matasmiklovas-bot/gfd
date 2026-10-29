@@ -1,38 +1,29 @@
 [
   {
     "id": "ost-001",
-    "handle": "heavyweight-oversized-hoodie",
-    "name": "Heavyweight Oversized Hoodie",
-    "category": "hoodies",
-    "price": 3999,
-    "drop": "drop-01",
-    "releasedAt": "2026-10-03",
-    "isNew": false,
-    "summary": "The base layer. Built heavy, worn loose.",
-    "description": "A 400gsm hoodie cut wide through the body with dropped shoulders and a deep double-layer hood. No drawcords, no logo on the front. Ribbed cuffs and hem hold the shape after every wash.",
-    "fit": "Oversized fit — size down for a regular fit. Dropped shoulders, boxy body, sleeves cut long.",
-    "material": "100% cotton, 400gsm brushed fleece. Pre-shrunk.",
+    "handle": "oversized-trench-coat",
+    "name": "Oversized Trench Coat",
+    "gender": "women",
+    "category": "coats",
+    "price": 8999,
+    "drop": "aw26",
+    "releasedAt": "2026-10-24",
+    "isNew": true,
+    "summary": "The autumn coat. Long, loose and belted.",
+    "description": "A double-breasted trench cut long and roomy, with storm flaps at the chest and back, a removable belt and deep welt pockets. Water-repellent cotton twill that softens with wear.",
+    "fit": "Oversized fit. Falls below the knee on a 170 cm model. Take your usual size.",
+    "material": "65% cotton, 35% polyester twill with a water-repellent finish. Lining: 100% viscose.",
     "care": [
-      "Machine wash cold, inside out",
+      "Machine wash at 30°C on a gentle cycle",
       "Do not tumble dry",
-      "Iron on low, avoid print",
-      "Do not bleach"
+      "Iron on low",
+      "Hang to dry"
     ],
     "colors": [
       {
-        "name": "Black",
-        "slug": "black",
-        "hex": "#0A0A0A"
-      },
-      {
-        "name": "Grey",
-        "slug": "grey",
-        "hex": "#8A8A8A"
-      },
-      {
-        "name": "Off-white",
-        "slug": "off-white",
-        "hex": "#F4F2EE"
+        "name": "Beige",
+        "slug": "beige",
+        "hex": "#C8B49A"
       }
     ],
     "sizes": [
@@ -40,305 +31,188 @@
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
+    ],
+    "stock": {
+      "beige": {
+        "XS": 2,
+        "S": 3,
+        "M": 6,
+        "L": 11,
+        "XL": 14
+      }
+    },
+    "images": [
+      {
+        "src": "/images/oversized-trench-coat-1.webp",
+        "alt": "Oversized Trench Coat in beige, front"
+      },
+      {
+        "src": "/images/oversized-trench-coat-2.webp",
+        "alt": "Oversized Trench Coat in beige, side"
+      },
+      {
+        "src": "/images/oversized-trench-coat-3.webp",
+        "alt": "Oversized Trench Coat in beige, back"
+      },
+      {
+        "src": "/images/oversized-trench-coat-4.webp",
+        "alt": "Oversized Trench Coat in beige, detail"
+      }
+    ],
+    "related": [
+      "oversized-blazer",
+      "wide-leg-jeans",
+      "chunky-turtleneck-jumper"
+    ]
+  },
+  {
+    "id": "ost-002",
+    "handle": "wool-blend-coat",
+    "name": "Wool Blend Coat",
+    "gender": "women",
+    "category": "coats",
+    "price": 9999,
+    "drop": "aw26",
+    "releasedAt": "2026-10-17",
+    "isNew": true,
+    "summary": "Clean lines, dropped shoulders, no buttons to fuss with.",
+    "description": "A long, collarless coat in a soft wool blend. Dropped shoulders, wide sleeves and hidden press studs keep the front clean. Wear it open over knitwear.",
+    "fit": "Relaxed fit. Mid-calf length on a 170 cm model.",
+    "material": "50% wool, 40% polyester, 10% polyamide. Lining: 100% polyester.",
+    "care": [
+      "Dry clean only",
+      "Do not tumble dry",
+      "Steam to refresh",
+      "Store on a wide hanger"
+    ],
+    "colors": [
+      {
+        "name": "Ecru",
+        "slug": "ecru",
+        "hex": "#EDE6D8"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "ecru": {
+        "XS": 2,
+        "S": 6,
+        "M": 22,
+        "L": 22,
+        "XL": 11
+      }
+    },
+    "images": [
+      {
+        "src": "/images/wool-blend-coat-1.webp",
+        "alt": "Wool Blend Coat in ecru, front"
+      },
+      {
+        "src": "/images/wool-blend-coat-2.webp",
+        "alt": "Wool Blend Coat in ecru, detail"
+      }
+    ],
+    "related": [
+      "soft-knit-jumper",
+      "straight-white-jeans",
+      "leather-shoulder-bag"
+    ]
+  },
+  {
+    "id": "ost-003",
+    "handle": "oversized-blazer",
+    "name": "Oversized Blazer",
+    "gender": "women",
+    "category": "coats",
+    "price": 5999,
+    "drop": "aw26",
+    "releasedAt": "2026-10-10",
+    "isNew": false,
+    "summary": "Sharp shoulders, easy body. Over a tee or a knit.",
+    "description": "A single-breasted blazer with structured shoulders, notch lapels and flap pockets. Cut long and boxy so it works over a T-shirt, a shirt or a fine knit.",
+    "fit": "Oversized fit. Take your usual size; size down for a closer fit.",
+    "material": "64% polyester, 33% viscose, 3% elastane. Lining: 100% polyester.",
+    "care": [
+      "Machine wash at 30°C on a gentle cycle",
+      "Iron on low with a cloth",
+      "Do not tumble dry",
+      "Dry clean possible"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "slug": "black",
+        "hex": "#111111"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
     ],
     "stock": {
       "black": {
         "XS": 6,
-        "S": 14,
-        "M": 22,
-        "L": 18,
-        "XL": 9,
-        "XXL": 3
-      },
-      "grey": {
-        "XS": 0,
-        "S": 8,
-        "M": 12,
-        "L": 4,
-        "XL": 7,
-        "XXL": 2
-      },
-      "off-white": {
-        "XS": 2,
-        "S": 5,
-        "M": 9,
-        "L": 0,
-        "XL": 3,
-        "XXL": 0
+        "S": 18,
+        "M": 14,
+        "L": 14,
+        "XL": 6
       }
     },
     "images": [
       {
-        "src": "/images/g-heavyweight-oversized-hoodie-black-1.webp",
-        "alt": "Illustration of the Heavyweight Oversized Hoodie in black, front"
+        "src": "/images/oversized-blazer-1.webp",
+        "alt": "Oversized Blazer in black, front"
       },
       {
-        "src": "/images/g-heavyweight-oversized-hoodie-black-2.webp",
-        "alt": "Illustration of the Heavyweight Oversized Hoodie in black, back"
+        "src": "/images/oversized-blazer-2.webp",
+        "alt": "Oversized Blazer in black, side"
+      },
+      {
+        "src": "/images/oversized-blazer-3.webp",
+        "alt": "Oversized Blazer in black, movement"
       }
     ],
     "related": [
-      "baggy-sweatpants",
-      "knit-beanie",
-      "heavyweight-blank-tee-250gsm"
-    ],
-    "colorImages": {
-      "black": [
-        {
-          "src": "/images/g-heavyweight-oversized-hoodie-black-1.webp",
-          "alt": "Illustration of the Heavyweight Oversized Hoodie in black, front"
-        },
-        {
-          "src": "/images/g-heavyweight-oversized-hoodie-black-2.webp",
-          "alt": "Illustration of the Heavyweight Oversized Hoodie in black, back"
-        }
-      ],
-      "grey": [
-        {
-          "src": "/images/g-heavyweight-oversized-hoodie-grey-1.webp",
-          "alt": "Illustration of the Heavyweight Oversized Hoodie in grey, front"
-        },
-        {
-          "src": "/images/g-heavyweight-oversized-hoodie-grey-2.webp",
-          "alt": "Illustration of the Heavyweight Oversized Hoodie in grey, back"
-        }
-      ],
-      "off-white": [
-        {
-          "src": "/images/g-heavyweight-oversized-hoodie-off-white-1.webp",
-          "alt": "Illustration of the Heavyweight Oversized Hoodie in off-white, front"
-        },
-        {
-          "src": "/images/g-heavyweight-oversized-hoodie-off-white-2.webp",
-          "alt": "Illustration of the Heavyweight Oversized Hoodie in off-white, back"
-        }
-      ]
-    }
-  },
-  {
-    "id": "ost-002",
-    "handle": "boxy-hoodie",
-    "name": "Boxy Hoodie",
-    "category": "hoodies",
-    "price": 4599,
-    "drop": "drop-01",
-    "releasedAt": "2026-10-03",
-    "isNew": false,
-    "summary": "Short body. Wide cut. EST. 2026.",
-    "description": "A cropped, boxy hoodie with an OSTREV EST. 2026 chest print. Structured double-layer hood, wide body, short length and a ribbed hem that sits at the hip.",
-    "fit": "Boxy fit — cropped length, wide body. Take your usual size; size up for more length.",
-    "material": "100% cotton, 380gsm loopback fleece. Garment washed.",
-    "care": [
-      "Machine wash cold, inside out, zip closed",
-      "Wash with similar colours",
-      "Do not tumble dry",
-      "Do not bleach"
-    ],
-    "colors": [
-      {
-        "name": "Washed black",
-        "slug": "washed-black",
-        "hex": "#2B2B2A"
-      },
-      {
-        "name": "Grey melange",
-        "slug": "grey-melange",
-        "hex": "#A3A3A0"
-      }
-    ],
-    "sizes": [
-      "XS",
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "stock": {
-      "washed-black": {
-        "XS": 4,
-        "S": 10,
-        "M": 16,
-        "L": 12,
-        "XL": 6,
-        "XXL": 2
-      },
-      "grey-melange": {
-        "XS": 0,
-        "S": 3,
-        "M": 6,
-        "L": 5,
-        "XL": 1,
-        "XXL": 0
-      }
-    },
-    "images": [
-      {
-        "src": "/images/g-boxy-hoodie-washed-black-1.webp",
-        "alt": "Illustration of the Boxy Hoodie in washed black, front"
-      },
-      {
-        "src": "/images/g-boxy-hoodie-washed-black-2.webp",
-        "alt": "Illustration of the Boxy Hoodie in washed black, back"
-      }
-    ],
-    "related": [
-      "wide-leg-cargo-pants",
-      "oversized-logo-tee",
-      "knit-beanie"
-    ],
-    "colorImages": {
-      "washed-black": [
-        {
-          "src": "/images/g-boxy-hoodie-washed-black-1.webp",
-          "alt": "Illustration of the Boxy Hoodie in washed black, front"
-        },
-        {
-          "src": "/images/g-boxy-hoodie-washed-black-2.webp",
-          "alt": "Illustration of the Boxy Hoodie in washed black, back"
-        }
-      ],
-      "grey-melange": [
-        {
-          "src": "/images/g-boxy-hoodie-grey-melange-1.webp",
-          "alt": "Illustration of the Boxy Hoodie in grey melange, front"
-        },
-        {
-          "src": "/images/g-boxy-hoodie-grey-melange-2.webp",
-          "alt": "Illustration of the Boxy Hoodie in grey melange, back"
-        }
-      ]
-    }
-  },
-  {
-    "id": "ost-003",
-    "handle": "oversized-logo-tee",
-    "name": "Oversized Logo Tee",
-    "category": "tees",
-    "price": 1999,
-    "drop": "drop-01",
-    "releasedAt": "2026-10-03",
-    "isNew": false,
-    "summary": "One mark. Back neck. Nothing else.",
-    "description": "A wide, dropped-shoulder tee with a small OSTREV logo printed at the back neck and nothing on the front. Thick ribbed collar that keeps its shape. Side-seamed so it hangs straight.",
-    "fit": "Oversized fit — size down for a regular fit. Dropped shoulders, sleeves past the elbow.",
-    "material": "100% cotton, 240gsm single jersey. Water-based print.",
-    "care": [
-      "Machine wash cold, inside out",
-      "Do not tumble dry",
-      "Do not iron on print"
-    ],
-    "colors": [
-      {
-        "name": "Black",
-        "slug": "black",
-        "hex": "#0A0A0A"
-      },
-      {
-        "name": "White",
-        "slug": "white",
-        "hex": "#FFFFFF"
-      }
-    ],
-    "sizes": [
-      "XS",
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "stock": {
-      "black": {
-        "XS": 8,
-        "S": 20,
-        "M": 28,
-        "L": 24,
-        "XL": 12,
-        "XXL": 6
-      },
-      "white": {
-        "XS": 5,
-        "S": 14,
-        "M": 18,
-        "L": 15,
-        "XL": 4,
-        "XXL": 1
-      }
-    },
-    "images": [
-      {
-        "src": "/images/g-oversized-logo-tee-black-1.webp",
-        "alt": "Illustration of the Oversized Logo Tee in black, front"
-      },
-      {
-        "src": "/images/g-oversized-logo-tee-black-2.webp",
-        "alt": "Illustration of the Oversized Logo Tee in black, back"
-      }
-    ],
-    "related": [
-      "wide-leg-cargo-pants",
-      "heavyweight-oversized-hoodie",
-      "tote-bag"
-    ],
-    "colorImages": {
-      "black": [
-        {
-          "src": "/images/g-oversized-logo-tee-black-1.webp",
-          "alt": "Illustration of the Oversized Logo Tee in black, front"
-        },
-        {
-          "src": "/images/g-oversized-logo-tee-black-2.webp",
-          "alt": "Illustration of the Oversized Logo Tee in black, back"
-        }
-      ],
-      "white": [
-        {
-          "src": "/images/g-oversized-logo-tee-white-1.webp",
-          "alt": "Illustration of the Oversized Logo Tee in white, front"
-        },
-        {
-          "src": "/images/g-oversized-logo-tee-white-2.webp",
-          "alt": "Illustration of the Oversized Logo Tee in white, back"
-        }
-      ]
-    }
+      "wide-leg-jeans",
+      "oversized-poplin-shirt",
+      "oversized-trench-coat"
+    ]
   },
   {
     "id": "ost-004",
-    "handle": "heavyweight-blank-tee-250gsm",
-    "name": "Heavyweight Blank Tee 250gsm",
-    "category": "tees",
-    "price": 1799,
-    "drop": "drop-01",
-    "releasedAt": "2026-10-03",
+    "handle": "faux-leather-biker-jacket",
+    "name": "Faux Leather Biker Jacket",
+    "gender": "women",
+    "category": "coats",
+    "price": 4999,
+    "drop": "aw26",
+    "releasedAt": "2026-09-26",
     "isNew": false,
-    "summary": "No print. No logo. Just weight.",
-    "description": "The blank you keep buying. Dense 250gsm cotton with a tight knit, a short ribbed collar and a boxy body. Holds its structure without looking stiff.",
-    "fit": "Oversized fit — size down for a regular fit. Boxy body, slightly cropped.",
-    "material": "100% combed cotton, 250gsm single jersey. Pre-shrunk.",
+    "summary": "The classic biker, cropped at the waist.",
+    "description": "An asymmetric zip biker in soft faux leather, with zipped pockets, quilted shoulder panels and zip cuffs. Cropped to sit at the waist over high-rise jeans.",
+    "fit": "Regular fit, cropped length. Take your usual size.",
+    "material": "Shell: 100% polyurethane on a polyester backing. Lining: 100% polyester.",
     "care": [
-      "Machine wash at 30°C",
-      "Do not tumble dry",
-      "Iron on medium"
+      "Wipe clean with a damp cloth",
+      "Do not machine wash",
+      "Do not iron",
+      "Do not tumble dry"
     ],
     "colors": [
       {
         "name": "Black",
         "slug": "black",
-        "hex": "#0A0A0A"
-      },
-      {
-        "name": "White",
-        "slug": "white",
-        "hex": "#FFFFFF"
-      },
-      {
-        "name": "Grey",
-        "slug": "grey",
-        "hex": "#8A8A8A"
+        "hex": "#111111"
       }
     ],
     "sizes": [
@@ -346,106 +220,57 @@
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "stock": {
       "black": {
-        "XS": 12,
-        "S": 30,
-        "M": 40,
-        "L": 34,
-        "XL": 18,
-        "XXL": 8
-      },
-      "white": {
-        "XS": 10,
-        "S": 24,
-        "M": 32,
-        "L": 28,
-        "XL": 14,
-        "XXL": 6
-      },
-      "grey": {
-        "XS": 3,
-        "S": 9,
-        "M": 11,
+        "XS": 4,
+        "S": 6,
+        "M": 2,
         "L": 0,
-        "XL": 4,
-        "XXL": 2
+        "XL": 18
       }
     },
     "images": [
       {
-        "src": "/images/g-heavyweight-blank-tee-250gsm-black-1.webp",
-        "alt": "Illustration of the Heavyweight Blank Tee 250gsm in black, front"
+        "src": "/images/faux-leather-biker-jacket-1.webp",
+        "alt": "Faux Leather Biker Jacket in black, front"
       },
       {
-        "src": "/images/g-heavyweight-blank-tee-250gsm-black-2.webp",
-        "alt": "Illustration of the Heavyweight Blank Tee 250gsm in black, back"
+        "src": "/images/faux-leather-biker-jacket-2.webp",
+        "alt": "Faux Leather Biker Jacket in black, side"
       }
     ],
     "related": [
-      "baggy-sweatpants",
-      "boxy-hoodie",
-      "knit-beanie"
-    ],
-    "colorImages": {
-      "black": [
-        {
-          "src": "/images/g-heavyweight-blank-tee-250gsm-black-1.webp",
-          "alt": "Illustration of the Heavyweight Blank Tee 250gsm in black, front"
-        },
-        {
-          "src": "/images/g-heavyweight-blank-tee-250gsm-black-2.webp",
-          "alt": "Illustration of the Heavyweight Blank Tee 250gsm in black, back"
-        }
-      ],
-      "white": [
-        {
-          "src": "/images/g-heavyweight-blank-tee-250gsm-white-1.webp",
-          "alt": "Illustration of the Heavyweight Blank Tee 250gsm in white, front"
-        },
-        {
-          "src": "/images/g-heavyweight-blank-tee-250gsm-white-2.webp",
-          "alt": "Illustration of the Heavyweight Blank Tee 250gsm in white, back"
-        }
-      ],
-      "grey": [
-        {
-          "src": "/images/g-heavyweight-blank-tee-250gsm-grey-1.webp",
-          "alt": "Illustration of the Heavyweight Blank Tee 250gsm in grey, front"
-        },
-        {
-          "src": "/images/g-heavyweight-blank-tee-250gsm-grey-2.webp",
-          "alt": "Illustration of the Heavyweight Blank Tee 250gsm in grey, back"
-        }
-      ]
-    }
+      "mom-jeans",
+      "oversized-poplin-shirt"
+    ]
   },
   {
     "id": "ost-005",
-    "handle": "graphic-tee-drop-01",
-    "name": "Graphic Tee \"DROP 01\"",
-    "category": "tees",
-    "price": 2299,
-    "drop": "drop-01",
+    "handle": "chunky-turtleneck-jumper",
+    "name": "Chunky Turtleneck Jumper",
+    "gender": "women",
+    "category": "knitwear",
+    "price": 3599,
+    "drop": "aw26",
     "releasedAt": "2026-10-24",
     "isNew": true,
-    "summary": "Printed once. Not coming back.",
-    "description": "The Drop 01 graphic. Chest print with the release date, screen printed in off-white on our heavyweight blank. One run only.",
-    "fit": "Oversized fit — size down for a regular fit. Dropped shoulders, long sleeves.",
-    "material": "100% cotton, 250gsm single jersey. Plastisol-free screen print.",
+    "summary": "A thick roll neck in a soft, washed green.",
+    "description": "A chunky turtleneck with a fold-over collar, dropped shoulders and ribbed cuffs and hem. Heavy enough to wear on its own in October, loose enough to layer under a coat.",
+    "fit": "Relaxed fit. Take your usual size.",
+    "material": "50% acrylic, 28% polyester, 17% wool, 5% alpaca.",
     "care": [
-      "Machine wash cold, inside out",
+      "Hand wash cold or wool cycle",
+      "Dry flat",
       "Do not tumble dry",
-      "Do not iron on print"
+      "Fold, do not hang"
     ],
     "colors": [
       {
-        "name": "Black",
-        "slug": "black",
-        "hex": "#0A0A0A"
+        "name": "Sage green",
+        "slug": "sage",
+        "hex": "#A9BFA8"
       }
     ],
     "sizes": [
@@ -453,405 +278,61 @@
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "stock": {
-      "black": {
+      "sage": {
         "XS": 2,
-        "S": 6,
-        "M": 4,
-        "L": 7,
-        "XL": 3,
-        "XXL": 1
+        "S": 22,
+        "M": 18,
+        "L": 22,
+        "XL": 3
       }
     },
     "images": [
       {
-        "src": "/images/g-graphic-tee-drop-01-black-1.webp",
-        "alt": "Illustration of the Graphic Tee DROP 01 in black, front"
+        "src": "/images/chunky-turtleneck-jumper-1.webp",
+        "alt": "Chunky Turtleneck Jumper in sage green, front"
       },
       {
-        "src": "/images/g-graphic-tee-drop-01-black-2.webp",
-        "alt": "Illustration of the Graphic Tee DROP 01 in black, back"
+        "src": "/images/chunky-turtleneck-jumper-2.webp",
+        "alt": "Chunky Turtleneck Jumper in sage green, seated"
+      },
+      {
+        "src": "/images/chunky-turtleneck-jumper-3.webp",
+        "alt": "Chunky Turtleneck Jumper in sage green, detail"
       }
     ],
     "related": [
-      "wide-leg-cargo-pants",
-      "heavyweight-oversized-hoodie",
-      "knit-beanie"
+      "wide-leg-jeans",
+      "oversized-trench-coat"
     ]
   },
   {
     "id": "ost-006",
-    "handle": "wide-leg-cargo-pants",
-    "name": "Wide-leg Cargo Pants",
-    "category": "pants",
-    "price": 3599,
-    "drop": "drop-01",
-    "releasedAt": "2026-10-24",
+    "handle": "soft-knit-jumper",
+    "name": "Soft Knit Jumper",
+    "gender": "women",
+    "category": "knitwear",
+    "price": 3999,
+    "drop": "aw26",
+    "releasedAt": "2026-10-17",
     "isNew": true,
-    "summary": "Six pockets. Wide leg. Washed denim.",
-    "description": "Wide, straight-leg cargos in a heavy stone-washed denim. Bellowed side pockets, a relaxed rise and a long inseam that stacks on the shoe.",
-    "fit": "Relaxed wide-leg fit. True to size. Inseam 81 cm on size M.",
-    "material": "100% cotton, 13oz denim. Stone washed.",
+    "summary": "Brushed, loose and warm. The one you reach for first.",
+    "description": "A brushed, fluffy crew-neck jumper with long ribbed cuffs and a slightly cropped body. Pairs with high-rise jeans and a long coat.",
+    "fit": "Oversized fit, slightly cropped. Take your usual size.",
+    "material": "45% acrylic, 30% polyamide, 15% mohair, 10% wool.",
     "care": [
-      "Machine wash at 30°C, inside out",
-      "Do not tumble dry",
-      "Iron on medium"
-    ],
-    "colors": [
-      {
-        "name": "Washed grey",
-        "slug": "washed-grey",
-        "hex": "#7E7E7B"
-      },
-      {
-        "name": "Black",
-        "slug": "black",
-        "hex": "#0A0A0A"
-      }
-    ],
-    "sizes": [
-      "XS",
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "stock": {
-      "washed-grey": {
-        "XS": 3,
-        "S": 9,
-        "M": 14,
-        "L": 11,
-        "XL": 5,
-        "XXL": 2
-      },
-      "black": {
-        "XS": 0,
-        "S": 4,
-        "M": 7,
-        "L": 6,
-        "XL": 2,
-        "XXL": 0
-      }
-    },
-    "images": [
-      {
-        "src": "/images/g-wide-leg-cargo-pants-washed-grey-1.webp",
-        "alt": "Illustration of the Wide-leg Cargo Pants in washed grey, front"
-      },
-      {
-        "src": "/images/g-wide-leg-cargo-pants-washed-grey-2.webp",
-        "alt": "Illustration of the Wide-leg Cargo Pants in washed grey, back"
-      }
-    ],
-    "related": [
-      "oversized-logo-tee",
-      "boxy-hoodie",
-      "tote-bag"
-    ],
-    "colorImages": {
-      "washed-grey": [
-        {
-          "src": "/images/g-wide-leg-cargo-pants-washed-grey-1.webp",
-          "alt": "Illustration of the Wide-leg Cargo Pants in washed grey, front"
-        },
-        {
-          "src": "/images/g-wide-leg-cargo-pants-washed-grey-2.webp",
-          "alt": "Illustration of the Wide-leg Cargo Pants in washed grey, back"
-        }
-      ],
-      "black": [
-        {
-          "src": "/images/g-wide-leg-cargo-pants-black-1.webp",
-          "alt": "Illustration of the Wide-leg Cargo Pants in black, front"
-        },
-        {
-          "src": "/images/g-wide-leg-cargo-pants-black-2.webp",
-          "alt": "Illustration of the Wide-leg Cargo Pants in black, back"
-        }
-      ]
-    }
-  },
-  {
-    "id": "ost-007",
-    "handle": "baggy-sweatpants",
-    "name": "Baggy Sweatpants",
-    "category": "pants",
-    "price": 3299,
-    "drop": "drop-01",
-    "releasedAt": "2026-10-03",
-    "isNew": false,
-    "summary": "Matches the hoodie. Fits like nothing.",
-    "description": "Wide sweatpants in the same 400gsm fleece as the hoodie. Elastic waist with an internal cord, open hem, deep side pockets and one back pocket. Built to be worn as a set.",
-    "fit": "Baggy fit — true to size. Open hem, extra length to stack.",
-    "material": "100% cotton, 400gsm brushed fleece. Pre-shrunk.",
-    "care": [
-      "Machine wash cold, inside out",
-      "Do not tumble dry",
-      "Do not bleach"
-    ],
-    "colors": [
-      {
-        "name": "Off-white",
-        "slug": "off-white",
-        "hex": "#F4F2EE"
-      },
-      {
-        "name": "Grey melange",
-        "slug": "grey-melange",
-        "hex": "#A3A3A0"
-      }
-    ],
-    "sizes": [
-      "XS",
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "stock": {
-      "off-white": {
-        "XS": 5,
-        "S": 12,
-        "M": 18,
-        "L": 15,
-        "XL": 8,
-        "XXL": 3
-      },
-      "grey-melange": {
-        "XS": 4,
-        "S": 10,
-        "M": 13,
-        "L": 9,
-        "XL": 4,
-        "XXL": 1
-      }
-    },
-    "images": [
-      {
-        "src": "/images/g-baggy-sweatpants-off-white-1.webp",
-        "alt": "Illustration of the Baggy Sweatpants in off-white, front"
-      },
-      {
-        "src": "/images/g-baggy-sweatpants-off-white-2.webp",
-        "alt": "Illustration of the Baggy Sweatpants in off-white, back"
-      }
-    ],
-    "related": [
-      "heavyweight-oversized-hoodie",
-      "heavyweight-blank-tee-250gsm",
-      "knit-beanie"
-    ],
-    "colorImages": {
-      "off-white": [
-        {
-          "src": "/images/g-baggy-sweatpants-off-white-1.webp",
-          "alt": "Illustration of the Baggy Sweatpants in off-white, front"
-        },
-        {
-          "src": "/images/g-baggy-sweatpants-off-white-2.webp",
-          "alt": "Illustration of the Baggy Sweatpants in off-white, back"
-        }
-      ],
-      "grey-melange": [
-        {
-          "src": "/images/g-baggy-sweatpants-grey-melange-1.webp",
-          "alt": "Illustration of the Baggy Sweatpants in grey melange, front"
-        },
-        {
-          "src": "/images/g-baggy-sweatpants-grey-melange-2.webp",
-          "alt": "Illustration of the Baggy Sweatpants in grey melange, back"
-        }
-      ]
-    }
-  },
-  {
-    "id": "ost-008",
-    "handle": "knit-beanie",
-    "name": "Knit Beanie",
-    "category": "accessories",
-    "price": 1499,
-    "drop": "drop-01",
-    "releasedAt": "2026-10-03",
-    "isNew": false,
-    "summary": "Woven OSTREV label. Deep cuff.",
-    "description": "A chunky rib-knit beanie with a deep fold-over cuff and a small woven OSTREV label. Sits high or pulls low.",
-    "fit": "One size. Stretches to fit most heads.",
-    "material": "50% merino wool, 50% acrylic. Woven polyester label.",
-    "care": [
-      "Hand wash cold",
+      "Hand wash cold or wool cycle",
       "Dry flat",
-      "Do not tumble dry"
-    ],
-    "colors": [
-      {
-        "name": "Black",
-        "slug": "black",
-        "hex": "#0A0A0A"
-      },
-      {
-        "name": "Grey",
-        "slug": "grey",
-        "hex": "#8A8A8A"
-      }
-    ],
-    "sizes": [
-      "ONE SIZE"
-    ],
-    "stock": {
-      "black": {
-        "ONE SIZE": 40
-      },
-      "grey": {
-        "ONE SIZE": 4
-      }
-    },
-    "images": [
-      {
-        "src": "/images/g-knit-beanie-black-1.webp",
-        "alt": "Illustration of the Knit Beanie in black, front"
-      },
-      {
-        "src": "/images/g-knit-beanie-black-2.webp",
-        "alt": "Illustration of the Knit Beanie in black, back"
-      }
-    ],
-    "related": [
-      "heavyweight-oversized-hoodie",
-      "boxy-hoodie",
-      "tote-bag"
-    ],
-    "colorImages": {
-      "black": [
-        {
-          "src": "/images/g-knit-beanie-black-1.webp",
-          "alt": "Illustration of the Knit Beanie in black, front"
-        },
-        {
-          "src": "/images/g-knit-beanie-black-2.webp",
-          "alt": "Illustration of the Knit Beanie in black, back"
-        }
-      ],
-      "grey": [
-        {
-          "src": "/images/g-knit-beanie-grey-1.webp",
-          "alt": "Illustration of the Knit Beanie in grey, front"
-        },
-        {
-          "src": "/images/g-knit-beanie-grey-2.webp",
-          "alt": "Illustration of the Knit Beanie in grey, back"
-        }
-      ]
-    }
-  },
-  {
-    "id": "ost-009",
-    "handle": "tote-bag",
-    "name": "Tote Bag",
-    "category": "accessories",
-    "price": 1299,
-    "drop": "drop-01",
-    "releasedAt": "2026-10-03",
-    "isNew": false,
-    "summary": "Heavy canvas. Carries everything.",
-    "description": "A soft heavy-canvas tote with long handles that sit on the shoulder. Unlined, unbranded on the outside, with a small woven label inside. Folds flat.",
-    "fit": "One size. 40 × 42 × 10 cm. Handle drop 30 cm.",
-    "material": "100% cotton, 12oz canvas.",
-    "care": [
-      "Spot clean",
-      "Hand wash cold if needed",
-      "Dry flat"
-    ],
-    "colors": [
-      {
-        "name": "Sand",
-        "slug": "sand",
-        "hex": "#C49A68"
-      },
-      {
-        "name": "Black",
-        "slug": "black",
-        "hex": "#0A0A0A"
-      }
-    ],
-    "sizes": [
-      "ONE SIZE"
-    ],
-    "stock": {
-      "sand": {
-        "ONE SIZE": 25
-      },
-      "black": {
-        "ONE SIZE": 18
-      }
-    },
-    "images": [
-      {
-        "src": "/images/g-tote-bag-sand-1.webp",
-        "alt": "Illustration of the Tote Bag in sand, front"
-      },
-      {
-        "src": "/images/g-tote-bag-sand-2.webp",
-        "alt": "Illustration of the Tote Bag in sand, back"
-      }
-    ],
-    "related": [
-      "oversized-logo-tee",
-      "knit-beanie",
-      "heavyweight-blank-tee-250gsm"
-    ],
-    "colorImages": {
-      "sand": [
-        {
-          "src": "/images/g-tote-bag-sand-1.webp",
-          "alt": "Illustration of the Tote Bag in sand, front"
-        },
-        {
-          "src": "/images/g-tote-bag-sand-2.webp",
-          "alt": "Illustration of the Tote Bag in sand, back"
-        }
-      ],
-      "black": [
-        {
-          "src": "/images/g-tote-bag-black-1.webp",
-          "alt": "Illustration of the Tote Bag in black, front"
-        },
-        {
-          "src": "/images/g-tote-bag-black-2.webp",
-          "alt": "Illustration of the Tote Bag in black, back"
-        }
-      ]
-    }
-  },
-  {
-    "id": "ost-010",
-    "handle": "logo-hoodie",
-    "name": "Logo Hoodie",
-    "category": "hoodies",
-    "price": 4499,
-    "drop": "drop-01",
-    "releasedAt": "2026-10-24",
-    "isNew": true,
-    "summary": "Wide chest print. Built heavy.",
-    "description": "Our 400gsm oversized hoodie with a wide OSTREV wordmark across the chest and a DROP 01 line underneath, screen printed in off-white. Double-layer hood, dropped shoulders, deep kangaroo pocket.",
-    "fit": "Oversized fit — size down for a regular fit. Dropped shoulders, long sleeves that stack at the wrist.",
-    "material": "100% cotton, 400gsm brushed fleece. Water-based screen print.",
-    "care": [
-      "Machine wash cold, inside out",
       "Do not tumble dry",
-      "Do not iron on print",
-      "Do not bleach"
+      "Fold, do not hang"
     ],
     "colors": [
       {
-        "name": "Black",
-        "slug": "black",
-        "hex": "#0A0A0A"
+        "name": "Oat",
+        "slug": "oat",
+        "hex": "#C9B8A6"
       }
     ],
     "sizes": [
@@ -859,67 +340,669 @@
       "S",
       "M",
       "L",
-      "XL",
-      "XXL"
+      "XL"
     ],
     "stock": {
-      "black": {
-        "XS": 3,
-        "S": 7,
-        "M": 10,
-        "L": 8,
-        "XL": 4,
-        "XXL": 1
+      "oat": {
+        "XS": 2,
+        "S": 6,
+        "M": 6,
+        "L": 6,
+        "XL": 14
       }
     },
     "images": [
       {
-        "src": "/images/g-logo-hoodie-black-1.webp",
-        "alt": "Illustration of the Logo Hoodie in black, front"
+        "src": "/images/soft-knit-jumper-1.webp",
+        "alt": "Soft Knit Jumper in oat, front"
       },
       {
-        "src": "/images/g-logo-hoodie-black-2.webp",
-        "alt": "Illustration of the Logo Hoodie in black, back"
+        "src": "/images/soft-knit-jumper-2.webp",
+        "alt": "Soft Knit Jumper in oat, movement"
+      },
+      {
+        "src": "/images/soft-knit-jumper-3.webp",
+        "alt": "Soft Knit Jumper in oat, close-up"
+      },
+      {
+        "src": "/images/soft-knit-jumper-4.webp",
+        "alt": "Soft Knit Jumper in oat, sleeve detail"
       }
     ],
     "related": [
-      "wide-leg-cargo-pants",
-      "knit-beanie",
-      "graphic-tee-drop-01"
+      "wool-blend-coat",
+      "straight-white-jeans"
     ]
   },
   {
-    "id": "ost-011",
-    "handle": "boxy-tee",
-    "name": "Boxy Tee",
-    "category": "tees",
-    "price": 1999,
-    "drop": "drop-01",
-    "releasedAt": "2026-10-03",
+    "id": "ost-007",
+    "handle": "chunky-rib-jumper",
+    "name": "Chunky Rib Jumper",
+    "gender": "women",
+    "category": "knitwear",
+    "price": 3299,
+    "drop": "aw26",
+    "releasedAt": "2026-09-26",
     "isNew": false,
-    "summary": "Short. Square. Gone.",
-    "description": "A short, square tee with a narrow collar and a clean, close neckline. Made in one small run for Drop 01.",
-    "fit": "Boxy fit — cropped and wide. Take your usual size.",
-    "material": "100% cotton, 220gsm single jersey.",
+    "summary": "A heavy rib knit in cream, cut wide.",
+    "description": "A chunky, wide-rib jumper with a round neck and long sleeves you can push up. Heavy gauge, soft handle.",
+    "fit": "Oversized fit. Size down for a closer fit.",
+    "material": "60% acrylic, 30% polyester, 10% wool.",
+    "care": [
+      "Hand wash cold or wool cycle",
+      "Dry flat",
+      "Do not tumble dry",
+      "Fold, do not hang"
+    ],
+    "colors": [
+      {
+        "name": "Cream",
+        "slug": "cream",
+        "hex": "#F1EBDF"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "cream": {
+        "XS": 0,
+        "S": 0,
+        "M": 0,
+        "L": 0,
+        "XL": 0
+      }
+    },
+    "images": [
+      {
+        "src": "/images/chunky-rib-jumper-1.webp",
+        "alt": "Chunky Rib Jumper in cream, front"
+      },
+      {
+        "src": "/images/chunky-rib-jumper-2.webp",
+        "alt": "Chunky Rib Jumper in cream, close-up"
+      },
+      {
+        "src": "/images/chunky-rib-jumper-3.webp",
+        "alt": "Chunky Rib Jumper in cream, detail"
+      }
+    ],
+    "related": [
+      "mom-jeans",
+      "oversized-trench-coat"
+    ]
+  },
+  {
+    "id": "ost-008",
+    "handle": "satin-shirt-dress",
+    "name": "Satin Shirt Dress",
+    "gender": "women",
+    "category": "shirts",
+    "price": 4599,
+    "drop": "aw26",
+    "releasedAt": "2026-10-24",
+    "isNew": true,
+    "summary": "A long shirt dress with a liquid drape.",
+    "description": "A long-sleeve shirt dress in fluid satin, with a classic collar, full button placket and side slits. Wear it loose or belted.",
+    "fit": "Relaxed fit. Maxi length on a 170 cm model.",
+    "material": "100% polyester satin.",
+    "care": [
+      "Machine wash at 30°C on a delicate cycle",
+      "Iron on low, inside out",
+      "Do not tumble dry",
+      "Hang to dry"
+    ],
+    "colors": [
+      {
+        "name": "Dusty blue",
+        "slug": "dusty-blue",
+        "hex": "#7C9CC4"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "dusty-blue": {
+        "XS": 2,
+        "S": 18,
+        "M": 8,
+        "L": 22,
+        "XL": 14
+      }
+    },
+    "images": [
+      {
+        "src": "/images/satin-shirt-dress-1.webp",
+        "alt": "Satin Shirt Dress in dusty blue, front"
+      },
+      {
+        "src": "/images/satin-shirt-dress-2.webp",
+        "alt": "Satin Shirt Dress in dusty blue, seated"
+      },
+      {
+        "src": "/images/satin-shirt-dress-3.webp",
+        "alt": "Satin Shirt Dress in dusty blue, back"
+      }
+    ],
+    "related": [
+      "oversized-blazer",
+      "leather-shoulder-bag"
+    ]
+  },
+  {
+    "id": "ost-009",
+    "handle": "oversized-poplin-shirt",
+    "name": "Oversized Poplin Shirt",
+    "gender": "women",
+    "category": "shirts",
+    "price": 2999,
+    "drop": "aw26",
+    "releasedAt": "2026-10-10",
+    "isNew": false,
+    "summary": "Crisp white poplin, cut big.",
+    "description": "An oversized shirt in crisp cotton poplin with a classic collar, dropped shoulders and a curved hem. Wear it buttoned, open or off one shoulder.",
+    "fit": "Oversized fit. Take your usual size.",
+    "material": "100% cotton poplin.",
     "care": [
       "Machine wash at 30°C",
-      "Do not tumble dry",
-      "Iron on medium"
+      "Wash inside out with similar colours",
+      "Iron on medium",
+      "Do not tumble dry"
     ],
     "colors": [
       {
         "name": "White",
         "slug": "white",
         "hex": "#FFFFFF"
-      },
-      {
-        "name": "Concrete",
-        "slug": "concrete",
-        "hex": "#8A8A8A"
       }
     ],
     "sizes": [
       "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "white": {
+        "XS": 2,
+        "S": 14,
+        "M": 3,
+        "L": 18,
+        "XL": 3
+      }
+    },
+    "images": [
+      {
+        "src": "/images/oversized-poplin-shirt-1.webp",
+        "alt": "Oversized Poplin Shirt in white, front"
+      },
+      {
+        "src": "/images/oversized-poplin-shirt-2.webp",
+        "alt": "Oversized Poplin Shirt in white, close-up"
+      },
+      {
+        "src": "/images/oversized-poplin-shirt-3.webp",
+        "alt": "Oversized Poplin Shirt in white, seated"
+      }
+    ],
+    "related": [
+      "wide-leg-jeans",
+      "oversized-blazer"
+    ]
+  },
+  {
+    "id": "ost-010",
+    "handle": "wide-leg-jeans",
+    "name": "Wide Leg Jeans",
+    "gender": "women",
+    "category": "trousers",
+    "price": 3599,
+    "drop": "aw26",
+    "releasedAt": "2026-10-17",
+    "isNew": true,
+    "summary": "High rise, wide leg, light wash.",
+    "description": "High-rise jeans with a long, wide leg that skims the floor. Rigid cotton denim in a light vintage wash, five pockets and a zip fly.",
+    "fit": "High rise, wide leg. Full length on a 170 cm model. Take your usual size.",
+    "material": "100% cotton denim, 12.5 oz.",
+    "care": [
+      "Machine wash at 30°C, inside out",
+      "Wash with similar colours",
+      "Do not tumble dry",
+      "Iron on medium if needed"
+    ],
+    "colors": [
+      {
+        "name": "Light blue",
+        "slug": "light-blue",
+        "hex": "#AFC4DA"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "light-blue": {
+        "XS": 1,
+        "S": 18,
+        "M": 14,
+        "L": 8,
+        "XL": 22
+      }
+    },
+    "images": [
+      {
+        "src": "/images/wide-leg-jeans-1.webp",
+        "alt": "Wide Leg Jeans in light blue, front"
+      },
+      {
+        "src": "/images/wide-leg-jeans-2.webp",
+        "alt": "Wide Leg Jeans in light blue, seated"
+      },
+      {
+        "src": "/images/wide-leg-jeans-3.webp",
+        "alt": "Wide Leg Jeans in light blue, movement"
+      }
+    ],
+    "related": [
+      "oversized-poplin-shirt",
+      "oversized-blazer",
+      "chunky-turtleneck-jumper"
+    ]
+  },
+  {
+    "id": "ost-011",
+    "handle": "mom-jeans",
+    "name": "Mom Jeans",
+    "gender": "women",
+    "category": "trousers",
+    "price": 2999,
+    "drop": "aw26",
+    "releasedAt": "2026-09-26",
+    "isNew": false,
+    "summary": "High waist, tapered leg, mid wash.",
+    "description": "Classic mom jeans with a high waist, relaxed hip and tapered leg that ends at the ankle. Mid-wash rigid denim.",
+    "fit": "High rise, tapered leg. Ankle length. Take your usual size.",
+    "material": "100% cotton denim.",
+    "care": [
+      "Machine wash at 30°C, inside out",
+      "Wash with similar colours",
+      "Do not tumble dry",
+      "Iron on medium if needed"
+    ],
+    "colors": [
+      {
+        "name": "Mid blue",
+        "slug": "mid-blue",
+        "hex": "#5F86B3"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "mid-blue": {
+        "XS": 6,
+        "S": 11,
+        "M": 11,
+        "L": 22,
+        "XL": 18
+      }
+    },
+    "images": [
+      {
+        "src": "/images/mom-jeans-1.webp",
+        "alt": "Mom Jeans in mid blue, front"
+      },
+      {
+        "src": "/images/mom-jeans-2.webp",
+        "alt": "Mom Jeans in mid blue, side"
+      },
+      {
+        "src": "/images/mom-jeans-3.webp",
+        "alt": "Mom Jeans in mid blue, detail"
+      }
+    ],
+    "related": [
+      "faux-leather-biker-jacket",
+      "oversized-poplin-shirt"
+    ]
+  },
+  {
+    "id": "ost-012",
+    "handle": "straight-white-jeans",
+    "name": "Straight White Jeans",
+    "gender": "women",
+    "category": "trousers",
+    "price": 3599,
+    "drop": "aw26",
+    "releasedAt": "2026-10-17",
+    "isNew": true,
+    "summary": "Ecru-white denim, straight leg.",
+    "description": "High-rise straight-leg jeans in an off-white denim, with a raw-cut hem you can wear as it is or turn up once.",
+    "fit": "High rise, straight leg. Full length on a 170 cm model.",
+    "material": "99% cotton, 1% elastane.",
+    "care": [
+      "Machine wash at 30°C, inside out",
+      "Wash with similar colours",
+      "Do not tumble dry",
+      "Iron on medium if needed"
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "slug": "white",
+        "hex": "#FFFFFF"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "white": {
+        "XS": 2,
+        "S": 8,
+        "M": 6,
+        "L": 14,
+        "XL": 11
+      }
+    },
+    "images": [
+      {
+        "src": "/images/straight-white-jeans-1.webp",
+        "alt": "Straight White Jeans in white, movement"
+      },
+      {
+        "src": "/images/straight-white-jeans-2.webp",
+        "alt": "Straight White Jeans in white, detail"
+      }
+    ],
+    "related": [
+      "soft-knit-jumper",
+      "wool-blend-coat"
+    ]
+  },
+  {
+    "id": "ost-013",
+    "handle": "leather-shoulder-bag",
+    "name": "Leather Shoulder Bag",
+    "gender": "women",
+    "category": "accessories",
+    "price": 6999,
+    "drop": "aw26",
+    "releasedAt": "2026-10-10",
+    "isNew": false,
+    "summary": "A soft messenger in tan leather.",
+    "description": "A slouchy shoulder bag in soft leather with a fold-over flap, a long adjustable strap and an inside zip pocket. Fits an A4 notebook.",
+    "fit": "One size. 34 × 30 × 8 cm. Strap drop adjustable from 50 to 62 cm.",
+    "material": "Outer: 100% cow leather. Lining: 100% cotton.",
+    "care": [
+      "Wipe clean with a dry cloth",
+      "Keep away from direct heat",
+      "Store stuffed, in the dust bag",
+      "Treat with leather balm when needed"
+    ],
+    "colors": [
+      {
+        "name": "Tan",
+        "slug": "tan",
+        "hex": "#9A6A43"
+      }
+    ],
+    "sizes": [
+      "ONE SIZE"
+    ],
+    "stock": {
+      "tan": {
+        "ONE SIZE": 22
+      }
+    },
+    "images": [
+      {
+        "src": "/images/leather-shoulder-bag-1.webp",
+        "alt": "Leather Shoulder Bag in tan, worn on the shoulder"
+      }
+    ],
+    "related": [
+      "wool-blend-coat",
+      "satin-shirt-dress"
+    ]
+  },
+  {
+    "id": "ost-014",
+    "handle": "oversized-denim-jacket",
+    "name": "Oversized Denim Jacket",
+    "gender": "men",
+    "category": "coats",
+    "price": 4999,
+    "drop": "aw26",
+    "releasedAt": "2026-10-24",
+    "isNew": true,
+    "summary": "The trucker jacket, sized up.",
+    "description": "A classic trucker jacket cut oversized, with chest flap pockets, side welt pockets and a buttoned front. Mid-wash rigid denim that fades with you.",
+    "fit": "Oversized fit. Take your usual size.",
+    "material": "100% cotton denim, 13 oz.",
+    "care": [
+      "Machine wash at 30°C, inside out",
+      "Wash with similar colours",
+      "Do not tumble dry",
+      "Iron on medium if needed"
+    ],
+    "colors": [
+      {
+        "name": "Mid blue",
+        "slug": "mid-blue",
+        "hex": "#5F86B3"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock": {
+      "mid-blue": {
+        "S": 11,
+        "M": 14,
+        "L": 14,
+        "XL": 6,
+        "XXL": 2
+      }
+    },
+    "images": [
+      {
+        "src": "/images/oversized-denim-jacket-1.webp",
+        "alt": "Oversized Denim Jacket in mid blue, detail"
+      },
+      {
+        "src": "/images/oversized-denim-jacket-2.webp",
+        "alt": "Oversized Denim Jacket in mid blue, side"
+      },
+      {
+        "src": "/images/oversized-denim-jacket-3.webp",
+        "alt": "Oversized Denim Jacket in mid blue, worn with a white T-shirt"
+      }
+    ],
+    "related": [
+      "oversized-cotton-t-shirt",
+      "baggy-jeans"
+    ]
+  },
+  {
+    "id": "ost-015",
+    "handle": "puffer-jacket",
+    "name": "Puffer Jacket",
+    "gender": "men",
+    "category": "coats",
+    "price": 6999,
+    "drop": "aw26",
+    "releasedAt": "2026-10-17",
+    "isNew": true,
+    "summary": "Light, warm, high collar.",
+    "description": "A quilted puffer with a tall funnel collar, a two-way zip and press-stud storm flap. Filled with recycled padding for warmth without weight.",
+    "fit": "Relaxed fit, hip length. Take your usual size.",
+    "material": "Shell: 100% polyamide. Padding: 100% recycled polyester.",
+    "care": [
+      "Machine wash at 30°C on a gentle cycle",
+      "Tumble dry low with dryer balls",
+      "Do not iron",
+      "Do not dry clean"
+    ],
+    "colors": [
+      {
+        "name": "Ecru",
+        "slug": "ecru",
+        "hex": "#EDE6D8"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock": {
+      "ecru": {
+        "S": 3,
+        "M": 3,
+        "L": 14,
+        "XL": 14,
+        "XXL": 2
+      }
+    },
+    "images": [
+      {
+        "src": "/images/puffer-jacket-1.webp",
+        "alt": "Puffer Jacket in ecru, side"
+      },
+      {
+        "src": "/images/puffer-jacket-2.webp",
+        "alt": "Puffer Jacket in ecru, close-up"
+      },
+      {
+        "src": "/images/puffer-jacket-3.webp",
+        "alt": "Puffer Jacket in ecru, collar detail"
+      }
+    ],
+    "related": [
+      "cord-trousers",
+      "corduroy-overshirt"
+    ]
+  },
+  {
+    "id": "ost-016",
+    "handle": "corduroy-overshirt",
+    "name": "Corduroy Overshirt",
+    "gender": "men",
+    "category": "shirts",
+    "price": 3999,
+    "drop": "aw26",
+    "releasedAt": "2026-10-10",
+    "isNew": false,
+    "summary": "A shirt you wear like a jacket.",
+    "description": "A heavyweight overshirt in fine-wale corduroy, with two chest pockets and a buttoned front. Wear it open over a T-shirt or closed on its own.",
+    "fit": "Relaxed fit. Take your usual size.",
+    "material": "100% cotton corduroy.",
+    "care": [
+      "Machine wash at 30°C",
+      "Wash inside out with similar colours",
+      "Iron on medium",
+      "Do not tumble dry"
+    ],
+    "colors": [
+      {
+        "name": "Forest green",
+        "slug": "forest-green",
+        "hex": "#2F4A3A"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock": {
+      "forest-green": {
+        "S": 3,
+        "M": 11,
+        "L": 6,
+        "XL": 8,
+        "XXL": 2
+      }
+    },
+    "images": [
+      {
+        "src": "/images/corduroy-overshirt-1.webp",
+        "alt": "Corduroy Overshirt in forest green, front"
+      },
+      {
+        "src": "/images/corduroy-overshirt-2.webp",
+        "alt": "Corduroy Overshirt in forest green, close-up"
+      },
+      {
+        "src": "/images/corduroy-overshirt-3.webp",
+        "alt": "Corduroy Overshirt in forest green, seated"
+      }
+    ],
+    "related": [
+      "cord-trousers",
+      "puffer-jacket"
+    ]
+  },
+  {
+    "id": "ost-017",
+    "handle": "oversized-cotton-t-shirt",
+    "name": "Oversized Cotton T-shirt",
+    "gender": "men",
+    "category": "shirts",
+    "price": 1599,
+    "drop": "aw26",
+    "releasedAt": "2026-09-26",
+    "isNew": false,
+    "summary": "A heavy white tee with a boxy cut.",
+    "description": "A heavyweight cotton T-shirt with dropped shoulders, a wide body and a ribbed crew neck that keeps its shape.",
+    "fit": "Oversized fit. Size down for a regular fit.",
+    "material": "100% cotton jersey, 240 gsm.",
+    "care": [
+      "Machine wash at 30°C",
+      "Wash inside out with similar colours",
+      "Iron on medium",
+      "Do not tumble dry"
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "slug": "white",
+        "hex": "#FFFFFF"
+      }
+    ],
+    "sizes": [
       "S",
       "M",
       "L",
@@ -928,87 +1011,300 @@
     ],
     "stock": {
       "white": {
-        "XS": 0,
-        "S": 0,
-        "M": 0,
-        "L": 0,
-        "XL": 0,
-        "XXL": 0
-      },
-      "concrete": {
-        "XS": 0,
-        "S": 0,
-        "M": 0,
-        "L": 0,
-        "XL": 0,
-        "XXL": 0
+        "S": 22,
+        "M": 14,
+        "L": 8,
+        "XL": 3,
+        "XXL": 2
       }
     },
     "images": [
       {
-        "src": "/images/g-boxy-tee-white-1.webp",
-        "alt": "Illustration of the Boxy Tee in white, front"
+        "src": "/images/oversized-cotton-t-shirt-1.webp",
+        "alt": "Oversized Cotton T-shirt in white, front"
       },
       {
-        "src": "/images/g-boxy-tee-white-2.webp",
-        "alt": "Illustration of the Boxy Tee in white, back"
+        "src": "/images/oversized-cotton-t-shirt-2.webp",
+        "alt": "Oversized Cotton T-shirt in white, side"
       }
     ],
     "related": [
-      "heavyweight-blank-tee-250gsm",
-      "baggy-jeans",
-      "tote-bag"
-    ],
-    "colorImages": {
-      "white": [
-        {
-          "src": "/images/g-boxy-tee-white-1.webp",
-          "alt": "Illustration of the Boxy Tee in white, front"
-        },
-        {
-          "src": "/images/g-boxy-tee-white-2.webp",
-          "alt": "Illustration of the Boxy Tee in white, back"
-        }
-      ],
-      "concrete": [
-        {
-          "src": "/images/g-boxy-tee-concrete-1.webp",
-          "alt": "Illustration of the Boxy Tee in concrete, front"
-        },
-        {
-          "src": "/images/g-boxy-tee-concrete-2.webp",
-          "alt": "Illustration of the Boxy Tee in concrete, back"
-        }
-      ]
-    }
+      "relaxed-straight-jeans",
+      "oversized-denim-jacket"
+    ]
   },
   {
-    "id": "ost-012",
-    "handle": "washed-long-sleeve-tee",
-    "name": "Washed Long Sleeve Tee",
-    "category": "tees",
-    "price": 2499,
-    "drop": "drop-01",
-    "releasedAt": "2026-10-03",
-    "isNew": false,
-    "summary": "Faded on purpose. Sleeves cut long.",
-    "description": "A long sleeve tee washed down to a soft faded black. Extended sleeves that stack at the wrist, wide ribbed cuffs and a small tonal print on the back neck.",
-    "fit": "Oversized fit — size down for a regular fit. Extra-long sleeves.",
-    "material": "100% cotton, 230gsm single jersey. Enzyme and pigment washed.",
+    "id": "ost-018",
+    "handle": "crew-neck-jumper",
+    "name": "Crew Neck Jumper",
+    "gender": "men",
+    "category": "knitwear",
+    "price": 3599,
+    "drop": "aw26",
+    "releasedAt": "2026-10-24",
+    "isNew": true,
+    "summary": "A soft crew neck in ecru.",
+    "description": "A brushed crew-neck jumper with a ribbed collar, cuffs and hem. Soft, warm and easy over a T-shirt.",
+    "fit": "Regular fit. Take your usual size.",
+    "material": "55% acrylic, 25% polyamide, 15% wool, 5% elastane.",
     "care": [
-      "Machine wash cold, inside out",
-      "Wash with dark colours",
+      "Hand wash cold or wool cycle",
+      "Dry flat",
+      "Do not tumble dry",
+      "Fold, do not hang"
+    ],
+    "colors": [
+      {
+        "name": "Ecru",
+        "slug": "ecru",
+        "hex": "#EDE6D8"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock": {
+      "ecru": {
+        "S": 11,
+        "M": 18,
+        "L": 11,
+        "XL": 14,
+        "XXL": 2
+      }
+    },
+    "images": [
+      {
+        "src": "/images/crew-neck-jumper-1.webp",
+        "alt": "Crew Neck Jumper in ecru, front"
+      },
+      {
+        "src": "/images/crew-neck-jumper-2.webp",
+        "alt": "Crew Neck Jumper in ecru, close-up"
+      },
+      {
+        "src": "/images/crew-neck-jumper-3.webp",
+        "alt": "Crew Neck Jumper in ecru, portrait"
+      }
+    ],
+    "related": [
+      "baggy-jeans",
+      "cord-trousers"
+    ]
+  },
+  {
+    "id": "ost-019",
+    "handle": "fine-knit-jumper",
+    "name": "Fine Knit Jumper",
+    "gender": "men",
+    "category": "knitwear",
+    "price": 2999,
+    "drop": "aw26",
+    "releasedAt": "2026-10-10",
+    "isNew": false,
+    "summary": "A fine-gauge black crew neck.",
+    "description": "A fine-gauge knit with a round neck and relaxed body. Light enough to layer, smart enough on its own.",
+    "fit": "Relaxed fit. Take your usual size.",
+    "material": "70% cotton, 30% viscose.",
+    "care": [
+      "Hand wash cold or wool cycle",
+      "Dry flat",
+      "Do not tumble dry",
+      "Fold, do not hang"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "slug": "black",
+        "hex": "#111111"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock": {
+      "black": {
+        "S": 8,
+        "M": 3,
+        "L": 18,
+        "XL": 6,
+        "XXL": 2
+      }
+    },
+    "images": [
+      {
+        "src": "/images/fine-knit-jumper-1.webp",
+        "alt": "Fine Knit Jumper in black, front"
+      },
+      {
+        "src": "/images/fine-knit-jumper-2.webp",
+        "alt": "Fine Knit Jumper in black, back"
+      },
+      {
+        "src": "/images/fine-knit-jumper-3.webp",
+        "alt": "Fine Knit Jumper in black, collar detail"
+      }
+    ],
+    "related": [
+      "relaxed-straight-jeans",
+      "puffer-jacket"
+    ]
+  },
+  {
+    "id": "ost-020",
+    "handle": "baggy-jeans",
+    "name": "Baggy Jeans",
+    "gender": "men",
+    "category": "trousers",
+    "price": 3599,
+    "drop": "aw26",
+    "releasedAt": "2026-10-17",
+    "isNew": true,
+    "summary": "Wide, low and long. Mid wash.",
+    "description": "Baggy jeans with a relaxed seat and a wide, straight leg that stacks over trainers. Rigid mid-wash denim.",
+    "fit": "Baggy fit. Take your usual waist size.",
+    "material": "100% cotton denim, 13 oz.",
+    "care": [
+      "Machine wash at 30°C, inside out",
+      "Wash with similar colours",
+      "Do not tumble dry",
+      "Iron on medium if needed"
+    ],
+    "colors": [
+      {
+        "name": "Mid blue",
+        "slug": "mid-blue",
+        "hex": "#5F86B3"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock": {
+      "mid-blue": {
+        "S": 6,
+        "M": 18,
+        "L": 8,
+        "XL": 8,
+        "XXL": 6
+      }
+    },
+    "images": [
+      {
+        "src": "/images/baggy-jeans-1.webp",
+        "alt": "Baggy Jeans in mid blue, side"
+      },
+      {
+        "src": "/images/baggy-jeans-2.webp",
+        "alt": "Baggy Jeans in mid blue, front"
+      },
+      {
+        "src": "/images/baggy-jeans-3.webp",
+        "alt": "Baggy Jeans in mid blue, crouching"
+      }
+    ],
+    "related": [
+      "oversized-cotton-t-shirt",
+      "crew-neck-jumper"
+    ]
+  },
+  {
+    "id": "ost-021",
+    "handle": "relaxed-straight-jeans",
+    "name": "Relaxed Straight Jeans",
+    "gender": "men",
+    "category": "trousers",
+    "price": 3299,
+    "drop": "aw26",
+    "releasedAt": "2026-09-26",
+    "isNew": false,
+    "summary": "A straight leg with a little room.",
+    "description": "Mid-rise jeans with a relaxed seat and thigh and a straight leg. Light-mid wash denim with a touch of stretch.",
+    "fit": "Relaxed fit, straight leg. Take your usual waist size.",
+    "material": "98% cotton, 2% elastane.",
+    "care": [
+      "Machine wash at 30°C, inside out",
+      "Wash with similar colours",
+      "Do not tumble dry",
+      "Iron on medium if needed"
+    ],
+    "colors": [
+      {
+        "name": "Light blue",
+        "slug": "light-blue",
+        "hex": "#AFC4DA"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock": {
+      "light-blue": {
+        "S": 22,
+        "M": 18,
+        "L": 18,
+        "XL": 11,
+        "XXL": 6
+      }
+    },
+    "images": [
+      {
+        "src": "/images/relaxed-straight-jeans-1.webp",
+        "alt": "Relaxed Straight Jeans in light blue, front"
+      },
+      {
+        "src": "/images/relaxed-straight-jeans-2.webp",
+        "alt": "Relaxed Straight Jeans in light blue, seated"
+      }
+    ],
+    "related": [
+      "oversized-cotton-t-shirt",
+      "fine-knit-jumper"
+    ]
+  },
+  {
+    "id": "ost-022",
+    "handle": "cord-trousers",
+    "name": "Cord Trousers",
+    "gender": "men",
+    "category": "trousers",
+    "price": 3999,
+    "drop": "aw26",
+    "releasedAt": "2026-10-10",
+    "isNew": false,
+    "summary": "Wide-wale cord in ecru.",
+    "description": "Relaxed trousers in wide-wale corduroy with a straight leg, side pockets and a button-and-zip fly. Pair with loafers or trainers.",
+    "fit": "Relaxed fit, straight leg. Take your usual waist size.",
+    "material": "98% cotton, 2% elastane corduroy.",
+    "care": [
+      "Machine wash at 30°C",
+      "Wash inside out with similar colours",
+      "Iron on medium",
       "Do not tumble dry"
     ],
     "colors": [
       {
-        "name": "Washed black",
-        "slug": "washed-black",
-        "hex": "#2B2B2A"
+        "name": "Ecru",
+        "slug": "ecru",
+        "hex": "#EDE6D8"
       }
     ],
     "sizes": [
-      "XS",
       "S",
       "M",
       "L",
@@ -1016,88 +1312,27 @@
       "XXL"
     ],
     "stock": {
-      "washed-black": {
-        "XS": 2,
-        "S": 8,
-        "M": 11,
-        "L": 9,
-        "XL": 0,
-        "XXL": 0
+      "ecru": {
+        "S": 11,
+        "M": 14,
+        "L": 11,
+        "XL": 18,
+        "XXL": 2
       }
     },
     "images": [
       {
-        "src": "/images/g-washed-long-sleeve-tee-washed-black-1.webp",
-        "alt": "Illustration of the Washed Long Sleeve Tee in washed black, front"
+        "src": "/images/cord-trousers-1.webp",
+        "alt": "Cord Trousers in ecru, seated"
       },
       {
-        "src": "/images/g-washed-long-sleeve-tee-washed-black-2.webp",
-        "alt": "Illustration of the Washed Long Sleeve Tee in washed black, back"
+        "src": "/images/cord-trousers-2.webp",
+        "alt": "Cord Trousers in ecru, detail"
       }
     ],
     "related": [
-      "wide-leg-cargo-pants",
-      "knit-beanie",
-      "baggy-sweatpants"
-    ]
-  },
-  {
-    "id": "ost-013",
-    "handle": "baggy-jeans",
-    "name": "Baggy Jeans",
-    "category": "pants",
-    "price": 3999,
-    "drop": "drop-01",
-    "releasedAt": "2026-10-03",
-    "isNew": false,
-    "summary": "Rigid denim. Wide leg. Sold out.",
-    "description": "Wide, low-slung jeans in rigid raw denim with utility pockets on the thigh. Stiff at first, broken in after a month.",
-    "fit": "Baggy fit — true to size. Long inseam to stack.",
-    "material": "100% cotton, 14oz rigid denim.",
-    "care": [
-      "Wash rarely, cold, inside out",
-      "Line dry",
-      "Expect indigo transfer at first"
-    ],
-    "colors": [
-      {
-        "name": "Raw black",
-        "slug": "raw-black",
-        "hex": "#1C1D22"
-      }
-    ],
-    "sizes": [
-      "XS",
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "stock": {
-      "raw-black": {
-        "XS": 0,
-        "S": 0,
-        "M": 0,
-        "L": 0,
-        "XL": 0,
-        "XXL": 0
-      }
-    },
-    "images": [
-      {
-        "src": "/images/g-baggy-jeans-raw-black-1.webp",
-        "alt": "Illustration of the Baggy Jeans in raw black, front"
-      },
-      {
-        "src": "/images/g-baggy-jeans-raw-black-2.webp",
-        "alt": "Illustration of the Baggy Jeans in raw black, back"
-      }
-    ],
-    "related": [
-      "logo-hoodie",
-      "oversized-logo-tee",
-      "knit-beanie"
+      "corduroy-overshirt",
+      "puffer-jacket"
     ]
   }
 ]

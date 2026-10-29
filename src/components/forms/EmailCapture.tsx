@@ -11,7 +11,7 @@ export function EmailCapture({
   successMessage,
   dark = false,
 }: {
-  source: 'newsletter' | 'drop-notify';
+  source: 'newsletter';
   cta: string;
   successMessage: React.ReactNode;
   dark?: boolean;

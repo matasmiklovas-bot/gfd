@@ -46,7 +46,7 @@ export default function PrivacyPage() {
             <td>Legal obligation (Art. 6(1)(c))</td>
           </tr>
           <tr>
-            <td>Email address (newsletter, drop alerts)</td>
+            <td>Email address (newsletter)</td>
             <td>Sending news about releases and offers</td>
             <td>Consent (Art. 6(1)(a)) — withdraw any time</td>
           </tr>

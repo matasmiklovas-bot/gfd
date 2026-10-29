@@ -12,7 +12,7 @@ import { useDialogBehavior, useScrollLock } from '@/lib/hooks';
 import { CloseIcon, SearchIcon } from '@/components/ui/Icons';
 import { Price } from '@/components/ui/Price';
 
-const SUGGESTIONS = ['Hoodie', 'Heavyweight tee', 'Cargo', 'Sweatpants', 'Beanie'];
+const SUGGESTIONS = ['Trench coat', 'Knit jumper', 'Wide leg jeans', 'Blazer', 'Shirt'];
 
 export function SearchOverlay({ products }: { products: ProductSummary[] }) {
   const t = useT();

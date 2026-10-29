@@ -5,7 +5,7 @@ import { absoluteUrl } from '@/lib/site';
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const products = await getAllProducts();
   const staticPaths = [
-    '/', '/shop', '/new', '/drops', '/about',
+    '/', '/women', '/men', '/shop', '/new', '/about',
     '/help/shipping', '/help/returns', '/help/faq', '/help/size-guide', '/help/contact',
     '/legal/privacy', '/legal/terms', '/legal/cookies',
   ];

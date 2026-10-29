@@ -13,7 +13,7 @@ import { JsonLd } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
-  title: { default: 'OSTREV — Minimalist streetwear. Built heavy. Worn loose.', template: '%s — OSTREV' },
+  title: { default: 'OSTREV — Women’s and men’s fashion. Autumn–Winter 2026.', template: '%s — OSTREV' },
   description: SITE.description,
   applicationName: SITE.name,
   openGraph: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     locale: 'en_GB',
     url: '/',
-    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'OSTREV — Drop 01' }],
+    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'OSTREV — Autumn–Winter 2026' }],
   },
   twitter: { card: 'summary_large_image' },
   formatDetection: { telephone: false },

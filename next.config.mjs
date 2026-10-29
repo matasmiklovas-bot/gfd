@@ -14,6 +14,15 @@ const nextConfig = {
     imageSizes: [96, 160, 240, 320],
     minimumCacheTTL: 60 * 60 * 24 * 30,
   },
+  async redirects() {
+    // Old streetwear URLs.
+    return [
+      { source: '/drops', destination: '/new', permanent: true },
+      { source: '/shop/hoodies/:path*', destination: '/shop/knitwear', permanent: true },
+      { source: '/shop/tees/:path*', destination: '/shop/shirts', permanent: true },
+      { source: '/shop/pants/:path*', destination: '/shop/trousers', permanent: true },
+    ];
+  },
   async headers() {
     return [{ source: '/:path*', headers: securityHeaders }];
   },

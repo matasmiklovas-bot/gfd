@@ -307,7 +307,7 @@ export function CheckoutForm() {
           />
           <label className="flex cursor-pointer items-start gap-3 text-[14px]">
             <input type="checkbox" name="marketing" className="mt-0.5 h-5 w-5 shrink-0 accent-ink" />
-            <span>Email me about new drops. Unsubscribe any time.</span>
+            <span>Email me about new collections and offers. Unsubscribe any time.</span>
           </label>
         </section>
 

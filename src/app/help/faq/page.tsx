@@ -7,20 +7,20 @@ import { SITE } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'FAQ',
-  description: 'Sizing, shipping, returns, payments and drops. Answers to common questions about OSTREV.',
+  description: 'Sizing, shipping, returns and payments. Answers to common questions about OSTREV.',
   alternates: { canonical: '/help/faq' },
 };
 
 const FAQ: { q: string; a: React.ReactNode; text: string }[] = [
   {
     q: 'How do your clothes fit?',
-    a: <>Most tops are cut oversized. Size down for a regular fit. Every product page lists the fit, and the <Link href="/help/size-guide">size guide</Link> has exact measurements in cm.</>,
-    text: 'Most tops are cut oversized. Size down for a regular fit. Every product page lists the fit, and the size guide has exact measurements in cm.',
+    a: <>Fits vary by piece: coats and knitwear are often relaxed or oversized, jeans follow your usual waist size. Every product page lists the fit, and the <Link href="/help/size-guide">size guide</Link> has exact measurements in cm.</>,
+    text: 'Fits vary by piece: coats and knitwear are often relaxed or oversized, jeans follow your usual waist size. Every product page lists the fit, and the size guide has exact measurements in cm.',
   },
   {
     q: 'Will sold-out items come back?',
-    a: 'No. Every piece is made in a single run. When it is gone, it is gone. Sign up to the newsletter to hear about new drops first.',
-    text: 'No. Every piece is made in a single run. When it is gone, it is gone. Sign up to the newsletter to hear about new drops first.',
+    a: 'Sometimes. Core pieces such as jeans and basics are restocked; seasonal pieces are usually made once. Use the newsletter to hear about restocks and new collections first.',
+    text: 'Sometimes. Core pieces such as jeans and basics are restocked; seasonal pieces are usually made once. Use the newsletter to hear about restocks and new collections first.',
   },
   {
     q: 'How long does delivery take?',
@@ -58,9 +58,9 @@ const FAQ: { q: string; a: React.ReactNode; text: string }[] = [
     text: 'Enter it in the discount field at checkout. One code per order. Codes cannot be applied after the order is placed.',
   },
   {
-    q: 'How do I wash heavyweight pieces?',
-    a: 'Cold, inside out, no tumble dryer. Fleece and jersey are pre-shrunk, but heat still shortens cotton. Care instructions are on every product page.',
-    text: 'Cold, inside out, no tumble dryer. Fleece and jersey are pre-shrunk, but heat still shortens cotton.',
+    q: 'How do I care for wool, knitwear and denim?',
+    a: 'Knitwear: wash cold on a wool cycle and dry flat. Wool coats: dry clean or steam. Denim: wash inside out at 30°C, no tumble dryer. Care instructions are on every product page.',
+    text: 'Knitwear: wash cold on a wool cycle and dry flat. Wool coats: dry clean or steam. Denim: wash inside out at 30°C, no tumble dryer.',
   },
 ];
 

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { getAllSummaries, sortForListing } from '@/lib/commerce';
 import { SITE } from '@/lib/site';
 import { Hero } from '@/components/home/Hero';
-import { CategoryTiles, DropCountdown, Editorial, Newsletter, SocialGrid } from '@/components/home/Sections';
+import { CategoryTiles, Editorial, Lookbook, Newsletter, SocialGrid } from '@/components/home/Sections';
 import { ProductSlider } from '@/components/product/ProductSlider';
 import { JsonLd } from '@/components/seo/JsonLd';
 
@@ -11,16 +11,18 @@ export const metadata: Metadata = {
 };
 
 export default async function HomePage() {
-  const products = await getAllSummaries();
-  const newIn = sortForListing(products).filter((p) => !p.soldOut).slice(0, 8);
+  const products = sortForListing(await getAllSummaries()).filter((p) => !p.soldOut);
+  const women = products.filter((p) => p.gender === 'women').slice(0, 8);
+  const men = products.filter((p) => p.gender === 'men').slice(0, 8);
 
   return (
     <>
-      <Hero pieces={products.length} />
-      <ProductSlider title="New in" products={newIn} href="/shop" linkLabel="Shop all" />
+      <Hero />
       <CategoryTiles />
+      <ProductSlider title="New in — Women" products={women} href="/women" linkLabel="View all" />
       <Editorial />
-      <DropCountdown />
+      <ProductSlider title="New in — Men" products={men} href="/men" linkLabel="View all" />
+      <Lookbook />
       <SocialGrid />
       <Newsletter />
       <JsonLd

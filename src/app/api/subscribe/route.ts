@@ -1,7 +1,7 @@
 import { forward } from '@/lib/server/forward';
 import { isEmail, json, str } from '@/lib/server/validate';
 
-const SOURCES = new Set(['newsletter', 'drop-notify']);
+const SOURCES = new Set(['newsletter']);
 
 export async function POST(req: Request) {
   const body = await req.json().catch(() => null);
