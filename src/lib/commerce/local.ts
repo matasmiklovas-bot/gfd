@@ -30,6 +30,10 @@ function validate(list: Product[]) {
     for (const c of p.colors) {
       if (!p.stock[c.slug]) fail(`missing stock for colour "${c.slug}"`);
     }
+    for (const [color, imgs] of Object.entries(p.colorImages ?? {})) {
+      if (!p.colors.some((c) => c.slug === color)) fail(`colorImages for unknown colour "${color}"`);
+      if (!imgs.length) fail(`colorImages["${color}"] is empty`);
+    }
     for (const [color, sizes] of Object.entries(p.stock)) {
       if (!p.colors.some((c) => c.slug === color)) fail(`stock for unknown colour "${color}"`);
       for (const size of Object.keys(sizes)) {

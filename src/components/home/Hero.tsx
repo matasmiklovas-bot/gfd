@@ -1,33 +1,34 @@
+import Image from 'next/image';
 import Link from 'next/link';
-import { getImageProps } from 'next/image';
 
+/** Split hero: headline on bone, one full-height photo. Stacks on mobile (photo first). */
 export function Hero({ pieces }: { pieces: number }) {
-  const common = { alt: 'Model in an oversized hoodie and gas mask holding a smoke flare', priority: true, sizes: '100vw' };
-  const {
-    props: { srcSet: desktop },
-  } = getImageProps({ ...common, src: '/images/hero.webp', width: 2400, height: 1600, quality: 70 });
-  const {
-    props: { srcSet: mobile, ...rest },
-  } = getImageProps({ ...common, src: '/images/hero-mobile.webp', width: 1080, height: 1600, quality: 70 });
-
   return (
-    <section className="on-dark relative -mt-header h-[100svh] min-h-[560px] w-full overflow-hidden bg-ink text-white">
-      <picture>
-        <source media="(min-width: 768px)" srcSet={desktop} />
-        <source media="(max-width: 767px)" srcSet={mobile} />
-        {/* eslint-disable-next-line jsx-a11y/alt-text -- alt is in rest */}
-        <img {...rest} className="absolute inset-0 h-full w-full object-cover" style={{ objectPosition: '50% 35%' }} />
-      </picture>
-      <div className="absolute inset-0 bg-ink/35" aria-hidden="true" />
-      <div className="container-site relative flex h-full flex-col justify-end pb-24 md:pb-20">
-        <p className="label mb-4">Out now · {pieces} pieces · No restocks</p>
-        <h1 className="heading-display">
-          Drop 01
+    <section className="relative -mt-header flex min-h-[calc(100svh-var(--announce-h))] flex-col bg-bone md:grid md:grid-cols-2">
+      <div className="relative order-1 min-h-[300px] flex-1 md:order-2 md:min-h-0">
+        <Image
+          src="/images/hero-mobile.webp"
+          alt="Two models in matching grey melange hoodies and sweatpants against a concrete wall"
+          fill
+          priority
+          sizes="(min-width: 768px) 50vw, 100vw"
+          className="object-cover object-[50%_30%]"
+        />
+      </div>
+      <div className="order-2 flex flex-col justify-end px-4 pb-8 pt-6 md:order-1 md:px-8 md:pb-16 md:pt-header lg:px-12">
+        <p className="label mb-3 text-muted md:mb-5">Out now · {pieces} pieces · No restocks</p>
+        <h1 className="heading-display text-[20vw] md:text-[12vw] xl:text-[10.5rem]">
+          Drop
+          <br />
+          01
         </h1>
-        <p className="mt-5 max-w-sm text-[15px] text-white/85 md:text-base">Built heavy. Worn loose.</p>
-        <div className="mt-8">
-          <Link href="/shop" className="btn-inverse min-w-[200px]">
+        <p className="mt-4 max-w-xs text-[15px] leading-relaxed md:mt-6 md:text-base">Built heavy. Worn loose.</p>
+        <div className="mt-6 flex flex-wrap gap-3 md:mt-8">
+          <Link href="/shop" className="btn-primary min-w-[180px]">
             Shop now
+          </Link>
+          <Link href="/drops" className="btn-secondary">
+            Drop 02
           </Link>
         </div>
       </div>

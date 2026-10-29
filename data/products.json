@@ -12,52 +12,177 @@
     "description": "A 400gsm hoodie cut wide through the body with dropped shoulders and a deep double-layer hood. No drawcords, no logo on the front. Ribbed cuffs and hem hold the shape after every wash.",
     "fit": "Oversized fit — size down for a regular fit. Dropped shoulders, boxy body, sleeves cut long.",
     "material": "100% cotton, 400gsm brushed fleece. Pre-shrunk.",
-    "care": ["Machine wash cold, inside out", "Do not tumble dry", "Iron on low, avoid print", "Do not bleach"],
-    "colors": [
-      { "name": "Black", "slug": "black", "hex": "#0A0A0A" },
-      { "name": "Grey", "slug": "grey", "hex": "#8A8A8A" },
-      { "name": "Off-white", "slug": "off-white", "hex": "#F4F2EE" }
+    "care": [
+      "Machine wash cold, inside out",
+      "Do not tumble dry",
+      "Iron on low, avoid print",
+      "Do not bleach"
     ],
-    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "colors": [
+      {
+        "name": "Black",
+        "slug": "black",
+        "hex": "#0A0A0A"
+      },
+      {
+        "name": "Grey",
+        "slug": "grey",
+        "hex": "#8A8A8A"
+      },
+      {
+        "name": "Off-white",
+        "slug": "off-white",
+        "hex": "#F4F2EE"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "stock": {
-      "black": { "XS": 6, "S": 14, "M": 22, "L": 18, "XL": 9, "XXL": 3 },
-      "grey": { "XS": 0, "S": 8, "M": 12, "L": 4, "XL": 7, "XXL": 2 },
-      "off-white": { "XS": 2, "S": 5, "M": 9, "L": 0, "XL": 3, "XXL": 0 }
+      "black": {
+        "XS": 6,
+        "S": 14,
+        "M": 22,
+        "L": 18,
+        "XL": 9,
+        "XXL": 3
+      },
+      "grey": {
+        "XS": 0,
+        "S": 8,
+        "M": 12,
+        "L": 4,
+        "XL": 7,
+        "XXL": 2
+      },
+      "off-white": {
+        "XS": 2,
+        "S": 5,
+        "M": 9,
+        "L": 0,
+        "XL": 3,
+        "XXL": 0
+      }
     },
     "images": [
-      { "src": "/images/hoodie-1.webp", "alt": "Model in a grey oversized hoodie with the hood up, seen from behind" },
-      { "src": "/images/hoodie-2.webp", "alt": "Two models seated outdoors, one wearing an oversized hoodie and beanie" }
+      {
+        "src": "/images/hoodie-1.webp",
+        "alt": "Model in a black heavyweight hoodie, one hand on his head, on an off-white studio backdrop"
+      },
+      {
+        "src": "/images/hoodie-2.webp",
+        "alt": "Back view of a black heavyweight hoodie with dropped shoulders"
+      }
     ],
-    "related": ["baggy-sweatpants", "knit-beanie", "heavyweight-blank-tee-250gsm"]
+    "related": [
+      "baggy-sweatpants",
+      "knit-beanie",
+      "heavyweight-blank-tee-250gsm"
+    ],
+    "colorImages": {
+      "off-white": [
+        {
+          "src": "/images/hoodie-offwhite-1.webp",
+          "alt": "Model in an off-white heavyweight hoodie and matching sweatpants, front view"
+        },
+        {
+          "src": "/images/hoodie-offwhite-2.webp",
+          "alt": "Back view of an off-white heavyweight hoodie with the hood up"
+        }
+      ],
+      "grey": [
+        {
+          "src": "/images/hoodie-grey-1.webp",
+          "alt": "Model in a grey heavyweight hoodie with the hood up, looking over his shoulder"
+        }
+      ]
+    }
   },
   {
     "id": "ost-002",
-    "handle": "zip-hoodie-boxy-fit",
-    "name": "Zip Hoodie Boxy Fit",
+    "handle": "boxy-hoodie",
+    "name": "Boxy Hoodie",
     "category": "hoodies",
     "price": 4599,
     "drop": "drop-01",
     "releasedAt": "2026-10-03",
     "isNew": false,
-    "summary": "Full zip. Short body. Wide cut.",
-    "description": "A cropped, boxy zip hoodie with a two-way metal zip and a structured hood that stands up on its own. Washed for a lived-in surface from day one. Kangaroo pockets with hidden seams.",
+    "summary": "Short body. Wide cut. Heavy hood.",
+    "description": "A cropped, boxy pullover hoodie with a structured double-layer hood that stands up on its own and a flat cord. Wide body, short length, ribbed hem that sits at the hip. Kangaroo pocket with hidden seams.",
     "fit": "Boxy fit — cropped length, wide body. Take your usual size; size up for more length.",
     "material": "100% cotton, 380gsm loopback fleece. Garment washed.",
-    "care": ["Machine wash cold, inside out, zip closed", "Wash with similar colours", "Do not tumble dry", "Do not bleach"],
-    "colors": [
-      { "name": "Black", "slug": "black", "hex": "#0A0A0A" },
-      { "name": "Washed grey", "slug": "washed-grey", "hex": "#6F6F6C" }
+    "care": [
+      "Machine wash cold, inside out, zip closed",
+      "Wash with similar colours",
+      "Do not tumble dry",
+      "Do not bleach"
     ],
-    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "colors": [
+      {
+        "name": "Grey melange",
+        "slug": "grey-melange",
+        "hex": "#A3A3A0"
+      },
+      {
+        "name": "Black",
+        "slug": "black",
+        "hex": "#0A0A0A"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "stock": {
-      "black": { "XS": 4, "S": 10, "M": 16, "L": 12, "XL": 6, "XXL": 2 },
-      "washed-grey": { "XS": 0, "S": 3, "M": 6, "L": 5, "XL": 1, "XXL": 0 }
+      "grey-melange": {
+        "XS": 4,
+        "S": 10,
+        "M": 16,
+        "L": 12,
+        "XL": 6,
+        "XXL": 2
+      },
+      "black": {
+        "XS": 0,
+        "S": 3,
+        "M": 6,
+        "L": 5,
+        "XL": 1,
+        "XXL": 0
+      }
     },
     "images": [
-      { "src": "/images/zip-1.webp", "alt": "Model in a hoodie layered under a denim jacket against a wall" },
-      { "src": "/images/zip-2.webp", "alt": "Model in sunglasses wearing a hoodie under a quilted jacket" }
+      {
+        "src": "/images/boxy-1.webp",
+        "alt": "Model in a grey melange boxy hoodie and matching sweatpants, hands on the hood"
+      },
+      {
+        "src": "/images/boxy-2.webp",
+        "alt": "Back view of a grey melange boxy hoodie"
+      }
     ],
-    "related": ["wide-leg-cargo-pants", "oversized-logo-tee", "knit-beanie"]
+    "related": [
+      "wide-leg-cargo-pants",
+      "oversized-logo-tee",
+      "knit-beanie"
+    ],
+    "colorImages": {
+      "black": [
+        {
+          "src": "/images/boxy-black-1.webp",
+          "alt": "Back view of a black boxy hoodie on an off-white studio backdrop"
+        }
+      ]
+    }
   },
   {
     "id": "ost-003",
@@ -68,25 +193,68 @@
     "drop": "drop-01",
     "releasedAt": "2026-10-03",
     "isNew": false,
-    "summary": "One mark. Left chest. Nothing else.",
-    "description": "A wide, dropped-shoulder tee with a small OSTREV seal printed on the chest. Thick ribbed collar that keeps its shape. Side-seamed so it hangs straight.",
+    "summary": "One mark. Back neck. Nothing else.",
+    "description": "A wide, dropped-shoulder tee with a small OSTREV logo printed at the back neck and nothing on the front. Thick ribbed collar that keeps its shape. Side-seamed so it hangs straight.",
     "fit": "Oversized fit — size down for a regular fit. Dropped shoulders, sleeves past the elbow.",
     "material": "100% cotton, 240gsm single jersey. Water-based print.",
-    "care": ["Machine wash cold, inside out", "Do not tumble dry", "Do not iron on print"],
-    "colors": [
-      { "name": "Black", "slug": "black", "hex": "#0A0A0A" },
-      { "name": "White", "slug": "white", "hex": "#FFFFFF" }
+    "care": [
+      "Machine wash cold, inside out",
+      "Do not tumble dry",
+      "Do not iron on print"
     ],
-    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "colors": [
+      {
+        "name": "Black",
+        "slug": "black",
+        "hex": "#0A0A0A"
+      },
+      {
+        "name": "White",
+        "slug": "white",
+        "hex": "#FFFFFF"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "stock": {
-      "black": { "XS": 8, "S": 20, "M": 28, "L": 24, "XL": 12, "XXL": 6 },
-      "white": { "XS": 5, "S": 14, "M": 18, "L": 15, "XL": 4, "XXL": 1 }
+      "black": {
+        "XS": 8,
+        "S": 20,
+        "M": 28,
+        "L": 24,
+        "XL": 12,
+        "XXL": 6
+      },
+      "white": {
+        "XS": 5,
+        "S": 14,
+        "M": 18,
+        "L": 15,
+        "XL": 4,
+        "XXL": 1
+      }
     },
     "images": [
-      { "src": "/images/logo-tee-1.webp", "alt": "Black tee with a small round chest print, hanging on a hanger" },
-      { "src": "/images/logo-tee-2.webp", "alt": "Model in sunglasses wearing a black oversized tee outdoors" }
+      {
+        "src": "/images/logo-tee-1.webp",
+        "alt": "Model in a black oversized tee and tan trousers on a light grey studio backdrop"
+      },
+      {
+        "src": "/images/logo-tee-2.webp",
+        "alt": "Model in a black oversized tee leaning on a clothing rail"
+      }
     ],
-    "related": ["wide-leg-cargo-pants", "heavyweight-oversized-hoodie", "tote-bag"]
+    "related": [
+      "wide-leg-cargo-pants",
+      "heavyweight-oversized-hoodie",
+      "tote-bag"
+    ]
   },
   {
     "id": "ost-004",
@@ -101,23 +269,89 @@
     "description": "The blank you keep buying. Dense 250gsm cotton with a tight knit, a short ribbed collar and a boxy body. Holds its structure without looking stiff.",
     "fit": "Oversized fit — size down for a regular fit. Boxy body, slightly cropped.",
     "material": "100% combed cotton, 250gsm single jersey. Pre-shrunk.",
-    "care": ["Machine wash at 30°C", "Do not tumble dry", "Iron on medium"],
-    "colors": [
-      { "name": "Black", "slug": "black", "hex": "#0A0A0A" },
-      { "name": "White", "slug": "white", "hex": "#FFFFFF" },
-      { "name": "Grey", "slug": "grey", "hex": "#8A8A8A" }
+    "care": [
+      "Machine wash at 30°C",
+      "Do not tumble dry",
+      "Iron on medium"
     ],
-    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "colors": [
+      {
+        "name": "Black",
+        "slug": "black",
+        "hex": "#0A0A0A"
+      },
+      {
+        "name": "White",
+        "slug": "white",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Grey",
+        "slug": "grey",
+        "hex": "#8A8A8A"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "stock": {
-      "black": { "XS": 12, "S": 30, "M": 40, "L": 34, "XL": 18, "XXL": 8 },
-      "white": { "XS": 10, "S": 24, "M": 32, "L": 28, "XL": 14, "XXL": 6 },
-      "grey": { "XS": 3, "S": 9, "M": 11, "L": 0, "XL": 4, "XXL": 2 }
+      "black": {
+        "XS": 12,
+        "S": 30,
+        "M": 40,
+        "L": 34,
+        "XL": 18,
+        "XXL": 8
+      },
+      "white": {
+        "XS": 10,
+        "S": 24,
+        "M": 32,
+        "L": 28,
+        "XL": 14,
+        "XXL": 6
+      },
+      "grey": {
+        "XS": 3,
+        "S": 9,
+        "M": 11,
+        "L": 0,
+        "XL": 4,
+        "XXL": 2
+      }
     },
     "images": [
-      { "src": "/images/blank-tee-1.webp", "alt": "White blank tee on a hanger against a concrete wall" },
-      { "src": "/images/blank-tee-2.webp", "alt": "Close-up of a model in a plain white heavyweight tee" }
+      {
+        "src": "/images/blank-tee-1.webp",
+        "alt": "Model in a white heavyweight blank tee, front view"
+      },
+      {
+        "src": "/images/blank-tee-2.webp",
+        "alt": "Back view of a white heavyweight blank tee"
+      }
     ],
-    "related": ["baggy-sweatpants", "zip-hoodie-boxy-fit", "knit-beanie"]
+    "related": [
+      "baggy-sweatpants",
+      "boxy-hoodie",
+      "knit-beanie"
+    ],
+    "colorImages": {
+      "grey": [
+        {
+          "src": "/images/blank-tee-grey-1.webp",
+          "alt": "Model in a grey heavyweight blank tee, front view"
+        },
+        {
+          "src": "/images/blank-tee-grey-2.webp",
+          "alt": "Back view of a grey heavyweight blank tee"
+        }
+      ]
+    }
   },
   {
     "id": "ost-005",
@@ -129,22 +363,50 @@
     "releasedAt": "2026-10-24",
     "isNew": true,
     "summary": "Printed once. Not coming back.",
-    "description": "The Drop 01 graphic. Large back print with the release date, small front hit. Screen printed on our heavyweight blank. One run only.",
+    "description": "The Drop 01 graphic. Chest print with the release date, screen printed in off-white on our heavyweight blank. One run only.",
     "fit": "Oversized fit — size down for a regular fit. Dropped shoulders, long sleeves.",
     "material": "100% cotton, 250gsm single jersey. Plastisol-free screen print.",
-    "care": ["Machine wash cold, inside out", "Do not tumble dry", "Do not iron on print"],
-    "colors": [
-      { "name": "Black", "slug": "black", "hex": "#0A0A0A" }
+    "care": [
+      "Machine wash cold, inside out",
+      "Do not tumble dry",
+      "Do not iron on print"
     ],
-    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "colors": [
+      {
+        "name": "Black",
+        "slug": "black",
+        "hex": "#0A0A0A"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "stock": {
-      "black": { "XS": 2, "S": 6, "M": 4, "L": 7, "XL": 3, "XXL": 1 }
+      "black": {
+        "XS": 2,
+        "S": 6,
+        "M": 4,
+        "L": 7,
+        "XL": 3,
+        "XXL": 1
+      }
     },
     "images": [
-      { "src": "/images/graphic-tee-1.webp", "alt": "Model in a black graphic tee standing against a concrete wall" },
-      { "src": "/images/graphic-tee-2.webp", "alt": "Model in sunglasses wearing a black tee, hands in pockets" }
+      {
+        "src": "/images/graphic-tee-1.webp",
+        "alt": "Black tee on a hanger with an off-white DROP 01 chest print, against a sunlit white wall"
+      }
     ],
-    "related": ["wide-leg-cargo-pants", "heavyweight-oversized-hoodie", "knit-beanie"]
+    "related": [
+      "wide-leg-cargo-pants",
+      "heavyweight-oversized-hoodie",
+      "knit-beanie"
+    ]
   },
   {
     "id": "ost-006",
@@ -155,25 +417,68 @@
     "drop": "drop-01",
     "releasedAt": "2026-10-24",
     "isNew": true,
-    "summary": "Six pockets. Wide leg. Full drape.",
-    "description": "Wide, straight-leg cargos in a heavy cotton twill. Bellowed side pockets, adjustable toggles at the hem and a relaxed rise. Stacks on the shoe or cinches at the ankle.",
+    "summary": "Six pockets. Wide leg. Washed denim.",
+    "description": "Wide, straight-leg cargos in a heavy stone-washed denim. Bellowed side pockets, a relaxed rise and a long inseam that stacks on the shoe.",
     "fit": "Relaxed wide-leg fit. True to size. Inseam 81 cm on size M.",
-    "material": "100% cotton, 300gsm ripstop twill.",
-    "care": ["Machine wash at 30°C, inside out", "Do not tumble dry", "Iron on medium"],
-    "colors": [
-      { "name": "Black", "slug": "black", "hex": "#0A0A0A" },
-      { "name": "Grey", "slug": "grey", "hex": "#8A8A8A" }
+    "material": "100% cotton, 13oz denim. Stone washed.",
+    "care": [
+      "Machine wash at 30°C, inside out",
+      "Do not tumble dry",
+      "Iron on medium"
     ],
-    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "colors": [
+      {
+        "name": "Washed grey",
+        "slug": "washed-grey",
+        "hex": "#7E7E7B"
+      },
+      {
+        "name": "Black",
+        "slug": "black",
+        "hex": "#0A0A0A"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "stock": {
-      "black": { "XS": 3, "S": 9, "M": 14, "L": 11, "XL": 5, "XXL": 2 },
-      "grey": { "XS": 0, "S": 4, "M": 7, "L": 6, "XL": 2, "XXL": 0 }
+      "washed-grey": {
+        "XS": 3,
+        "S": 9,
+        "M": 14,
+        "L": 11,
+        "XL": 5,
+        "XXL": 2
+      },
+      "black": {
+        "XS": 0,
+        "S": 4,
+        "M": 7,
+        "L": 6,
+        "XL": 2,
+        "XXL": 0
+      }
     },
     "images": [
-      { "src": "/images/cargo-1.webp", "alt": "Folded dark trousers laid flat next to white sneakers" },
-      { "src": "/images/cargo-2.webp", "alt": "Model wearing relaxed trousers and white sneakers outdoors" }
+      {
+        "src": "/images/cargo-1.webp",
+        "alt": "Washed grey wide-leg cargo pants with side pockets, front view on a white backdrop"
+      },
+      {
+        "src": "/images/cargo-2.webp",
+        "alt": "Side view of washed grey wide-leg cargo pants stacking on white sneakers"
+      }
     ],
-    "related": ["oversized-logo-tee", "zip-hoodie-boxy-fit", "tote-bag"]
+    "related": [
+      "oversized-logo-tee",
+      "boxy-hoodie",
+      "tote-bag"
+    ]
   },
   {
     "id": "ost-007",
@@ -188,21 +493,86 @@
     "description": "Wide sweatpants in the same 400gsm fleece as the hoodie. Elastic waist with an internal cord, open hem, deep side pockets and one back pocket. Built to be worn as a set.",
     "fit": "Baggy fit — true to size. Open hem, extra length to stack.",
     "material": "100% cotton, 400gsm brushed fleece. Pre-shrunk.",
-    "care": ["Machine wash cold, inside out", "Do not tumble dry", "Do not bleach"],
-    "colors": [
-      { "name": "Black", "slug": "black", "hex": "#0A0A0A" },
-      { "name": "Grey melange", "slug": "grey-melange", "hex": "#A3A3A0" }
+    "care": [
+      "Machine wash cold, inside out",
+      "Do not tumble dry",
+      "Do not bleach"
     ],
-    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "colors": [
+      {
+        "name": "Off-white",
+        "slug": "off-white",
+        "hex": "#F4F2EE"
+      },
+      {
+        "name": "Grey melange",
+        "slug": "grey-melange",
+        "hex": "#A3A3A0"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "stock": {
-      "black": { "XS": 5, "S": 12, "M": 18, "L": 15, "XL": 8, "XXL": 3 },
-      "grey-melange": { "XS": 4, "S": 10, "M": 13, "L": 9, "XL": 4, "XXL": 1 }
+      "off-white": {
+        "XS": 5,
+        "S": 12,
+        "M": 18,
+        "L": 15,
+        "XL": 8,
+        "XXL": 3
+      },
+      "grey-melange": {
+        "XS": 4,
+        "S": 10,
+        "M": 13,
+        "L": 9,
+        "XL": 4,
+        "XXL": 1
+      }
     },
     "images": [
-      { "src": "/images/sweatpants-1.webp", "alt": "Close-up of a hand in the pocket of grey sweatpants" },
-      { "src": "/images/sweatpants-2.webp", "alt": "Model in a matching sweatsuit on an outdoor court" }
+      {
+        "src": "/images/sweatpants-1.webp",
+        "alt": "Off-white baggy sweatpants worn with a matching hoodie, hand in pocket"
+      },
+      {
+        "src": "/images/sweatpants-2.webp",
+        "alt": "Grey melange baggy sweatpants with a matching hoodie"
+      }
     ],
-    "related": ["heavyweight-oversized-hoodie", "heavyweight-blank-tee-250gsm", "knit-beanie"]
+    "related": [
+      "heavyweight-oversized-hoodie",
+      "heavyweight-blank-tee-250gsm",
+      "knit-beanie"
+    ],
+    "colorImages": {
+      "off-white": [
+        {
+          "src": "/images/sweatpants-1.webp",
+          "alt": "Off-white baggy sweatpants worn with a matching hoodie, hand in pocket"
+        },
+        {
+          "src": "/images/sweatpants-offwhite-2.webp",
+          "alt": "Off-white baggy sweatpants and hoodie, front view"
+        }
+      ],
+      "grey-melange": [
+        {
+          "src": "/images/sweatpants-2.webp",
+          "alt": "Grey melange baggy sweatpants with a matching hoodie"
+        },
+        {
+          "src": "/images/sweatpants-grey-2.webp",
+          "alt": "Grey melange baggy sweatpants with a drawcord hoodie, front view"
+        }
+      ]
+    }
   },
   {
     "id": "ost-008",
@@ -217,21 +587,45 @@
     "description": "A chunky rib-knit beanie with a deep fold-over cuff and a small woven OSTREV label. Sits high or pulls low.",
     "fit": "One size. Stretches to fit most heads.",
     "material": "50% merino wool, 50% acrylic. Woven polyester label.",
-    "care": ["Hand wash cold", "Dry flat", "Do not tumble dry"],
-    "colors": [
-      { "name": "Black", "slug": "black", "hex": "#0A0A0A" },
-      { "name": "Grey", "slug": "grey", "hex": "#8A8A8A" }
+    "care": [
+      "Hand wash cold",
+      "Dry flat",
+      "Do not tumble dry"
     ],
-    "sizes": ["ONE SIZE"],
+    "colors": [
+      {
+        "name": "Black",
+        "slug": "black",
+        "hex": "#0A0A0A"
+      },
+      {
+        "name": "Grey",
+        "slug": "grey",
+        "hex": "#8A8A8A"
+      }
+    ],
+    "sizes": [
+      "ONE SIZE"
+    ],
     "stock": {
-      "black": { "ONE SIZE": 40 },
-      "grey": { "ONE SIZE": 4 }
+      "black": {
+        "ONE SIZE": 40
+      },
+      "grey": {
+        "ONE SIZE": 4
+      }
     },
     "images": [
-      { "src": "/images/beanie-1.webp", "alt": "Model in a chunky knit beanie, seen from behind" },
-      { "src": "/images/beanie-2.webp", "alt": "Model wearing a knit beanie with a woven label and a shearling jacket" }
+      {
+        "src": "/images/beanie-1.webp",
+        "alt": "Model in a grey knit beanie, white tee and dark jacket, black-and-white studio portrait"
+      }
     ],
-    "related": ["heavyweight-oversized-hoodie", "zip-hoodie-boxy-fit", "tote-bag"]
+    "related": [
+      "heavyweight-oversized-hoodie",
+      "boxy-hoodie",
+      "tote-bag"
+    ]
   },
   {
     "id": "ost-009",
@@ -243,81 +637,212 @@
     "releasedAt": "2026-10-03",
     "isNew": false,
     "summary": "Heavy canvas. Carries everything.",
-    "description": "A structured canvas tote with long handles that sit on the shoulder and a small OSTREV print near the base. Inside pocket for your phone and keys.",
+    "description": "A soft heavy-canvas tote with long handles that sit on the shoulder. Unlined, unbranded on the outside, with a small woven label inside. Folds flat.",
     "fit": "One size. 40 × 42 × 10 cm. Handle drop 30 cm.",
     "material": "100% cotton, 12oz canvas.",
-    "care": ["Spot clean", "Hand wash cold if needed", "Dry flat"],
-    "colors": [
-      { "name": "Off-white", "slug": "off-white", "hex": "#F4F2EE" },
-      { "name": "Black", "slug": "black", "hex": "#0A0A0A" }
+    "care": [
+      "Spot clean",
+      "Hand wash cold if needed",
+      "Dry flat"
     ],
-    "sizes": ["ONE SIZE"],
+    "colors": [
+      {
+        "name": "Sand",
+        "slug": "sand",
+        "hex": "#C49A68"
+      },
+      {
+        "name": "Black",
+        "slug": "black",
+        "hex": "#0A0A0A"
+      }
+    ],
+    "sizes": [
+      "ONE SIZE"
+    ],
     "stock": {
-      "off-white": { "ONE SIZE": 25 },
-      "black": { "ONE SIZE": 18 }
+      "sand": {
+        "ONE SIZE": 25
+      },
+      "black": {
+        "ONE SIZE": 18
+      }
     },
     "images": [
-      { "src": "/images/tote-1.webp", "alt": "Canvas tote bag hanging against a plain wall" }
+      {
+        "src": "/images/tote-1.webp",
+        "alt": "Sand canvas tote bag held by its handles against a white wall"
+      }
     ],
-    "related": ["oversized-logo-tee", "knit-beanie", "heavyweight-blank-tee-250gsm"]
+    "related": [
+      "oversized-logo-tee",
+      "knit-beanie",
+      "heavyweight-blank-tee-250gsm"
+    ]
   },
   {
     "id": "ost-010",
-    "handle": "heavyweight-crewneck",
-    "name": "Heavyweight Crewneck",
+    "handle": "relaxed-hoodie",
+    "name": "Relaxed Hoodie",
     "category": "hoodies",
     "price": 3499,
     "drop": "drop-01",
     "releasedAt": "2026-10-24",
     "isNew": true,
-    "summary": "No hood. Same weight.",
-    "description": "A boxy crewneck in our 400gsm fleece with a small woven label at the hem. Wide ribbed collar, long cuffs that bunch at the wrist.",
-    "fit": "Oversized fit — size down for a regular fit. Boxy body, dropped shoulders.",
+    "summary": "Soft colour. Same weight.",
+    "description": "Our 400gsm fleece hoodie in a relaxed cut and a warm sand colour. Double-layer hood with a flat cord, wide ribbed cuffs, kangaroo pocket. Built to wear as a set with the lounge pants.",
+    "fit": "Relaxed fit — true to size. Size up for an oversized look.",
     "material": "100% cotton, 400gsm brushed fleece. Pre-shrunk.",
-    "care": ["Machine wash cold, inside out", "Do not tumble dry", "Do not bleach"],
-    "colors": [
-      { "name": "Black", "slug": "black", "hex": "#0A0A0A" },
-      { "name": "Grey melange", "slug": "grey-melange", "hex": "#A3A3A0" }
+    "care": [
+      "Machine wash cold, inside out",
+      "Do not tumble dry",
+      "Do not bleach"
     ],
-    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "colors": [
+      {
+        "name": "Sand",
+        "slug": "sand",
+        "hex": "#D9C7AE"
+      },
+      {
+        "name": "Off-white",
+        "slug": "off-white",
+        "hex": "#F4F2EE"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "stock": {
-      "black": { "XS": 3, "S": 7, "M": 10, "L": 8, "XL": 4, "XXL": 1 },
-      "grey-melange": { "XS": 1, "S": 4, "M": 6, "L": 3, "XL": 0, "XXL": 0 }
+      "sand": {
+        "XS": 3,
+        "S": 7,
+        "M": 10,
+        "L": 8,
+        "XL": 4,
+        "XXL": 1
+      },
+      "off-white": {
+        "XS": 1,
+        "S": 4,
+        "M": 6,
+        "L": 3,
+        "XL": 0,
+        "XXL": 0
+      }
     },
     "images": [
-      { "src": "/images/crewneck-1.webp", "alt": "Model in a black crewneck sweatshirt leaning on a brick wall" },
-      { "src": "/images/crewneck-2.webp", "alt": "Model in a crewneck sweatshirt with one hand in her hair" }
+      {
+        "src": "/images/relaxed-1.webp",
+        "alt": "Model in a sand relaxed hoodie and matching pants, front view"
+      },
+      {
+        "src": "/images/relaxed-2.webp",
+        "alt": "Back view of a sand relaxed hoodie with the hood up"
+      }
     ],
-    "related": ["wide-leg-cargo-pants", "baggy-sweatpants", "knit-beanie"]
+    "related": [
+      "lounge-pants",
+      "heavyweight-blank-tee-250gsm",
+      "tote-bag"
+    ],
+    "colorImages": {
+      "off-white": [
+        {
+          "src": "/images/relaxed-offwhite-1.webp",
+          "alt": "Model in an off-white relaxed hoodie against a concrete wall"
+        },
+        {
+          "src": "/images/relaxed-offwhite-2.webp",
+          "alt": "Model pulling up the hood of an off-white relaxed hoodie"
+        }
+      ]
+    }
   },
   {
     "id": "ost-011",
-    "handle": "boxy-pocket-tee",
-    "name": "Boxy Pocket Tee",
+    "handle": "boxy-tee",
+    "name": "Boxy Tee",
     "category": "tees",
     "price": 1999,
     "drop": "drop-01",
     "releasedAt": "2026-10-03",
     "isNew": false,
-    "summary": "Chest pocket. Short sleeve. Gone.",
-    "description": "A short, square tee with a single patch pocket on the chest and a narrow collar. Made in one small run for Drop 01.",
+    "summary": "Short. Square. Gone.",
+    "description": "A short, square tee with a narrow collar and a clean, close neckline. Made in one small run for Drop 01.",
     "fit": "Boxy fit — cropped and wide. Take your usual size.",
     "material": "100% cotton, 220gsm single jersey.",
-    "care": ["Machine wash at 30°C", "Do not tumble dry", "Iron on medium"],
-    "colors": [
-      { "name": "White", "slug": "white", "hex": "#FFFFFF" },
-      { "name": "Concrete", "slug": "concrete", "hex": "#8A8A8A" }
+    "care": [
+      "Machine wash at 30°C",
+      "Do not tumble dry",
+      "Iron on medium"
     ],
-    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "colors": [
+      {
+        "name": "White",
+        "slug": "white",
+        "hex": "#FFFFFF"
+      },
+      {
+        "name": "Concrete",
+        "slug": "concrete",
+        "hex": "#8A8A8A"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "stock": {
-      "white": { "XS": 0, "S": 0, "M": 0, "L": 0, "XL": 0, "XXL": 0 },
-      "concrete": { "XS": 0, "S": 0, "M": 0, "L": 0, "XL": 0, "XXL": 0 }
+      "white": {
+        "XS": 0,
+        "S": 0,
+        "M": 0,
+        "L": 0,
+        "XL": 0,
+        "XXL": 0
+      },
+      "concrete": {
+        "XS": 0,
+        "S": 0,
+        "M": 0,
+        "L": 0,
+        "XL": 0,
+        "XXL": 0
+      }
     },
     "images": [
-      { "src": "/images/pocket-tee-1.webp", "alt": "Grey tee on a hanger against a white wall" },
-      { "src": "/images/pocket-tee-2.webp", "alt": "Model in a white tee and cap standing outdoors" }
+      {
+        "src": "/images/boxy-tee-1.webp",
+        "alt": "Model in a white boxy tee and black trousers, front view"
+      },
+      {
+        "src": "/images/boxy-tee-2.webp",
+        "alt": "Back view of a white boxy tee"
+      }
     ],
-    "related": ["heavyweight-blank-tee-250gsm", "oversized-logo-tee", "tote-bag"]
+    "related": [
+      "heavyweight-blank-tee-250gsm",
+      "oversized-logo-tee",
+      "tote-bag"
+    ],
+    "colorImages": {
+      "concrete": [
+        {
+          "src": "/images/boxy-tee-concrete-1.webp",
+          "alt": "Model in a concrete grey boxy tee with arms crossed"
+        }
+      ]
+    }
   },
   {
     "id": "ost-012",
@@ -332,45 +857,109 @@
     "description": "A long sleeve tee washed down to a soft faded black. Extended sleeves that stack at the wrist, wide ribbed cuffs and a small tonal print on the back neck.",
     "fit": "Oversized fit — size down for a regular fit. Extra-long sleeves.",
     "material": "100% cotton, 230gsm single jersey. Enzyme and pigment washed.",
-    "care": ["Machine wash cold, inside out", "Wash with dark colours", "Do not tumble dry"],
-    "colors": [
-      { "name": "Washed black", "slug": "washed-black", "hex": "#2B2B2A" }
+    "care": [
+      "Machine wash cold, inside out",
+      "Wash with dark colours",
+      "Do not tumble dry"
     ],
-    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "colors": [
+      {
+        "name": "Washed black",
+        "slug": "washed-black",
+        "hex": "#2B2B2A"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "stock": {
-      "washed-black": { "XS": 2, "S": 8, "M": 11, "L": 9, "XL": 0, "XXL": 0 }
+      "washed-black": {
+        "XS": 2,
+        "S": 8,
+        "M": 11,
+        "L": 9,
+        "XL": 0,
+        "XXL": 0
+      }
     },
     "images": [
-      { "src": "/images/longsleeve-1.webp", "alt": "Model in a dark long sleeve top and bucket hat, head down" },
-      { "src": "/images/longsleeve-2.webp", "alt": "Model in a black cap and dark tee in front of window blinds" }
+      {
+        "src": "/images/longsleeve-1.webp",
+        "alt": "Model in a washed black long sleeve tee, front view"
+      },
+      {
+        "src": "/images/longsleeve-2.webp",
+        "alt": "Back view of a washed black long sleeve tee"
+      }
     ],
-    "related": ["wide-leg-cargo-pants", "knit-beanie", "baggy-sweatpants"]
+    "related": [
+      "wide-leg-cargo-pants",
+      "knit-beanie",
+      "baggy-sweatpants"
+    ]
   },
   {
     "id": "ost-013",
-    "handle": "parachute-track-pants",
-    "name": "Parachute Track Pants",
+    "handle": "lounge-pants",
+    "name": "Lounge Pants",
     "category": "pants",
     "price": 3499,
     "drop": "drop-01",
     "releasedAt": "2026-10-03",
     "isNew": false,
-    "summary": "Light nylon. Loud silhouette. Sold out.",
-    "description": "Ultra-wide nylon track pants with a drawcord waist, zip ankle vents and a toggle hem. Light enough to pack, wide enough to move.",
-    "fit": "Baggy fit — true to size. Toggle hem to adjust length.",
-    "material": "100% recycled nylon taffeta. Mesh lining.",
-    "care": ["Machine wash cold", "Line dry", "Do not iron"],
-    "colors": [
-      { "name": "Black", "slug": "black", "hex": "#0A0A0A" }
+    "summary": "Soft fleece. Wide leg. Sold out.",
+    "description": "Wide lounge pants in our sand fleece, made to match the relaxed hoodie. Drawcord waist, open hem, deep side pockets.",
+    "fit": "Relaxed wide fit — true to size. Open hem with extra length to stack.",
+    "material": "100% cotton, 380gsm loopback fleece.",
+    "care": [
+      "Machine wash cold, inside out",
+      "Do not tumble dry",
+      "Do not bleach"
     ],
-    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "colors": [
+      {
+        "name": "Sand",
+        "slug": "sand",
+        "hex": "#D9C7AE"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
     "stock": {
-      "black": { "XS": 0, "S": 0, "M": 0, "L": 0, "XL": 0, "XXL": 0 }
+      "sand": {
+        "XS": 0,
+        "S": 0,
+        "M": 0,
+        "L": 0,
+        "XL": 0,
+        "XXL": 0
+      }
     },
     "images": [
-      { "src": "/images/trackpants-1.webp", "alt": "Model crouching in a white hoodie and dark track pants" },
-      { "src": "/images/trackpants-2.webp", "alt": "Model in a dark tee standing outdoors" }
+      {
+        "src": "/images/lounge-1.webp",
+        "alt": "Sand lounge pants with a drawcord waist, worn with a matching hoodie"
+      },
+      {
+        "src": "/images/lounge-2.webp",
+        "alt": "Sand lounge pants and hoodie set against a concrete wall"
+      }
     ],
-    "related": ["heavyweight-oversized-hoodie", "graphic-tee-drop-01", "knit-beanie"]
+    "related": [
+      "relaxed-hoodie",
+      "boxy-tee",
+      "knit-beanie"
+    ]
   }
 ]

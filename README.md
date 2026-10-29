@@ -35,7 +35,7 @@ Read this before launch.
 | Currency | EUR only. The footer shows "EUR €" as a label, not a selector. |
 | Analytics / pixels | None installed. The cookie banner stores consent (`consentStore`); check it before loading any tracking script. |
 | Rate limiting | None on the API routes. The forms have a honeypot only. Add rate limiting (Vercel WAF, Upstash) before launch. |
-| Photos | **Placeholders.** Unsplash photos graded to monochrome. They do not show the actual products (the "cargo pants" photo is chinos, the "tote" is a generic bag). Replace with real product shots (4:5, at least 1600×2000 px). |
+| Photos | **Stock placeholders.** Mostly one Pexels studio shoot (Monstera Production) with blank garments, so the catalog looks consistent. They are not OSTREV products: the Drop 01 print on the graphic tee is composited onto a blank tee, and several products were renamed to match the available photos (Boxy Hoodie, Relaxed Hoodie, Lounge Pants, Boxy Tee). Replace with your own shoot (4:5, at least 1600×2000 px) before launch. |
 | Copy | Brand story, product descriptions, size tables, dispatch cut-off (14:00) and delivery times are realistic placeholders. Confirm each with operations. |
 | Legal pages | Written to match how this code works, under EU/Lithuanian consumer law and GDPR. **They are templates. Have a lawyer review them**, and fill in company code and VAT number in `src/lib/site.ts`. |
 
@@ -156,49 +156,55 @@ All catalog reads go through `src/lib/commerce/index.ts`. To switch:
 
 ## Image sources
 
-Placeholder photography from Unsplash ([Unsplash License](https://unsplash.com/license)), converted to grayscale and
-cropped. Replace before launch.
+Placeholder photography from Pexels ([Pexels License](https://www.pexels.com/license/): free to use, attribution not required), cropped and colour-graded. Most come from one studio shoot by Monstera Production. The graphic on `graphic-tee-1.webp` is composited. Replace before launch.
 
 | File | Source |
 | --- | --- |
-| `hoodie-1.webp` | https://images.unsplash.com/photo-1556821840-3a63f95609a7 |
-| `hoodie-2.webp` | https://images.unsplash.com/photo-1572495641004-28421ae52e52 |
-| `zip-1.webp` | https://images.unsplash.com/photo-1517841905240-472988babdf9 |
-| `zip-2.webp` | https://images.unsplash.com/photo-1548126032-079a0fb0099d |
-| `logo-tee-1.webp` | https://images.unsplash.com/photo-1618354691373-d851c5c3a990 |
-| `logo-tee-2.webp` | https://images.unsplash.com/photo-1618517351616-38fb9c5210c6 |
-| `blank-tee-1.webp` | https://images.unsplash.com/photo-1581655353564-df123a1eb820 |
-| `blank-tee-2.webp` | https://images.unsplash.com/photo-1521572163474-6864f9cf17ab |
-| `graphic-tee-1.webp` | https://images.unsplash.com/photo-1503341504253-dff4815485f1 |
-| `graphic-tee-2.webp` | https://images.unsplash.com/photo-1622519407650-3df9883f76a5 |
-| `cargo-1.webp` | https://images.unsplash.com/photo-1544441893-675973e31985 |
-| `cargo-2.webp` | https://images.unsplash.com/photo-1473966968600-fa801b869a1a |
-| `sweatpants-1.webp` | https://images.unsplash.com/photo-1506629082955-511b1aa562c8 |
-| `sweatpants-2.webp` | https://images.unsplash.com/photo-1515886657613-9f3515b0c78f |
-| `beanie-1.webp` | https://images.unsplash.com/photo-1510598969022-c4c6c5d05769 |
-| `beanie-2.webp` | https://images.unsplash.com/photo-1608063615781-e2ef8c73d114 |
-| `tote-1.webp` | https://images.unsplash.com/photo-1544816155-12df9643f363 |
-| `crewneck-1.webp` | https://images.unsplash.com/photo-1614975059251-992f11792b9f |
-| `crewneck-2.webp` | https://images.unsplash.com/photo-1578587018452-892bacefd3f2 |
-| `pocket-tee-1.webp` | https://images.unsplash.com/photo-1564584217132-2271feaeb3c5 |
-| `pocket-tee-2.webp` | https://images.unsplash.com/photo-1622445275463-afa2ab738c34 |
-| `longsleeve-1.webp` | https://images.unsplash.com/photo-1578681994506-b8f463449011 |
-| `longsleeve-2.webp` | https://images.unsplash.com/photo-1531891437562-4301cf35b7e4 |
-| `trackpants-1.webp` | https://images.unsplash.com/photo-1550246140-29f40b909e5a |
-| `trackpants-2.webp` | https://images.unsplash.com/photo-1519058082700-08a0b56da9b4 |
-| `hero.webp` | https://images.unsplash.com/photo-1509942774463-acf339cf87d5 |
-| `hero-mobile.webp` | https://images.unsplash.com/photo-1509942774463-acf339cf87d5 |
-| `cat-hoodies.webp` | https://images.unsplash.com/photo-1548126032-079a0fb0099d |
-| `cat-tees.webp` | https://images.unsplash.com/photo-1586790170083-2f9ceadc732d |
-| `cat-pants.webp` | https://images.unsplash.com/photo-1473966968600-fa801b869a1a |
-| `editorial.webp` | https://images.unsplash.com/photo-1523398002811-999ca8dec234 |
-| `social-1.webp` | https://images.unsplash.com/photo-1520975954732-35dd22299614 |
-| `social-2.webp` | https://images.unsplash.com/photo-1529139574466-a303027c1d8b |
-| `social-3.webp` | https://images.unsplash.com/photo-1488161628813-04466f872be2 |
-| `social-4.webp` | https://images.unsplash.com/photo-1503342394128-c104d54dba01 |
-| `social-5.webp` | https://images.unsplash.com/photo-1613852348851-df1739db8201 |
-| `social-6.webp` | https://images.unsplash.com/photo-1607345366928-199ea26cfe3e |
-| `about-1.webp` | https://images.unsplash.com/photo-1488161628813-04466f872be2 |
-| `about-2.webp` | https://images.unsplash.com/photo-1520975954732-35dd22299614 |
-| `about-3.webp` | https://images.unsplash.com/photo-1490481651871-ab68de25d43d |
-
+| `about-1.webp` | https://www.pexels.com/photo/6311606/ |
+| `about-2.webp` | https://www.pexels.com/photo/6311691/ |
+| `about-3.webp` | https://www.pexels.com/photo/6311272/ |
+| `beanie-1.webp` | https://www.pexels.com/photo/33091835/ |
+| `blank-tee-1.webp` | https://www.pexels.com/photo/6311251/ |
+| `blank-tee-2.webp` | https://www.pexels.com/photo/6311252/ |
+| `blank-tee-grey-1.webp` | https://www.pexels.com/photo/6311588/ |
+| `blank-tee-grey-2.webp` | https://www.pexels.com/photo/6311579/ |
+| `boxy-1.webp` | https://www.pexels.com/photo/6311613/ |
+| `boxy-2.webp` | https://www.pexels.com/photo/6311642/ |
+| `boxy-black-1.webp` | https://www.pexels.com/photo/6311272/ |
+| `boxy-tee-1.webp` | https://www.pexels.com/photo/6311577/ |
+| `boxy-tee-2.webp` | https://www.pexels.com/photo/6311575/ |
+| `boxy-tee-concrete-1.webp` | https://www.pexels.com/photo/6311583/ |
+| `cargo-1.webp` | https://www.pexels.com/photo/19461549/ |
+| `cargo-2.webp` | https://www.pexels.com/photo/19461553/ |
+| `cat-hoodies.webp` | https://www.pexels.com/photo/6311505/ |
+| `cat-pants.webp` | https://www.pexels.com/photo/19461549/ |
+| `cat-tees.webp` | https://www.pexels.com/photo/6311588/ |
+| `editorial.webp` | https://www.pexels.com/photo/6311678/ |
+| `graphic-tee-1.webp` | https://www.pexels.com/photo/8532616/ |
+| `hero-mobile.webp` | https://www.pexels.com/photo/6311606/ |
+| `hoodie-1.webp` | https://www.pexels.com/photo/6311502/ |
+| `hoodie-2.webp` | https://www.pexels.com/photo/6311506/ |
+| `hoodie-grey-1.webp` | https://www.pexels.com/photo/6311719/ |
+| `hoodie-offwhite-1.webp` | https://www.pexels.com/photo/6311505/ |
+| `hoodie-offwhite-2.webp` | https://www.pexels.com/photo/6311449/ |
+| `logo-tee-1.webp` | https://www.pexels.com/photo/9558707/ |
+| `logo-tee-2.webp` | https://www.pexels.com/photo/9558898/ |
+| `longsleeve-1.webp` | https://www.pexels.com/photo/6311446/ |
+| `longsleeve-2.webp` | https://www.pexels.com/photo/6311442/ |
+| `lounge-1.webp` | https://www.pexels.com/photo/6311480/ |
+| `lounge-2.webp` | https://www.pexels.com/photo/6311605/ |
+| `relaxed-1.webp` | https://www.pexels.com/photo/6311600/ |
+| `relaxed-2.webp` | https://www.pexels.com/photo/6311670/ |
+| `relaxed-offwhite-1.webp` | https://www.pexels.com/photo/6311586/ |
+| `relaxed-offwhite-2.webp` | https://www.pexels.com/photo/6311691/ |
+| `social-1.webp` | https://www.pexels.com/photo/6311721/ |
+| `social-2.webp` | https://www.pexels.com/photo/6311691/ |
+| `social-3.webp` | https://www.pexels.com/photo/6311332/ |
+| `social-4.webp` | https://www.pexels.com/photo/6311586/ |
+| `social-5.webp` | https://www.pexels.com/photo/6311605/ |
+| `social-6.webp` | https://www.pexels.com/photo/6311272/ |
+| `sweatpants-1.webp` | https://www.pexels.com/photo/6311511/ |
+| `sweatpants-2.webp` | https://www.pexels.com/photo/6311663/ |
+| `sweatpants-grey-2.webp` | https://www.pexels.com/photo/6311647/ |
+| `sweatpants-offwhite-2.webp` | https://www.pexels.com/photo/6311503/ |
+| `tote-1.webp` | https://www.pexels.com/photo/8148587/ |

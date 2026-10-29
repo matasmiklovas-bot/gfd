@@ -33,6 +33,8 @@ export interface Product {
   /** stock[colorSlug][size] = units available */
   stock: Record<string, Partial<Record<Size, number>>>;
   images: ProductImage[];
+  /** Optional photos per colour slug; falls back to `images`. */
+  colorImages?: Record<string, ProductImage[]>;
   related: string[];
 }
 

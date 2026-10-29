@@ -15,11 +15,31 @@ import { WishlistButton } from './WishlistButton';
 
 const LOW_STOCK = 5;
 
-export function ProductDetail({ product, url, sizeTables }: { product: Product; url: string; sizeTables: SizeTable[] }) {
+export function defaultColor(product: Product) {
+  return (
+    product.colors.find((c) => Object.values(product.stock[c.slug] ?? {}).some((n) => (n ?? 0) > 0)) ?? product.colors[0]
+  ).slug;
+}
+
+export function imagesFor(product: Product, color: string) {
+  return product.colorImages?.[color] ?? product.images;
+}
+
+export function ProductDetail({
+  product,
+  url,
+  sizeTables,
+  color,
+  onColorChange,
+}: {
+  product: Product;
+  url: string;
+  sizeTables: SizeTable[];
+  color: string;
+  onColorChange: (slug: string) => void;
+}) {
   const t = useT();
-  const firstAvailableColor =
-    product.colors.find((c) => Object.values(product.stock[c.slug] ?? {}).some((n) => (n ?? 0) > 0)) ?? product.colors[0];
-  const [color, setColor] = useState(firstAvailableColor.slug);
+  const setColor = onColorChange;
   const oneSize = product.sizes.length === 1;
   const [size, setSize] = useState<Size | null>(oneSize ? product.sizes[0] : null);
   const [error, setError] = useState(false);
@@ -45,7 +65,7 @@ export function ProductDetail({ product, url, sizeTables }: { product: Product; 
       handle: product.handle,
       name: product.name,
       url,
-      image: product.images[0].src,
+      image: imagesFor(product, color)[0].src,
       color,
       colorName: colorObj.name,
       size,

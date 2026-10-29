@@ -13,8 +13,7 @@ import { tablesFor } from '@/lib/sizeGuide';
 import { FLAT_SHIPPING } from '@/lib/pricing';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { JsonLd } from '@/components/seo/JsonLd';
-import { ProductGallery } from '@/components/product/ProductGallery';
-import { ProductDetail } from '@/components/product/ProductDetail';
+import { ProductMain } from '@/components/product/ProductMain';
 import { ProductSlider } from '@/components/product/ProductSlider';
 
 type Props = { params: Promise<{ category: string; slug: string }> };
@@ -79,16 +78,7 @@ export default async function ProductPage({ params }: Props) {
         />
       </div>
 
-      <div className="md:container-site md:grid md:grid-cols-12 md:gap-10 lg:gap-16">
-        <div className="md:col-span-7">
-          <ProductGallery images={product.images} name={product.name} />
-        </div>
-        <div className="container-site pt-6 md:col-span-5 md:px-0 md:pt-0">
-          <div className="md:sticky md:top-[calc(var(--header-h)+2rem)]">
-            <ProductDetail product={product} url={url} sizeTables={tablesFor(product.category)} />
-          </div>
-        </div>
-      </div>
+      <ProductMain product={product} url={url} sizeTables={tablesFor(product.category)} />
 
       {related.length > 0 && <ProductSlider title="Complete the look" products={related} />}
 
@@ -111,7 +101,7 @@ export default async function ProductPage({ params }: Props) {
               name: `${product.name} — ${c.name}, ${s}`,
               color: c.name,
               size: s,
-              image: absoluteUrl(product.images[0].src),
+              image: absoluteUrl((product.colorImages?.[c.slug] ?? product.images)[0].src),
               offers: {
                 '@type': 'Offer',
                 url: absoluteUrl(url),
