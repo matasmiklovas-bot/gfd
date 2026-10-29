@@ -27,10 +27,10 @@ export default function AboutPage() {
 
       <section aria-label="Images" className="grid gap-1 md:grid-cols-2">
         <div className="relative aspect-[4/5]">
-          <Image src="/images/about-1.webp" alt="Model in a long black coat walking along a car park ramp" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+          <Image src="/images/about-1.webp" alt="Illustration of an off-white long sleeve tee on black" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
         </div>
         <div className="relative aspect-[4/5]">
-          <Image src="/images/about-2.webp" alt="Model in a black coat standing under the concrete ramps of a car park" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+          <Image src="/images/about-2.webp" alt="Illustration of a black heavyweight hoodie, back view" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
         </div>
       </section>
 
@@ -62,7 +62,7 @@ export default function AboutPage() {
       </section>
 
       <section aria-label="Image" className="relative aspect-[4/3] md:aspect-[16/7]">
-        <Image src="/images/about-3.webp" alt="Model with arms spread on a rail in front of curved concrete car park ramps" fill sizes="100vw" className="object-cover" />
+        <Image src="/images/about-3.webp" alt="Illustration of the Drop 01 logo hoodie, graphic tee and cargo pants side by side" fill sizes="100vw" className="object-cover" />
       </section>
 
       <section className="container-site section text-center">

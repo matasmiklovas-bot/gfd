@@ -7,9 +7,9 @@ import { EmailCapture } from '@/components/forms/EmailCapture';
 import { Countdown } from './Countdown';
 
 const TILES = [
-  { href: '/shop/hoodies', label: 'Hoodies', image: '/images/cat-hoodies.webp', alt: 'Model in a black OSTREV logo hoodie and washed cargo jeans' },
-  { href: '/shop/tees', label: 'Tees', image: '/images/cat-tees.webp', alt: 'Model in a black oversized tee' },
-  { href: '/shop/pants', label: 'Pants', image: '/images/cat-pants.webp', alt: 'Washed grey wide-leg cargo pants' },
+  { href: '/shop/hoodies', label: 'Hoodies', image: '/images/cat-hoodies.webp', alt: 'Illustration of a black OSTREV logo hoodie' },
+  { href: '/shop/tees', label: 'Tees', image: '/images/cat-tees.webp', alt: 'Illustration of a white heavyweight tee' },
+  { href: '/shop/pants', label: 'Pants', image: '/images/cat-pants.webp', alt: 'Illustration of grey wide-leg cargo pants' },
 ];
 
 export function CategoryTiles() {
@@ -47,7 +47,7 @@ export function Editorial() {
         <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[90vh]">
           <Image
             src="/images/editorial.webp"
-            alt="Two models in long black coats on the rooftop of a brutalist car park"
+            alt="Illustration of the black DROP 01 graphic tee on concrete grey"
             fill
             sizes="(min-width: 768px) 50vw, 100vw"
             className="object-cover"

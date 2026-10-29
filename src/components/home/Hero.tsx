@@ -3,10 +3,10 @@ import { getImageProps } from 'next/image';
 
 /** Full-bleed hero. Art-directed: landscape crop on desktop, portrait crop on phones. */
 export function Hero({ pieces }: { pieces: number }) {
-  const common = { alt: 'Model in a long black coat leaning on the rail of a brutalist car park', priority: true, sizes: '100vw' };
+  const common = { alt: 'Illustration of an off-white OSTREV logo hoodie on black', priority: true, sizes: '100vw' };
   const {
     props: { srcSet: desktop },
-  } = getImageProps({ ...common, src: '/images/hero.webp', width: 2000, height: 1333, quality: 75 });
+  } = getImageProps({ ...common, src: '/images/hero.webp', width: 2000, height: 1125, quality: 75 });
   const {
     props: { srcSet: mobile, ...rest },
   } = getImageProps({ ...common, src: '/images/hero-mobile.webp', width: 1080, height: 1742, quality: 75 });
@@ -19,8 +19,6 @@ export function Hero({ pieces }: { pieces: number }) {
         {/* eslint-disable-next-line jsx-a11y/alt-text -- alt is in rest */}
         <img {...rest} className="absolute inset-0 h-full w-full object-cover object-[50%_40%]" />
       </picture>
-      {/* Flat scrim for text contrast (no gradients). */}
-      <div className="absolute inset-0 bg-ink/30" aria-hidden="true" />
       <div className="container-site relative flex h-full flex-col justify-end pb-10 md:pb-16">
         <p className="label mb-4 text-white/85">Out now · {pieces} pieces · No restocks</p>
         <h1 className="heading-display text-[22vw] md:text-[12vw] xl:text-[11rem]">Drop 01</h1>

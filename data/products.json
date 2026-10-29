@@ -71,12 +71,12 @@
     },
     "images": [
       {
-        "src": "/images/hoodie-1.webp",
-        "alt": "Model in a black heavyweight hoodie, one hand on his head, on an off-white studio backdrop"
+        "src": "/images/g-heavyweight-oversized-hoodie-black-1.webp",
+        "alt": "Illustration of the Heavyweight Oversized Hoodie in black, front"
       },
       {
-        "src": "/images/hoodie-2.webp",
-        "alt": "Back view of a black heavyweight hoodie with dropped shoulders"
+        "src": "/images/g-heavyweight-oversized-hoodie-black-2.webp",
+        "alt": "Illustration of the Heavyweight Oversized Hoodie in black, back"
       }
     ],
     "related": [
@@ -85,20 +85,34 @@
       "heavyweight-blank-tee-250gsm"
     ],
     "colorImages": {
-      "off-white": [
+      "black": [
         {
-          "src": "/images/hoodie-offwhite-1.webp",
-          "alt": "Model in an off-white heavyweight hoodie and matching sweatpants, front view"
+          "src": "/images/g-heavyweight-oversized-hoodie-black-1.webp",
+          "alt": "Illustration of the Heavyweight Oversized Hoodie in black, front"
         },
         {
-          "src": "/images/hoodie-offwhite-2.webp",
-          "alt": "Back view of an off-white heavyweight hoodie with the hood up"
+          "src": "/images/g-heavyweight-oversized-hoodie-black-2.webp",
+          "alt": "Illustration of the Heavyweight Oversized Hoodie in black, back"
         }
       ],
       "grey": [
         {
-          "src": "/images/hoodie-grey-1.webp",
-          "alt": "Model in a grey heavyweight hoodie with the hood up, looking over his shoulder"
+          "src": "/images/g-heavyweight-oversized-hoodie-grey-1.webp",
+          "alt": "Illustration of the Heavyweight Oversized Hoodie in grey, front"
+        },
+        {
+          "src": "/images/g-heavyweight-oversized-hoodie-grey-2.webp",
+          "alt": "Illustration of the Heavyweight Oversized Hoodie in grey, back"
+        }
+      ],
+      "off-white": [
+        {
+          "src": "/images/g-heavyweight-oversized-hoodie-off-white-1.webp",
+          "alt": "Illustration of the Heavyweight Oversized Hoodie in off-white, front"
+        },
+        {
+          "src": "/images/g-heavyweight-oversized-hoodie-off-white-2.webp",
+          "alt": "Illustration of the Heavyweight Oversized Hoodie in off-white, back"
         }
       ]
     }
@@ -162,12 +176,12 @@
     },
     "images": [
       {
-        "src": "/images/boxy-1.webp",
-        "alt": "Model in sunglasses wearing a washed black boxy hoodie with an OSTREV EST. 2026 chest print"
+        "src": "/images/g-boxy-hoodie-washed-black-1.webp",
+        "alt": "Illustration of the Boxy Hoodie in washed black, front"
       },
       {
-        "src": "/images/boxy-2.webp",
-        "alt": "Back view of a washed black boxy hoodie with the hood up"
+        "src": "/images/g-boxy-hoodie-washed-black-2.webp",
+        "alt": "Illustration of the Boxy Hoodie in washed black, back"
       }
     ],
     "related": [
@@ -176,14 +190,24 @@
       "knit-beanie"
     ],
     "colorImages": {
-      "grey-melange": [
+      "washed-black": [
         {
-          "src": "/images/boxy-grey-1.webp",
-          "alt": "Model in a grey melange boxy hoodie, hands on the hood"
+          "src": "/images/g-boxy-hoodie-washed-black-1.webp",
+          "alt": "Illustration of the Boxy Hoodie in washed black, front"
         },
         {
-          "src": "/images/boxy-grey-2.webp",
-          "alt": "Back view of a grey melange boxy hoodie"
+          "src": "/images/g-boxy-hoodie-washed-black-2.webp",
+          "alt": "Illustration of the Boxy Hoodie in washed black, back"
+        }
+      ],
+      "grey-melange": [
+        {
+          "src": "/images/g-boxy-hoodie-grey-melange-1.webp",
+          "alt": "Illustration of the Boxy Hoodie in grey melange, front"
+        },
+        {
+          "src": "/images/g-boxy-hoodie-grey-melange-2.webp",
+          "alt": "Illustration of the Boxy Hoodie in grey melange, back"
         }
       ]
     }
@@ -246,19 +270,41 @@
     },
     "images": [
       {
-        "src": "/images/logo-tee-1.webp",
-        "alt": "Model in a black oversized tee and tan trousers on a light grey studio backdrop"
+        "src": "/images/g-oversized-logo-tee-black-1.webp",
+        "alt": "Illustration of the Oversized Logo Tee in black, front"
       },
       {
-        "src": "/images/logo-tee-2.webp",
-        "alt": "Model in a black oversized tee leaning on a clothing rail"
+        "src": "/images/g-oversized-logo-tee-black-2.webp",
+        "alt": "Illustration of the Oversized Logo Tee in black, back"
       }
     ],
     "related": [
       "wide-leg-cargo-pants",
       "heavyweight-oversized-hoodie",
       "tote-bag"
-    ]
+    ],
+    "colorImages": {
+      "black": [
+        {
+          "src": "/images/g-oversized-logo-tee-black-1.webp",
+          "alt": "Illustration of the Oversized Logo Tee in black, front"
+        },
+        {
+          "src": "/images/g-oversized-logo-tee-black-2.webp",
+          "alt": "Illustration of the Oversized Logo Tee in black, back"
+        }
+      ],
+      "white": [
+        {
+          "src": "/images/g-oversized-logo-tee-white-1.webp",
+          "alt": "Illustration of the Oversized Logo Tee in white, front"
+        },
+        {
+          "src": "/images/g-oversized-logo-tee-white-2.webp",
+          "alt": "Illustration of the Oversized Logo Tee in white, back"
+        }
+      ]
+    }
   },
   {
     "id": "ost-004",
@@ -331,12 +377,12 @@
     },
     "images": [
       {
-        "src": "/images/blank-tee-1.webp",
-        "alt": "Model in a white heavyweight blank tee, front view"
+        "src": "/images/g-heavyweight-blank-tee-250gsm-black-1.webp",
+        "alt": "Illustration of the Heavyweight Blank Tee 250gsm in black, front"
       },
       {
-        "src": "/images/blank-tee-2.webp",
-        "alt": "Back view of a white heavyweight blank tee"
+        "src": "/images/g-heavyweight-blank-tee-250gsm-black-2.webp",
+        "alt": "Illustration of the Heavyweight Blank Tee 250gsm in black, back"
       }
     ],
     "related": [
@@ -345,14 +391,34 @@
       "knit-beanie"
     ],
     "colorImages": {
-      "grey": [
+      "black": [
         {
-          "src": "/images/blank-tee-grey-1.webp",
-          "alt": "Model in a grey heavyweight blank tee, front view"
+          "src": "/images/g-heavyweight-blank-tee-250gsm-black-1.webp",
+          "alt": "Illustration of the Heavyweight Blank Tee 250gsm in black, front"
         },
         {
-          "src": "/images/blank-tee-grey-2.webp",
-          "alt": "Back view of a grey heavyweight blank tee"
+          "src": "/images/g-heavyweight-blank-tee-250gsm-black-2.webp",
+          "alt": "Illustration of the Heavyweight Blank Tee 250gsm in black, back"
+        }
+      ],
+      "white": [
+        {
+          "src": "/images/g-heavyweight-blank-tee-250gsm-white-1.webp",
+          "alt": "Illustration of the Heavyweight Blank Tee 250gsm in white, front"
+        },
+        {
+          "src": "/images/g-heavyweight-blank-tee-250gsm-white-2.webp",
+          "alt": "Illustration of the Heavyweight Blank Tee 250gsm in white, back"
+        }
+      ],
+      "grey": [
+        {
+          "src": "/images/g-heavyweight-blank-tee-250gsm-grey-1.webp",
+          "alt": "Illustration of the Heavyweight Blank Tee 250gsm in grey, front"
+        },
+        {
+          "src": "/images/g-heavyweight-blank-tee-250gsm-grey-2.webp",
+          "alt": "Illustration of the Heavyweight Blank Tee 250gsm in grey, back"
         }
       ]
     }
@@ -402,8 +468,12 @@
     },
     "images": [
       {
-        "src": "/images/graphic-tee-1.webp",
-        "alt": "Black tee on a hanger with an off-white DROP 01 chest print, against a sunlit white wall"
+        "src": "/images/g-graphic-tee-drop-01-black-1.webp",
+        "alt": "Illustration of the Graphic Tee DROP 01 in black, front"
+      },
+      {
+        "src": "/images/g-graphic-tee-drop-01-black-2.webp",
+        "alt": "Illustration of the Graphic Tee DROP 01 in black, back"
       }
     ],
     "related": [
@@ -470,19 +540,41 @@
     },
     "images": [
       {
-        "src": "/images/cargo-1.webp",
-        "alt": "Washed grey wide-leg cargo pants with side pockets, front view on a white backdrop"
+        "src": "/images/g-wide-leg-cargo-pants-washed-grey-1.webp",
+        "alt": "Illustration of the Wide-leg Cargo Pants in washed grey, front"
       },
       {
-        "src": "/images/cargo-2.webp",
-        "alt": "Side view of washed grey wide-leg cargo pants stacking on white sneakers"
+        "src": "/images/g-wide-leg-cargo-pants-washed-grey-2.webp",
+        "alt": "Illustration of the Wide-leg Cargo Pants in washed grey, back"
       }
     ],
     "related": [
       "oversized-logo-tee",
       "boxy-hoodie",
       "tote-bag"
-    ]
+    ],
+    "colorImages": {
+      "washed-grey": [
+        {
+          "src": "/images/g-wide-leg-cargo-pants-washed-grey-1.webp",
+          "alt": "Illustration of the Wide-leg Cargo Pants in washed grey, front"
+        },
+        {
+          "src": "/images/g-wide-leg-cargo-pants-washed-grey-2.webp",
+          "alt": "Illustration of the Wide-leg Cargo Pants in washed grey, back"
+        }
+      ],
+      "black": [
+        {
+          "src": "/images/g-wide-leg-cargo-pants-black-1.webp",
+          "alt": "Illustration of the Wide-leg Cargo Pants in black, front"
+        },
+        {
+          "src": "/images/g-wide-leg-cargo-pants-black-2.webp",
+          "alt": "Illustration of the Wide-leg Cargo Pants in black, back"
+        }
+      ]
+    }
   },
   {
     "id": "ost-007",
@@ -542,12 +634,12 @@
     },
     "images": [
       {
-        "src": "/images/sweatpants-1.webp",
-        "alt": "Off-white baggy sweatpants worn with a matching hoodie, hand in pocket"
+        "src": "/images/g-baggy-sweatpants-off-white-1.webp",
+        "alt": "Illustration of the Baggy Sweatpants in off-white, front"
       },
       {
-        "src": "/images/sweatpants-2.webp",
-        "alt": "Grey melange baggy sweatpants with a matching hoodie"
+        "src": "/images/g-baggy-sweatpants-off-white-2.webp",
+        "alt": "Illustration of the Baggy Sweatpants in off-white, back"
       }
     ],
     "related": [
@@ -558,22 +650,22 @@
     "colorImages": {
       "off-white": [
         {
-          "src": "/images/sweatpants-1.webp",
-          "alt": "Off-white baggy sweatpants worn with a matching hoodie, hand in pocket"
+          "src": "/images/g-baggy-sweatpants-off-white-1.webp",
+          "alt": "Illustration of the Baggy Sweatpants in off-white, front"
         },
         {
-          "src": "/images/sweatpants-offwhite-2.webp",
-          "alt": "Off-white baggy sweatpants and hoodie, front view"
+          "src": "/images/g-baggy-sweatpants-off-white-2.webp",
+          "alt": "Illustration of the Baggy Sweatpants in off-white, back"
         }
       ],
       "grey-melange": [
         {
-          "src": "/images/sweatpants-2.webp",
-          "alt": "Grey melange baggy sweatpants with a matching hoodie"
+          "src": "/images/g-baggy-sweatpants-grey-melange-1.webp",
+          "alt": "Illustration of the Baggy Sweatpants in grey melange, front"
         },
         {
-          "src": "/images/sweatpants-grey-2.webp",
-          "alt": "Grey melange baggy sweatpants with a drawcord hoodie, front view"
+          "src": "/images/g-baggy-sweatpants-grey-melange-2.webp",
+          "alt": "Illustration of the Baggy Sweatpants in grey melange, back"
         }
       ]
     }
@@ -621,15 +713,41 @@
     },
     "images": [
       {
-        "src": "/images/beanie-1.webp",
-        "alt": "Model in a grey knit beanie, white tee and dark jacket, black-and-white studio portrait"
+        "src": "/images/g-knit-beanie-black-1.webp",
+        "alt": "Illustration of the Knit Beanie in black, front"
+      },
+      {
+        "src": "/images/g-knit-beanie-black-2.webp",
+        "alt": "Illustration of the Knit Beanie in black, back"
       }
     ],
     "related": [
       "heavyweight-oversized-hoodie",
       "boxy-hoodie",
       "tote-bag"
-    ]
+    ],
+    "colorImages": {
+      "black": [
+        {
+          "src": "/images/g-knit-beanie-black-1.webp",
+          "alt": "Illustration of the Knit Beanie in black, front"
+        },
+        {
+          "src": "/images/g-knit-beanie-black-2.webp",
+          "alt": "Illustration of the Knit Beanie in black, back"
+        }
+      ],
+      "grey": [
+        {
+          "src": "/images/g-knit-beanie-grey-1.webp",
+          "alt": "Illustration of the Knit Beanie in grey, front"
+        },
+        {
+          "src": "/images/g-knit-beanie-grey-2.webp",
+          "alt": "Illustration of the Knit Beanie in grey, back"
+        }
+      ]
+    }
   },
   {
     "id": "ost-009",
@@ -674,15 +792,41 @@
     },
     "images": [
       {
-        "src": "/images/tote-1.webp",
-        "alt": "Sand canvas tote bag held by its handles against a white wall"
+        "src": "/images/g-tote-bag-sand-1.webp",
+        "alt": "Illustration of the Tote Bag in sand, front"
+      },
+      {
+        "src": "/images/g-tote-bag-sand-2.webp",
+        "alt": "Illustration of the Tote Bag in sand, back"
       }
     ],
     "related": [
       "oversized-logo-tee",
       "knit-beanie",
       "heavyweight-blank-tee-250gsm"
-    ]
+    ],
+    "colorImages": {
+      "sand": [
+        {
+          "src": "/images/g-tote-bag-sand-1.webp",
+          "alt": "Illustration of the Tote Bag in sand, front"
+        },
+        {
+          "src": "/images/g-tote-bag-sand-2.webp",
+          "alt": "Illustration of the Tote Bag in sand, back"
+        }
+      ],
+      "black": [
+        {
+          "src": "/images/g-tote-bag-black-1.webp",
+          "alt": "Illustration of the Tote Bag in black, front"
+        },
+        {
+          "src": "/images/g-tote-bag-black-2.webp",
+          "alt": "Illustration of the Tote Bag in black, back"
+        }
+      ]
+    }
   },
   {
     "id": "ost-010",
@@ -730,16 +874,12 @@
     },
     "images": [
       {
-        "src": "/images/logo-hoodie-1.webp",
-        "alt": "Model in sunglasses wearing a black oversized hoodie with a wide OSTREV chest print and washed grey cargo jeans"
+        "src": "/images/g-logo-hoodie-black-1.webp",
+        "alt": "Illustration of the Logo Hoodie in black, front"
       },
       {
-        "src": "/images/logo-hoodie-2.webp",
-        "alt": "Back view of a black oversized hoodie with the hood up, worn with baggy cargo jeans"
-      },
-      {
-        "src": "/images/logo-hoodie-3.webp",
-        "alt": "Model in a wide stance wearing the black OSTREV logo hoodie"
+        "src": "/images/g-logo-hoodie-black-2.webp",
+        "alt": "Illustration of the Logo Hoodie in black, back"
       }
     ],
     "related": [
@@ -806,12 +946,12 @@
     },
     "images": [
       {
-        "src": "/images/boxy-tee-1.webp",
-        "alt": "Model in a white boxy tee and black trousers, front view"
+        "src": "/images/g-boxy-tee-white-1.webp",
+        "alt": "Illustration of the Boxy Tee in white, front"
       },
       {
-        "src": "/images/boxy-tee-2.webp",
-        "alt": "Back view of a white boxy tee"
+        "src": "/images/g-boxy-tee-white-2.webp",
+        "alt": "Illustration of the Boxy Tee in white, back"
       }
     ],
     "related": [
@@ -820,10 +960,24 @@
       "tote-bag"
     ],
     "colorImages": {
+      "white": [
+        {
+          "src": "/images/g-boxy-tee-white-1.webp",
+          "alt": "Illustration of the Boxy Tee in white, front"
+        },
+        {
+          "src": "/images/g-boxy-tee-white-2.webp",
+          "alt": "Illustration of the Boxy Tee in white, back"
+        }
+      ],
       "concrete": [
         {
-          "src": "/images/boxy-tee-concrete-1.webp",
-          "alt": "Model in a concrete grey boxy tee with arms crossed"
+          "src": "/images/g-boxy-tee-concrete-1.webp",
+          "alt": "Illustration of the Boxy Tee in concrete, front"
+        },
+        {
+          "src": "/images/g-boxy-tee-concrete-2.webp",
+          "alt": "Illustration of the Boxy Tee in concrete, back"
         }
       ]
     }
@@ -873,12 +1027,12 @@
     },
     "images": [
       {
-        "src": "/images/longsleeve-1.webp",
-        "alt": "Model in a washed black long sleeve tee, front view"
+        "src": "/images/g-washed-long-sleeve-tee-washed-black-1.webp",
+        "alt": "Illustration of the Washed Long Sleeve Tee in washed black, front"
       },
       {
-        "src": "/images/longsleeve-2.webp",
-        "alt": "Back view of a washed black long sleeve tee"
+        "src": "/images/g-washed-long-sleeve-tee-washed-black-2.webp",
+        "alt": "Illustration of the Washed Long Sleeve Tee in washed black, back"
       }
     ],
     "related": [
@@ -932,8 +1086,12 @@
     },
     "images": [
       {
-        "src": "/images/jeans-1.webp",
-        "alt": "Model mid-step in dark raw baggy jeans with thigh pockets and white sneakers"
+        "src": "/images/g-baggy-jeans-raw-black-1.webp",
+        "alt": "Illustration of the Baggy Jeans in raw black, front"
+      },
+      {
+        "src": "/images/g-baggy-jeans-raw-black-2.webp",
+        "alt": "Illustration of the Baggy Jeans in raw black, back"
       }
     ],
     "related": [
