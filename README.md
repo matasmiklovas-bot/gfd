@@ -176,7 +176,7 @@ Placeholder photography from Pexels ([Pexels License](https://www.pexels.com/lic
 | `boxy-tee-concrete-1.webp` | https://www.pexels.com/photo/6311583/ |
 | `cargo-1.webp` | https://www.pexels.com/photo/19461549/ |
 | `cargo-2.webp` | https://www.pexels.com/photo/19461553/ |
-| `cat-hoodies.webp` | https://www.pexels.com/photo/6311505/ |
+| `cat-hoodies.webp` | https://www.pexels.com/photo/6311503/ |
 | `cat-pants.webp` | https://www.pexels.com/photo/19461549/ |
 | `cat-tees.webp` | https://www.pexels.com/photo/6311588/ |
 | `editorial.webp` | https://www.pexels.com/photo/6311678/ |
@@ -185,7 +185,7 @@ Placeholder photography from Pexels ([Pexels License](https://www.pexels.com/lic
 | `hoodie-1.webp` | https://www.pexels.com/photo/6311502/ |
 | `hoodie-2.webp` | https://www.pexels.com/photo/6311506/ |
 | `hoodie-grey-1.webp` | https://www.pexels.com/photo/6311719/ |
-| `hoodie-offwhite-1.webp` | https://www.pexels.com/photo/6311505/ |
+| `hoodie-offwhite-1.webp` | https://www.pexels.com/photo/6311503/ |
 | `hoodie-offwhite-2.webp` | https://www.pexels.com/photo/6311449/ |
 | `logo-tee-1.webp` | https://www.pexels.com/photo/9558707/ |
 | `logo-tee-2.webp` | https://www.pexels.com/photo/9558898/ |
