@@ -36,7 +36,7 @@ export function Header() {
   return (
     <header
       className={`sticky top-0 z-header h-header transition-colors duration-300 ease-out ${
-        transparent ? 'border-b border-transparent bg-transparent text-ink' : 'border-b border-line bg-white text-ink'
+        transparent ? 'on-dark border-b border-transparent bg-transparent text-white' : 'border-b border-line bg-white text-ink'
       }`}
     >
       <div className="container-site grid h-full grid-cols-[1fr_auto_1fr] items-center">
@@ -109,7 +109,9 @@ export function Header() {
             <BagIcon />
             {count > 0 && (
               <span
-                className="absolute right-1.5 top-1.5 flex h-4 min-w-4 items-center justify-center bg-ink px-1 text-[10px] font-semibold leading-none tabular-nums text-white"
+                className={`absolute right-1.5 top-1.5 flex h-4 min-w-4 items-center justify-center px-1 text-[10px] font-semibold leading-none tabular-nums ${
+                  transparent ? 'bg-white text-ink' : 'bg-ink text-white'
+                }`}
                 aria-hidden="true"
               >
                 {count}

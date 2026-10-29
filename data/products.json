@@ -112,8 +112,8 @@
     "drop": "drop-01",
     "releasedAt": "2026-10-03",
     "isNew": false,
-    "summary": "Short body. Wide cut. Heavy hood.",
-    "description": "A cropped, boxy pullover hoodie with a structured double-layer hood that stands up on its own and a flat cord. Wide body, short length, ribbed hem that sits at the hip. Kangaroo pocket with hidden seams.",
+    "summary": "Short body. Wide cut. EST. 2026.",
+    "description": "A cropped, boxy hoodie with an OSTREV EST. 2026 chest print. Structured double-layer hood, wide body, short length and a ribbed hem that sits at the hip.",
     "fit": "Boxy fit — cropped length, wide body. Take your usual size; size up for more length.",
     "material": "100% cotton, 380gsm loopback fleece. Garment washed.",
     "care": [
@@ -124,14 +124,14 @@
     ],
     "colors": [
       {
+        "name": "Washed black",
+        "slug": "washed-black",
+        "hex": "#2B2B2A"
+      },
+      {
         "name": "Grey melange",
         "slug": "grey-melange",
         "hex": "#A3A3A0"
-      },
-      {
-        "name": "Black",
-        "slug": "black",
-        "hex": "#0A0A0A"
       }
     ],
     "sizes": [
@@ -143,7 +143,7 @@
       "XXL"
     ],
     "stock": {
-      "grey-melange": {
+      "washed-black": {
         "XS": 4,
         "S": 10,
         "M": 16,
@@ -151,7 +151,7 @@
         "XL": 6,
         "XXL": 2
       },
-      "black": {
+      "grey-melange": {
         "XS": 0,
         "S": 3,
         "M": 6,
@@ -163,11 +163,11 @@
     "images": [
       {
         "src": "/images/boxy-1.webp",
-        "alt": "Model in a grey melange boxy hoodie and matching sweatpants, hands on the hood"
+        "alt": "Model in sunglasses wearing a washed black boxy hoodie with an OSTREV EST. 2026 chest print"
       },
       {
         "src": "/images/boxy-2.webp",
-        "alt": "Back view of a grey melange boxy hoodie"
+        "alt": "Back view of a washed black boxy hoodie with the hood up"
       }
     ],
     "related": [
@@ -176,10 +176,14 @@
       "knit-beanie"
     ],
     "colorImages": {
-      "black": [
+      "grey-melange": [
         {
-          "src": "/images/boxy-black-1.webp",
-          "alt": "Back view of a black boxy hoodie on an off-white studio backdrop"
+          "src": "/images/boxy-grey-1.webp",
+          "alt": "Model in a grey melange boxy hoodie, hands on the hood"
+        },
+        {
+          "src": "/images/boxy-grey-2.webp",
+          "alt": "Back view of a grey melange boxy hoodie"
         }
       ]
     }
@@ -682,32 +686,28 @@
   },
   {
     "id": "ost-010",
-    "handle": "relaxed-hoodie",
-    "name": "Relaxed Hoodie",
+    "handle": "logo-hoodie",
+    "name": "Logo Hoodie",
     "category": "hoodies",
-    "price": 3499,
+    "price": 4499,
     "drop": "drop-01",
     "releasedAt": "2026-10-24",
     "isNew": true,
-    "summary": "Soft colour. Same weight.",
-    "description": "Our 400gsm fleece hoodie in a relaxed cut and a warm sand colour. Double-layer hood with a flat cord, wide ribbed cuffs, kangaroo pocket. Built to wear as a set with the lounge pants.",
-    "fit": "Relaxed fit — true to size. Size up for an oversized look.",
-    "material": "100% cotton, 400gsm brushed fleece. Pre-shrunk.",
+    "summary": "Wide chest print. Built heavy.",
+    "description": "Our 400gsm oversized hoodie with a wide OSTREV wordmark across the chest and a DROP 01 line underneath, screen printed in off-white. Double-layer hood, dropped shoulders, deep kangaroo pocket.",
+    "fit": "Oversized fit — size down for a regular fit. Dropped shoulders, long sleeves that stack at the wrist.",
+    "material": "100% cotton, 400gsm brushed fleece. Water-based screen print.",
     "care": [
       "Machine wash cold, inside out",
       "Do not tumble dry",
+      "Do not iron on print",
       "Do not bleach"
     ],
     "colors": [
       {
-        "name": "Sand",
-        "slug": "sand",
-        "hex": "#D9C7AE"
-      },
-      {
-        "name": "Off-white",
-        "slug": "off-white",
-        "hex": "#F4F2EE"
+        "name": "Black",
+        "slug": "black",
+        "hex": "#0A0A0A"
       }
     ],
     "sizes": [
@@ -719,50 +719,34 @@
       "XXL"
     ],
     "stock": {
-      "sand": {
+      "black": {
         "XS": 3,
         "S": 7,
         "M": 10,
         "L": 8,
         "XL": 4,
         "XXL": 1
-      },
-      "off-white": {
-        "XS": 1,
-        "S": 4,
-        "M": 6,
-        "L": 3,
-        "XL": 0,
-        "XXL": 0
       }
     },
     "images": [
       {
-        "src": "/images/relaxed-1.webp",
-        "alt": "Model in a sand relaxed hoodie and matching pants, front view"
+        "src": "/images/logo-hoodie-1.webp",
+        "alt": "Model in sunglasses wearing a black oversized hoodie with a wide OSTREV chest print and washed grey cargo jeans"
       },
       {
-        "src": "/images/relaxed-2.webp",
-        "alt": "Back view of a sand relaxed hoodie with the hood up"
+        "src": "/images/logo-hoodie-2.webp",
+        "alt": "Back view of a black oversized hoodie with the hood up, worn with baggy cargo jeans"
+      },
+      {
+        "src": "/images/logo-hoodie-3.webp",
+        "alt": "Model in a wide stance wearing the black OSTREV logo hoodie"
       }
     ],
     "related": [
-      "lounge-pants",
-      "heavyweight-blank-tee-250gsm",
-      "tote-bag"
-    ],
-    "colorImages": {
-      "off-white": [
-        {
-          "src": "/images/relaxed-offwhite-1.webp",
-          "alt": "Model in an off-white relaxed hoodie against a concrete wall"
-        },
-        {
-          "src": "/images/relaxed-offwhite-2.webp",
-          "alt": "Model pulling up the hood of an off-white relaxed hoodie"
-        }
-      ]
-    }
+      "wide-leg-cargo-pants",
+      "knit-beanie",
+      "graphic-tee-drop-01"
+    ]
   },
   {
     "id": "ost-011",
@@ -832,7 +816,7 @@
     ],
     "related": [
       "heavyweight-blank-tee-250gsm",
-      "oversized-logo-tee",
+      "baggy-jeans",
       "tote-bag"
     ],
     "colorImages": {
@@ -905,27 +889,27 @@
   },
   {
     "id": "ost-013",
-    "handle": "lounge-pants",
-    "name": "Lounge Pants",
+    "handle": "baggy-jeans",
+    "name": "Baggy Jeans",
     "category": "pants",
-    "price": 3499,
+    "price": 3999,
     "drop": "drop-01",
     "releasedAt": "2026-10-03",
     "isNew": false,
-    "summary": "Soft fleece. Wide leg. Sold out.",
-    "description": "Wide lounge pants in our sand fleece, made to match the relaxed hoodie. Drawcord waist, open hem, deep side pockets.",
-    "fit": "Relaxed wide fit — true to size. Open hem with extra length to stack.",
-    "material": "100% cotton, 380gsm loopback fleece.",
+    "summary": "Rigid denim. Wide leg. Sold out.",
+    "description": "Wide, low-slung jeans in rigid raw denim with utility pockets on the thigh. Stiff at first, broken in after a month.",
+    "fit": "Baggy fit — true to size. Long inseam to stack.",
+    "material": "100% cotton, 14oz rigid denim.",
     "care": [
-      "Machine wash cold, inside out",
-      "Do not tumble dry",
-      "Do not bleach"
+      "Wash rarely, cold, inside out",
+      "Line dry",
+      "Expect indigo transfer at first"
     ],
     "colors": [
       {
-        "name": "Sand",
-        "slug": "sand",
-        "hex": "#D9C7AE"
+        "name": "Raw black",
+        "slug": "raw-black",
+        "hex": "#1C1D22"
       }
     ],
     "sizes": [
@@ -937,7 +921,7 @@
       "XXL"
     ],
     "stock": {
-      "sand": {
+      "raw-black": {
         "XS": 0,
         "S": 0,
         "M": 0,
@@ -948,17 +932,13 @@
     },
     "images": [
       {
-        "src": "/images/lounge-1.webp",
-        "alt": "Sand lounge pants with a drawcord waist, worn with a matching hoodie"
-      },
-      {
-        "src": "/images/lounge-2.webp",
-        "alt": "Sand lounge pants and hoodie set against a concrete wall"
+        "src": "/images/jeans-1.webp",
+        "alt": "Model mid-step in dark raw baggy jeans with thigh pockets and white sneakers"
       }
     ],
     "related": [
-      "relaxed-hoodie",
-      "boxy-tee",
+      "logo-hoodie",
+      "oversized-logo-tee",
       "knit-beanie"
     ]
   }

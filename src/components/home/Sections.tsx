@@ -7,8 +7,8 @@ import { EmailCapture } from '@/components/forms/EmailCapture';
 import { Countdown } from './Countdown';
 
 const TILES = [
-  { href: '/shop/hoodies', label: 'Hoodies', image: '/images/cat-hoodies.webp', alt: 'Model in an off-white heavyweight hoodie and matching sweatpants' },
-  { href: '/shop/tees', label: 'Tees', image: '/images/cat-tees.webp', alt: 'Model in a grey heavyweight tee' },
+  { href: '/shop/hoodies', label: 'Hoodies', image: '/images/cat-hoodies.webp', alt: 'Model in a black OSTREV logo hoodie and washed cargo jeans' },
+  { href: '/shop/tees', label: 'Tees', image: '/images/cat-tees.webp', alt: 'Model in a black oversized tee' },
   { href: '/shop/pants', label: 'Pants', image: '/images/cat-pants.webp', alt: 'Washed grey wide-leg cargo pants' },
 ];
 
@@ -47,7 +47,7 @@ export function Editorial() {
         <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[90vh]">
           <Image
             src="/images/editorial.webp"
-            alt="Back view of a model in an off-white hoodie against a concrete wall"
+            alt="Two models in long black coats on the rooftop of a brutalist car park"
             fill
             sizes="(min-width: 768px) 50vw, 100vw"
             className="object-cover"
@@ -60,7 +60,7 @@ export function Editorial() {
           </h2>
           <p className="mt-6 max-w-md text-[15px] leading-7 text-ink md:text-base">
             We make a small number of things and make them properly. 400gsm fleece, 250gsm jersey, cuts that sit wide and drop
-            low. Black, grey, off-white, sand. Every piece is made in one run. When it is gone, it is gone.
+            low. Black, washed grey, white. Every piece is made in one run. When it is gone, it is gone.
           </p>
           <div className="mt-10">
             <Link href="/about" className="btn-secondary">

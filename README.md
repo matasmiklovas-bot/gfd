@@ -35,7 +35,7 @@ Read this before launch.
 | Currency | EUR only. The footer shows "EUR €" as a label, not a selector. |
 | Analytics / pixels | None installed. The cookie banner stores consent (`consentStore`); check it before loading any tracking script. |
 | Rate limiting | None on the API routes. The forms have a honeypot only. Add rate limiting (Vercel WAF, Upstash) before launch. |
-| Photos | **Stock placeholders.** Mostly one Pexels studio shoot (Monstera Production) with blank garments, so the catalog looks consistent. They are not OSTREV products: the Drop 01 print on the graphic tee is composited onto a blank tee, and several products were renamed to match the available photos (Boxy Hoodie, Relaxed Hoodie, Lounge Pants, Boxy Tee). Replace with your own shoot (4:5, at least 1600×2000 px) before launch. |
+| Photos | **Edited stock placeholders, graded black and white.** Sources: a Pexels streetwear studio shoot (addy bronzzz), a car-park editorial shoot and a basics studio shoot (Monstera Production). Other brands' prints and logos (Amiri, FILA) were removed digitally and the OSTREV prints on the logo/boxy hoodies and the DROP 01 tee are composited. They are not OSTREV products. Replace with your own shoot (4:5, at least 1600×2000 px) before launch, and do not present the composites as real product photos to customers. |
 | Copy | Brand story, product descriptions, size tables, dispatch cut-off (14:00) and delivery times are realistic placeholders. Confirm each with operations. |
 | Legal pages | Written to match how this code works, under EU/Lithuanian consumer law and GDPR. **They are templates. Have a lawyer review them**, and fill in company code and VAT number in `src/lib/site.ts`. |
 
@@ -156,53 +156,53 @@ All catalog reads go through `src/lib/commerce/index.ts`. To switch:
 
 ## Image sources
 
-Placeholder photography from Pexels ([Pexels License](https://www.pexels.com/license/): free to use, attribution not required), cropped and colour-graded. Most come from one studio shoot by Monstera Production. The graphic on `graphic-tee-1.webp` is composited. Replace before launch.
+Placeholder photography from Pexels ([Pexels License](https://www.pexels.com/license/): free to use, attribution not required), cropped and graded black and white. Edited files are marked. Replace before launch.
 
 | File | Source |
 | --- | --- |
-| `about-1.webp` | https://www.pexels.com/photo/6311606/ |
-| `about-2.webp` | https://www.pexels.com/photo/6311691/ |
-| `about-3.webp` | https://www.pexels.com/photo/6311272/ |
+| `about-1.webp` | https://www.pexels.com/photo/5905277/ |
+| `about-2.webp` | https://www.pexels.com/photo/5905268/ (edited: logo removed / OSTREV print added) |
+| `about-3.webp` | https://www.pexels.com/photo/5905274/ (edited: logo removed / OSTREV print added) |
 | `beanie-1.webp` | https://www.pexels.com/photo/33091835/ |
 | `blank-tee-1.webp` | https://www.pexels.com/photo/6311251/ |
 | `blank-tee-2.webp` | https://www.pexels.com/photo/6311252/ |
 | `blank-tee-grey-1.webp` | https://www.pexels.com/photo/6311588/ |
 | `blank-tee-grey-2.webp` | https://www.pexels.com/photo/6311579/ |
-| `boxy-1.webp` | https://www.pexels.com/photo/6311613/ |
-| `boxy-2.webp` | https://www.pexels.com/photo/6311642/ |
-| `boxy-black-1.webp` | https://www.pexels.com/photo/6311272/ |
+| `boxy-1.webp` | https://www.pexels.com/photo/562/ (edited: logo removed / OSTREV print added) |
+| `boxy-2.webp` | https://www.pexels.com/photo/19461567/ |
+| `boxy-grey-1.webp` | https://www.pexels.com/photo/6311613/ |
+| `boxy-grey-2.webp` | https://www.pexels.com/photo/6311642/ |
 | `boxy-tee-1.webp` | https://www.pexels.com/photo/6311577/ |
 | `boxy-tee-2.webp` | https://www.pexels.com/photo/6311575/ |
 | `boxy-tee-concrete-1.webp` | https://www.pexels.com/photo/6311583/ |
 | `cargo-1.webp` | https://www.pexels.com/photo/19461549/ |
 | `cargo-2.webp` | https://www.pexels.com/photo/19461553/ |
-| `cat-hoodies.webp` | https://www.pexels.com/photo/6311503/ |
+| `cat-hoodies.webp` | https://www.pexels.com/photo/563/ (edited: logo removed / OSTREV print added) |
 | `cat-pants.webp` | https://www.pexels.com/photo/19461549/ |
-| `cat-tees.webp` | https://www.pexels.com/photo/6311588/ |
-| `editorial.webp` | https://www.pexels.com/photo/6311678/ |
-| `graphic-tee-1.webp` | https://www.pexels.com/photo/8532616/ |
-| `hero-mobile.webp` | https://www.pexels.com/photo/6311606/ |
+| `cat-tees.webp` | https://www.pexels.com/photo/9558707/ |
+| `editorial.webp` | https://www.pexels.com/photo/5905253/ (edited: logo removed / OSTREV print added) |
+| `graphic-tee-1.webp` | https://www.pexels.com/photo/8532616/ (edited: DROP 01 print added) |
+| `hero-mobile.webp` | https://www.pexels.com/photo/5905268/ (edited: logo removed / OSTREV print added) |
+| `hero.webp` | https://www.pexels.com/photo/5905270/ (edited: logo removed / OSTREV print added) |
 | `hoodie-1.webp` | https://www.pexels.com/photo/6311502/ |
 | `hoodie-2.webp` | https://www.pexels.com/photo/6311506/ |
 | `hoodie-grey-1.webp` | https://www.pexels.com/photo/6311719/ |
 | `hoodie-offwhite-1.webp` | https://www.pexels.com/photo/6311503/ |
 | `hoodie-offwhite-2.webp` | https://www.pexels.com/photo/6311449/ |
+| `jeans-1.webp` | https://www.pexels.com/photo/19461531/ |
+| `logo-hoodie-1.webp` | https://www.pexels.com/photo/549/ (edited: logo removed / OSTREV print added) |
+| `logo-hoodie-2.webp` | https://www.pexels.com/photo/19461550/ |
+| `logo-hoodie-3.webp` | https://www.pexels.com/photo/563/ (edited: logo removed / OSTREV print added) |
 | `logo-tee-1.webp` | https://www.pexels.com/photo/9558707/ |
 | `logo-tee-2.webp` | https://www.pexels.com/photo/9558898/ |
 | `longsleeve-1.webp` | https://www.pexels.com/photo/6311446/ |
 | `longsleeve-2.webp` | https://www.pexels.com/photo/6311442/ |
-| `lounge-1.webp` | https://www.pexels.com/photo/6311480/ |
-| `lounge-2.webp` | https://www.pexels.com/photo/6311605/ |
-| `relaxed-1.webp` | https://www.pexels.com/photo/6311600/ |
-| `relaxed-2.webp` | https://www.pexels.com/photo/6311670/ |
-| `relaxed-offwhite-1.webp` | https://www.pexels.com/photo/6311586/ |
-| `relaxed-offwhite-2.webp` | https://www.pexels.com/photo/6311691/ |
-| `social-1.webp` | https://www.pexels.com/photo/6311721/ |
-| `social-2.webp` | https://www.pexels.com/photo/6311691/ |
-| `social-3.webp` | https://www.pexels.com/photo/6311332/ |
-| `social-4.webp` | https://www.pexels.com/photo/6311586/ |
-| `social-5.webp` | https://www.pexels.com/photo/6311605/ |
-| `social-6.webp` | https://www.pexels.com/photo/6311272/ |
+| `social-1.webp` | https://www.pexels.com/photo/5905272/ |
+| `social-2.webp` | https://www.pexels.com/photo/549/ (edited: logo removed / OSTREV print added) |
+| `social-3.webp` | https://www.pexels.com/photo/5905268/ (edited: logo removed / OSTREV print added) |
+| `social-4.webp` | https://www.pexels.com/photo/19461550/ |
+| `social-5.webp` | https://www.pexels.com/photo/562/ (edited: logo removed / OSTREV print added) |
+| `social-6.webp` | https://www.pexels.com/photo/5905277/ |
 | `sweatpants-1.webp` | https://www.pexels.com/photo/6311511/ |
 | `sweatpants-2.webp` | https://www.pexels.com/photo/6311663/ |
 | `sweatpants-grey-2.webp` | https://www.pexels.com/photo/6311647/ |

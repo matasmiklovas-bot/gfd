@@ -27,10 +27,10 @@ export default function AboutPage() {
 
       <section aria-label="Images" className="grid gap-1 md:grid-cols-2">
         <div className="relative aspect-[4/5]">
-          <Image src="/images/about-1.webp" alt="Two models in matching grey melange hoodie sets against a concrete wall" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+          <Image src="/images/about-1.webp" alt="Model in a long black coat walking along a car park ramp" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
         </div>
         <div className="relative aspect-[4/5]">
-          <Image src="/images/about-2.webp" alt="Model pulling up the hood of an off-white hoodie against a concrete wall" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+          <Image src="/images/about-2.webp" alt="Model in a black coat standing under the concrete ramps of a car park" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
         </div>
       </section>
 
@@ -62,7 +62,7 @@ export default function AboutPage() {
       </section>
 
       <section aria-label="Image" className="relative aspect-[4/3] md:aspect-[16/7]">
-        <Image src="/images/about-3.webp" alt="Back view of a model in a black heavyweight hoodie in an empty studio" fill sizes="100vw" className="object-cover" />
+        <Image src="/images/about-3.webp" alt="Model with arms spread on a rail in front of curved concrete car park ramps" fill sizes="100vw" className="object-cover" />
       </section>
 
       <section className="container-site section text-center">
