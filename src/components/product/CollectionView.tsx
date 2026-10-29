@@ -36,6 +36,7 @@ export const CATEGORY_LABELS: Record<Category, string> = {
   coats: 'Coats & jackets',
   knitwear: 'Knitwear',
   shirts: 'Shirts & tops',
+  dresses: 'Dresses',
   trousers: 'Jeans & trousers',
   accessories: 'Bags',
 };

@@ -1,4 +1,4 @@
-export type Category = 'coats' | 'knitwear' | 'shirts' | 'trousers' | 'accessories';
+export type Category = 'coats' | 'knitwear' | 'shirts' | 'dresses' | 'trousers' | 'accessories';
 
 export type Gender = 'women' | 'men';
 

@@ -1,6 +1,7 @@
 import 'server-only';
 import raw from '@data/products.json';
 import type { Category, Gender, Product, Size } from '@/lib/types';
+import { MENU } from '@/lib/site';
 
 /**
  * Local JSON catalog. Edit data/products.json to change products.
@@ -15,7 +16,7 @@ const products = validate(raw as unknown as Product[]);
 /** Fails the build with a readable message if products.json is edited into an invalid state. */
 function validate(list: Product[]) {
   const handles = new Set<string>();
-  const categories = ['coats', 'knitwear', 'shirts', 'trousers', 'accessories'];
+  const categories = ['coats', 'knitwear', 'shirts', 'dresses', 'trousers', 'accessories'];
   const genders = ['women', 'men'];
   for (const p of list) {
     const fail = (msg: string) => {
@@ -40,6 +41,13 @@ function validate(list: Product[]) {
       if (!p.colors.some((c) => c.slug === color)) fail(`stock for unknown colour "${color}"`);
       for (const size of Object.keys(sizes)) {
         if (!p.sizes.includes(size as Size)) fail(`stock for unknown size "${size}"`);
+      }
+    }
+  }
+  for (const [gender, items] of Object.entries(MENU)) {
+    for (const { category } of items) {
+      if (!list.some((p) => p.gender === gender && p.category === category)) {
+        throw new Error(`src/lib/site.ts: MENU.${gender} links to "${category}" but no ${gender} product is in that category`);
       }
     }
   }

@@ -66,6 +66,7 @@ export const SIZE_TABLES: Record<'tops' | 'tees' | 'bottoms' | 'body', SizeTable
 export function tablesFor(category: Category): SizeTable[] {
   if (category === 'trousers') return [SIZE_TABLES.bottoms, SIZE_TABLES.body];
   if (category === 'shirts') return [SIZE_TABLES.tees, SIZE_TABLES.body];
+  if (category === 'dresses') return [SIZE_TABLES.body];
   if (category === 'coats' || category === 'knitwear') return [SIZE_TABLES.tops, SIZE_TABLES.body];
   return [];
 }

@@ -30,6 +30,24 @@ export const NAV = [
   { href: '/about', label: 'About', key: 'nav.about' },
 ] as const;
 
+/** Category links under Women and Men in the header and mobile menu. Checked against the catalog at build time. */
+export const MENU: Record<'women' | 'men', { category: string; label: string }[]> = {
+  women: [
+    { category: 'coats', label: 'Coats & jackets' },
+    { category: 'knitwear', label: 'Knitwear' },
+    { category: 'shirts', label: 'Shirts & tops' },
+    { category: 'dresses', label: 'Dresses' },
+    { category: 'trousers', label: 'Jeans & trousers' },
+    { category: 'accessories', label: 'Bags' },
+  ],
+  men: [
+    { category: 'coats', label: 'Coats & jackets' },
+    { category: 'knitwear', label: 'Knitwear' },
+    { category: 'shirts', label: 'Shirts & T-shirts' },
+    { category: 'trousers', label: 'Jeans & trousers' },
+  ],
+};
+
 export const FOOTER_LINKS = {
   shop: [
     { href: '/women', label: 'Women' },

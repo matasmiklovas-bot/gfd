@@ -8,7 +8,7 @@ import {
   toSummary,
 } from '@/lib/commerce';
 import { centsToDecimal } from '@/lib/money';
-import { absoluteUrl, SITE } from '@/lib/site';
+import { absoluteUrl, MENU, SITE } from '@/lib/site';
 import { tablesFor } from '@/lib/sizeGuide';
 import { FLAT_SHIPPING } from '@/lib/pricing';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
@@ -73,7 +73,10 @@ export default async function ProductPage({ params }: Props) {
           items={[
             { href: '/', label: 'Home' },
             { href: `/${product.gender}`, label: product.gender === 'women' ? 'Women' : 'Men' },
-            { href: `/shop/${category.slug}`, label: category.label },
+            {
+              href: `/${product.gender}/${category.slug}`,
+              label: MENU[product.gender].find((m) => m.category === category.slug)?.label ?? category.label,
+            },
             { href: url, label: product.name },
           ]}
         />

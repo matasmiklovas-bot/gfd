@@ -410,11 +410,11 @@
     ],
     "stock": {
       "cream": {
-        "XS": 0,
-        "S": 0,
-        "M": 0,
-        "L": 0,
-        "XL": 0
+        "XS": 4,
+        "S": 8,
+        "M": 2,
+        "L": 22,
+        "XL": 14
       }
     },
     "images": [
@@ -441,7 +441,7 @@
     "handle": "satin-shirt-dress",
     "name": "Satin Shirt Dress",
     "gender": "women",
-    "category": "shirts",
+    "category": "dresses",
     "price": 4599,
     "drop": "aw26",
     "releasedAt": "2026-10-24",
@@ -791,6 +791,530 @@
   },
   {
     "id": "ost-014",
+    "handle": "faux-shearling-coat",
+    "name": "Faux Shearling Coat",
+    "gender": "women",
+    "category": "coats",
+    "price": 7999,
+    "drop": "aw26",
+    "releasedAt": "2026-10-24",
+    "isNew": true,
+    "summary": "Soft, warm teddy fleece, cut long.",
+    "description": "A long coat in soft faux shearling with notch lapels, hidden press studs and deep side pockets. Lined through the body for warmth on the coldest days.",
+    "fit": "Oversized fit. Knee length on a 170 cm model. Take your usual size.",
+    "material": "Shell: 100% polyester faux shearling. Lining: 100% polyester.",
+    "care": [
+      "Machine wash at 30°C on a gentle cycle",
+      "Do not tumble dry",
+      "Do not iron",
+      "Brush gently to restore the pile"
+    ],
+    "colors": [
+      {
+        "name": "Camel",
+        "slug": "camel",
+        "hex": "#B98A62"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "camel": {
+        "XS": 6,
+        "S": 4,
+        "M": 6,
+        "L": 3,
+        "XL": 3
+      }
+    },
+    "images": [
+      {
+        "src": "/images/faux-shearling-coat-1.webp",
+        "alt": "Faux Shearling Coat in camel, front"
+      },
+      {
+        "src": "/images/faux-shearling-coat-2.webp",
+        "alt": "Faux Shearling Coat in camel, close-up"
+      }
+    ],
+    "related": [
+      "flared-trousers",
+      "chunky-turtleneck-jumper"
+    ]
+  },
+  {
+    "id": "ost-015",
+    "handle": "printed-denim-jacket",
+    "name": "Printed Denim Jacket",
+    "gender": "women",
+    "category": "coats",
+    "price": 4599,
+    "drop": "aw26",
+    "releasedAt": "2026-10-17",
+    "isNew": true,
+    "summary": "A cropped jacket in all-over printed denim.",
+    "description": "A cropped trucker jacket in denim with an all-over floral print, chest flap pockets and a boxy shape. Wear it with matching washed jeans.",
+    "fit": "Cropped, boxy fit. Take your usual size.",
+    "material": "100% cotton denim.",
+    "care": [
+      "Machine wash at 30°C, inside out",
+      "Wash with similar colours",
+      "Do not tumble dry",
+      "Iron on medium if needed"
+    ],
+    "colors": [
+      {
+        "name": "Washed blue",
+        "slug": "washed-blue",
+        "hex": "#8EA7C2"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "washed-blue": {
+        "XS": 2,
+        "S": 14,
+        "M": 14,
+        "L": 18,
+        "XL": 22
+      }
+    },
+    "images": [
+      {
+        "src": "/images/printed-denim-jacket-1.webp",
+        "alt": "Printed Denim Jacket in washed blue, front"
+      },
+      {
+        "src": "/images/printed-denim-jacket-2.webp",
+        "alt": "Printed Denim Jacket in washed blue, side"
+      },
+      {
+        "src": "/images/printed-denim-jacket-3.webp",
+        "alt": "Printed Denim Jacket in washed blue, seated"
+      }
+    ],
+    "related": [
+      "wide-leg-jeans",
+      "open-back-bodysuit"
+    ]
+  },
+  {
+    "id": "ost-016",
+    "handle": "poplin-midi-dress",
+    "name": "Poplin Midi Dress",
+    "gender": "women",
+    "category": "dresses",
+    "price": 4999,
+    "drop": "aw26",
+    "releasedAt": "2026-10-24",
+    "isNew": true,
+    "summary": "Open shoulders, long sleeves, a full skirt.",
+    "description": "A cotton poplin midi dress with a V-neck, cut-out shoulders, gathered long sleeves and a full A-line skirt. Light enough for layering under a long coat.",
+    "fit": "Relaxed fit through the skirt, fitted at the waist. Midi length on a 170 cm model.",
+    "material": "100% cotton poplin.",
+    "care": [
+      "Machine wash at 30°C",
+      "Wash inside out with similar colours",
+      "Iron on medium",
+      "Do not tumble dry"
+    ],
+    "colors": [
+      {
+        "name": "Ecru",
+        "slug": "ecru",
+        "hex": "#EDE6D8"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "ecru": {
+        "XS": 2,
+        "S": 11,
+        "M": 6,
+        "L": 8,
+        "XL": 14
+      }
+    },
+    "images": [
+      {
+        "src": "/images/poplin-midi-dress-1.webp",
+        "alt": "Poplin Midi Dress in ecru, front"
+      },
+      {
+        "src": "/images/poplin-midi-dress-2.webp",
+        "alt": "Poplin Midi Dress in ecru, back"
+      },
+      {
+        "src": "/images/poplin-midi-dress-3.webp",
+        "alt": "Poplin Midi Dress in ecru, side"
+      }
+    ],
+    "related": [
+      "wool-blend-coat",
+      "leather-shoulder-bag"
+    ]
+  },
+  {
+    "id": "ost-017",
+    "handle": "cropped-shirt",
+    "name": "Cropped Shirt",
+    "gender": "women",
+    "category": "shirts",
+    "price": 2599,
+    "drop": "aw26",
+    "releasedAt": "2026-10-17",
+    "isNew": false,
+    "summary": "A boxy black shirt that ends at the waist.",
+    "description": "A cropped shirt with a classic collar, dropped shoulders and buttoned cuffs. Made to sit at the waistband of high-rise trousers.",
+    "fit": "Boxy, cropped fit. Take your usual size.",
+    "material": "100% cotton.",
+    "care": [
+      "Machine wash at 30°C",
+      "Wash inside out with similar colours",
+      "Iron on medium",
+      "Do not tumble dry"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "slug": "black",
+        "hex": "#111111"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "black": {
+        "XS": 2,
+        "S": 22,
+        "M": 14,
+        "L": 8,
+        "XL": 3
+      }
+    },
+    "images": [
+      {
+        "src": "/images/cropped-shirt-1.webp",
+        "alt": "Cropped Shirt in black, front"
+      },
+      {
+        "src": "/images/cropped-shirt-2.webp",
+        "alt": "Cropped Shirt in black, close-up"
+      },
+      {
+        "src": "/images/cropped-shirt-3.webp",
+        "alt": "Cropped Shirt in black, full look"
+      }
+    ],
+    "related": [
+      "pleated-trousers",
+      "oversized-trench-coat"
+    ]
+  },
+  {
+    "id": "ost-018",
+    "handle": "open-back-bodysuit",
+    "name": "Open Back Bodysuit",
+    "gender": "women",
+    "category": "shirts",
+    "price": 2299,
+    "drop": "aw26",
+    "releasedAt": "2026-10-24",
+    "isNew": true,
+    "summary": "Short sleeves at the front, an open back behind.",
+    "description": "A stretch jersey bodysuit with a round neck, short sleeves and a low open back. Snap fastening.",
+    "fit": "Fitted. Take your usual size.",
+    "material": "92% viscose, 8% elastane.",
+    "care": [
+      "Machine wash at 30°C",
+      "Wash inside out",
+      "Do not tumble dry",
+      "Iron on low"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "slug": "black",
+        "hex": "#111111"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "stock": {
+      "black": {
+        "XS": 2,
+        "S": 11,
+        "M": 18,
+        "L": 11
+      }
+    },
+    "images": [
+      {
+        "src": "/images/open-back-bodysuit-1.webp",
+        "alt": "Open Back Bodysuit in black, front"
+      },
+      {
+        "src": "/images/open-back-bodysuit-2.webp",
+        "alt": "Open Back Bodysuit in black, back"
+      },
+      {
+        "src": "/images/open-back-bodysuit-3.webp",
+        "alt": "Open Back Bodysuit in black, close-up"
+      }
+    ],
+    "related": [
+      "flared-trousers",
+      "printed-denim-jacket"
+    ]
+  },
+  {
+    "id": "ost-019",
+    "handle": "flared-trousers",
+    "name": "Flared Trousers",
+    "gender": "women",
+    "category": "trousers",
+    "price": 3599,
+    "drop": "aw26",
+    "releasedAt": "2026-10-24",
+    "isNew": true,
+    "summary": "High waist, long flared leg.",
+    "description": "High-waisted trousers in a soft stretch crepe with a slim thigh that flares to the hem. Concealed side zip, no pockets, clean front.",
+    "fit": "Fitted through the hip, flared leg. Full length on a 170 cm model.",
+    "material": "72% polyester, 23% viscose, 5% elastane.",
+    "care": [
+      "Machine wash at 30°C",
+      "Iron on low",
+      "Do not tumble dry",
+      "Hang to dry"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "slug": "black",
+        "hex": "#111111"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "black": {
+        "XS": 2,
+        "S": 3,
+        "M": 8,
+        "L": 3,
+        "XL": 18
+      }
+    },
+    "images": [
+      {
+        "src": "/images/flared-trousers-1.webp",
+        "alt": "Flared Trousers in black, side"
+      },
+      {
+        "src": "/images/flared-trousers-2.webp",
+        "alt": "Flared Trousers in black, front"
+      },
+      {
+        "src": "/images/flared-trousers-3.webp",
+        "alt": "Flared Trousers in black, full look"
+      }
+    ],
+    "related": [
+      "open-back-bodysuit",
+      "faux-shearling-coat"
+    ]
+  },
+  {
+    "id": "ost-020",
+    "handle": "pleated-trousers",
+    "name": "Pleated Trousers",
+    "gender": "women",
+    "category": "trousers",
+    "price": 3599,
+    "drop": "aw26",
+    "releasedAt": "2026-10-10",
+    "isNew": false,
+    "summary": "Front pleats, tapered leg, in stone.",
+    "description": "High-waisted tailored trousers with front pleats, slanted side pockets and a tapered ankle-length leg. Button and zip fastening.",
+    "fit": "High rise, relaxed through the hip, tapered leg. Ankle length.",
+    "material": "64% polyester, 34% viscose, 2% elastane.",
+    "care": [
+      "Machine wash at 30°C",
+      "Iron on medium",
+      "Do not tumble dry",
+      "Hang to dry"
+    ],
+    "colors": [
+      {
+        "name": "Stone",
+        "slug": "stone",
+        "hex": "#CFC6B4"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "stone": {
+        "XS": 2,
+        "S": 6,
+        "M": 18,
+        "L": 8,
+        "XL": 8
+      }
+    },
+    "images": [
+      {
+        "src": "/images/pleated-trousers-1.webp",
+        "alt": "Pleated Trousers in stone, front"
+      },
+      {
+        "src": "/images/pleated-trousers-2.webp",
+        "alt": "Pleated Trousers in stone, detail"
+      },
+      {
+        "src": "/images/pleated-trousers-3.webp",
+        "alt": "Pleated Trousers in stone, side"
+      }
+    ],
+    "related": [
+      "cropped-shirt",
+      "oversized-blazer"
+    ]
+  },
+  {
+    "id": "ost-021",
+    "handle": "buckle-baguette-bag",
+    "name": "Buckle Baguette Bag",
+    "gender": "women",
+    "category": "accessories",
+    "price": 3999,
+    "drop": "aw26",
+    "releasedAt": "2026-10-24",
+    "isNew": true,
+    "summary": "A small shoulder bag with silver buckles.",
+    "description": "A compact baguette bag in faux leather with two buckle straps across the front, a zip top and a short shoulder strap.",
+    "fit": "One size. 28 × 14 × 7 cm. Strap drop 24 cm.",
+    "material": "Outer: 100% polyurethane. Lining: 100% polyester.",
+    "care": [
+      "Wipe clean with a damp cloth",
+      "Keep away from direct heat",
+      "Store stuffed",
+      "Do not machine wash"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "slug": "black",
+        "hex": "#111111"
+      }
+    ],
+    "sizes": [
+      "ONE SIZE"
+    ],
+    "stock": {
+      "black": {
+        "ONE SIZE": 22
+      }
+    },
+    "images": [
+      {
+        "src": "/images/buckle-baguette-bag-1.webp",
+        "alt": "Buckle Baguette Bag in black, worn on the shoulder"
+      }
+    ],
+    "related": [
+      "faux-leather-biker-jacket",
+      "flared-trousers"
+    ]
+  },
+  {
+    "id": "ost-022",
+    "handle": "quilted-chain-bag",
+    "name": "Quilted Chain Bag",
+    "gender": "women",
+    "category": "accessories",
+    "price": 3599,
+    "drop": "aw26",
+    "releasedAt": "2026-10-17",
+    "isNew": false,
+    "summary": "Quilted faux leather on a gold chain.",
+    "description": "A flat quilted crossbody bag with a gold-tone chain strap, a magnetic flap and a fringed tassel. Fits a phone, cards and keys.",
+    "fit": "One size. 24 × 15 × 5 cm. Chain drop 55 cm.",
+    "material": "Outer: 100% polyurethane. Lining: 100% polyester.",
+    "care": [
+      "Wipe clean with a damp cloth",
+      "Keep away from direct heat",
+      "Store flat",
+      "Do not machine wash"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "slug": "black",
+        "hex": "#111111"
+      }
+    ],
+    "sizes": [
+      "ONE SIZE"
+    ],
+    "stock": {
+      "black": {
+        "ONE SIZE": 22
+      }
+    },
+    "images": [
+      {
+        "src": "/images/quilted-chain-bag-1.webp",
+        "alt": "Quilted Chain Bag in black, front"
+      },
+      {
+        "src": "/images/quilted-chain-bag-2.webp",
+        "alt": "Quilted Chain Bag in black, detail"
+      }
+    ],
+    "related": [
+      "satin-shirt-dress",
+      "poplin-midi-dress"
+    ]
+  },
+  {
+    "id": "ost-023",
     "handle": "oversized-denim-jacket",
     "name": "Oversized Denim Jacket",
     "gender": "men",
@@ -825,11 +1349,11 @@
     ],
     "stock": {
       "mid-blue": {
-        "S": 11,
-        "M": 14,
-        "L": 14,
-        "XL": 6,
-        "XXL": 2
+        "S": 14,
+        "M": 22,
+        "L": 18,
+        "XL": 18,
+        "XXL": 4
       }
     },
     "images": [
@@ -852,7 +1376,7 @@
     ]
   },
   {
-    "id": "ost-015",
+    "id": "ost-024",
     "handle": "puffer-jacket",
     "name": "Puffer Jacket",
     "gender": "men",
@@ -887,10 +1411,10 @@
     ],
     "stock": {
       "ecru": {
-        "S": 3,
+        "S": 14,
         "M": 3,
         "L": 14,
-        "XL": 14,
+        "XL": 11,
         "XXL": 2
       }
     },
@@ -914,7 +1438,7 @@
     ]
   },
   {
-    "id": "ost-016",
+    "id": "ost-025",
     "handle": "corduroy-overshirt",
     "name": "Corduroy Overshirt",
     "gender": "men",
@@ -950,9 +1474,9 @@
     "stock": {
       "forest-green": {
         "S": 3,
-        "M": 11,
-        "L": 6,
-        "XL": 8,
+        "M": 6,
+        "L": 14,
+        "XL": 3,
         "XXL": 2
       }
     },
@@ -976,7 +1500,7 @@
     ]
   },
   {
-    "id": "ost-017",
+    "id": "ost-026",
     "handle": "oversized-cotton-t-shirt",
     "name": "Oversized Cotton T-shirt",
     "gender": "men",
@@ -1011,11 +1535,11 @@
     ],
     "stock": {
       "white": {
-        "S": 22,
-        "M": 14,
-        "L": 8,
-        "XL": 3,
-        "XXL": 2
+        "S": 14,
+        "M": 22,
+        "L": 18,
+        "XL": 11,
+        "XXL": 6
       }
     },
     "images": [
@@ -1034,7 +1558,7 @@
     ]
   },
   {
-    "id": "ost-018",
+    "id": "ost-027",
     "handle": "crew-neck-jumper",
     "name": "Crew Neck Jumper",
     "gender": "men",
@@ -1069,10 +1593,10 @@
     ],
     "stock": {
       "ecru": {
-        "S": 11,
-        "M": 18,
-        "L": 11,
-        "XL": 14,
+        "S": 6,
+        "M": 22,
+        "L": 14,
+        "XL": 3,
         "XXL": 2
       }
     },
@@ -1096,7 +1620,7 @@
     ]
   },
   {
-    "id": "ost-019",
+    "id": "ost-028",
     "handle": "fine-knit-jumper",
     "name": "Fine Knit Jumper",
     "gender": "men",
@@ -1131,10 +1655,10 @@
     ],
     "stock": {
       "black": {
-        "S": 8,
-        "M": 3,
-        "L": 18,
-        "XL": 6,
+        "S": 22,
+        "M": 11,
+        "L": 3,
+        "XL": 8,
         "XXL": 2
       }
     },
@@ -1158,7 +1682,7 @@
     ]
   },
   {
-    "id": "ost-020",
+    "id": "ost-029",
     "handle": "baggy-jeans",
     "name": "Baggy Jeans",
     "gender": "men",
@@ -1193,10 +1717,10 @@
     ],
     "stock": {
       "mid-blue": {
-        "S": 6,
-        "M": 18,
-        "L": 8,
-        "XL": 8,
+        "S": 3,
+        "M": 8,
+        "L": 6,
+        "XL": 3,
         "XXL": 6
       }
     },
@@ -1220,7 +1744,7 @@
     ]
   },
   {
-    "id": "ost-021",
+    "id": "ost-030",
     "handle": "relaxed-straight-jeans",
     "name": "Relaxed Straight Jeans",
     "gender": "men",
@@ -1256,10 +1780,10 @@
     "stock": {
       "light-blue": {
         "S": 22,
-        "M": 18,
-        "L": 18,
-        "XL": 11,
-        "XXL": 6
+        "M": 3,
+        "L": 3,
+        "XL": 22,
+        "XXL": 4
       }
     },
     "images": [
@@ -1278,7 +1802,7 @@
     ]
   },
   {
-    "id": "ost-022",
+    "id": "ost-031",
     "handle": "cord-trousers",
     "name": "Cord Trousers",
     "gender": "men",
@@ -1313,11 +1837,11 @@
     ],
     "stock": {
       "ecru": {
-        "S": 11,
-        "M": 14,
-        "L": 11,
-        "XL": 18,
-        "XXL": 2
+        "S": 14,
+        "M": 3,
+        "L": 22,
+        "XL": 8,
+        "XXL": 4
       }
     },
     "images": [
@@ -1333,6 +1857,300 @@
     "related": [
       "corduroy-overshirt",
       "puffer-jacket"
+    ]
+  },
+  {
+    "id": "ost-032",
+    "handle": "linen-blend-blazer",
+    "name": "Linen Blend Blazer",
+    "gender": "men",
+    "category": "coats",
+    "price": 6999,
+    "drop": "aw26",
+    "releasedAt": "2026-10-17",
+    "isNew": true,
+    "summary": "A soft-shouldered blazer in light grey.",
+    "description": "A single-breasted blazer in a linen blend with soft shoulders, notch lapels, two flap pockets and a chest pocket. Half lined so it stays light.",
+    "fit": "Regular fit. Take your usual size.",
+    "material": "55% linen, 45% viscose. Lining: 100% polyester.",
+    "care": [
+      "Dry clean only",
+      "Steam to remove creases",
+      "Store on a wide hanger",
+      "Do not tumble dry"
+    ],
+    "colors": [
+      {
+        "name": "Light grey",
+        "slug": "light-grey",
+        "hex": "#C9CDD3"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock": {
+      "light-grey": {
+        "S": 18,
+        "M": 18,
+        "L": 14,
+        "XL": 18,
+        "XXL": 2
+      }
+    },
+    "images": [
+      {
+        "src": "/images/linen-blend-blazer-1.webp",
+        "alt": "Linen Blend Blazer in light grey, seated"
+      },
+      {
+        "src": "/images/linen-blend-blazer-2.webp",
+        "alt": "Linen Blend Blazer in light grey, close-up"
+      },
+      {
+        "src": "/images/linen-blend-blazer-3.webp",
+        "alt": "Linen Blend Blazer in light grey, side"
+      }
+    ],
+    "related": [
+      "oxford-shirt",
+      "fine-knit-jumper"
+    ]
+  },
+  {
+    "id": "ost-033",
+    "handle": "wool-blend-blazer",
+    "name": "Wool Blend Blazer",
+    "gender": "men",
+    "category": "coats",
+    "price": 7999,
+    "drop": "aw26",
+    "releasedAt": "2026-10-24",
+    "isNew": true,
+    "summary": "Camel wool blend, relaxed and unstructured.",
+    "description": "An unstructured blazer in a soft wool blend with patch pockets and a two-button front. Wear it over a T-shirt or a roll neck.",
+    "fit": "Relaxed fit. Take your usual size.",
+    "material": "60% wool, 35% polyester, 5% other fibres. Lining: 100% viscose.",
+    "care": [
+      "Dry clean only",
+      "Do not tumble dry",
+      "Steam to refresh",
+      "Store on a wide hanger"
+    ],
+    "colors": [
+      {
+        "name": "Camel",
+        "slug": "camel",
+        "hex": "#B98A62"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock": {
+      "camel": {
+        "S": 3,
+        "M": 3,
+        "L": 6,
+        "XL": 11,
+        "XXL": 4
+      }
+    },
+    "images": [
+      {
+        "src": "/images/wool-blend-blazer-1.webp",
+        "alt": "Wool Blend Blazer in camel, front"
+      },
+      {
+        "src": "/images/wool-blend-blazer-2.webp",
+        "alt": "Wool Blend Blazer in camel, arms crossed"
+      }
+    ],
+    "related": [
+      "roll-neck-jumper",
+      "cord-trousers"
+    ]
+  },
+  {
+    "id": "ost-034",
+    "handle": "oxford-shirt",
+    "name": "Oxford Shirt",
+    "gender": "men",
+    "category": "shirts",
+    "price": 2999,
+    "drop": "aw26",
+    "releasedAt": "2026-10-10",
+    "isNew": false,
+    "summary": "A crisp white shirt for every day.",
+    "description": "A classic shirt in cotton Oxford cloth with a spread collar, a curved hem and a single chest pocket.",
+    "fit": "Regular fit. Take your usual size.",
+    "material": "100% cotton Oxford.",
+    "care": [
+      "Machine wash at 30°C",
+      "Wash inside out with similar colours",
+      "Iron on medium",
+      "Do not tumble dry"
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "slug": "white",
+        "hex": "#FFFFFF"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock": {
+      "white": {
+        "S": 6,
+        "M": 6,
+        "L": 22,
+        "XL": 14,
+        "XXL": 4
+      }
+    },
+    "images": [
+      {
+        "src": "/images/oxford-shirt-1.webp",
+        "alt": "Oxford Shirt in white, front"
+      },
+      {
+        "src": "/images/oxford-shirt-2.webp",
+        "alt": "Oxford Shirt in white, close-up"
+      }
+    ],
+    "related": [
+      "linen-blend-blazer",
+      "relaxed-straight-jeans"
+    ]
+  },
+  {
+    "id": "ost-035",
+    "handle": "roll-neck-jumper",
+    "name": "Roll Neck Jumper",
+    "gender": "men",
+    "category": "knitwear",
+    "price": 3299,
+    "drop": "aw26",
+    "releasedAt": "2026-10-17",
+    "isNew": true,
+    "summary": "A fine roll neck in grey melange.",
+    "description": "A fine-gauge roll neck with a ribbed collar, cuffs and hem. Smooth enough to layer under a blazer or coat.",
+    "fit": "Regular fit. Take your usual size.",
+    "material": "50% cotton, 30% viscose, 20% polyamide.",
+    "care": [
+      "Hand wash cold or wool cycle",
+      "Dry flat",
+      "Do not tumble dry",
+      "Fold, do not hang"
+    ],
+    "colors": [
+      {
+        "name": "Grey melange",
+        "slug": "grey-melange",
+        "hex": "#A6A8AB"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock": {
+      "grey-melange": {
+        "S": 11,
+        "M": 14,
+        "L": 22,
+        "XL": 8,
+        "XXL": 2
+      }
+    },
+    "images": [
+      {
+        "src": "/images/roll-neck-jumper-1.webp",
+        "alt": "Roll Neck Jumper in grey melange, seated"
+      },
+      {
+        "src": "/images/roll-neck-jumper-2.webp",
+        "alt": "Roll Neck Jumper in grey melange, close-up"
+      },
+      {
+        "src": "/images/roll-neck-jumper-3.webp",
+        "alt": "Roll Neck Jumper in grey melange, side"
+      }
+    ],
+    "related": [
+      "wool-blend-blazer",
+      "cord-trousers"
+    ]
+  },
+  {
+    "id": "ost-036",
+    "handle": "cotton-trench-coat",
+    "name": "Cotton Trench Coat",
+    "gender": "men",
+    "category": "coats",
+    "price": 8999,
+    "drop": "aw26",
+    "releasedAt": "2026-10-10",
+    "isNew": false,
+    "summary": "A long single-breasted trench in stone.",
+    "description": "A single-breasted trench coat in cotton gabardine with a concealed button front, raglan sleeves and side pockets. Long enough to cover a blazer.",
+    "fit": "Relaxed fit. Below the knee on a 185 cm model.",
+    "material": "100% cotton gabardine. Lining: 100% viscose.",
+    "care": [
+      "Machine wash at 30°C on a gentle cycle",
+      "Do not tumble dry",
+      "Iron on medium",
+      "Hang to dry"
+    ],
+    "colors": [
+      {
+        "name": "Stone",
+        "slug": "stone",
+        "hex": "#CFC6B4"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock": {
+      "stone": {
+        "S": 14,
+        "M": 18,
+        "L": 3,
+        "XL": 18,
+        "XXL": 6
+      }
+    },
+    "images": [
+      {
+        "src": "/images/cotton-trench-coat-1.webp",
+        "alt": "Cotton Trench Coat in stone, front"
+      }
+    ],
+    "related": [
+      "roll-neck-jumper",
+      "cord-trousers"
     ]
   }
 ]

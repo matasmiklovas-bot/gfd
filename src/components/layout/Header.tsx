@@ -1,9 +1,10 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
-import { NAV } from '@/lib/site';
+import { useEffect, useState, type FocusEvent } from 'react';
+import { MENU, NAV } from '@/lib/site';
 import { useT } from '@/lib/i18n';
 import { cartCount, cartStore, ui, uiStore } from '@/lib/store';
 import { BagIcon, MenuIcon, SearchIcon, UserIcon, HeartIcon } from '@/components/ui/Icons';
@@ -15,6 +16,7 @@ export function Header() {
   const count = cartStore.useStore(cartCount);
   const panel = uiStore.useStore((s) => s.panel);
   const [scrolled, setScrolled] = useState(false);
+  const [dropdown, setDropdown] = useState<'women' | 'men' | null>(null);
 
   // Only the home page has a full-bleed hero under the header.
   const overlay = pathname === '/';
@@ -26,9 +28,23 @@ export function Header() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  useEffect(() => ui.close(), [pathname]);
+  useEffect(() => {
+    ui.close();
+    setDropdown(null);
+  }, [pathname]);
 
-  const transparent = overlay && !scrolled && panel !== 'search';
+  useEffect(() => {
+    if (!dropdown) return;
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setDropdown(null);
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [dropdown]);
+
+  const leave = (e: FocusEvent<HTMLLIElement>) => {
+    if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setDropdown(null);
+  };
+
+  const transparent = overlay && !scrolled && panel !== 'search' && !dropdown;
 
   const iconBtn =
     'inline-flex h-11 w-11 items-center justify-center transition-opacity hover:opacity-60';
@@ -64,17 +80,71 @@ export function Header() {
             <ul className="flex items-center gap-7">
               {NAV.map((item) => {
                 const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
+                const gender = item.href === '/women' ? 'women' : item.href === '/men' ? 'men' : null;
+                const link = (
+                  <Link
+                    href={item.href}
+                    aria-current={active ? 'page' : undefined}
+                    className={`label inline-block py-2 transition-opacity hover:opacity-60 ${
+                      active ? 'underline decoration-1 underline-offset-[6px]' : ''
+                    }`}
+                  >
+                    {t(item.key)}
+                  </Link>
+                );
+                if (!gender) return <li key={item.href}>{link}</li>;
+                const open = dropdown === gender;
                 return (
-                  <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      aria-current={active ? 'page' : undefined}
-                      className={`label py-2 transition-opacity hover:opacity-60 ${
-                        active ? 'underline decoration-1 underline-offset-[6px]' : ''
+                  <li
+                    key={item.href}
+                    className="flex h-header items-center"
+                    onMouseEnter={() => setDropdown(gender)}
+                    onMouseLeave={() => setDropdown(null)}
+                    onFocus={() => setDropdown(gender)}
+                    onBlur={leave}
+                  >
+                    {link}
+                    <div
+                      className={`absolute inset-x-0 top-full border-b border-line bg-white text-ink transition-[opacity,visibility] duration-200 ${
+                        open ? 'visible opacity-100' : 'invisible opacity-0'
                       }`}
                     >
-                      {t(item.key)}
-                    </Link>
+                      <div className="container-site grid grid-cols-[1fr_auto] gap-12 py-8">
+                        <ul className="grid max-w-2xl auto-rows-min grid-cols-2 gap-x-16 gap-y-1 self-start lg:grid-cols-3">
+                          {MENU[gender].map((m) => (
+                            <li key={m.category}>
+                              <Link
+                                href={`/${gender}/${m.category}`}
+                                className="block py-2 text-[15px] transition-opacity hover:opacity-60"
+                                tabIndex={open ? 0 : -1}
+                              >
+                                {m.label}
+                              </Link>
+                            </li>
+                          ))}
+                          <li>
+                            <Link href={`/${gender}`} className="label block py-3 underline underline-offset-4" tabIndex={open ? 0 : -1}>
+                              View all
+                            </Link>
+                          </li>
+                        </ul>
+                        <Link
+                          href={`/${gender}`}
+                          className="group relative block aspect-[4/5] w-[200px] overflow-hidden bg-bone"
+                          tabIndex={-1}
+                          aria-hidden="true"
+                        >
+                          <Image
+                            src={`/images/hero-${gender}.webp`}
+                            alt=""
+                            fill
+                            sizes="200px"
+                            className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                          />
+                          <span className="label absolute bottom-3 left-3 bg-white px-2 py-1">New in</span>
+                        </Link>
+                      </div>
+                    </div>
                   </li>
                 );
               })}

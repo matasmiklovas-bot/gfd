@@ -7,9 +7,10 @@ export const { getAllProducts, getProductByHandle, getProductsByCategory, getPro
 export const CATEGORIES: { slug: Category; label: string; description: string }[] = [
   { slug: 'coats', label: 'Coats & jackets', description: 'Trench coats, wool coats, blazers, puffers and denim jackets for the cold half of the year.' },
   { slug: 'knitwear', label: 'Knitwear', description: 'Chunky turtlenecks, soft brushed jumpers and fine-gauge crew necks.' },
-  { slug: 'shirts', label: 'Shirts & tops', description: 'Poplin shirts, satin shirt dresses, overshirts and heavyweight T-shirts.' },
-  { slug: 'trousers', label: 'Jeans & trousers', description: 'Wide-leg, straight, mom and baggy jeans, plus corduroy trousers.' },
-  { slug: 'accessories', label: 'Bags', description: 'Leather bags to finish the look.' },
+  { slug: 'shirts', label: 'Shirts & tops', description: 'Poplin and Oxford shirts, bodysuits, overshirts and heavyweight T-shirts.' },
+  { slug: 'dresses', label: 'Dresses', description: 'Satin shirt dresses and cotton midi dresses.' },
+  { slug: 'trousers', label: 'Jeans & trousers', description: 'Wide-leg, straight, mom and baggy jeans, flared and pleated trousers, corduroy.' },
+  { slug: 'accessories', label: 'Bags', description: 'Shoulder, baguette and chain bags to finish the look.' },
 ];
 
 export const GENDERS: { slug: Gender; label: string; description: string }[] = [
@@ -19,6 +20,10 @@ export const GENDERS: { slug: Gender; label: string; description: string }[] = [
 
 export function isCategory(value: string): value is Category {
   return CATEGORIES.some((c) => c.slug === value);
+}
+
+export function categoriesFor(products: Pick<Product, 'category'>[]) {
+  return CATEGORIES.filter((c) => products.some((p) => p.category === c.slug));
 }
 
 export function productUrl(p: Pick<Product, 'category' | 'handle'>) {

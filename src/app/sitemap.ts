@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { CATEGORIES, getAllProducts, productUrl } from '@/lib/commerce';
+import { CATEGORIES, GENDERS, categoriesFor, getAllProducts, productUrl } from '@/lib/commerce';
 import { absoluteUrl } from '@/lib/site';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -12,6 +12,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     ...staticPaths.map((p) => ({ url: absoluteUrl(p), changeFrequency: 'weekly' as const, priority: p === '/' ? 1 : 0.5 })),
     ...CATEGORIES.map((c) => ({ url: absoluteUrl(`/shop/${c.slug}`), changeFrequency: 'weekly' as const, priority: 0.8 })),
+    ...GENDERS.flatMap((g) =>
+      categoriesFor(products.filter((p) => p.gender === g.slug)).map((c) => ({
+        url: absoluteUrl(`/${g.slug}/${c.slug}`),
+        changeFrequency: 'weekly' as const,
+        priority: 0.8,
+      })),
+    ),
     ...products.map((p) => ({
       url: absoluteUrl(productUrl(p)),
       lastModified: p.releasedAt,

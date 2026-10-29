@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useCallback, useRef } from 'react';
-import { NAV, FOOTER_LINKS } from '@/lib/site';
+import { MENU, NAV, FOOTER_LINKS } from '@/lib/site';
 import { useT } from '@/lib/i18n';
 import { ui, uiStore } from '@/lib/store';
 import { useDialogBehavior, useScrollLock } from '@/lib/hooks';
@@ -55,6 +55,17 @@ export function MobileMenu() {
               <Link href={item.href} onClick={close} className="heading-1 block py-1">
                 {t(item.key)}
               </Link>
+              {(item.href === '/women' || item.href === '/men') && (
+                <ul className="mb-5 mt-1 flex flex-wrap gap-x-5 gap-y-1">
+                  {MENU[item.href === '/women' ? 'women' : 'men'].map((m) => (
+                    <li key={m.category}>
+                      <Link href={`${item.href}/${m.category}`} onClick={close} className="block py-2 text-[15px] text-muted">
+                        {m.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
           ))}
         </ul>
