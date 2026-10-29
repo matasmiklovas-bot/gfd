@@ -5,6 +5,7 @@ import { getAllSummaries } from '@/lib/commerce';
 import { AnnouncementBar } from '@/components/layout/AnnouncementBar';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { HideOnCheckout } from '@/components/layout/HideOnCheckout';
 import { MobileMenu } from '@/components/layout/MobileMenu';
 import { SearchOverlay } from '@/components/layout/SearchOverlay';
 import { CartDrawer } from '@/components/layout/CartDrawer';
@@ -58,7 +59,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <main id="main" tabIndex={-1} className="focus:outline-none">
           {children}
         </main>
-        <Footer />
+        <HideOnCheckout>
+          <Footer />
+        </HideOnCheckout>
         <MobileMenu />
         <SearchOverlay products={products} />
         <CartDrawer />

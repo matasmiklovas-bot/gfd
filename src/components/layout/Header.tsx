@@ -49,6 +49,21 @@ export function Header() {
   const iconBtn =
     'inline-flex h-11 w-11 items-center justify-center transition-opacity hover:opacity-60';
 
+  // Checkout: logo, a way back to the bag and a reassurance line. No shop navigation.
+  if (pathname === '/checkout') {
+    return (
+      <header className="sticky top-0 z-header h-header border-b border-line bg-white text-ink">
+        <div className="container-site grid h-full grid-cols-[1fr_auto_1fr] items-center">
+          <Link href="/shop" className="label -ml-1 inline-flex h-11 items-center px-1 transition-opacity hover:opacity-60">
+            ← <span className="ml-1 hidden sm:inline">Continue shopping</span><span className="ml-1 sm:hidden">Shop</span>
+          </Link>
+          <Logo />
+          <p className="label hidden justify-self-end text-muted sm:block">Secure checkout</p>
+        </div>
+      </header>
+    );
+  }
+
   return (
     <header
       className={`sticky top-0 z-header h-header transition-colors duration-300 ease-out ${

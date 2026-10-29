@@ -68,7 +68,7 @@ src/
 
 ### Editing products
 
-Each product in `data/products.json` has `handle` (URL slug), `gender` (`women | men`), `category` (`coats | knitwear | shirts | trousers | accessories`),
+Each product in `data/products.json` has `handle` (URL slug), `gender` (`women | men`), `category` (`coats | knitwear | shirts | dresses | trousers | accessories`),
 `price` in **cents** (`3999` = €39.99, VAT included), `colors`, `sizes`, `stock[colorSlug][size]`, `images` (4:5),
 `isNew` and `related` handles for "Complete the look". A product with all stock at `0` shows as **Sold out**. Stock
 under 5 shows "Only N left".
@@ -78,9 +78,16 @@ missing related handle fails the build with a readable message instead of breaki
 
 ### Women / Men
 
-`/women` and `/men` list products by `gender`, with a row of category chips above the grid. `/shop/[category]` mixes
-both and offers a Women / Men filter. Old streetwear URLs (`/drops`, `/shop/hoodies|tees|pants/...`) redirect in
+`/women` and `/men` list products by `gender`. `/women/[category]` and `/men/[category]` (for example `/women/dresses`)
+are generated for every category that has products for that gender, with a category nav above the grid. The header
+dropdown and the mobile menu read their links from `MENU` in `src/lib/site.ts`; the build fails if `MENU` points at a
+category with no products. `/shop/[category]` mixes both genders and offers a Women / Men filter. Product breadcrumbs
+link to the gender category. Old streetwear URLs (`/drops`, `/shop/hoodies|tees|pants/...`) redirect in
 `next.config.mjs`.
+
+Product pages show "Complete the look" (`related` in the JSON), "You may also like" (same gender and category) and
+"Recently viewed" (handles stored in this browser's `localStorage`). Search matches synonyms and common Lithuanian
+words (`src/lib/search.ts`).
 
 ---
 
@@ -107,10 +114,23 @@ sold-out sizes announced as "M, sold out", 44px+ touch targets. Lighthouse acces
 
 ## Performance
 
-Measured with Lighthouse 12 (mobile, simulated throttling) against `next start` on a cloud container: **95–99** on
-home, shop, product and FAQ once warm. The very first cold hit scored 74, because Next generates AVIF variants on first
-request. On Vercel the image CDN caches them after the first visit. Shared JS is ~103 kB gzipped (mostly React/Next).
-Re-measure on your real host; container numbers are not production numbers.
+Lighthouse 12, mobile, simulated throttling, against `next start` on a cloud container (October 2026): performance
+**90–97** on home, women, men/coats, a product page, checkout and about; accessibility **100**; best practices **100**;
+SEO **100** (checkout scores 63 on purpose: it is `noindex`). LCP is 1.7–3.1 s; the slower numbers come from Next
+generating AVIF variants on the first request, which a CDN caches. Re-measure on your real host.
+
+## Checks
+
+```bash
+npm run build && npm start               # in one terminal
+BASE_URL=http://localhost:3000 npm run qa:crawl     # every sitemap page at 1440px and 390px
+BASE_URL=http://localhost:3000 npm run qa:checkout  # demo purchase end to end, desktop and phone
+```
+
+Both need Playwright (`npm i -D playwright && npx playwright install chromium`). The crawl reports JavaScript errors,
+failed requests, horizontal overflow, pages without exactly one `h1`, images without `alt`, unnamed buttons and links,
+short meta descriptions and broken internal links. The checkout test goes menu → product → size → bag → checkout
+validation → `WELCOME10` → confirmation. Last run: 73 pages, no issues; checkout passes on both widths.
 
 ## SEO
 
@@ -160,7 +180,7 @@ All catalog reads go through `src/lib/commerce/index.ts`. To switch:
 
 Placeholder photography from Pexels ([Pexels License](https://www.pexels.com/license/): free for commercial use,
 attribution not required; you may not imply that the people shown endorse OSTREV, and you may not resell the photos
-unaltered). Cropped to 4:5 (products), 2:3 (hero), 16:10 (editorial) or square (social). No other edits.
+unaltered). Cropped to 4:5 (products), 7:10 (hero), 16:10 (editorial) or square (social). No other edits.
 
 **These are placeholders.** Replace every product photo with photography of your actual garments before launch.
 
@@ -202,6 +222,29 @@ unaltered). Cropped to 4:5 (products), 2:3 (hero), 16:10 (editorial) or square (
 | `straight-white-jeans-1.webp` | https://www.pexels.com/photo/7760230/ |
 | `straight-white-jeans-2.webp` | https://www.pexels.com/photo/7760232/ |
 | `leather-shoulder-bag-1.webp` | https://www.pexels.com/photo/13055401/ |
+| `faux-shearling-coat-1.webp` | https://www.pexels.com/photo/9327147/ |
+| `faux-shearling-coat-2.webp` | https://www.pexels.com/photo/9327148/ |
+| `printed-denim-jacket-1.webp` | https://www.pexels.com/photo/34977380/ |
+| `printed-denim-jacket-2.webp` | https://www.pexels.com/photo/34977382/ |
+| `printed-denim-jacket-3.webp` | https://www.pexels.com/photo/34977385/ |
+| `poplin-midi-dress-1.webp` | https://www.pexels.com/photo/13816060/ |
+| `poplin-midi-dress-2.webp` | https://www.pexels.com/photo/13816063/ |
+| `poplin-midi-dress-3.webp` | https://www.pexels.com/photo/13816066/ |
+| `cropped-shirt-1.webp` | https://www.pexels.com/photo/19456439/ |
+| `cropped-shirt-2.webp` | https://www.pexels.com/photo/19456440/ |
+| `cropped-shirt-3.webp` | https://www.pexels.com/photo/19456446/ |
+| `open-back-bodysuit-1.webp` | https://www.pexels.com/photo/34977336/ |
+| `open-back-bodysuit-2.webp` | https://www.pexels.com/photo/34977333/ |
+| `open-back-bodysuit-3.webp` | https://www.pexels.com/photo/34977335/ |
+| `flared-trousers-1.webp` | https://www.pexels.com/photo/34977323/ |
+| `flared-trousers-2.webp` | https://www.pexels.com/photo/34977341/ |
+| `flared-trousers-3.webp` | https://www.pexels.com/photo/34977332/ |
+| `pleated-trousers-1.webp` | https://www.pexels.com/photo/19456444/ |
+| `pleated-trousers-2.webp` | https://www.pexels.com/photo/19456438/ |
+| `pleated-trousers-3.webp` | https://www.pexels.com/photo/19456441/ |
+| `buckle-baguette-bag-1.webp` | https://www.pexels.com/photo/20591023/ |
+| `quilted-chain-bag-1.webp` | https://www.pexels.com/photo/20591024/ |
+| `quilted-chain-bag-2.webp` | https://www.pexels.com/photo/20591025/ |
 | `oversized-denim-jacket-1.webp` | https://www.pexels.com/photo/6769357/ |
 | `oversized-denim-jacket-2.webp` | https://www.pexels.com/photo/6769366/ |
 | `oversized-denim-jacket-3.webp` | https://www.pexels.com/photo/6769363/ |
@@ -226,6 +269,17 @@ unaltered). Cropped to 4:5 (products), 2:3 (hero), 16:10 (editorial) or square (
 | `relaxed-straight-jeans-2.webp` | https://www.pexels.com/photo/9775484/ |
 | `cord-trousers-1.webp` | https://www.pexels.com/photo/6626754/ |
 | `cord-trousers-2.webp` | https://www.pexels.com/photo/6626745/ |
+| `linen-blend-blazer-1.webp` | https://www.pexels.com/photo/16825859/ |
+| `linen-blend-blazer-2.webp` | https://www.pexels.com/photo/16825852/ |
+| `linen-blend-blazer-3.webp` | https://www.pexels.com/photo/16825860/ |
+| `wool-blend-blazer-1.webp` | https://www.pexels.com/photo/16825857/ |
+| `wool-blend-blazer-2.webp` | https://www.pexels.com/photo/16825858/ |
+| `oxford-shirt-1.webp` | https://www.pexels.com/photo/16825854/ |
+| `oxford-shirt-2.webp` | https://www.pexels.com/photo/16825851/ |
+| `roll-neck-jumper-1.webp` | https://www.pexels.com/photo/20359830/ |
+| `roll-neck-jumper-2.webp` | https://www.pexels.com/photo/20359839/ |
+| `roll-neck-jumper-3.webp` | https://www.pexels.com/photo/20359831/ |
+| `cotton-trench-coat-1.webp` | https://www.pexels.com/photo/10153584/ |
 | `hero-women.webp` | https://www.pexels.com/photo/7760017/ |
 | `hero-men.webp` | https://www.pexels.com/photo/6626747/ |
 | `cat-coats.webp` | https://www.pexels.com/photo/7760014/ |
