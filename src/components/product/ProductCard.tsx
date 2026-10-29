@@ -39,17 +39,18 @@ export function ProductCard({
               className="hidden object-cover opacity-0 transition-opacity duration-500 ease-out md:block md:group-hover:opacity-100"
             />
           )}
-          {(product.soldOut || product.isNew) && (
-            <span
-              className={`label absolute left-2 top-2 px-2 py-1 text-[10px] ${
-                product.soldOut ? 'bg-white text-ink' : 'bg-ink text-white'
-              }`}
-            >
-              <T k={product.soldOut ? 'product.soldOut' : 'product.new'} />
+          {product.soldOut && (
+            <span className="label absolute left-2 top-2 bg-white px-2 py-1 text-[10px] text-ink">
+              <T k="product.soldOut" />
             </span>
           )}
         </div>
-        <h3 className="mt-3 font-sans text-[13px] font-normal normal-case leading-snug tracking-normal md:text-[14px]">
+        {product.isNew && !product.soldOut && (
+          <p className="label mt-3 text-[10px] text-muted">
+            <T k="product.new" />
+          </p>
+        )}
+        <h3 className={`${product.isNew && !product.soldOut ? 'mt-1' : 'mt-3'} font-sans text-[13px] font-normal normal-case leading-snug tracking-normal md:text-[14px]`}>
           {product.name}
         </h3>
         <Price cents={product.price} className="text-[13px] text-muted md:text-[14px]" />

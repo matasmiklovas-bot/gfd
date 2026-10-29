@@ -11,11 +11,14 @@ export function ProductSlider({
   products,
   href,
   linkLabel = 'View all',
+  compact = false,
 }: {
   title: string;
   products: ProductSummary[];
   href?: string;
   linkLabel?: string;
+  /** Tighter vertical spacing for stacked sliders under a product. */
+  compact?: boolean;
 }) {
   const track = useRef<HTMLUListElement>(null);
   const [edges, setEdges] = useState({ start: true, end: false });
@@ -42,7 +45,7 @@ export function ProductSlider({
     'inline-flex h-11 w-11 items-center justify-center border border-ink transition-colors hover:bg-ink hover:text-white disabled:border-line disabled:text-concrete disabled:hover:bg-transparent';
 
   return (
-    <section aria-label={title} className="section">
+    <section aria-label={title} className={compact ? 'py-10 md:py-14' : 'section'}>
       <div className="container-site mb-6 flex items-end justify-between gap-4 md:mb-10">
         <h2 className="heading-2">{title}</h2>
         <div className="flex items-center gap-4">

@@ -27,10 +27,11 @@ export function ProductGallery({ images, name }: { images: ProductImage[]; name:
 
   return (
     <div className="relative">
+      {/* Swipeable row on phones; one column on tablets; two columns on large screens (one photo stays single). */}
       <ul
         ref={track}
         onScroll={onScroll}
-        className="scroll-row gap-0 md:grid md:grid-cols-1 md:gap-1 md:overflow-visible"
+        className={`scroll-row gap-0 md:grid md:grid-cols-1 md:gap-1 md:overflow-visible ${images.length > 1 ? 'lg:grid-cols-2' : 'lg:max-w-[640px]'}`}
         aria-label={`${name} images`}
       >
         {images.map((img, i) => (
@@ -46,7 +47,7 @@ export function ProductGallery({ images, name }: { images: ProductImage[]; name:
                 alt={img.alt}
                 fill
                 priority={i === 0}
-                sizes="(min-width: 768px) 58vw, 100vw"
+                sizes={images.length > 1 ? '(min-width: 1024px) 31vw, (min-width: 768px) 58vw, 100vw' : '(min-width: 768px) 62vw, 100vw'}
                 className="object-cover"
               />
             </button>

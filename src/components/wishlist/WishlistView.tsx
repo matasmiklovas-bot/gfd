@@ -13,7 +13,7 @@ export function WishlistView({ products }: { products: ProductSummary[] }) {
 
   return (
     <div className="container-site pb-24 pt-10 md:pt-16">
-      <h1 className="heading-display">Wishlist</h1>
+      <h1 className="heading-1">Wishlist</h1>
       {!mounted ? null : saved.length === 0 ? (
         <div className="py-16">
           <p className="text-muted">Nothing saved yet. Tap the heart on any product to keep it here.</p>
@@ -21,7 +21,7 @@ export function WishlistView({ products }: { products: ProductSummary[] }) {
         </div>
       ) : (
         <>
-          <p className="label mb-8 mt-4 text-muted">{saved.length} saved</p>
+          <h2 className="label mb-8 mt-4 text-muted">{saved.length} saved</h2>
           <ul className="grid grid-cols-2 gap-x-3 gap-y-10 md:gap-x-4 lg:grid-cols-4">
             {saved.map((p) => (
               <li key={p.handle}>

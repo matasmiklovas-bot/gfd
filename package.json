@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "qa:crawl": "node scripts/qa/crawl.js",
+    "qa:checkout": "node scripts/qa/checkout.js"
   },
   "dependencies": {
     "@fontsource-variable/archivo": "^5.2.0",

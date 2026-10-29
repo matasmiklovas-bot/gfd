@@ -127,6 +127,16 @@ export function toggleWishlist(handle: string) {
 
 type Panel = 'cart' | 'menu' | 'search' | 'filters' | null;
 
+/* ---------- Recently viewed ---------- */
+
+export const recentStore = createStore<{ handles: string[] }>({ handles: [] }, 'ostrev:recent');
+
+export const recent = {
+  add(handle: string) {
+    recentStore.set((s) => ({ handles: [handle, ...s.handles.filter((h) => h !== handle)].slice(0, 12) }));
+  },
+};
+
 export const uiStore = createStore<{ panel: Panel }>({ panel: null });
 
 export const ui = {

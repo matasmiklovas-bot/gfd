@@ -3,14 +3,26 @@ import type { ProductSummary } from '@/lib/types';
 const normalize = (s: string) =>
   s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9 ]/g, ' ');
 
-/** Every query word must match the start of a word in name, category or colour. */
+/** Extra words people search for, including Lithuanian, per category and gender. */
+const SYNONYMS: Record<string, string> = {
+  coats: 'coat jacket outerwear blazer paltas paltai striuke striukes svarkas',
+  knitwear: 'knit knitwear sweater jumper pullover cardigan megztinis megztiniai',
+  shirts: 'shirt shirts top tops tee t-shirt bodysuit marskiniai palaidine',
+  dresses: 'dress dresses suknele sukneles',
+  trousers: 'trousers pants jeans denim kelnes dzinsai',
+  accessories: 'bag bags handbag accessories rankine rankines krepsys',
+  women: 'women woman womens ladies moterims moteriski',
+  men: 'men man mens vyrams vyriski',
+};
+
+/** Every query word must match the start of a word in name, category, colour or synonyms. */
 export function searchProducts(products: ProductSummary[], query: string) {
   const terms = normalize(query).split(/\s+/).filter(Boolean);
   if (!terms.length) return [];
   return products
     .map((p) => {
       const haystack = normalize(
-        [p.name, p.category, p.category.replace(/s$/, ''), ...p.colors.map((c) => c.name)].join(' '),
+        [p.name, p.category, SYNONYMS[p.category], SYNONYMS[p.gender], ...p.colors.map((c) => c.name)].join(' '),
       );
       const words = haystack.split(/\s+/);
       const nameWords = normalize(p.name).split(/\s+/);

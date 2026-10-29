@@ -14,6 +14,7 @@ export default async function SearchPage({ searchParams }: Props) {
 
   return (
     <div className="container-site pb-24 pt-10 md:pt-16">
+      <h1 className="sr-only">{q ? `Search results for “${q}”` : 'Search'}</h1>
       <form action="/search" role="search" className="max-w-2xl border-b border-ink">
         <label htmlFor="search-page-q" className="sr-only">Search products</label>
         <input
@@ -31,6 +32,7 @@ export default async function SearchPage({ searchParams }: Props) {
       {q && results.length === 0 && (
         <Link href="/shop" className="btn-primary">Browse all products</Link>
       )}
+      {results.length > 0 && <h2 className="sr-only">Results</h2>}
       <ul className="grid grid-cols-2 gap-x-3 gap-y-10 md:gap-x-4 lg:grid-cols-4">
         {results.map((p) => (
           <li key={p.handle}>

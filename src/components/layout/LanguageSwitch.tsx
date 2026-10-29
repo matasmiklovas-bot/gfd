@@ -23,7 +23,8 @@ export function LanguageSwitch() {
           <button
             type="button"
             lang={l.code}
-            aria-label={l.name}
+            // Starts with the visible code so speech users can say what they see.
+            aria-label={`${l.label} – ${l.name}`}
             aria-pressed={locale === l.code}
             onClick={() => prefsStore.set({ locale: l.code })}
             className={`label inline-flex h-9 min-w-9 items-center justify-center px-1 transition-colors ${

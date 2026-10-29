@@ -26,7 +26,7 @@ export function ContentPage({
       <h1 className="heading-1 max-w-3xl text-balance">{title}</h1>
       {intro && <div className="mt-6 max-w-prose text-[16px] leading-7">{intro}</div>}
       <div className="mt-12 grid gap-12 md:mt-16 md:grid-cols-12">
-        <nav aria-label={nav === 'help' ? 'Help' : 'Legal'} className="md:col-span-3">
+        <nav aria-label={nav === 'help' ? 'Help' : 'Legal'} className="min-w-0 md:col-span-3">
           <ul className="scroll-row -mx-4 px-4 md:mx-0 md:flex-col md:gap-0 md:overflow-visible md:px-0">
             {links.map((l) => (
               <li key={l.href} className="shrink-0">
@@ -41,7 +41,7 @@ export function ContentPage({
             ))}
           </ul>
         </nav>
-        <div className="prose-ostrev md:col-span-8 md:col-start-5">
+        <div className="prose-ostrev min-w-0 md:col-span-8 md:col-start-5">
           {children}
           {updated && <p className="mt-12 text-[13px] text-muted">Last updated: {updated}</p>}
         </div>

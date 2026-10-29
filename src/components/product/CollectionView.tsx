@@ -204,13 +204,16 @@ export function CollectionView({
             </button>
           </div>
         ) : (
-          <ul className="grid grid-cols-2 gap-x-3 gap-y-10 md:gap-x-4 lg:grid-cols-4 lg:gap-y-14">
-            {visible.map((p, i) => (
-              <li key={p.handle}>
-                <ProductCard product={p} priority={i < 4} />
-              </li>
-            ))}
-          </ul>
+          <>
+            <h2 className="sr-only">Products</h2>
+            <ul className="grid grid-cols-2 gap-x-3 gap-y-10 md:gap-x-4 lg:grid-cols-4 lg:gap-y-14">
+              {visible.map((p, i) => (
+                <li key={p.handle}>
+                  <ProductCard product={p} priority={i < 4} />
+                </li>
+              ))}
+            </ul>
+          </>
         )}
       </div>
 

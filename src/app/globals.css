@@ -99,6 +99,9 @@
 
   .heading-display {
     @apply font-display text-display font-black uppercase;
+    /* A long word on a 320px phone hyphenates instead of widening the page. */
+    hyphens: auto;
+    overflow-wrap: break-word;
     font-stretch: 88%;
     word-spacing: 0.14em;
   }
@@ -139,8 +142,9 @@
   .prose-ostrev a {
     @apply link-underline;
   }
+  /* Wide tables scroll sideways inside the text column instead of widening the page on phones. */
   .prose-ostrev > table {
-    @apply mb-6 w-full border-collapse text-sm;
+    @apply mb-6 block w-full max-w-full overflow-x-auto border-collapse text-sm md:table;
   }
   .prose-ostrev > table th,
   .prose-ostrev > table td {

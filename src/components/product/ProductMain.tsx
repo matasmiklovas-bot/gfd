@@ -11,10 +11,10 @@ export function ProductMain({ product, url, sizeTables }: { product: Product; ur
   const [color, setColor] = useState(() => defaultColor(product));
   return (
     <div className="md:container-site md:grid md:grid-cols-12 md:gap-10 lg:gap-16">
-      <div className="md:col-span-7">
+      <div className="md:col-span-7 lg:col-span-8">
         <ProductGallery key={color} images={imagesFor(product, color)} name={product.name} />
       </div>
-      <div className="container-site pt-6 md:col-span-5 md:px-0 md:pt-0">
+      <div className="container-site pt-6 md:col-span-5 md:px-0 md:pt-0 lg:col-span-4">
         <div className="md:sticky md:top-[calc(var(--header-h)+2rem)]">
           <ProductDetail product={product} url={url} sizeTables={sizeTables} color={color} onColorChange={setColor} />
         </div>

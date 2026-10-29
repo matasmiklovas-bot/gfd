@@ -5,6 +5,7 @@ import {
   getProductByHandle,
   CATEGORIES,
   productUrl,
+  sortForListing,
   toSummary,
 } from '@/lib/commerce';
 import { centsToDecimal } from '@/lib/money';
@@ -15,6 +16,7 @@ import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { ProductMain } from '@/components/product/ProductMain';
 import { ProductSlider } from '@/components/product/ProductSlider';
+import { RecentlyViewed } from '@/components/product/RecentlyViewed';
 
 type Props = { params: Promise<{ category: string; slug: string }> };
 
@@ -65,6 +67,14 @@ export default async function ProductPage({ params }: Props) {
     .map((h) => all.find((p) => p.handle === h))
     .filter((p): p is NonNullable<typeof p> => Boolean(p))
     .map(toSummary);
+  // Same gender and category first, then the newest pieces for that gender.
+  const taken = new Set([product.handle, ...related.map((p) => p.handle)]);
+  const similar = sortForListing(
+    all.filter((p) => p.gender === product.gender && !taken.has(p.handle)).map(toSummary),
+  )
+    .sort((a, b) => Number(b.category === product.category) - Number(a.category === product.category))
+    .filter((p) => !p.soldOut)
+    .slice(0, 8);
 
   return (
     <>
@@ -83,8 +93,11 @@ export default async function ProductPage({ params }: Props) {
       </div>
 
       <ProductMain product={product} url={url} sizeTables={tablesFor(product.category)} />
+      <div className="h-6 md:h-12" aria-hidden="true" />
 
-      {related.length > 0 && <ProductSlider title="Complete the look" products={related} />}
+      {related.length > 0 && <ProductSlider title="Complete the look" products={related} compact />}
+      {similar.length > 0 && <ProductSlider title="You may also like" products={similar} compact />}
+      <RecentlyViewed current={product.handle} products={all.map(toSummary)} />
 
       <JsonLd
         data={{
