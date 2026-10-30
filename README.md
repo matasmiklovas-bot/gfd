@@ -331,9 +331,9 @@ unaltered). Cropped to 4:5 (products), 7:10 (hero), 16:10 (editorial) or square 
 | `satin-slip-dress-1.webp` | https://www.pexels.com/photo/20332983/ |
 | `satin-slip-dress-2.webp` | https://www.pexels.com/photo/20332986/ |
 | `satin-slip-dress-3.webp` | https://www.pexels.com/photo/20332984/ |
-| `satin-midi-slip-dress-1.webp` | https://www.pexels.com/photo/21904524/ |
-| `satin-midi-slip-dress-2.webp` | https://www.pexels.com/photo/21904522/ |
-| `satin-midi-slip-dress-3.webp` | https://www.pexels.com/photo/21904525/ |
+| `satin-midi-slip-dress-1.webp` | https://www.pexels.com/photo/7462006/ |
+| `satin-midi-slip-dress-2.webp` | https://www.pexels.com/photo/7462011/ |
+| `satin-midi-slip-dress-3.webp` | https://www.pexels.com/photo/7462009/ |
 | `strappy-midi-dress-1.webp` | https://www.pexels.com/photo/18851696/ |
 | `strappy-midi-dress-2.webp` | https://www.pexels.com/photo/18851698/ |
 | `chunky-bobble-cardigan-1.webp` | https://www.pexels.com/photo/18851699/ |
@@ -364,3 +364,6 @@ unaltered). Cropped to 4:5 (products), 7:10 (hero), 16:10 (editorial) or square 
 | `leather-shoulder-bag-2.webp` | https://www.pexels.com/photo/13055401/ (detail crop) |
 | `buckle-baguette-bag-2.webp` | https://www.pexels.com/photo/20591023/ (detail crop) |
 | `cotton-trench-coat-2.webp` | https://www.pexels.com/photo/10153584/ (detail crop) |
+| `jersey-mini-dress-1.webp` | https://www.pexels.com/photo/17291685/ |
+| `jersey-mini-dress-2.webp` | https://www.pexels.com/photo/17291682/ |
+| `jersey-mini-dress-3.webp` | https://www.pexels.com/photo/17291688/ |

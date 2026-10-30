@@ -2258,7 +2258,7 @@
     "releasedAt": "2026-10-27",
     "isNew": true,
     "summary": "The black satin dress, in midi length.",
-    "description": "A midi slip dress in heavy satin, with a V neckline, thin straps and a button detail at the front. Wear it with a coat and boots now, alone later.",
+    "description": "A midi slip dress in heavy satin, with a draped neckline, thin straps and a side slit. Wear it with a coat and boots now, alone later.",
     "fit": "Regular fit. Midi length on a 170 cm model.",
     "material": "100% polyester satin.",
     "care": [
@@ -2297,11 +2297,11 @@
       },
       {
         "src": "/images/satin-midi-slip-dress-2.webp",
-        "alt": "Satin Midi Slip Dress in black, portrait"
+        "alt": "Satin Midi Slip Dress in black, front"
       },
       {
         "src": "/images/satin-midi-slip-dress-3.webp",
-        "alt": "Satin Midi Slip Dress in black, side"
+        "alt": "Satin Midi Slip Dress in black, seated"
       }
     ],
     "related": [
@@ -2835,6 +2835,68 @@
     "related": [
       "baggy-jeans",
       "cotton-trench-coat"
+    ]
+  },
+  {
+    "id": "ost-047",
+    "handle": "jersey-mini-dress",
+    "name": "Jersey Mini Dress",
+    "gender": "women",
+    "category": "dresses",
+    "price": 2599,
+    "drop": "aw26",
+    "releasedAt": "2026-10-29",
+    "isNew": true,
+    "summary": "A fitted black mini dress in stretch jersey.",
+    "description": "A sleeveless mini dress in soft stretch jersey, with a scoop neckline and a close, body-skimming fit. Wear it alone, or under an oversized blazer and boots.",
+    "fit": "Slim fit, stretchy. Mini length on a 170 cm model.",
+    "material": "95% viscose, 5% elastane.",
+    "care": [
+      "Machine wash at 30°C on a gentle cycle",
+      "Wash inside out",
+      "Do not tumble dry",
+      "Dry flat"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "slug": "black",
+        "hex": "#111111"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "black": {
+        "XS": 2,
+        "S": 18,
+        "M": 6,
+        "L": 14,
+        "XL": 14
+      }
+    },
+    "images": [
+      {
+        "src": "/images/jersey-mini-dress-1.webp",
+        "alt": "Jersey Mini Dress in black, side"
+      },
+      {
+        "src": "/images/jersey-mini-dress-2.webp",
+        "alt": "Jersey Mini Dress in black, seated"
+      },
+      {
+        "src": "/images/jersey-mini-dress-3.webp",
+        "alt": "Jersey Mini Dress in black, portrait"
+      }
+    ],
+    "related": [
+      "oversized-blazer",
+      "buckle-baguette-bag"
     ]
   }
 ]

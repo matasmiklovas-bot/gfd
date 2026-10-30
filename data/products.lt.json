@@ -340,7 +340,7 @@
     "satin-midi-slip-dress": {
       "name": "Midi satininė suknelė ant petnešėlių",
       "summary": "Juoda satininė suknelė, midi ilgio.",
-      "description": "Midi ilgio suknelė iš sunkaus satino su V formos iškirpte, plonomis petnešėlėmis ir sagų detale priekyje. Dabar – su paltu ir batais, vėliau – vieną.",
+      "description": "Midi ilgio suknelė iš sunkaus satino su drapiruota iškirpte, plonomis petnešėlėmis ir skeltuku šone. Dabar – su paltu ir batais, vėliau – vieną.",
       "fit": "Įprastas kirpimas. 170 cm modeliui – iki blauzdų vidurio.",
       "material": "100 % poliesterio satinas."
     },
@@ -399,6 +399,13 @@
       "description": "Megztinis apvalia apykakle iš minkšto pašiaušto medvilnės mišinio, nuleistais pečiais ir rantyta apykakle, rankogaliais bei apačia. Paprastas baltas sluoksnis po paltu ar ant marškinių.",
       "fit": "Laisvas kirpimas.",
       "material": "60 % medvilnė, 40 % poliesteris."
+    },
+    "jersey-mini-dress": {
+      "name": "Džersio mini suknelė",
+      "summary": "Priglundanti juoda mini suknelė iš tampraus džersio.",
+      "description": "Trumpa suknelė be rankovių iš minkšto tampraus džersio, su apvalia gilesne iškirpte, švelniai priglundanti prie kūno. Dėvėkite vieną arba su laisvu švarku ir batais.",
+      "fit": "Prigludęs kirpimas, tampri. 170 cm modeliui – virš kelių.",
+      "material": "95 % viskozė, 5 % elastanas."
     }
   }
 }
