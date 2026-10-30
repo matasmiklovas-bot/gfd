@@ -389,3 +389,8 @@ unaltered). Cropped to 4:5 (products), 7:10 (hero), 16:10 (editorial) or square 
 | `striped-popover-shirt-1.webp` | https://www.pexels.com/photo/7129365/ |
 | `striped-popover-shirt-2.webp` | https://www.pexels.com/photo/7129366/ |
 | `striped-popover-shirt-3.webp` | https://www.pexels.com/photo/7129368/ |
+| `ruffle-sleeve-blouse-1.webp` | https://www.pexels.com/photo/11791521/ |
+| `ruffle-sleeve-blouse-2.webp` | https://www.pexels.com/photo/11791520/ |
+| `ruffle-sleeve-blouse-3.webp` | https://www.pexels.com/photo/11791522/ |
+| `wide-leg-suit-trousers-1.webp` | https://www.pexels.com/photo/18173600/ |
+| `wide-leg-suit-trousers-2.webp` | https://www.pexels.com/photo/18173602/ |

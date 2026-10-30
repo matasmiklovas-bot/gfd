@@ -444,6 +444,20 @@
       "description": "Per galvą velkami marškiniai iš lengvos medvilnės su mėlynais ir baltais dryžiais, stačia apykakle, užsegimu iki krūtinės vidurio ir ilgomis rankovėmis. Pakankamai laisvi, kad dėvėtumėte išleistus ant kelnių ar džinsų.",
       "fit": "Laisvas kirpimas.",
       "material": "100 % medvilnė."
+    },
+    "ruffle-sleeve-blouse": {
+      "name": "Palaidinė raukintomis rankovėmis",
+      "summary": "Ryškiai raudona palaidinė su dvigubais raukiniais ant rankovių.",
+      "description": "Trumparankovė palaidinė iš lengvo krepo, apvalia iškirpte, paslėptu sagų užsegimu ir dviem raukinių eilėmis ties pečiais. Susikiškite į džinsus ar plačias kelnes.",
+      "fit": "Įprastas kirpimas.",
+      "material": "100 % poliesterio krepas."
+    },
+    "wide-leg-suit-trousers": {
+      "name": "Plačios kostiuminės kelnės",
+      "summary": "Aukšto juosmens smėlio spalvos kelnės plačiomis, iki grindų siekiančiomis klešnėmis.",
+      "description": "Kostiuminės kelnės iš takaus „twill“ audinio, aukštu juosmeniu, klostėmis priekyje, šoninėmis kišenėmis ir plačiomis klešnėmis iki grindų. Dėvėkite su ilgu švarku arba paprastu megztiniu.",
+      "fit": "Aukštas juosmuo, plačios klešnės. 170 cm modeliui – visu ilgiu.",
+      "material": "65 % poliesteris, 30 % viskozė, 5 % elastanas."
     }
   }
 }

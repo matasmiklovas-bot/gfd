@@ -3192,5 +3192,125 @@
       "wide-leg-chinos",
       "baggy-jeans"
     ]
+  },
+  {
+    "id": "ost-053",
+    "handle": "ruffle-sleeve-blouse",
+    "name": "Ruffle Sleeve Blouse",
+    "gender": "women",
+    "category": "shirts",
+    "price": 2799,
+    "drop": "aw26",
+    "releasedAt": "2026-10-28",
+    "isNew": true,
+    "summary": "A bright red blouse with layered ruffle sleeves.",
+    "description": "A short-sleeve blouse in light crepe, with a round neck, a concealed button placket and two tiers of ruffles at the shoulder. Tuck it into jeans or wide trousers.",
+    "fit": "Regular fit.",
+    "material": "100% polyester crepe.",
+    "care": [
+      "Machine wash at 30°C on a delicate cycle",
+      "Iron on low, inside out",
+      "Do not tumble dry",
+      "Hang to dry"
+    ],
+    "colors": [
+      {
+        "name": "Red",
+        "slug": "red",
+        "hex": "#D62B2B"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "red": {
+        "XS": 2,
+        "S": 11,
+        "M": 3,
+        "L": 22,
+        "XL": 11
+      }
+    },
+    "images": [
+      {
+        "src": "/images/ruffle-sleeve-blouse-1.webp",
+        "alt": "Ruffle Sleeve Blouse in red, front"
+      },
+      {
+        "src": "/images/ruffle-sleeve-blouse-2.webp",
+        "alt": "Ruffle Sleeve Blouse in red, seated"
+      },
+      {
+        "src": "/images/ruffle-sleeve-blouse-3.webp",
+        "alt": "Ruffle Sleeve Blouse in red, portrait"
+      }
+    ],
+    "related": [
+      "straight-white-jeans",
+      "wide-leg-suit-trousers"
+    ]
+  },
+  {
+    "id": "ost-054",
+    "handle": "wide-leg-suit-trousers",
+    "name": "Wide-Leg Suit Trousers",
+    "gender": "women",
+    "category": "trousers",
+    "price": 3999,
+    "drop": "aw26",
+    "releasedAt": "2026-10-27",
+    "isNew": true,
+    "summary": "High-waisted beige trousers with a wide, floor-grazing leg.",
+    "description": "Tailored trousers in a fluid twill, with a high waist, front pleats, side pockets and a wide leg that falls to the floor. Wear them with a long blazer or a simple knit.",
+    "fit": "High waist, wide leg. Full length on a 170 cm model.",
+    "material": "65% polyester, 30% viscose, 5% elastane.",
+    "care": [
+      "Machine wash at 30°C on a gentle cycle",
+      "Iron on low",
+      "Do not tumble dry",
+      "Hang to dry"
+    ],
+    "colors": [
+      {
+        "name": "Beige",
+        "slug": "beige",
+        "hex": "#C8B49A"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "beige": {
+        "XS": 2,
+        "S": 18,
+        "M": 3,
+        "L": 6,
+        "XL": 3
+      }
+    },
+    "images": [
+      {
+        "src": "/images/wide-leg-suit-trousers-1.webp",
+        "alt": "Wide-Leg Suit Trousers in beige, full look"
+      },
+      {
+        "src": "/images/wide-leg-suit-trousers-2.webp",
+        "alt": "Wide-Leg Suit Trousers in beige, crouching"
+      }
+    ],
+    "related": [
+      "ruffle-sleeve-blouse",
+      "oversized-blazer"
+    ]
   }
 ]
