@@ -108,7 +108,7 @@
     },
     "chunky-turtleneck-jumper": {
       "name": "Storas megztinis aukštu kaklu",
-      "summary": "Storas golfas švelniai žalia, tarsi išblukusia spalva.",
+      "summary": "Storas golfas švelnios, tarsi išblukusios žalios spalvos.",
       "description": "Storo mezgimo megztinis su atlenkiama apykakle, nuleistais pečiais ir rantytais rankogaliais bei apačia. Pakankamai šiltas spalį vilkėti vienam ir pakankamai laisvas po paltu.",
       "fit": "Laisvas kirpimas. Rinkitės įprastą dydį.",
       "material": "50 % akrilas, 28 % poliesteris, 17 % vilna, 5 % alpaka."
@@ -122,7 +122,7 @@
     },
     "chunky-rib-jumper": {
       "name": "Storas rantyto mezgimo megztinis",
-      "summary": "Storas rantytas mezgimas kreminės spalvos, platus.",
+      "summary": "Storas kreminės spalvos rantytas megztinis, laisvas ir platus.",
       "description": "Storo, plataus ranto megztinis apvalia iškirpte ir ilgomis rankovėmis, kurias galima pastumti aukštyn. Stambus mezgimas, minkštas prisilietimas.",
       "fit": "Laisvas kirpimas. Jei norite aptemptesnio, rinkitės mažesnį dydį.",
       "material": "60 % akrilas, 30 % poliesteris, 10 % vilna."
@@ -198,7 +198,7 @@
       "material": "100 % medvilnė."
     },
     "open-back-bodysuit": {
-      "name": "Glaustinukė atvira nugara",
+      "name": "Glaustinukė su atvira nugara",
       "summary": "Trumpos rankovės priekyje, atvira nugara.",
       "description": "Tamprios trikotažinės medžiagos glaustinukė apvalia iškirpte, trumpomis rankovėmis ir giliai atvira nugara. Užsegama spaudėmis.",
       "fit": "Prigludęs kirpimas. Rinkitės įprastą dydį.",
@@ -234,7 +234,7 @@
     },
     "oversized-denim-jacket": {
       "name": "Laisva džinsinė striukė",
-      "summary": "Klasikinė džinsinė striukė, didesnio dydžio.",
+      "summary": "Klasikinė džinsinė striukė, laisvesnio kirpimo.",
       "description": "Klasikinė džinsinė striukė laisvo kirpimo, su krūtinės kišenėmis su atvartėliais, šoninėmis kišenėmis ir sagomis priekyje. Standus vidutinio plovimo džinsas, kuris blunka kartu su jumis.",
       "fit": "Laisvas kirpimas. Rinkitės įprastą dydį.",
       "material": "100 % medvilninis džinsas, 13 oz."
@@ -257,7 +257,7 @@
       "name": "Laisvi medvilniniai marškinėliai",
       "summary": "Stori balti marškinėliai tiesiu kirpimu.",
       "description": "Storos medvilnės marškinėliai su nuleistais pečiais, plačiu liemeniu ir rantyta apvalia apykakle, kuri išlaiko formą.",
-      "fit": "Laisvas kirpimas. Įprastam priglundančiam – rinkitės mažesnį dydį.",
+      "fit": "Laisvas kirpimas. Jei norite labiau priglundančių, rinkitės mažesnį dydį.",
       "material": "100 % medvilninis trikotažas, 240 g/m²."
     },
     "crew-neck-jumper": {
@@ -290,7 +290,7 @@
     },
     "cord-trousers": {
       "name": "Velvetinės kelnės",
-      "summary": "Plataus ranto velvetas ekru spalvos.",
+      "summary": "Ekru spalvos plataus ranto velvetas.",
       "description": "Laisvos kelnės iš plataus ranto velveto su tiesiomis klešnėmis, šoninėmis kišenėmis, saga ir užtrauktuku. Derinkite su loaferiais ar sportbačiais.",
       "fit": "Laisvas kirpimas, tiesios klešnės. Rinkitės įprastą juosmens dydį.",
       "material": "98 % medvilnė, 2 % elastanas, velvetas."
@@ -304,7 +304,7 @@
     },
     "wool-blend-blazer": {
       "name": "Švarkas su vilna",
-      "summary": "Kupranugario spalvos vilnos mišinys, laisvas ir be formavimo.",
+      "summary": "Kupranugario spalvos vilnos mišinys, laisvas ir minkštos formos.",
       "description": "Neformuotas švarkas iš minkšto vilnos mišinio su užsiuvamomis kišenėmis ir dviem sagomis. Dėvėkite ant marškinėlių ar golfo.",
       "fit": "Laisvas kirpimas. Rinkitės įprastą dydį.",
       "material": "60 % vilna, 35 % poliesteris, 5 % kiti pluoštai. Pamušalas: 100 % viskozė."
@@ -394,7 +394,7 @@
       "material": "100 % medvilninis džinsas."
     },
     "soft-crew-jumper": {
-      "name": "Minkštas megztinis apvalia apykakle",
+      "name": "Pašiaušto mezgimo megztinis",
       "summary": "Švarus baltas megztinis iš pašiaušto mezgimo.",
       "description": "Megztinis apvalia apykakle iš minkšto pašiaušto medvilnės mišinio, nuleistais pečiais ir rantyta apykakle, rankogaliais bei apačia. Paprastas baltas sluoksnis po paltu ar ant marškinių.",
       "fit": "Laisvas kirpimas.",
