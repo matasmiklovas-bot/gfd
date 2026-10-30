@@ -406,6 +406,20 @@
       "description": "Trumpa suknelė be rankovių iš minkšto tampraus džersio, su apvalia gilesne iškirpte, švelniai priglundanti prie kūno. Dėvėkite vieną arba su laisvu švarku ir batais.",
       "fit": "Prigludęs kirpimas, tampri. 170 cm modeliui – virš kelių.",
       "material": "95 % viskozė, 5 % elastanas."
+    },
+    "wool-blend-overcoat": {
+      "name": "Vilnos mišinio paltas",
+      "summary": "Vienaeilis kupranugario spalvos paltas iki kelių.",
+      "description": "Vienaeilis paltas iš minkšto vilnos mišinio, su atlapais, trimis sagomis, kišenėmis su atvartėliais ir skeltuku nugaroje. Su pamušalu, sukirptas dėvėti ant megztinio ar švarko.",
+      "fit": "Įprastas kirpimas. 183 cm modeliui – virš kelių.",
+      "material": "60 % vilna, 30 % poliesteris, 10 % poliamidas. Pamušalas: 100 % viskozė."
+    },
+    "wide-leg-chinos": {
+      "name": "Plačios chino kelnės",
+      "summary": "Laisvos smėlio spalvos chino kelnės plačiomis tiesiomis klešnėmis.",
+      "description": "Chino kelnės iš minkšto medvilninio „twill“ audinio, vidutinio aukščio juosmeniu su guma nugaroje, klostėmis priekyje, šoninėmis kišenėmis ir plačiomis tiesiomis klešnėmis, ilgai krentančiomis ant batų.",
+      "fit": "Laisvas kirpimas, plačios klešnės. Ilgos.",
+      "material": "98 % medvilnė, 2 % elastanas."
     }
   }
 }

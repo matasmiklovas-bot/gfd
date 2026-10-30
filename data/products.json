@@ -2898,5 +2898,125 @@
       "oversized-blazer",
       "buckle-baguette-bag"
     ]
+  },
+  {
+    "id": "ost-048",
+    "handle": "wool-blend-overcoat",
+    "name": "Wool-Blend Overcoat",
+    "gender": "men",
+    "category": "coats",
+    "price": 8999,
+    "drop": "aw26",
+    "releasedAt": "2026-10-29",
+    "isNew": true,
+    "summary": "A single-breasted camel overcoat that sits just above the knee.",
+    "description": "A single-breasted overcoat in a soft wool blend, with notch lapels, a three-button front, flap pockets and a back vent. Fully lined, cut to wear over a knit or a blazer.",
+    "fit": "Regular fit. Above-knee length on a 183 cm model.",
+    "material": "60% wool, 30% polyester, 10% polyamide. Lining: 100% viscose.",
+    "care": [
+      "Dry clean only",
+      "Steam to refresh",
+      "Store on a wide hanger",
+      "Do not tumble dry"
+    ],
+    "colors": [
+      {
+        "name": "Camel",
+        "slug": "camel",
+        "hex": "#B98A62"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock": {
+      "camel": {
+        "S": 14,
+        "M": 3,
+        "L": 8,
+        "XL": 14,
+        "XXL": 6
+      }
+    },
+    "images": [
+      {
+        "src": "/images/wool-blend-overcoat-1.webp",
+        "alt": "Wool-Blend Overcoat in camel, front"
+      },
+      {
+        "src": "/images/wool-blend-overcoat-2.webp",
+        "alt": "Wool-Blend Overcoat in camel, seated"
+      }
+    ],
+    "related": [
+      "roll-neck-jumper",
+      "cord-trousers"
+    ]
+  },
+  {
+    "id": "ost-049",
+    "handle": "wide-leg-chinos",
+    "name": "Wide-Leg Chinos",
+    "gender": "men",
+    "category": "trousers",
+    "price": 3599,
+    "drop": "aw26",
+    "releasedAt": "2026-10-27",
+    "isNew": true,
+    "summary": "Relaxed beige chinos with a wide, straight leg.",
+    "description": "Chinos in soft cotton twill with a mid-rise elasticated back waist, front pleats, side pockets and a wide straight leg that falls long over the shoe.",
+    "fit": "Relaxed fit, wide leg. Long length.",
+    "material": "98% cotton, 2% elastane.",
+    "care": [
+      "Machine wash at 30°C",
+      "Wash inside out with similar colours",
+      "Iron on medium",
+      "Do not tumble dry"
+    ],
+    "colors": [
+      {
+        "name": "Beige",
+        "slug": "beige",
+        "hex": "#C8B49A"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock": {
+      "beige": {
+        "S": 8,
+        "M": 3,
+        "L": 14,
+        "XL": 8,
+        "XXL": 4
+      }
+    },
+    "images": [
+      {
+        "src": "/images/wide-leg-chinos-1.webp",
+        "alt": "Wide-Leg Chinos in beige, front"
+      },
+      {
+        "src": "/images/wide-leg-chinos-2.webp",
+        "alt": "Wide-Leg Chinos in beige, side"
+      },
+      {
+        "src": "/images/wide-leg-chinos-3.webp",
+        "alt": "Wide-Leg Chinos in beige, full look"
+      }
+    ],
+    "related": [
+      "oversized-cotton-t-shirt",
+      "denim-shirt"
+    ]
   }
 ]

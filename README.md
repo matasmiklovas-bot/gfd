@@ -376,3 +376,8 @@ unaltered). Cropped to 4:5 (products), 7:10 (hero), 16:10 (editorial) or square 
 | `jersey-mini-dress-1.webp` | https://www.pexels.com/photo/17291685/ |
 | `jersey-mini-dress-2.webp` | https://www.pexels.com/photo/17291682/ |
 | `jersey-mini-dress-3.webp` | https://www.pexels.com/photo/17291688/ |
+| `wool-blend-overcoat-1.webp` | https://www.pexels.com/photo/6211656/ |
+| `wool-blend-overcoat-2.webp` | https://www.pexels.com/photo/6211654/ |
+| `wide-leg-chinos-1.webp` | https://www.pexels.com/photo/9558929/ |
+| `wide-leg-chinos-2.webp` | https://www.pexels.com/photo/9558934/ |
+| `wide-leg-chinos-3.webp` | https://www.pexels.com/photo/9558932/ |
