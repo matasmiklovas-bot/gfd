@@ -13,6 +13,19 @@ npm run lint && npm run typecheck
 
 Node 20+ required.
 
+## Deploy (Vercel)
+
+1. Sign in at [vercel.com](https://vercel.com) with GitHub and choose **Add New → Project**.
+2. Import this repository. Vercel detects Next.js; keep the default build settings.
+3. Under **Environment Variables** add `NEXT_PUBLIC_SITE_URL` (the address the site will live at, for example
+   `https://ostrev.com`, or the `https://<project>.vercel.app` address until a domain is connected). Nothing else is
+   needed for a demo: without `STRIPE_SECRET_KEY` the checkout runs in demo mode and no money moves.
+4. Deploy. Every push to the production branch redeploys; set it under **Settings → Git** if it is not this branch.
+5. Connect the domain under **Settings → Domains**, then change `NEXT_PUBLIC_SITE_URL` to it and redeploy, so
+   canonical URLs, `hreflang`, the sitemap and Open Graph tags point at the real domain.
+
+Before taking real orders, work through the [launch checklist](#launch-checklist).
+
 ---
 
 ## What is real and what is not
