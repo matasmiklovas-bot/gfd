@@ -108,6 +108,13 @@
   .heading-1 {
     @apply font-display text-h1 font-extrabold uppercase;
   }
+  /* Lithuanian capitals carry dots and carons (Ė, Č, Š, Ž) that collide with the line above at display leading. */
+  :lang(lt) .heading-display {
+    line-height: 0.95;
+  }
+  :lang(lt) .heading-1 {
+    line-height: 1.02;
+  }
   .heading-2 {
     @apply font-display text-h2 font-extrabold uppercase;
   }

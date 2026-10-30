@@ -5,7 +5,9 @@ export function SizeTables({ tables }: { tables: SizeTable[] }) {
     <div className="space-y-10">
       {tables.map((t) => (
         <div key={t.title}>
-          <h3 className="label mb-1">{t.title} <span className="text-muted">(cm)</span></h3>
+          <h3 className="label mb-1">
+            {t.title} <span className="text-muted">(cm)</span>
+          </h3>
           <p className="mb-4 text-[13px] text-muted">{t.note}</p>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[320px] border-collapse text-[14px] tabular-nums">

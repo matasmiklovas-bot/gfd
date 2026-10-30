@@ -5,8 +5,10 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import type { ProductImage } from '@/lib/types';
 import { CloseIcon } from '@/components/ui/Icons';
 import { useScrollLock } from '@/lib/hooks';
+import { useT } from '@/lib/i18n';
 
 export function ProductGallery({ images, name }: { images: ProductImage[]; name: string }) {
+  const t = useT();
   const [index, setIndex] = useState(0);
   const [zoom, setZoom] = useState<{ i: number; x: number; y: number } | null>(null);
   const track = useRef<HTMLUListElement>(null);
@@ -32,7 +34,7 @@ export function ProductGallery({ images, name }: { images: ProductImage[]; name:
         ref={track}
         onScroll={onScroll}
         className={`scroll-row gap-0 md:grid md:grid-cols-1 md:gap-1 md:overflow-visible ${images.length > 1 ? 'lg:grid-cols-2' : 'lg:max-w-[640px]'}`}
-        aria-label={`${name} images`}
+        aria-label={t('gallery.label', { name })}
       >
         {images.map((img, i) => (
           <li key={img.src} className="w-full shrink-0 snap-center md:w-auto">
@@ -40,7 +42,7 @@ export function ProductGallery({ images, name }: { images: ProductImage[]; name:
               type="button"
               onClick={(e) => openZoom(i, e)}
               className="relative block aspect-[4/5] w-full cursor-zoom-in overflow-hidden bg-bone"
-              aria-label={`Zoom image ${i + 1} of ${images.length}`}
+              aria-label={t('gallery.zoom', { i: i + 1, n: images.length })}
             >
               <Image
                 src={img.src}
@@ -77,6 +79,7 @@ function ZoomView({
   focus: { x: number; y: number };
   onClose: () => void;
 }) {
+  const t = useT();
   const scroller = useRef<HTMLDivElement>(null);
   const closeBtn = useRef<HTMLButtonElement>(null);
   useScrollLock(true);
@@ -100,7 +103,7 @@ function ZoomView({
   };
 
   return (
-    <div role="dialog" aria-modal="true" aria-label="Zoomed image" className="fixed inset-0 z-drawer bg-white">
+    <div role="dialog" aria-modal="true" aria-label={t('gallery.zoomed')} className="fixed inset-0 z-drawer bg-white">
       <div ref={scroller} className="h-full w-full cursor-zoom-out overflow-auto" onClick={onClose}>
         <Image
           src={image.src}
@@ -118,7 +121,7 @@ function ZoomView({
         type="button"
         onClick={onClose}
         className="absolute right-3 top-3 inline-flex h-11 w-11 items-center justify-center bg-white"
-        aria-label="Close zoom"
+        aria-label={t('gallery.close')}
       >
         <CloseIcon />
       </button>

@@ -6,6 +6,8 @@ import type { Product, Size } from '@/lib/types';
 import type { SizeTable } from '@/lib/sizeGuide';
 import { cart, ui } from '@/lib/store';
 import { useT } from '@/lib/i18n';
+import { lp } from '@/lib/locale';
+import { useLocale } from '@/lib/useLocale';
 import { formatPrice, formatPriceShort } from '@/lib/money';
 import { FREE_SHIPPING_THRESHOLD, FLAT_SHIPPING } from '@/lib/pricing';
 import { AccordionItem } from '@/components/ui/Accordion';
@@ -39,6 +41,7 @@ export function ProductDetail({
   onColorChange: (slug: string) => void;
 }) {
   const t = useT();
+  const locale = useLocale();
   const setColor = onColorChange;
   const oneSize = product.sizes.length === 1;
   const [size, setSize] = useState<Size | null>(oneSize ? product.sizes[0] : null);
@@ -93,7 +96,7 @@ export function ProductDetail({
       className={`btn-primary h-14 w-full text-[12px] ${extra}`}
     >
       {buttonLabel}
-      {!unavailable && !added && <span aria-hidden="true">· {formatPrice(product.price)}</span>}
+      {!unavailable && !added && <span aria-hidden="true">· {formatPrice(product.price, locale)}</span>}
     </button>
   );
 
@@ -110,13 +113,13 @@ export function ProductDetail({
         {product.isNew && !soldOut && <span className="label bg-ink px-2 py-1 text-[10px] text-white">{t('product.new')}</span>}
         {soldOut && <span className="label border border-ink px-2 py-1 text-[10px]">{t('product.soldOut')}</span>}
       </div>
-      <p className="mt-1 text-[12px] text-muted">VAT included.</p>
+      <p className="mt-1 text-[12px] text-muted">{t('product.vat')}</p>
       <p className="mt-6 text-[15px] leading-7">{product.summary}</p>
 
       {/* Colour */}
       <fieldset className="mt-8">
         <legend className="label mb-3">
-          Colour: <span className="text-muted">{colorObj.name}</span>
+          {t('filter.colour')}: <span className="text-muted">{colorObj.name}</span>
         </legend>
         <div className="flex flex-wrap gap-2">
           {product.colors.map((c) => {
@@ -131,7 +134,7 @@ export function ProductDetail({
                   setError(false);
                 }}
                 aria-pressed={active}
-                aria-label={`${c.name}${out ? ', sold out' : ''}`}
+                aria-label={out ? t('product.optionSoldOut', { name: c.name }) : c.name}
                 title={c.name}
                 className={`relative h-11 w-11 border p-1 transition-colors ${active ? 'border-ink' : 'border-line hover:border-concrete'}`}
               >
@@ -163,7 +166,7 @@ export function ProductDetail({
                   type="button"
                   aria-pressed={active}
                   aria-disabled={out}
-                  aria-label={out ? `${s}, sold out` : s}
+                  aria-label={out ? t('product.optionSoldOut', { name: s }) : s}
                   onClick={() => {
                     if (out) return;
                     setSize(s);
@@ -205,18 +208,18 @@ export function ProductDetail({
       </div>
 
       <p className="mt-4 text-[13px] text-muted">
-        Free EU shipping over {formatPriceShort(FREE_SHIPPING_THRESHOLD)}. 14-day returns.
+        {t('product.shippingLine', { amount: formatPriceShort(FREE_SHIPPING_THRESHOLD, locale) })}
       </p>
 
       <div className="mt-10 border-t border-line">
-        <AccordionItem title="Description" defaultOpen>
+        <AccordionItem title={t('product.description')} defaultOpen>
           <p>{product.description}</p>
         </AccordionItem>
-        <AccordionItem title="Fit & sizing">
+        <AccordionItem title={t('product.fit')}>
           <p>{product.fit}</p>
-          {sizeTables.length > 0 && <p className="mt-3 text-muted">Exact measurements are in the size guide.</p>}
+          {sizeTables.length > 0 && <p className="mt-3 text-muted">{t('product.fitNote')}</p>}
         </AccordionItem>
-        <AccordionItem title="Material & care">
+        <AccordionItem title={t('product.material')}>
           <p>{product.material}</p>
           <ul className="mt-3 list-disc space-y-1 pl-5">
             {product.care.map((c) => (
@@ -224,14 +227,16 @@ export function ProductDetail({
             ))}
           </ul>
         </AccordionItem>
-        <AccordionItem title="Shipping & returns">
+        <AccordionItem title={t('product.shipping')}>
           <p>
-            EU delivery in 2–5 working days. {formatPrice(FLAT_SHIPPING)} flat rate, free over {formatPriceShort(FREE_SHIPPING_THRESHOLD)}.
-            Orders placed before 14:00 (Vilnius time) on working days ship the same day.
+            {t('product.shippingText', {
+              flat: formatPrice(FLAT_SHIPPING, locale),
+              free: formatPriceShort(FREE_SHIPPING_THRESHOLD, locale),
+            })}
           </p>
           <p className="mt-3">
-            Return unworn items within 14 days of delivery for a full refund.{' '}
-            <Link href="/help/returns" className="link-underline">Returns policy</Link>
+            {t('product.returnsText')}{' '}
+            <Link href={lp(locale, '/help/returns')} className="link-underline">{t('product.returnsLink')}</Link>
           </p>
         </AccordionItem>
       </div>

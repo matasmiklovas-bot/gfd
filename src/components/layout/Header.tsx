@@ -5,14 +5,19 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState, type FocusEvent } from 'react';
 import { MENU, NAV } from '@/lib/site';
+import { lp, splitLocale } from '@/lib/locale';
 import { useT } from '@/lib/i18n';
+import { COUNT, plural } from '@/lib/dictionary';
 import { cartCount, cartStore, ui, uiStore } from '@/lib/store';
 import { BagIcon, MenuIcon, SearchIcon, UserIcon, HeartIcon } from '@/components/ui/Icons';
 import { Logo } from './Logo';
 
 export function Header() {
   const t = useT();
-  const pathname = usePathname();
+  const fullPath = usePathname();
+  // Path without the /lt prefix, so the checks below work in both languages.
+  const { locale, path: pathname } = splitLocale(fullPath);
+  const L = (path: string) => lp(locale, path);
   const count = cartStore.useStore(cartCount);
   const panel = uiStore.useStore((s) => s.panel);
   const [scrolled, setScrolled] = useState(false);
@@ -31,7 +36,7 @@ export function Header() {
   useEffect(() => {
     ui.close();
     setDropdown(null);
-  }, [pathname]);
+  }, [fullPath]);
 
   useEffect(() => {
     if (!dropdown) return;
@@ -54,11 +59,11 @@ export function Header() {
     return (
       <header className="sticky top-0 z-header h-header border-b border-line bg-white text-ink">
         <div className="container-site grid h-full grid-cols-[1fr_auto_1fr] items-center">
-          <Link href="/shop" className="label -ml-1 inline-flex h-11 items-center px-1 transition-opacity hover:opacity-60">
-            ← <span className="ml-1 hidden sm:inline">Continue shopping</span><span className="ml-1 sm:hidden">Shop</span>
+          <Link href={L('/shop')} className="label -ml-1 inline-flex h-11 items-center px-1 transition-opacity hover:opacity-60">
+            ← <span className="ml-1 hidden sm:inline">{t('cart.continue')}</span><span className="ml-1 sm:hidden">{t('nav.shop')}</span>
           </Link>
           <Logo />
-          <p className="label hidden justify-self-end text-muted sm:block">Secure checkout</p>
+          <p className="label hidden justify-self-end text-muted sm:block">{t('checkout.secure')}</p>
         </div>
       </header>
     );
@@ -91,14 +96,14 @@ export function Header() {
           >
             <SearchIcon />
           </button>
-          <nav aria-label="Main" className="hidden md:block">
+          <nav aria-label={t('nav.main')} className="hidden md:block">
             <ul className="flex items-center gap-7">
               {NAV.map((item) => {
                 const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
                 const gender = item.href === '/women' ? 'women' : item.href === '/men' ? 'men' : null;
                 const link = (
                   <Link
-                    href={item.href}
+                    href={L(item.href)}
                     aria-current={active ? 'page' : undefined}
                     className={`label inline-block py-2 transition-opacity hover:opacity-60 ${
                       active ? 'underline decoration-1 underline-offset-[6px]' : ''
@@ -129,22 +134,22 @@ export function Header() {
                           {MENU[gender].map((m) => (
                             <li key={m.category}>
                               <Link
-                                href={`/${gender}/${m.category}`}
+                                href={L(`/${gender}/${m.category}`)}
                                 className="block py-2 text-[15px] transition-opacity hover:opacity-60"
                                 tabIndex={open ? 0 : -1}
                               >
-                                {m.label}
+                                {m.label[locale]}
                               </Link>
                             </li>
                           ))}
                           <li>
-                            <Link href={`/${gender}`} className="label block py-3 underline underline-offset-4" tabIndex={open ? 0 : -1}>
-                              View all
+                            <Link href={L(`/${gender}`)} className="label block py-3 underline underline-offset-4" tabIndex={open ? 0 : -1}>
+                              {t('common.viewAll')}
                             </Link>
                           </li>
                         </ul>
                         <Link
-                          href={`/${gender}`}
+                          href={L(`/${gender}`)}
                           className="group relative block aspect-[4/5] w-[200px] overflow-hidden bg-bone"
                           tabIndex={-1}
                           aria-hidden="true"
@@ -156,7 +161,7 @@ export function Header() {
                             sizes="200px"
                             className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                           />
-                          <span className="label absolute bottom-3 left-3 bg-white px-2 py-1">New in</span>
+                          <span className="label absolute bottom-3 left-3 bg-white px-2 py-1">{t('nav.newIn')}</span>
                         </Link>
                       </div>
                     </div>
@@ -178,16 +183,16 @@ export function Header() {
           >
             <SearchIcon />
           </button>
-          <Link href="/account" className={`${iconBtn} hidden md:inline-flex`} aria-label={t('nav.account')}>
+          <Link href={L('/account')} className={`${iconBtn} hidden md:inline-flex`} aria-label={t('nav.account')}>
             <UserIcon />
           </Link>
-          <Link href="/wishlist" className={`${iconBtn} hidden md:inline-flex`} aria-label={t('nav.wishlist')}>
+          <Link href={L('/wishlist')} className={`${iconBtn} hidden md:inline-flex`} aria-label={t('nav.wishlist')}>
             <HeartIcon />
           </Link>
           <button
             type="button"
             className={`${iconBtn} relative`}
-            aria-label={`${t('nav.bag')}, ${count} ${count === 1 ? 'item' : 'items'}`}
+            aria-label={`${t('nav.bag')}, ${plural(locale, count, COUNT.items)}`}
             aria-expanded={panel === 'cart'}
             aria-controls="cart-drawer"
             onClick={() => ui.open('cart')}

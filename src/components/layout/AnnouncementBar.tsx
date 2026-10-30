@@ -24,7 +24,7 @@ export function AnnouncementBar() {
       onFocus={() => setPaused(true)}
       onBlur={() => setPaused(false)}
       role="region"
-      aria-label="Announcements"
+      aria-label={t('a11y.announcements')}
     >
       {KEYS.map((key, i) => (
         <p

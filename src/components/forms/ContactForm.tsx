@@ -1,27 +1,67 @@
 'use client';
 
 import { useState } from 'react';
+import { useLocale } from '@/lib/useLocale';
 
-const TOPICS = [
-  { value: 'order', label: 'An order' },
-  { value: 'returns', label: 'Returns' },
-  { value: 'sizing', label: 'Sizing' },
-  { value: 'wholesale', label: 'Wholesale' },
-  { value: 'press', label: 'Press & collabs' },
-  { value: 'other', label: 'Something else' },
-];
+const COPY = {
+  en: {
+    topics: [
+      ['order', 'An order'],
+      ['returns', 'Returns'],
+      ['sizing', 'Sizing'],
+      ['wholesale', 'Wholesale'],
+      ['press', 'Press & collabs'],
+      ['other', 'Something else'],
+    ],
+    name: 'Name',
+    email: 'Email',
+    topic: 'Topic',
+    order: 'Order number',
+    optional: '(optional)',
+    message: 'Message',
+    send: 'Send message',
+    sending: 'Sending',
+    sent: 'Message sent',
+    reply: 'We reply within one working day.',
+    failed: 'Message not sent. Email us directly instead.',
+    fields: { name: 'Enter your name.', email: 'Enter a valid email address.', message: 'Write at least a sentence.' },
+  },
+  lt: {
+    topics: [
+      ['order', 'Užsakymas'],
+      ['returns', 'Grąžinimas'],
+      ['sizing', 'Dydžiai'],
+      ['wholesale', 'Didmeninė prekyba'],
+      ['press', 'Spauda ir bendradarbiavimas'],
+      ['other', 'Kita'],
+    ],
+    name: 'Vardas',
+    email: 'El. paštas',
+    topic: 'Tema',
+    order: 'Užsakymo numeris',
+    optional: '(neprivaloma)',
+    message: 'Žinutė',
+    send: 'Siųsti žinutę',
+    sending: 'Siunčiama',
+    sent: 'Žinutė išsiųsta',
+    reply: 'Atsakysime per vieną darbo dieną.',
+    failed: 'Žinutės išsiųsti nepavyko. Parašykite mums el. paštu.',
+    fields: { name: 'Įveskite vardą.', email: 'Įveskite teisingą el. pašto adresą.', message: 'Parašykite bent vieną sakinį.' },
+  },
+};
+
+type FieldKey = keyof (typeof COPY)['en']['fields'];
 
 export function ContactForm() {
+  const c = COPY[useLocale()];
   const [status, setStatus] = useState<'idle' | 'loading' | 'sent' | 'error'>('idle');
-  const [error, setError] = useState('');
-  const [fields, setFields] = useState<Record<string, string>>({});
+  const [fields, setFields] = useState<FieldKey[]>([]);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(e.currentTarget));
     setStatus('loading');
-    setError('');
-    setFields({});
+    setFields([]);
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
@@ -30,78 +70,92 @@ export function ContactForm() {
       });
       const body = await res.json().catch(() => ({}));
       if (!res.ok) {
-        setFields(body.fields ?? {});
-        throw new Error(body.error ?? 'Message not sent.');
+        // The API answers in English; show our own message for each field it flags.
+        setFields(Object.keys(body.fields ?? {}).filter((k): k is FieldKey => k in c.fields));
+        setStatus('error');
+        return;
       }
       setStatus('sent');
-    } catch (err) {
+    } catch {
       setStatus('error');
-      setError(err instanceof Error ? err.message : 'Message not sent.');
     }
   }
 
   if (status === 'sent') {
     return (
       <div role="status" className="border border-ink p-6">
-        <p className="label mb-2">Message sent</p>
-        <p className="text-[15px]">We reply within one working day.</p>
+        <p className="label mb-2">{c.sent}</p>
+        <p className="text-[15px]">{c.reply}</p>
       </div>
     );
   }
 
-  const err = (k: string) =>
-    fields[k] ? (
+  const invalid = (k: FieldKey) => fields.includes(k);
+  const err = (k: FieldKey) =>
+    invalid(k) ? (
       <p id={`c-${k}-e`} className="mt-1.5 text-[13px] text-danger">
-        {fields[k]}
+        {c.fields[k]}
       </p>
     ) : null;
 
   return (
     <form onSubmit={onSubmit} className="grid gap-4 md:grid-cols-2" noValidate>
       <div>
-        <label htmlFor="c-name" className="field-label">Name</label>
-        <input id="c-name" name="name" required autoComplete="name" className="input" aria-invalid={Boolean(fields.name)} aria-describedby={fields.name ? 'c-name-e' : undefined} />
+        <label htmlFor="c-name" className="field-label">
+          {c.name}
+        </label>
+        <input id="c-name" name="name" required autoComplete="name" className="input" aria-invalid={invalid('name')} aria-describedby={invalid('name') ? 'c-name-e' : undefined} />
         {err('name')}
       </div>
       <div>
-        <label htmlFor="c-email" className="field-label">Email</label>
-        <input id="c-email" name="email" type="email" required autoComplete="email" className="input" aria-invalid={Boolean(fields.email)} aria-describedby={fields.email ? 'c-email-e' : undefined} />
+        <label htmlFor="c-email" className="field-label">
+          {c.email}
+        </label>
+        <input id="c-email" name="email" type="email" required autoComplete="email" className="input" aria-invalid={invalid('email')} aria-describedby={invalid('email') ? 'c-email-e' : undefined} />
         {err('email')}
       </div>
       <div>
-        <label htmlFor="c-topic" className="field-label">Topic</label>
+        <label htmlFor="c-topic" className="field-label">
+          {c.topic}
+        </label>
         <select id="c-topic" name="topic" className="input cursor-pointer" defaultValue="order">
-          {TOPICS.map((t) => (
-            <option key={t.value} value={t.value}>{t.label}</option>
+          {c.topics.map(([value, label]) => (
+            <option key={value} value={value}>
+              {label}
+            </option>
           ))}
         </select>
       </div>
       <div>
         <label htmlFor="c-order" className="field-label">
-          Order number <span className="normal-case tracking-normal">(optional)</span>
+          {c.order} <span className="normal-case tracking-normal">{c.optional}</span>
         </label>
         <input id="c-order" name="orderNumber" placeholder="OST-" className="input" />
       </div>
       <div className="md:col-span-2">
-        <label htmlFor="c-message" className="field-label">Message</label>
+        <label htmlFor="c-message" className="field-label">
+          {c.message}
+        </label>
         <textarea
           id="c-message"
           name="message"
           required
           rows={6}
           className="input h-auto py-3"
-          aria-invalid={Boolean(fields.message)}
-          aria-describedby={fields.message ? 'c-message-e' : undefined}
+          aria-invalid={invalid('message')}
+          aria-describedby={invalid('message') ? 'c-message-e' : undefined}
         />
         {err('message')}
       </div>
       <input type="text" name="company" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
-      {status === 'error' && (
-        <p role="alert" className="text-[14px] text-danger md:col-span-2">{error}</p>
+      {status === 'error' && fields.length === 0 && (
+        <p role="alert" className="text-[14px] text-danger md:col-span-2">
+          {c.failed}
+        </p>
       )}
       <div className="md:col-span-2">
         <button type="submit" className="btn-primary w-full md:w-auto" disabled={status === 'loading'}>
-          {status === 'loading' ? 'Sending' : 'Send message'}
+          {status === 'loading' ? c.sending : c.send}
         </button>
       </div>
     </form>

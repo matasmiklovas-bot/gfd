@@ -7,15 +7,22 @@ import { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } f
 import type { ProductSummary } from '@/lib/types';
 import { searchProducts } from '@/lib/search';
 import { useT } from '@/lib/i18n';
+import { COUNT, plural } from '@/lib/dictionary';
+import { lp } from '@/lib/locale';
+import { useLocale } from '@/lib/useLocale';
 import { ui, uiStore } from '@/lib/store';
 import { useDialogBehavior, useScrollLock } from '@/lib/hooks';
 import { CloseIcon, SearchIcon } from '@/components/ui/Icons';
 import { Price } from '@/components/ui/Price';
 
-const SUGGESTIONS = ['Trench coat', 'Knit jumper', 'Wide leg jeans', 'Blazer', 'Shirt'];
+const SUGGESTIONS = {
+  en: ['Trench coat', 'Knit jumper', 'Wide leg jeans', 'Blazer', 'Dress'],
+  lt: ['Paltas', 'Megztinis', 'Džinsai', 'Švarkas', 'Suknelė'],
+};
 
 export function SearchOverlay({ products }: { products: ProductSummary[] }) {
   const t = useT();
+  const locale = useLocale();
   const router = useRouter();
   const open = uiStore.useStore((s) => s.panel === 'search');
   const ref = useRef<HTMLDivElement>(null);
@@ -61,11 +68,11 @@ export function SearchOverlay({ products }: { products: ProductSummary[] }) {
             e.preventDefault();
             if (!query.trim()) return;
             close();
-            router.push(`/search?q=${encodeURIComponent(query.trim())}`);
+            router.push(lp(locale, `/search?q=${encodeURIComponent(query.trim())}`));
           }}
         >
           <SearchIcon className="shrink-0" />
-          <label htmlFor="site-search" className="sr-only">Search products</label>
+          <label htmlFor="site-search" className="sr-only">{t('search.label')}</label>
           <input
             id="site-search"
             ref={inputRef}
@@ -73,7 +80,7 @@ export function SearchOverlay({ products }: { products: ProductSummary[] }) {
             type="search"
             autoComplete="off"
             enterKeyHint="search"
-            placeholder="Search"
+            placeholder={t('nav.search')}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             className="h-full flex-1 bg-transparent font-display text-xl font-bold uppercase tracking-tight placeholder:text-concrete md:text-3xl"
@@ -92,9 +99,9 @@ export function SearchOverlay({ products }: { products: ProductSummary[] }) {
         <div className="container-site py-6 md:py-10" id="search-results" aria-live="polite">
           {!hasQuery && (
             <div>
-              <p className="label mb-4 text-muted">Popular</p>
+              <p className="label mb-4 text-muted">{t('search.popular')}</p>
               <ul className="flex flex-wrap gap-2">
-                {SUGGESTIONS.map((s) => (
+                {SUGGESTIONS[locale].map((s) => (
                   <li key={s}>
                     <button
                       type="button"
@@ -113,13 +120,13 @@ export function SearchOverlay({ products }: { products: ProductSummary[] }) {
           )}
 
           {hasQuery && results.length === 0 && (
-            <p className="text-muted">No results for &ldquo;{deferred}&rdquo;.</p>
+            <p className="text-muted">{t('search.none', { q: deferred })}</p>
           )}
 
           {hasQuery && results.length > 0 && (
             <>
               <p className="label mb-4 text-muted">
-                {results.length} {results.length === 1 ? 'result' : 'results'}
+                {plural(locale, results.length, COUNT.results)}
               </p>
               <ul className="grid grid-cols-2 gap-x-3 gap-y-6 sm:grid-cols-4 lg:grid-cols-8">
                 {results.map((p) => (

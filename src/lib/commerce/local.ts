@@ -1,6 +1,8 @@
 import 'server-only';
 import raw from '@data/products.json';
+import rawLt from '@data/products.lt.json';
 import type { Category, Gender, Product, Size } from '@/lib/types';
+import type { Locale } from '@/lib/locale';
 import { MENU } from '@/lib/site';
 
 /**
@@ -12,6 +14,54 @@ import { MENU } from '@/lib/site';
  * export in index.ts.
  */
 const products = validate(raw as unknown as Product[]);
+
+interface Translation {
+  colors: Record<string, string>;
+  views: Record<string, string>;
+  care: Record<string, string>;
+  products: Record<string, Pick<Product, 'name' | 'summary' | 'description' | 'fit' | 'material'>>;
+}
+const lt = validateTranslation(rawLt as Translation, 'data/products.lt.json');
+const byLocale: Record<Locale, Product[]> = { en: products, lt: products.map((p) => localize(p, lt)) };
+
+/** Fails the build when a product, colour, care line or photo view has no translation. */
+function validateTranslation(t: Translation, file: string) {
+  for (const p of products) {
+    const fail = (msg: string) => {
+      throw new Error(`${file}: "${p.handle}": ${msg}`);
+    };
+    const tp = t.products[p.handle];
+    if (!tp) fail('missing translation');
+    for (const key of ['name', 'summary', 'description', 'fit', 'material'] as const) if (!tp[key]) fail(`missing ${key}`);
+    for (const c of p.colors) if (!t.colors[c.slug]) fail(`missing colour "${c.slug}"`);
+    for (const c of p.care) if (!t.care[c]) fail(`missing care line "${c}"`);
+    for (const img of [...p.images, ...Object.values(p.colorImages ?? {}).flat()]) {
+      const view = img.alt.split(', ').pop()!;
+      if (!t.views[view]) fail(`missing photo view "${view}"`);
+    }
+  }
+  return t;
+}
+
+function localize(p: Product, t: Translation): Product {
+  const tp = t.products[p.handle];
+  const alt = (a: string) => {
+    const color = p.colors.find((c) => a.includes(` in ${c.name.toLowerCase()}`));
+    const view = a.split(', ').pop()!;
+    return [tp.name, color ? t.colors[color.slug].toLowerCase() : null, t.views[view]].filter(Boolean).join(', ');
+  };
+  const imgs = (list: Product['images']) => list.map((i) => ({ ...i, alt: alt(i.alt) }));
+  return {
+    ...p,
+    ...tp,
+    care: p.care.map((c) => t.care[c]),
+    colors: p.colors.map((c) => ({ ...c, name: t.colors[c.slug] })),
+    images: imgs(p.images),
+    colorImages: p.colorImages
+      ? Object.fromEntries(Object.entries(p.colorImages).map(([k, v]) => [k, imgs(v)]))
+      : undefined,
+  };
+}
 
 /** Fails the build with a readable message if products.json is edited into an invalid state. */
 function validate(list: Product[]) {
@@ -59,20 +109,20 @@ function validate(list: Product[]) {
   return list;
 }
 
-export async function getAllProducts(): Promise<Product[]> {
-  return products;
+export async function getAllProducts(locale: Locale = 'en'): Promise<Product[]> {
+  return byLocale[locale];
 }
 
-export async function getProductByHandle(handle: string): Promise<Product | undefined> {
-  return products.find((p) => p.handle === handle);
+export async function getProductByHandle(handle: string, locale: Locale = 'en'): Promise<Product | undefined> {
+  return byLocale[locale].find((p) => p.handle === handle);
 }
 
-export async function getProductsByCategory(category: Category): Promise<Product[]> {
-  return products.filter((p) => p.category === category);
+export async function getProductsByCategory(category: Category, locale: Locale = 'en'): Promise<Product[]> {
+  return byLocale[locale].filter((p) => p.category === category);
 }
 
-export async function getProductsByGender(gender: Gender): Promise<Product[]> {
-  return products.filter((p) => p.gender === gender);
+export async function getProductsByGender(gender: Gender, locale: Locale = 'en'): Promise<Product[]> {
+  return byLocale[locale].filter((p) => p.gender === gender);
 }
 
 export async function getStock(handle: string, color: string, size: Size): Promise<number> {

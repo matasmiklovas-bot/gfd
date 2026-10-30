@@ -8,16 +8,96 @@ import { accountStore, type Address } from '@/lib/store';
 import { EU_COUNTRIES } from '@/lib/site';
 import { formatPrice } from '@/lib/money';
 import { useMounted } from '@/lib/hooks';
+import { LOCALE_META, lp, splitLocale, type Locale } from '@/lib/locale';
+import { useLocale } from '@/lib/useLocale';
 
 type Tab = 'orders' | 'addresses';
 
-const countryName = (code: string) => EU_COUNTRIES.find(([c]) => c === code)?.[1] ?? code;
+const COPY = {
+  en: {
+    title: 'Account',
+    pitch: 'Track orders, save addresses and check out faster.',
+    signIn: 'Sign in or create an account',
+    name: 'Name',
+    email: 'Email',
+    continue: 'Continue',
+    device: 'Your account details and order history are stored on this device.',
+    hi: 'Hi',
+    signOut: 'Sign out',
+    sections: 'Account sections',
+    orders: 'Orders',
+    addresses: 'Addresses',
+    noOrders: 'No orders yet.',
+    shopNow: 'Shop now',
+    demo: 'Demo order',
+    paid: 'Paid',
+    default: 'Default',
+    makeDefault: 'Make default',
+    remove: 'Remove',
+    add: 'Add address',
+    newAddress: 'New address',
+    fullName: 'Full name',
+    address: 'Address',
+    line2: 'Apartment, suite (optional)',
+    postalCode: 'Postal code',
+    city: 'City',
+    phone: 'Phone (optional)',
+    country: 'Country',
+    save: 'Save address',
+    cancel: 'Cancel',
+  },
+  lt: {
+    title: 'Paskyra',
+    pitch: 'Sekite užsakymus, išsaugokite adresus ir apmokėkite greičiau.',
+    signIn: 'Prisijunkite arba susikurkite paskyrą',
+    name: 'Vardas',
+    email: 'El. paštas',
+    continue: 'Tęsti',
+    device: 'Paskyros duomenys ir užsakymų istorija saugomi šiame įrenginyje.',
+    hi: 'Labas',
+    signOut: 'Atsijungti',
+    sections: 'Paskyros skiltys',
+    orders: 'Užsakymai',
+    addresses: 'Adresai',
+    noOrders: 'Užsakymų dar nėra.',
+    shopNow: 'Apsipirkti',
+    demo: 'Demonstracinis užsakymas',
+    paid: 'Apmokėta',
+    default: 'Pagrindinis',
+    makeDefault: 'Padaryti pagrindiniu',
+    remove: 'Pašalinti',
+    add: 'Pridėti adresą',
+    newAddress: 'Naujas adresas',
+    fullName: 'Vardas ir pavardė',
+    address: 'Adresas',
+    line2: 'Butas, korpusas (neprivaloma)',
+    postalCode: 'Pašto kodas',
+    city: 'Miestas',
+    phone: 'Telefonas (neprivaloma)',
+    country: 'Šalis',
+    save: 'Išsaugoti adresą',
+    cancel: 'Atšaukti',
+  },
+};
+
+type Copy = (typeof COPY)['en'];
+
+function countryNames(locale: Locale) {
+  const names = new Intl.DisplayNames([LOCALE_META[locale].intl], { type: 'region' });
+  return EU_COUNTRIES.map(([code, name]) => [code, names.of(code) ?? name] as const).sort((a, b) =>
+    a[1].localeCompare(b[1], LOCALE_META[locale].intl),
+  );
+}
 
 /**
  * Customer account. Data lives on this device (localStorage) until a customer
  * backend is connected — Shopify Customer Accounts or your own auth + database.
  */
 export function AccountView() {
+  const locale = useLocale();
+  const c = COPY[locale];
+  const L = (path: string) => lp(locale, path);
+  const countryName = (code: string) => countryNames(locale).find(([x]) => x === code)?.[1] ?? code;
   const mounted = useMounted();
   const router = useRouter();
   const { user, orders, addresses } = accountStore.useStore();
@@ -30,8 +110,8 @@ export function AccountView() {
     return (
       <div className="container-site grid gap-16 py-12 md:grid-cols-2 md:py-20">
         <div>
-          <h1 className="heading-display">Account</h1>
-          <p className="mt-6 max-w-sm text-[15px] text-muted">Track orders, save addresses and check out faster.</p>
+          <h1 className="heading-display">{c.title}</h1>
+          <p className="mt-6 max-w-sm text-[15px] text-muted">{c.pitch}</p>
         </div>
         <form
           className="max-w-md space-y-4"
@@ -43,19 +123,23 @@ export function AccountView() {
             if (next?.startsWith('/') && !next.startsWith('//')) router.push(next);
           }}
         >
-          <h2 className="label">Sign in or create an account</h2>
+          <h2 className="label">{c.signIn}</h2>
           <div>
-            <label htmlFor="acc-name" className="field-label">Name</label>
+            <label htmlFor="acc-name" className="field-label">
+              {c.name}
+            </label>
             <input id="acc-name" name="name" required autoComplete="name" className="input" />
           </div>
           <div>
-            <label htmlFor="acc-email" className="field-label">Email</label>
+            <label htmlFor="acc-email" className="field-label">
+              {c.email}
+            </label>
             <input id="acc-email" name="email" type="email" required autoComplete="email" className="input" />
           </div>
-          <button type="submit" className="btn-primary w-full">Continue</button>
-          <p className="text-[12px] leading-relaxed text-muted">
-            Your account details and order history are stored on this device.
-          </p>
+          <button type="submit" className="btn-primary w-full">
+            {c.continue}
+          </button>
+          <p className="text-[12px] leading-relaxed text-muted">{c.device}</p>
         </form>
       </div>
     );
@@ -80,24 +164,28 @@ export function AccountView() {
       <div className="flex flex-wrap items-end justify-between gap-6">
         <div>
           <p className="label mb-3 text-muted">{user.email}</p>
-          <h1 className="heading-1">Hi, {user.name.split(' ')[0]}</h1>
+          <h1 className="heading-1">
+            {c.hi}, {user.name.split(' ')[0]}
+          </h1>
         </div>
         <button type="button" className="label text-muted underline underline-offset-4 hover:text-ink" onClick={() => accountStore.set({ user: null })}>
-          Sign out
+          {c.signOut}
         </button>
       </div>
 
-      <div role="tablist" aria-label="Account sections" className="mt-10 flex gap-8 border-b border-line">
-        {tabBtn('orders', `Orders (${orders.length})`)}
-        {tabBtn('addresses', `Addresses (${addresses.length})`)}
+      <div role="tablist" aria-label={c.sections} className="mt-10 flex gap-8 border-b border-line">
+        {tabBtn('orders', `${c.orders} (${orders.length})`)}
+        {tabBtn('addresses', `${c.addresses} (${addresses.length})`)}
       </div>
 
       {tab === 'orders' && (
         <section id="panel-orders" role="tabpanel" aria-labelledby="tab-orders" className="py-8">
           {orders.length === 0 ? (
             <div className="py-12">
-              <p className="text-muted">No orders yet.</p>
-              <Link href="/shop" className="btn-primary mt-6">Shop now</Link>
+              <p className="text-muted">{c.noOrders}</p>
+              <Link href={L('/shop')} className="btn-primary mt-6">
+                {c.shopNow}
+              </Link>
             </div>
           ) : (
             <ul className="divide-y divide-line border-y border-line">
@@ -107,16 +195,16 @@ export function AccountView() {
                     <div>
                       <p className="label">{o.id}</p>
                       <p className="mt-1 text-[13px] text-muted">
-                        {new Intl.DateTimeFormat('en-GB', { dateStyle: 'medium' }).format(new Date(o.createdAt))} ·{' '}
-                        {o.status === 'demo' ? 'Demo order' : 'Paid'}
+                        {new Intl.DateTimeFormat(LOCALE_META[locale].intl, { dateStyle: 'medium' }).format(new Date(o.createdAt))} ·{' '}
+                        {o.status === 'demo' ? c.demo : c.paid}
                       </p>
                     </div>
-                    <p className="text-[15px] font-semibold tabular-nums">{formatPrice(o.total)}</p>
+                    <p className="text-[15px] font-semibold tabular-nums">{formatPrice(o.total, locale)}</p>
                   </div>
                   <ul className="mt-4 flex flex-wrap gap-3">
                     {o.lines.map((l, i) => (
                       <li key={i} className="flex items-center gap-3">
-                        <Link href={l.url} className="relative block aspect-[4/5] w-14 bg-bone">
+                        <Link href={L(splitLocale(l.url).path)} className="relative block aspect-[4/5] w-14 bg-bone">
                           <Image src={l.image} alt={l.name} fill sizes="56px" className="object-cover" />
                         </Link>
                         <span className="text-[13px] leading-snug">
@@ -142,7 +230,7 @@ export function AccountView() {
             <ul className="grid gap-4 md:grid-cols-3">
               {addresses.map((a, i) => (
                 <li key={a.id} className="border border-line p-5 text-[14px] leading-6">
-                  {i === 0 && <p className="label mb-2 text-muted">Default</p>}
+                  {i === 0 && <p className="label mb-2 text-muted">{c.default}</p>}
                   <p className="font-semibold">{a.name}</p>
                   <p>{a.line1}</p>
                   {a.line2 && <p>{a.line2}</p>}
@@ -158,7 +246,7 @@ export function AccountView() {
                         className="label underline underline-offset-4"
                         onClick={() => accountStore.set((s) => ({ addresses: [a, ...s.addresses.filter((x) => x.id !== a.id)] }))}
                       >
-                        Make default
+                        {c.makeDefault}
                       </button>
                     )}
                     <button
@@ -166,7 +254,7 @@ export function AccountView() {
                       className="label text-muted underline underline-offset-4 hover:text-ink"
                       onClick={() => accountStore.set((s) => ({ addresses: s.addresses.filter((x) => x.id !== a.id) }))}
                     >
-                      Remove
+                      {c.remove}
                     </button>
                   </div>
                 </li>
@@ -176,6 +264,8 @@ export function AccountView() {
 
           {adding ? (
             <AddressForm
+              c={c}
+              countries={countryNames(locale)}
               onCancel={() => setAdding(false)}
               onSave={(a) => {
                 accountStore.set((s) => ({ addresses: [...s.addresses, a] }));
@@ -184,7 +274,7 @@ export function AccountView() {
             />
           ) : (
             <button type="button" className="btn-secondary mt-8" onClick={() => setAdding(true)}>
-              Add address
+              {c.add}
             </button>
           )}
         </section>
@@ -193,7 +283,17 @@ export function AccountView() {
   );
 }
 
-function AddressForm({ onSave, onCancel }: { onSave: (a: Address) => void; onCancel: () => void }) {
+function AddressForm({
+  c,
+  countries,
+  onSave,
+  onCancel,
+}: {
+  c: Copy;
+  countries: (readonly [string, string])[];
+  onSave: (a: Address) => void;
+  onCancel: () => void;
+}) {
   return (
     <form
       className="mt-8 grid max-w-xl gap-4 md:grid-cols-2"
@@ -213,14 +313,14 @@ function AddressForm({ onSave, onCancel }: { onSave: (a: Address) => void; onCan
         });
       }}
     >
-      <h2 className="label md:col-span-2">New address</h2>
+      <h2 className="label md:col-span-2">{c.newAddress}</h2>
       {[
-        { name: 'name', label: 'Full name', auto: 'name', span: true, required: true },
-        { name: 'line1', label: 'Address', auto: 'address-line1', span: true, required: true },
-        { name: 'line2', label: 'Apartment, suite (optional)', auto: 'address-line2', span: true },
-        { name: 'postalCode', label: 'Postal code', auto: 'postal-code', required: true },
-        { name: 'city', label: 'City', auto: 'address-level2', required: true },
-        { name: 'phone', label: 'Phone (optional)', auto: 'tel' },
+        { name: 'name', label: c.fullName, auto: 'name', span: true, required: true },
+        { name: 'line1', label: c.address, auto: 'address-line1', span: true, required: true },
+        { name: 'line2', label: c.line2, auto: 'address-line2', span: true },
+        { name: 'postalCode', label: c.postalCode, auto: 'postal-code', required: true },
+        { name: 'city', label: c.city, auto: 'address-level2', required: true },
+        { name: 'phone', label: c.phone, auto: 'tel' },
       ].map((fld) => (
         <div key={fld.name} className={fld.span ? 'md:col-span-2' : ''}>
           <label htmlFor={`addr-${fld.name}`} className="field-label">{fld.label}</label>
@@ -228,16 +328,24 @@ function AddressForm({ onSave, onCancel }: { onSave: (a: Address) => void; onCan
         </div>
       ))}
       <div>
-        <label htmlFor="addr-country" className="field-label">Country</label>
+        <label htmlFor="addr-country" className="field-label">
+          {c.country}
+        </label>
         <select id="addr-country" name="country" defaultValue="LT" className="input" autoComplete="country">
-          {EU_COUNTRIES.map(([code, name]) => (
-            <option key={code} value={code}>{name}</option>
+          {countries.map(([code, name]) => (
+            <option key={code} value={code}>
+              {name}
+            </option>
           ))}
         </select>
       </div>
       <div className="flex gap-3 md:col-span-2">
-        <button type="submit" className="btn-primary">Save address</button>
-        <button type="button" className="btn-secondary" onClick={onCancel}>Cancel</button>
+        <button type="submit" className="btn-primary">
+          {c.save}
+        </button>
+        <button type="button" className="btn-secondary" onClick={onCancel}>
+          {c.cancel}
+        </button>
       </div>
     </form>
   );

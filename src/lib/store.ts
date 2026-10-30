@@ -191,9 +191,6 @@ export const consentStore = createStore<Consent>(
 
 /* ---------- Preferences ---------- */
 
-export type Locale = 'en' | 'lt';
-
-export const prefsStore = createStore<{ locale: Locale }>({ locale: 'en' }, 'ostrev:prefs');
 
 /** sessionStorage key for an order between checkout submit and the success page. */
 export const PENDING_ORDER_KEY = 'ostrev:pending-order';

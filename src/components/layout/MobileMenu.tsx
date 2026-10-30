@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import { useCallback, useRef } from 'react';
 import { MENU, NAV, FOOTER_LINKS } from '@/lib/site';
+import { lp } from '@/lib/locale';
+import { useLocale } from '@/lib/useLocale';
 import { useT } from '@/lib/i18n';
 import { ui, uiStore } from '@/lib/store';
 import { useDialogBehavior, useScrollLock } from '@/lib/hooks';
@@ -12,6 +14,8 @@ import { LanguageSwitch } from './LanguageSwitch';
 
 export function MobileMenu() {
   const t = useT();
+  const locale = useLocale();
+  const L = (path: string) => lp(locale, path);
   const open = uiStore.useStore((s) => s.panel === 'menu');
   const ref = useRef<HTMLDivElement>(null);
   const close = useCallback(() => ui.close(), []);
@@ -44,7 +48,7 @@ export function MobileMenu() {
         <span />
       </div>
 
-      <nav aria-label="Mobile" className="container-site flex-1 overflow-y-auto pb-10 pt-8">
+      <nav aria-label={t('nav.menu')} className="container-site flex-1 overflow-y-auto pb-10 pt-8">
         <ul className="space-y-1">
           {NAV.map((item, i) => (
             <li
@@ -52,15 +56,15 @@ export function MobileMenu() {
               className={`transition-all duration-500 ease-out ${open ? 'translate-y-0 opacity-100' : 'translate-y-3 opacity-0'}`}
               style={{ transitionDelay: open ? `${80 + i * 50}ms` : '0ms' }}
             >
-              <Link href={item.href} onClick={close} className="heading-1 block py-1">
+              <Link href={L(item.href)} onClick={close} className="heading-1 block py-1">
                 {t(item.key)}
               </Link>
               {(item.href === '/women' || item.href === '/men') && (
                 <ul className="mb-5 mt-1 flex flex-wrap gap-x-5 gap-y-1">
                   {MENU[item.href === '/women' ? 'women' : 'men'].map((m) => (
                     <li key={m.category}>
-                      <Link href={`${item.href}/${m.category}`} onClick={close} className="block py-2 text-[15px] text-muted">
-                        {m.label}
+                      <Link href={L(`${item.href}/${m.category}`)} onClick={close} className="block py-2 text-[15px] text-muted">
+                        {m.label[locale]}
                       </Link>
                     </li>
                   ))}
@@ -71,11 +75,11 @@ export function MobileMenu() {
         </ul>
 
         <ul className="mt-10 grid grid-cols-2 gap-x-4 gap-y-1 border-t border-line pt-6">
-          <li><Link href="/account" onClick={close} className="label block py-3">{t('nav.account')}</Link></li>
-          <li><Link href="/wishlist" onClick={close} className="label block py-3">{t('nav.wishlist')}</Link></li>
+          <li><Link href={L('/account')} onClick={close} className="label block py-3">{t('nav.account')}</Link></li>
+          <li><Link href={L('/wishlist')} onClick={close} className="label block py-3">{t('nav.wishlist')}</Link></li>
           {FOOTER_LINKS.help.map((l) => (
             <li key={l.href}>
-              <Link href={l.href} onClick={close} className="label block py-3 text-muted">{l.label}</Link>
+              <Link href={L(l.href)} onClick={close} className="label block py-3 text-muted">{l.label[locale]}</Link>
             </li>
           ))}
         </ul>

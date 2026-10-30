@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import { FOOTER_LINKS } from '@/lib/site';
+import { lp, type Locale } from '@/lib/locale';
 
 export function ContentPage({
   eyebrow,
@@ -9,6 +10,7 @@ export function ContentPage({
   nav,
   updated,
   path,
+  locale,
   children,
 }: {
   eyebrow: string;
@@ -17,6 +19,7 @@ export function ContentPage({
   nav: 'help' | 'legal';
   updated?: string;
   path: string;
+  locale: Locale;
   children: ReactNode;
 }) {
   const links = FOOTER_LINKS[nav];
@@ -26,16 +29,16 @@ export function ContentPage({
       <h1 className="heading-1 max-w-3xl text-balance">{title}</h1>
       {intro && <div className="mt-6 max-w-prose text-[16px] leading-7">{intro}</div>}
       <div className="mt-12 grid gap-12 md:mt-16 md:grid-cols-12">
-        <nav aria-label={nav === 'help' ? 'Help' : 'Legal'} className="min-w-0 md:col-span-3">
+        <nav aria-label={nav === 'help' ? (locale === 'lt' ? 'Pagalba' : 'Help') : locale === 'lt' ? 'Teisinė informacija' : 'Legal'} className="min-w-0 md:col-span-3">
           <ul className="scroll-row -mx-4 px-4 md:mx-0 md:flex-col md:gap-0 md:overflow-visible md:px-0">
             {links.map((l) => (
               <li key={l.href} className="shrink-0">
                 <Link
-                  href={l.href}
+                  href={lp(locale, l.href)}
                   aria-current={l.href === path ? 'page' : undefined}
                   className="label block aria-[current=page]:border-ink aria-[current=page]:underline border border-line px-4 py-2.5 hover:border-ink md:border-0 md:px-0 md:py-2 md:hover:underline"
                 >
-                  {l.label}
+                  {l.label[locale]}
                 </Link>
               </li>
             ))}
@@ -43,7 +46,11 @@ export function ContentPage({
         </nav>
         <div className="prose-ostrev min-w-0 md:col-span-8 md:col-start-5">
           {children}
-          {updated && <p className="mt-12 text-[13px] text-muted">Last updated: {updated}</p>}
+          {updated && (
+            <p className="mt-12 text-[13px] text-muted">
+              {locale === 'lt' ? 'Atnaujinta' : 'Last updated'}: {updated}
+            </p>
+          )}
         </div>
       </div>
     </div>

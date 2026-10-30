@@ -6,6 +6,7 @@ import { absoluteUrl, EU_COUNTRIES } from '@/lib/site';
 import type { Size } from '@/lib/types';
 import { getStripe } from '@/lib/server/stripe';
 import { isEmail, json, str } from '@/lib/server/validate';
+import { isLocale, lp, type Locale } from '@/lib/locale';
 
 const METHODS: Record<string, Stripe.Checkout.SessionCreateParams.PaymentMethodType[]> = {
   // Apple Pay and Google Pay are shown by Stripe Checkout on supported devices when card is enabled.
@@ -25,9 +26,40 @@ function orderRef() {
   return `OST-${rand.slice(0, 6)}`;
 }
 
+const MSG = {
+  en: {
+    invalid: 'Invalid request.',
+    email: 'Enter a valid email address.',
+    required: 'Required.',
+    country: 'We ship to EU countries only.',
+    check: 'Check the highlighted fields.',
+    empty: 'Your bag is empty.',
+    tooMany: 'Too many items in one order.',
+    unavailable: 'One of the items in your bag is no longer available. Remove it and try again.',
+    soldOut: (item: string) => `${item} just sold out.`,
+    onlyLeft: (n: number, item: string) => `Only ${n} left of ${item}.`,
+    payment: 'Could not start payment. Try again or choose another payment method.',
+  },
+  lt: {
+    invalid: 'Neteisinga užklausa.',
+    email: 'Įveskite teisingą el. pašto adresą.',
+    required: 'Privaloma.',
+    country: 'Siunčiame tik į ES šalis.',
+    check: 'Patikrinkite pažymėtus laukus.',
+    empty: 'Jūsų krepšelis tuščias.',
+    tooMany: 'Per daug prekių viename užsakyme.',
+    unavailable: 'Vienos iš krepšelio prekių nebėra. Pašalinkite ją ir bandykite dar kartą.',
+    soldOut: (item: string) => `${item} ką tik išparduota.`,
+    onlyLeft: (n: number, item: string) => `${item}: liko tik ${n}.`,
+    payment: 'Nepavyko pradėti mokėjimo. Bandykite dar kartą arba pasirinkite kitą mokėjimo būdą.',
+  },
+};
+
 export async function POST(req: Request) {
   const body = await req.json().catch(() => null);
-  if (!body) return json({ error: 'Invalid request.' }, 400);
+  if (!body) return json({ error: MSG.en.invalid }, 400);
+  const locale: Locale = isLocale(body.locale) ? body.locale : 'en';
+  const m = MSG[locale];
 
   /* ---- Contact & address ---- */
   const a = body.address ?? {};
@@ -42,29 +74,29 @@ export async function POST(req: Request) {
     phone: str(a.phone, 30),
   };
   const fields: Record<string, string> = {};
-  if (!isEmail(body.email)) fields.email = 'Enter a valid email address.';
-  if (!address.firstName) fields.firstName = 'Required.';
-  if (!address.lastName) fields.lastName = 'Required.';
-  if (!address.line1) fields.line1 = 'Required.';
-  if (!address.city) fields.city = 'Required.';
-  if (!address.postalCode) fields.postalCode = 'Required.';
-  if (!COUNTRY_CODES.has(address.country)) fields.country = 'We ship to EU countries only.';
-  if (Object.keys(fields).length) return json({ error: 'Check the highlighted fields.', fields }, 422);
+  if (!isEmail(body.email)) fields.email = m.email;
+  if (!address.firstName) fields.firstName = m.required;
+  if (!address.lastName) fields.lastName = m.required;
+  if (!address.line1) fields.line1 = m.required;
+  if (!address.city) fields.city = m.required;
+  if (!address.postalCode) fields.postalCode = m.required;
+  if (!COUNTRY_CODES.has(address.country)) fields.country = m.country;
+  if (Object.keys(fields).length) return json({ error: m.check, fields }, 422);
 
   const methodKey = typeof body.paymentMethod === 'string' && body.paymentMethod in METHODS ? body.paymentMethod : 'card';
 
   /* ---- Items: re-price and re-check stock on the server, never trust the client ---- */
-  if (!Array.isArray(body.items) || body.items.length === 0) return json({ error: 'Your bag is empty.' }, 422);
-  if (body.items.length > MAX_LINES) return json({ error: 'Too many items in one order.' }, 422);
+  if (!Array.isArray(body.items) || body.items.length === 0) return json({ error: m.empty }, 422);
+  if (body.items.length > MAX_LINES) return json({ error: m.tooMany }, 422);
 
   const lines: { name: string; image: string; url: string; color: string; size: Size; price: number; quantity: number }[] = [];
   for (const item of body.items) {
-    const product = await getProductByHandle(str(item?.handle, 120));
+    const product = await getProductByHandle(str(item?.handle, 120), locale);
     const color = product?.colors.find((c) => c.slug === item?.color);
     const size = product?.sizes.find((s) => s === item?.size);
     const quantity = Number(item?.quantity);
     if (!product || !color || !size || !Number.isInteger(quantity) || quantity < 1 || quantity > MAX_QTY) {
-      return json({ error: 'One of the items in your bag is no longer available. Remove it and try again.' }, 409);
+      return json({ error: m.unavailable }, 409);
     }
     const stock = product.stock[color.slug]?.[size] ?? 0;
     if (stock < quantity) {
@@ -72,8 +104,8 @@ export async function POST(req: Request) {
         {
           error:
             stock === 0
-              ? `${product.name} (${color.name}, ${size}) just sold out.`
-              : `Only ${stock} left of ${product.name} (${color.name}, ${size}).`,
+              ? m.soldOut(`${product.name} (${color.name}, ${size})`)
+              : m.onlyLeft(stock, `${product.name} (${color.name}, ${size})`),
         },
         409,
       );
@@ -81,7 +113,7 @@ export async function POST(req: Request) {
     lines.push({
       name: `${product.name} — ${color.name}, ${size}`,
       image: product.images[0].src,
-      url: productUrl(product),
+      url: lp(locale, productUrl(product)),
       color: color.name,
       size,
       price: product.price,
@@ -100,7 +132,7 @@ export async function POST(req: Request) {
 
   /* ---- Demo mode: no payment provider configured ---- */
   if (!stripe) {
-    return json({ mode: 'demo', url: `/checkout/success?order=${ref}&demo=1`, order: { id: ref, ...totals } });
+    return json({ mode: 'demo', url: lp(locale, `/checkout/success?order=${ref}&demo=1`), order: { id: ref, ...totals } });
   }
 
   /* ---- Stripe Checkout ---- */
@@ -116,7 +148,7 @@ export async function POST(req: Request) {
 
     const session = await stripe.checkout.sessions.create({
       mode: 'payment',
-      locale: 'auto',
+      locale: locale === 'lt' ? 'lt' : 'auto',
       customer_email: body.email.trim(),
       client_reference_id: ref,
       payment_method_types: METHODS[methodKey],
@@ -159,13 +191,13 @@ export async function POST(req: Request) {
         metadata: { order_ref: ref },
       },
       metadata: { order_ref: ref, marketing_opt_in: body.marketing ? 'yes' : 'no' },
-      success_url: `${origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${origin}/checkout`,
+      success_url: `${origin}${lp(locale, '/checkout/success')}?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${origin}${lp(locale, '/checkout')}`,
     });
 
     return json({ mode: 'stripe', url: session.url, order: { id: ref, ...totals } });
   } catch (err) {
     console.error('[checkout] Stripe error', err);
-    return json({ error: 'Payment could not be started. Try another method or try again.' }, 502);
+    return json({ error: m.payment }, 502);
   }
 }

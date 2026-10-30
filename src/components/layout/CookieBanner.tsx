@@ -5,6 +5,8 @@ import { useEffect, useId, useState } from 'react';
 import { consentStore, type Consent } from '@/lib/store';
 import { useMounted } from '@/lib/hooks';
 import { useT } from '@/lib/i18n';
+import { lp } from '@/lib/locale';
+import { useLocale } from '@/lib/useLocale';
 
 const OPEN_EVENT = 'ostrev:cookie-settings';
 
@@ -52,6 +54,7 @@ function Toggle({
  */
 export function CookieBanner() {
   const t = useT();
+  const locale = useLocale();
   const mounted = useMounted();
   const decided = consentStore.useStore((s) => s.decided);
   const stored = consentStore.useStore();
@@ -82,20 +85,20 @@ export function CookieBanner() {
   return (
     <div
       role="region"
-      aria-label="Cookie consent"
+      aria-label={t('cookie.region')}
       className="fixed inset-x-0 bottom-0 z-banner p-2 md:bottom-4 md:left-4 md:right-auto md:max-w-[420px] md:p-0"
     >
       <div className="max-h-[80dvh] overflow-y-auto border border-ink bg-white p-4 md:p-5">
         <p className="text-[12px] leading-snug md:text-[13px] md:leading-relaxed">
           {t('cookie.text')}{' '}
-          <Link href="/legal/cookies" className="link-underline">Cookie policy</Link>
+          <Link href={lp(locale, '/legal/cookies')} className="link-underline">{t('cookie.policy')}</Link>
         </p>
 
         {settings && (
           <div className="mt-4">
-            <Toggle label="Necessary" description="Cart, checkout, security and your cookie choice. Always on." checked disabled />
-            <Toggle label="Analytics" description="Anonymous usage statistics that help us improve the store." checked={analytics} onChange={setAnalytics} />
-            <Toggle label="Marketing" description="Measure ads on Instagram and TikTok." checked={marketing} onChange={setMarketing} />
+            <Toggle label={t('cookie.necessary')} description={t('cookie.necessaryText')} checked disabled />
+            <Toggle label={t('cookie.analytics')} description={t('cookie.analyticsText')} checked={analytics} onChange={setAnalytics} />
+            <Toggle label={t('cookie.marketing')} description={t('cookie.marketingText')} checked={marketing} onChange={setMarketing} />
           </div>
         )}
 
@@ -131,9 +134,10 @@ export function CookieBanner() {
 }
 
 export function CookieSettingsLink({ className = 'hover:text-white' }: { className?: string }) {
+  const t = useT();
   return (
     <button type="button" className={className} onClick={() => window.dispatchEvent(new Event(OPEN_EVENT))}>
-      Cookie settings
+      {t('cookie.settingsLink')}
     </button>
   );
 }

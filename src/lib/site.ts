@@ -1,8 +1,10 @@
 export const SITE = {
   name: 'OSTREV',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://ostrev.com',
-  description:
-    'OSTREV is women’s and men’s fashion from Vilnius: trench coats, knitwear, shirts and denim at high-street prices. EU delivery in 2–5 days.',
+  description: {
+    en: 'OSTREV is women’s and men’s fashion from Vilnius: trench coats, knitwear, shirts and denim at high-street prices. EU delivery in 2–5 days.',
+    lt: 'OSTREV – moterų ir vyrų mada iš Vilniaus: tranšėjiniai paltai, megztiniai, marškiniai ir džinsai prieinamomis kainomis. Pristatymas ES per 2–5 d.',
+  },
   email: 'hello@ostrev.com',
   supportEmail: 'support@ostrev.com',
   instagram: 'https://www.instagram.com/ostrev',
@@ -17,12 +19,6 @@ export const SITE = {
   },
 } as const;
 
-export const ANNOUNCEMENTS = [
-  'Free shipping over €60 · EU delivery 2–5 days',
-  'Autumn–Winter 2026 — new in',
-  '14-day returns across the EU',
-] as const;
-
 export const NAV = [
   { href: '/women', label: 'Women', key: 'nav.women' },
   { href: '/men', label: 'Men', key: 'nav.men' },
@@ -31,43 +27,45 @@ export const NAV = [
 ] as const;
 
 /** Category links under Women and Men in the header and mobile menu. Checked against the catalog at build time. */
-export const MENU: Record<'women' | 'men', { category: string; label: string }[]> = {
+export const MENU: Record<'women' | 'men', { category: string; label: { en: string; lt: string } }[]> = {
   women: [
-    { category: 'coats', label: 'Coats & jackets' },
-    { category: 'knitwear', label: 'Knitwear' },
-    { category: 'shirts', label: 'Shirts & tops' },
-    { category: 'dresses', label: 'Dresses' },
-    { category: 'trousers', label: 'Jeans & trousers' },
-    { category: 'accessories', label: 'Bags' },
+    { category: 'coats', label: { en: 'Coats & jackets', lt: 'Paltai ir striukės' } },
+    { category: 'knitwear', label: { en: 'Knitwear', lt: 'Megztiniai' } },
+    { category: 'shirts', label: { en: 'Shirts & tops', lt: 'Marškiniai ir palaidinės' } },
+    { category: 'dresses', label: { en: 'Dresses', lt: 'Suknelės' } },
+    { category: 'trousers', label: { en: 'Jeans & trousers', lt: 'Džinsai ir kelnės' } },
+    { category: 'accessories', label: { en: 'Bags', lt: 'Rankinės' } },
   ],
   men: [
-    { category: 'coats', label: 'Coats & jackets' },
-    { category: 'knitwear', label: 'Knitwear' },
-    { category: 'shirts', label: 'Shirts & T-shirts' },
-    { category: 'trousers', label: 'Jeans & trousers' },
+    { category: 'coats', label: { en: 'Coats & jackets', lt: 'Paltai ir striukės' } },
+    { category: 'knitwear', label: { en: 'Knitwear', lt: 'Megztiniai' } },
+    { category: 'shirts', label: { en: 'Shirts & T-shirts', lt: 'Marškiniai ir marškinėliai' } },
+    { category: 'trousers', label: { en: 'Jeans & trousers', lt: 'Džinsai ir kelnės' } },
   ],
 };
 
-export const FOOTER_LINKS = {
+type FooterLink = { href: string; label: { en: string; lt: string } };
+
+export const FOOTER_LINKS: Record<'shop' | 'help' | 'legal', FooterLink[]> = {
   shop: [
-    { href: '/women', label: 'Women' },
-    { href: '/men', label: 'Men' },
-    { href: '/shop/coats', label: 'Coats & jackets' },
-    { href: '/shop/knitwear', label: 'Knitwear' },
-    { href: '/shop/trousers', label: 'Jeans & trousers' },
-    { href: '/new', label: 'New in' },
+    { href: '/women', label: { en: 'Women', lt: 'Moterims' } },
+    { href: '/men', label: { en: 'Men', lt: 'Vyrams' } },
+    { href: '/shop/coats', label: { en: 'Coats & jackets', lt: 'Paltai ir striukės' } },
+    { href: '/shop/knitwear', label: { en: 'Knitwear', lt: 'Megztiniai' } },
+    { href: '/shop/trousers', label: { en: 'Jeans & trousers', lt: 'Džinsai ir kelnės' } },
+    { href: '/new', label: { en: 'New in', lt: 'Naujienos' } },
   ],
   help: [
-    { href: '/help/shipping', label: 'Shipping' },
-    { href: '/help/returns', label: 'Returns' },
-    { href: '/help/size-guide', label: 'Size guide' },
-    { href: '/help/faq', label: 'FAQ' },
-    { href: '/help/contact', label: 'Contact' },
+    { href: '/help/shipping', label: { en: 'Shipping', lt: 'Pristatymas' } },
+    { href: '/help/returns', label: { en: 'Returns', lt: 'Grąžinimas' } },
+    { href: '/help/size-guide', label: { en: 'Size guide', lt: 'Dydžių lentelė' } },
+    { href: '/help/faq', label: { en: 'FAQ', lt: 'DUK' } },
+    { href: '/help/contact', label: { en: 'Contact', lt: 'Kontaktai' } },
   ],
   legal: [
-    { href: '/legal/privacy', label: 'Privacy policy' },
-    { href: '/legal/terms', label: 'Terms & conditions' },
-    { href: '/legal/cookies', label: 'Cookie policy' },
+    { href: '/legal/privacy', label: { en: 'Privacy policy', lt: 'Privatumo politika' } },
+    { href: '/legal/terms', label: { en: 'Terms & conditions', lt: 'Pirkimo taisyklės' } },
+    { href: '/legal/cookies', label: { en: 'Cookie policy', lt: 'Slapukų politika' } },
   ],
 };
 

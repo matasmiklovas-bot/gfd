@@ -7,41 +7,53 @@ import { ui, uiStore } from '@/lib/store';
 import { useDialogBehavior, useScrollLock } from '@/lib/hooks';
 import { CloseIcon, FilterIcon } from '@/components/ui/Icons';
 import { ProductCard } from './ProductCard';
+import { useT } from '@/lib/i18n';
+import { COUNT, plural } from '@/lib/dictionary';
+import { lp, type Locale } from '@/lib/locale';
+import { useLocale } from '@/lib/useLocale';
 
 type Sort = 'newest' | 'price-asc' | 'price-desc';
 
-const SORTS: { value: Sort; label: string }[] = [
-  { value: 'newest', label: 'Newest' },
-  { value: 'price-asc', label: 'Price: low–high' },
-  { value: 'price-desc', label: 'Price: high–low' },
+type Text = Record<Locale, string>;
+
+const SORTS: { value: Sort; label: Text }[] = [
+  { value: 'newest', label: { en: 'Newest', lt: 'Naujausi' } },
+  { value: 'price-asc', label: { en: 'Price: low–high', lt: 'Kaina: nuo mažiausios' } },
+  { value: 'price-desc', label: { en: 'Price: high–low', lt: 'Kaina: nuo didžiausios' } },
 ];
 
 const SIZE_ORDER: Size[] = ['XS', 'S', 'M', 'L', 'XL', 'XXL', 'ONE SIZE'];
 
 const PRICES = [
-  { value: 'u30', label: 'Under €30', test: (c: number) => c < 3000 },
-  { value: '30-60', label: '€30–€60', test: (c: number) => c >= 3000 && c <= 6000 },
-  { value: 'o60', label: 'Over €60', test: (c: number) => c > 6000 },
+  { value: 'u30', label: { en: 'Under €30', lt: 'Iki 30 €' }, test: (c: number) => c < 3000 },
+  { value: '30-60', label: { en: '€30–€60', lt: '30–60 €' }, test: (c: number) => c >= 3000 && c <= 6000 },
+  { value: 'o60', label: { en: 'Over €60', lt: 'Virš 60 €' }, test: (c: number) => c > 6000 },
 ] as const;
 
-const FAMILIES: { value: string; label: string; hex: string; match: (slug: string) => boolean }[] = [
-  { value: 'black', label: 'Black', hex: '#111111', match: (s) => s === 'black' },
-  { value: 'white', label: 'White & ecru', hex: '#F1EBDF', match: (s) => ['white', 'ecru', 'cream'].includes(s) },
-  { value: 'neutral', label: 'Beige & brown', hex: '#C8B49A', match: (s) => ['beige', 'oat', 'tan'].includes(s) },
-  { value: 'blue', label: 'Blue', hex: '#7C9CC4', match: (s) => s.includes('blue') },
-  { value: 'green', label: 'Green', hex: '#A9BFA8', match: (s) => s.includes('green') || s === 'sage' },
+const FAMILIES: { value: string; label: Text; hex: string; match: (slug: string) => boolean }[] = [
+  { value: 'black', label: { en: 'Black', lt: 'Juoda' }, hex: '#111111', match: (s) => s === 'black' },
+  { value: 'white', label: { en: 'White & ecru', lt: 'Balta ir ekru' }, hex: '#F1EBDF', match: (s) => ['white', 'ecru', 'cream'].includes(s) },
+  {
+    value: 'neutral',
+    label: { en: 'Beige & brown', lt: 'Smėlio ir ruda' },
+    hex: '#C8B49A',
+    match: (s) => ['beige', 'oat', 'tan', 'camel', 'stone'].includes(s),
+  },
+  { value: 'grey', label: { en: 'Grey', lt: 'Pilka' }, hex: '#A6A8AB', match: (s) => s.includes('grey') },
+  { value: 'blue', label: { en: 'Blue', lt: 'Mėlyna' }, hex: '#7C9CC4', match: (s) => s.includes('blue') },
+  { value: 'green', label: { en: 'Green', lt: 'Žalia' }, hex: '#A9BFA8', match: (s) => s.includes('green') || s === 'sage' },
 ];
 
-export const CATEGORY_LABELS: Record<Category, string> = {
-  coats: 'Coats & jackets',
-  knitwear: 'Knitwear',
-  shirts: 'Shirts & tops',
-  dresses: 'Dresses',
-  trousers: 'Jeans & trousers',
-  accessories: 'Bags',
+export const CATEGORY_LABELS: Record<Category, Text> = {
+  coats: { en: 'Coats & jackets', lt: 'Paltai ir striukės' },
+  knitwear: { en: 'Knitwear', lt: 'Megztiniai' },
+  shirts: { en: 'Shirts & tops', lt: 'Marškiniai ir palaidinės' },
+  dresses: { en: 'Dresses', lt: 'Suknelės' },
+  trousers: { en: 'Jeans & trousers', lt: 'Džinsai ir kelnės' },
+  accessories: { en: 'Bags', lt: 'Rankinės' },
 };
 
-const GENDER_LABELS: Record<Gender, string> = { women: 'Women', men: 'Men' };
+const GENDER_LABELS: Record<Gender, Text> = { women: { en: 'Women', lt: 'Moterims' }, men: { en: 'Men', lt: 'Vyrams' } };
 
 interface Filters {
   gender: string[];
@@ -89,6 +101,8 @@ export function CollectionView({
   /** Bershka-style row of category chips above the grid (single choice). */
   quickCategories?: boolean;
 }) {
+  const locale = useLocale();
+  const t = useT();
   const [filters, setFilters] = useState<Filters>(EMPTY);
   const [sort, setSort] = useState<Sort>('newest');
   const open = uiStore.useStore((s) => s.panel === 'filters');
@@ -145,8 +159,8 @@ export function CollectionView({
     <>
       {quickCategories && options.categories.length > 1 && (
         <div className="container-site pb-4">
-          <div className="scroll-row -mx-4 px-4 md:mx-0 md:px-0" role="group" aria-label="Category">
-            {[{ value: '', label: 'All' }, ...options.categories.map((c) => ({ value: c, label: CATEGORY_LABELS[c] }))].map((item) => {
+          <div className="scroll-row -mx-4 px-4 md:mx-0 md:px-0" role="group" aria-label={t('filter.category')}>
+            {[{ value: '', label: t('common.all') }, ...options.categories.map((c) => ({ value: c, label: CATEGORY_LABELS[c][locale] }))].map((item) => {
               const active = item.value ? filters.category.length === 1 && filters.category[0] === item.value : filters.category.length === 0;
               return (
                 <button
@@ -174,13 +188,13 @@ export function CollectionView({
           aria-controls="filters-panel"
         >
           <FilterIcon size={18} />
-          Filter{activeCount > 0 && ` (${activeCount})`}
+          {t('filter.title')}{activeCount > 0 && ` (${activeCount})`}
         </button>
         <p className="label hidden text-muted sm:block" aria-live="polite">
-          {visible.length} {visible.length === 1 ? 'product' : 'products'}
+          {plural(locale, visible.length, COUNT.products)}
         </p>
         <label className="label flex items-center gap-2">
-          <span className="sr-only sm:not-sr-only text-muted">Sort</span>
+          <span className="sr-only sm:not-sr-only text-muted">{t('filter.sort')}</span>
           <select
             value={sort}
             onChange={(e) => setSort(e.target.value as Sort)}
@@ -188,7 +202,7 @@ export function CollectionView({
           >
             {SORTS.map((s) => (
               <option key={s.value} value={s.value}>
-                {s.label}
+                {s.label[locale]}
               </option>
             ))}
           </select>
@@ -198,14 +212,14 @@ export function CollectionView({
       <div className="container-site pb-20 pt-6 md:pb-28 md:pt-8">
         {visible.length === 0 ? (
           <div className="py-24 text-center">
-            <p className="text-muted">Nothing matches these filters.</p>
+            <p className="text-muted">{t('filter.none')}</p>
             <button type="button" className="btn-secondary mt-6" onClick={() => setFilters(EMPTY)}>
-              Clear filters
+              {t('filter.clearAll')}
             </button>
           </div>
         ) : (
           <>
-            <h2 className="sr-only">Products</h2>
+            <h2 className="sr-only">{t('filter.products')}</h2>
             <ul className="grid grid-cols-2 gap-x-3 gap-y-10 md:gap-x-4 lg:grid-cols-4 lg:gap-y-14">
               {visible.map((p, i) => (
                 <li key={p.handle}>
@@ -237,8 +251,8 @@ export function CollectionView({
           }`}
         >
           <div className="flex h-header items-center justify-between border-b border-line px-5">
-            <h2 id="filters-title" className="label">Filter</h2>
-            <button type="button" onClick={close} className="-mr-3 inline-flex h-11 w-11 items-center justify-center" aria-label="Close filters">
+            <h2 id="filters-title" className="label">{t('filter.title')}</h2>
+            <button type="button" onClick={close} className="-mr-3 inline-flex h-11 w-11 items-center justify-center" aria-label={t('filter.close')}>
               <CloseIcon />
             </button>
           </div>
@@ -246,11 +260,11 @@ export function CollectionView({
           <div className="flex-1 space-y-8 overflow-y-auto px-5 py-6">
             {showGenderFilter && options.genders.length > 1 && (
               <fieldset>
-                <legend className="label mb-3 text-muted">Women / Men</legend>
+                <legend className="label mb-3 text-muted">{t('filter.gender')}</legend>
                 <div className="flex flex-wrap gap-2">
                   {options.genders.map((g) => (
                     <button key={g} type="button" aria-pressed={filters.gender.includes(g)} onClick={() => toggle('gender', g)} className={chip(filters.gender.includes(g))}>
-                      {GENDER_LABELS[g]}
+                      {GENDER_LABELS[g][locale]}
                     </button>
                   ))}
                 </div>
@@ -259,11 +273,11 @@ export function CollectionView({
 
             {showCategoryFilter && options.categories.length > 1 && (
               <fieldset>
-                <legend className="label mb-3 text-muted">Category</legend>
+                <legend className="label mb-3 text-muted">{t('filter.category')}</legend>
                 <div className="flex flex-wrap gap-2">
                   {options.categories.map((c) => (
                     <button key={c} type="button" aria-pressed={filters.category.includes(c)} onClick={() => toggle('category', c)} className={chip(filters.category.includes(c))}>
-                      {CATEGORY_LABELS[c]}
+                      {CATEGORY_LABELS[c][locale]}
                     </button>
                   ))}
                 </div>
@@ -271,7 +285,7 @@ export function CollectionView({
             )}
 
             <fieldset>
-              <legend className="label mb-3 text-muted">Size</legend>
+              <legend className="label mb-3 text-muted">{t('filter.size')}</legend>
               <div className="flex flex-wrap gap-2">
                 {options.sizes.map((s) => (
                   <button key={s} type="button" aria-pressed={filters.size.includes(s)} onClick={() => toggle('size', s)} className={chip(filters.size.includes(s))}>
@@ -282,23 +296,23 @@ export function CollectionView({
             </fieldset>
 
             <fieldset>
-              <legend className="label mb-3 text-muted">Colour</legend>
+              <legend className="label mb-3 text-muted">{t('filter.colour')}</legend>
               <div className="flex flex-wrap gap-2">
                 {options.colors.map((c) => (
                   <button key={c.value} type="button" aria-pressed={filters.color.includes(c.value)} onClick={() => toggle('color', c.value)} className={chip(filters.color.includes(c.value))}>
                     <span className="h-3 w-3 border border-concrete" style={{ backgroundColor: c.hex }} aria-hidden="true" />
-                    {c.label}
+                    {c.label[locale]}
                   </button>
                 ))}
               </div>
             </fieldset>
 
             <fieldset>
-              <legend className="label mb-3 text-muted">Price</legend>
+              <legend className="label mb-3 text-muted">{t('filter.price')}</legend>
               <div className="flex flex-wrap gap-2">
                 {PRICES.map((p) => (
                   <button key={p.value} type="button" aria-pressed={filters.price.includes(p.value)} onClick={() => toggle('price', p.value)} className={chip(filters.price.includes(p.value))}>
-                    {p.label}
+                    {p.label[locale]}
                   </button>
                 ))}
               </div>
@@ -307,10 +321,10 @@ export function CollectionView({
 
           <div className="grid grid-cols-2 gap-2 border-t border-line px-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] pt-4">
             <button type="button" className="btn-secondary" onClick={() => setFilters(EMPTY)} disabled={activeCount === 0}>
-              Clear
+              {t('filter.clear')}
             </button>
             <button type="button" className="btn-primary" onClick={close}>
-              Show {visible.length}
+              {t('filter.show', { n: visible.length })}
             </button>
           </div>
         </div>
@@ -320,16 +334,18 @@ export function CollectionView({
 }
 
 export function CategoryNav({ current }: { current?: Category }) {
+  const locale = useLocale();
+  const t = useT();
   const items: { href: string; label: string; active: boolean }[] = [
-    { href: '/shop', label: 'All', active: !current },
+    { href: lp(locale, '/shop'), label: t('common.all'), active: !current },
     ...(Object.keys(CATEGORY_LABELS) as Category[]).map((c) => ({
-      href: `/shop/${c}`,
-      label: CATEGORY_LABELS[c],
+      href: lp(locale, `/shop/${c}`),
+      label: CATEGORY_LABELS[c][locale],
       active: current === c,
     })),
   ];
   return (
-    <nav aria-label="Categories" className="scroll-row -mx-4 px-4 md:mx-0 md:px-0">
+    <nav aria-label={t('filter.categories')} className="scroll-row -mx-4 px-4 md:mx-0 md:px-0">
       {items.map((item) => (
         <Link
           key={item.href}

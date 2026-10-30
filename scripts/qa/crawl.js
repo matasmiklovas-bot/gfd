@@ -6,7 +6,10 @@ const BASE = process.env.BASE_URL || 'http://localhost:3000';
 (async () => {
   const sitemap = await (await fetch(BASE + '/sitemap.xml')).text();
   const pages = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].replace(/^https?:\/\/[^/]+/, '') || '/');
-  pages.push('/search?q=coat', '/wishlist', '/account', '/checkout', '/help', '/legal', '/does-not-exist');
+  const extra = ['/search?q=coat', '/wishlist', '/account', '/checkout', '/help', '/legal', '/does-not-exist'];
+  pages.push(...extra, ...extra.map((u) => '/lt' + u.replace('coat', 'paltas')));
+  // The 404 probe is expected to 404, and its language switch links to the other locale's 404.
+  const probe = (u) => u.endsWith('/does-not-exist');
   const b = await chromium.launch();
   const issues = [];
   const links = new Set();
@@ -17,7 +20,7 @@ const BASE = process.env.BASE_URL || 'http://localhost:3000';
     let cur = '';
     p.on('pageerror', (e) => issues.push(`[${w}] ${cur} pageerror: ${e.message}`));
     p.on('console', (m) => { if (m.type() === 'error' && !/404 \(Not Found\)/.test(m.text())) issues.push(`[${w}] ${cur} console: ${m.text().slice(0, 200)}`); });
-    p.on('response', (r) => { if (r.status() >= 400 && !r.url().endsWith('/does-not-exist')) issues.push(`[${w}] ${cur} HTTP ${r.status()} ${r.url()}`); });
+    p.on('response', (r) => { if (r.status() >= 400 && !probe(r.url())) issues.push(`[${w}] ${cur} HTTP ${r.status()} ${r.url()}`); });
     for (const path of pages) {
       cur = path;
       await p.goto(BASE + path, { waitUntil: 'networkidle' });
@@ -35,7 +38,7 @@ const BASE = process.env.BASE_URL || 'http://localhost:3000';
       });
       r.links.forEach((l) => links.add(l.split('#')[0]));
       if (r.overflow > 0) issues.push(`[${w}] ${path} horizontal overflow ${r.overflow}px`);
-      if (r.h1 !== 1 && path !== '/does-not-exist') issues.push(`[${w}] ${path} has ${r.h1} h1`);
+      if (r.h1 !== 1 && !probe(path)) issues.push(`[${w}] ${path} has ${r.h1} h1`);
       if (r.noAlt.length) issues.push(`[${w}] ${path} img without alt: ${r.noAlt}`);
       if (r.unnamed.length) issues.push(`[${w}] ${path} unnamed controls: ${r.unnamed.join(' | ')}`);
       if (w === 1440 && (!r.desc || r.desc.length < 50)) issues.push(`${path} weak meta description (${r.desc.length})`);
@@ -43,6 +46,7 @@ const BASE = process.env.BASE_URL || 'http://localhost:3000';
     await ctx.close();
   }
   for (const l of links) {
+    if (probe(l)) continue;
     const res = await fetch(BASE + l, { redirect: 'manual' });
     if (res.status >= 400) issues.push(`broken link ${l} -> ${res.status}`);
   }

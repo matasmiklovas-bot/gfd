@@ -31,7 +31,7 @@ Read this before launch.
 | Newsletter / drop alerts / contact form | Validated server-side, then POSTed as JSON to `NEWSLETTER_WEBHOOK_URL` / `CONTACT_WEBHOOK_URL` (Klaviyo, Mailchimp, Zapier, Make…). Without a URL they are only logged. No double opt-in yet. |
 | Discount codes | `WELCOME10` (10%) in `src/lib/discounts.ts`, server-only. Unlimited use, no per-customer limit. The newsletter success message shows the same code to everyone. |
 | Baltic bank links (Swedbank, SEB, Luminor, Citadele) | **Not included.** Stripe does not offer them. You need Montonio, Paysera or MakeCommerce alongside Stripe. |
-| Language | EN/LT switch translates interface strings only (nav, buttons, cart, cookie banner). Product copy, help and legal pages are English. Full LT needs `/lt/...` routes and translated content. |
+| Language | **Full English and Lithuanian.** Every page, product, help and legal text, checkout and API message exists in both. English is un-prefixed (`/women`), Lithuanian lives under `/lt` (`/lt/women`). Lithuanian copy was written by an AI, not a native copywriter: have a Lithuanian speaker proofread it, the legal pages above all, before launch. |
 | Currency | EUR only. The footer shows "EUR €" as a label, not a selector. |
 | Analytics / pixels | None installed. The cookie banner stores consent (`consentStore`); check it before loading any tracking script. |
 | Rate limiting | None on the API routes. The forms have a honeypot only. Add rate limiting (Vercel WAF, Upstash) before launch. |
@@ -45,10 +45,13 @@ Read this before launch.
 
 ```
 data/products.json          ← the catalog. Edit this to change products.
+data/products.lt.json       ← Lithuanian names, descriptions, colours and care text for every product
 public/images/              ← optimised WebP masters (Next serves AVIF/WebP per device)
 src/
+  middleware.ts             ← /women → /en/women (internal rewrite); /en/... → 308 to un-prefixed
   app/                      ← routes (App Router)
-    shop/[category]/[slug]  ← clean URLs: /shop/coats/oversized-trench-coat
+    [locale]/               ← every page, rendered once per language (en, lt)
+      shop/[category]/[slug]  ← clean URLs: /shop/coats/cotton-trench-coat, /lt/shop/coats/cotton-trench-coat
     api/checkout            ← server-side order validation + Stripe session
     api/stripe/webhook      ← payment confirmation (fulfilment TODO)
     api/subscribe, contact, discount
@@ -58,12 +61,14 @@ src/
     home/ checkout/ account/ forms/ content/ ui/
   lib/
     commerce/               ← catalog access layer (swap for Shopify here)
-    store.ts                ← client state: cart, wishlist, account, consent, prefs
+    store.ts                ← client state: cart, wishlist, account, consent, recently viewed
     pricing.ts              ← shipping + totals (shared by client and server)
     discounts.ts            ← discount codes (server only)
-    site.ts                 ← brand config: announcements, nav, next drop date, company details
+    site.ts                 ← brand config: menu, footer links, company details
     sizeGuide.ts            ← size tables (cm)
-    i18n.ts                 ← EN/LT interface strings
+    locale.ts               ← locales, lp() link helper, hreflang alternates
+    dictionary.ts           ← EN/LT interface strings + Lithuanian plural rules
+    i18n.ts                 ← useT() for client components
 ```
 
 ### Editing products
@@ -88,6 +93,15 @@ link to the gender category. Old streetwear URLs (`/drops`, `/shop/hoodies|tees|
 Product pages show "Complete the look" (`related` in the JSON), "You may also like" (same gender and category) and
 "Recently viewed" (handles stored in this browser's `localStorage`). Search matches synonyms and common Lithuanian
 words (`src/lib/search.ts`).
+
+### Languages
+
+Pages take the locale from the URL (`src/lib/pageLocale.ts`), so both languages are statically generated and indexable,
+with `hreflang` alternates and a sitemap entry for each. Links go through `lp(locale, path)`. Interface strings live in
+`src/lib/dictionary.ts` (`{ en, lt }` per key; counts use `plural()` so Lithuanian gets *1 prekė / 2 prekės / 10
+prekių*). Product text in Lithuanian is in `data/products.lt.json`; **the build fails if a product, colour or view has
+no translation**, so a new product cannot ship half-English. Page-specific copy sits next to the page as a `COPY`
+object. The language switch keeps you on the same page. Stripe Checkout opens in the shopper's language.
 
 ---
 
@@ -125,17 +139,19 @@ generating AVIF variants on the first request, which a CDN caches. Re-measure on
 npm run build && npm start               # in one terminal
 BASE_URL=http://localhost:3000 npm run qa:crawl     # every sitemap page at 1440px and 390px
 BASE_URL=http://localhost:3000 npm run qa:checkout  # demo purchase end to end, desktop and phone
+BASE_URL=http://localhost:3000 LOCALE=lt npm run qa:checkout  # the same purchase in Lithuanian
 ```
 
 Both need Playwright (`npm i -D playwright && npx playwright install chromium`). The crawl reports JavaScript errors,
 failed requests, horizontal overflow, pages without exactly one `h1`, images without `alt`, unnamed buttons and links,
 short meta descriptions and broken internal links. The checkout test goes menu → product → size → bag → checkout
-validation → `WELCOME10` → confirmation. Last run: 73 pages, no issues; checkout passes on both widths.
+validation → `WELCOME10` → confirmation. Last run: 146 pages (both languages) at both widths, no issues; checkout
+passes in both languages on both widths.
 
 ## SEO
 
 Per-page titles and descriptions, canonical URLs, Open Graph image (`public/og.jpg`, product images on product pages),
-`sitemap.xml`, `robots.txt` (checkout/account/search excluded), JSON-LD: `Organization`, `WebSite` + `SearchAction`,
+`sitemap.xml` with `hreflang` alternates, `robots.txt` (checkout/account/search excluded in both languages), JSON-LD: `Organization`, `WebSite` + `SearchAction`,
 `BreadcrumbList`, `ProductGroup` with per-variant `Offer` (price, availability, shipping, return policy), `FAQPage`.
 
 ---

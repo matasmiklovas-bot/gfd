@@ -1,40 +1,33 @@
 'use client';
 
-import { useEffect } from 'react';
-import { prefsStore, type Locale } from '@/lib/store';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { LOCALES, LOCALE_META, lp, splitLocale } from '@/lib/locale';
 
-const LOCALES: { code: Locale; label: string; name: string }[] = [
-  { code: 'en', label: 'EN', name: 'English' },
-  { code: 'lt', label: 'LT', name: 'Lietuvių' },
-];
-
+/** Links to the same page in the other language (/women ↔ /lt/women). */
 export function LanguageSwitch() {
-  const locale = prefsStore.useStore((s) => s.locale);
-
-  useEffect(() => {
-    document.documentElement.lang = locale;
-  }, [locale]);
+  const { locale, path } = splitLocale(usePathname() ?? '/');
 
   return (
-    <div role="group" aria-label="Language" className="flex items-center gap-1">
+    <nav aria-label="Language" className="flex items-center gap-1">
       {LOCALES.map((l, i) => (
-        <span key={l.code} className="flex items-center gap-1">
+        <span key={l} className="flex items-center gap-1">
           {i > 0 && <span aria-hidden="true" className="label text-concrete">/</span>}
-          <button
-            type="button"
-            lang={l.code}
+          <Link
+            href={lp(l, path)}
+            hrefLang={LOCALE_META[l].htmlLang}
+            lang={LOCALE_META[l].htmlLang}
             // Starts with the visible code so speech users can say what they see.
-            aria-label={`${l.label} – ${l.name}`}
-            aria-pressed={locale === l.code}
-            onClick={() => prefsStore.set({ locale: l.code })}
+            aria-label={`${LOCALE_META[l].label} – ${LOCALE_META[l].name}`}
+            aria-current={locale === l ? 'true' : undefined}
             className={`label inline-flex h-9 min-w-9 items-center justify-center px-1 transition-colors ${
-              locale === l.code ? 'text-current underline underline-offset-4' : 'opacity-60 hover:opacity-100'
+              locale === l ? 'text-current underline underline-offset-4' : 'opacity-60 hover:opacity-100'
             }`}
           >
-            {l.label}
-          </button>
+            {LOCALE_META[l].label}
+          </Link>
         </span>
       ))}
-    </div>
+    </nav>
   );
 }

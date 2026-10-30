@@ -7,6 +7,8 @@ import { useT } from '@/lib/i18n';
 import { cart, cartStore, cartSubtotal, ui, uiStore } from '@/lib/store';
 import { amountToFreeShipping, FREE_SHIPPING_THRESHOLD } from '@/lib/pricing';
 import { formatPrice } from '@/lib/money';
+import { lp, splitLocale } from '@/lib/locale';
+import { useLocale } from '@/lib/useLocale';
 import { useDialogBehavior, useScrollLock } from '@/lib/hooks';
 import { CloseIcon } from '@/components/ui/Icons';
 import { Price } from '@/components/ui/Price';
@@ -14,6 +16,9 @@ import { QuantityStepper } from '@/components/ui/QuantityStepper';
 
 export function CartDrawer() {
   const t = useT();
+  const locale = useLocale();
+  // Lines keep the URL from when they were added; point them at the current language.
+  const href = (url: string) => lp(locale, splitLocale(url).path);
   const open = uiStore.useStore((s) => s.panel === 'cart');
   const lines = cartStore.useStore((s) => s.lines);
   const subtotal = cartStore.useStore(cartSubtotal);
@@ -61,7 +66,7 @@ export function CartDrawer() {
         {lines.length === 0 ? (
           <div className="flex flex-1 flex-col items-center justify-center gap-6 px-5 text-center">
             <p className="text-muted">{t('cart.empty')}</p>
-            <Link href="/shop" onClick={close} className="btn-primary">
+            <Link href={lp(locale, '/shop')} onClick={close} className="btn-primary">
               {t('cart.continue')}
             </Link>
           </div>
@@ -69,12 +74,12 @@ export function CartDrawer() {
           <>
             <div className="border-b border-line px-5 py-4">
               <p className="mb-3 text-[13px]" aria-live="polite">
-                {away > 0 ? t('cart.away', { amount: formatPrice(away) }) : t('cart.free')}
+                {away > 0 ? t('cart.away', { amount: formatPrice(away, locale) }) : t('cart.free')}
               </p>
               <div
                 className="h-[2px] w-full bg-line"
                 role="progressbar"
-                aria-label="Progress to free shipping"
+                aria-label={t('cart.progress')}
                 aria-valuemin={0}
                 aria-valuemax={100}
                 aria-valuenow={Math.round(progress)}
@@ -86,12 +91,12 @@ export function CartDrawer() {
             <ul className="flex-1 divide-y divide-line overflow-y-auto px-5">
               {lines.map((line) => (
                 <li key={line.key} className="flex gap-4 py-5">
-                  <Link href={line.url} onClick={close} className="relative aspect-[4/5] w-24 shrink-0 bg-bone">
+                  <Link href={href(line.url)} onClick={close} className="relative aspect-[4/5] w-24 shrink-0 bg-bone">
                     <Image src={line.image} alt="" fill sizes="96px" className="object-cover" />
                   </Link>
                   <div className="flex min-w-0 flex-1 flex-col">
                     <div className="flex items-start justify-between gap-3">
-                      <Link href={line.url} onClick={close} className="text-[14px] leading-snug hover:underline">
+                      <Link href={href(line.url)} onClick={close} className="text-[14px] leading-snug hover:underline">
                         {line.name}
                       </Link>
                       <Price cents={line.price * line.quantity} className="shrink-0 text-[14px]" />
@@ -125,7 +130,7 @@ export function CartDrawer() {
                 <Price cents={subtotal} className="text-[15px] font-semibold" />
               </div>
               <p className="mb-4 text-[12px] text-muted">{t('cart.taxes')}</p>
-              <Link href="/checkout" onClick={close} className="btn-primary w-full">
+              <Link href={lp(locale, '/checkout')} onClick={close} className="btn-primary w-full">
                 {t('cart.checkout')}
               </Link>
             </div>

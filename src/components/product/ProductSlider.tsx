@@ -5,12 +5,13 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import type { ProductSummary } from '@/lib/types';
 import { ArrowLeftIcon, ArrowRightIcon } from '@/components/ui/Icons';
 import { ProductCard } from './ProductCard';
+import { useT } from '@/lib/i18n';
 
 export function ProductSlider({
   title,
   products,
   href,
-  linkLabel = 'View all',
+  linkLabel,
   compact = false,
 }: {
   title: string;
@@ -21,6 +22,7 @@ export function ProductSlider({
   compact?: boolean;
 }) {
   const track = useRef<HTMLUListElement>(null);
+  const t = useT();
   const [edges, setEdges] = useState({ start: true, end: false });
 
   const update = useCallback(() => {
@@ -51,14 +53,14 @@ export function ProductSlider({
         <div className="flex items-center gap-4">
           {href && (
             <Link href={href} className="label link-underline">
-              {linkLabel}
+              {linkLabel ?? t('common.viewAll')}
             </Link>
           )}
           <div className="hidden gap-2 md:flex">
-            <button type="button" className={arrow} onClick={() => scroll(-1)} disabled={edges.start} aria-label="Previous products">
+            <button type="button" className={arrow} onClick={() => scroll(-1)} disabled={edges.start} aria-label={t('slider.prev')}>
               <ArrowLeftIcon size={18} />
             </button>
-            <button type="button" className={arrow} onClick={() => scroll(1)} disabled={edges.end} aria-label="Next products">
+            <button type="button" className={arrow} onClick={() => scroll(1)} disabled={edges.end} aria-label={t('slider.next')}>
               <ArrowRightIcon size={18} />
             </button>
           </div>
