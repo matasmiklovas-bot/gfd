@@ -9,9 +9,10 @@ cp .env.example .env.local   # optional — everything runs without keys
 npm run dev                  # http://localhost:3000
 npm run build && npm start   # production
 npm run lint && npm run typecheck
+npm test                     # unit tests: pricing, discounts, i18n, routing, search, catalog
 ```
 
-Node 20+ required.
+Node 20+ required (22.18+ to run `npm test`, which runs the TypeScript sources directly).
 
 ## Deploy (Vercel)
 
@@ -147,6 +148,14 @@ SEO **100** (checkout scores 63 on purpose: it is `noindex`). LCP is 1.7–3.1 s
 generating AVIF variants on the first request, which a CDN caches. Re-measure on your real host.
 
 ## Checks
+
+`npm test` runs the unit tests in `tests/` (Node's built-in runner, no extra dependencies). They cover shipping and
+discount maths, Lithuanian plurals and dictionary completeness, locale routing and the middleware, search, and
+catalog integrity: unique names in both languages, at least two photos per product, every photo on disk and
+listed in the image table below, and no stock photo shared between two products. GitHub Actions
+(`.github/workflows/ci.yml`) runs lint, typecheck, tests and build on every push.
+
+The browser checks below need a running server:
 
 ```bash
 npm run build && npm start               # in one terminal

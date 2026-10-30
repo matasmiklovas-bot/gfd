@@ -4,7 +4,7 @@ import type { Locale } from './locale';
  * Interface strings in both languages. Usable from server and client code.
  * Long-form copy (product descriptions, help and legal pages) lives next to the page or in data/.
  */
-const DICT = {
+export const DICT = {
   'nav.new': { en: 'New', lt: 'Naujienos' },
   'nav.women': { en: 'Women', lt: 'Moterims' },
   'nav.men': { en: 'Men', lt: 'Vyrams' },
