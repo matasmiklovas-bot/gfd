@@ -2771,74 +2771,12 @@
       }
     ],
     "related": [
-      "loose-straight-jeans",
+      "baggy-jeans",
       "cotton-trench-coat"
     ]
   },
   {
     "id": "ost-046",
-    "handle": "loose-straight-jeans",
-    "name": "Loose Straight Jeans",
-    "gender": "men",
-    "category": "trousers",
-    "price": 3999,
-    "drop": "aw26",
-    "releasedAt": "2026-10-28",
-    "isNew": true,
-    "summary": "Mid-blue jeans with a loose, straight leg.",
-    "description": "Five-pocket jeans in rigid cotton denim with a mid-rise waist, a loose straight leg and a long length that stacks at the ankle.",
-    "fit": "Loose fit through the hip and leg. Long length.",
-    "material": "100% cotton denim.",
-    "care": [
-      "Machine wash at 30°C, inside out",
-      "Wash with similar colours",
-      "Do not tumble dry",
-      "Iron on medium if needed"
-    ],
-    "colors": [
-      {
-        "name": "Mid blue",
-        "slug": "mid-blue",
-        "hex": "#5F86B3"
-      }
-    ],
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "stock": {
-      "mid-blue": {
-        "S": 18,
-        "M": 6,
-        "L": 8,
-        "XL": 14,
-        "XXL": 2
-      }
-    },
-    "images": [
-      {
-        "src": "/images/loose-straight-jeans-1.webp",
-        "alt": "Loose Straight Jeans in mid blue, front"
-      },
-      {
-        "src": "/images/loose-straight-jeans-2.webp",
-        "alt": "Loose Straight Jeans in mid blue, side"
-      },
-      {
-        "src": "/images/loose-straight-jeans-3.webp",
-        "alt": "Loose Straight Jeans in mid blue, crouching"
-      }
-    ],
-    "related": [
-      "oversized-cotton-t-shirt",
-      "denim-shirt"
-    ]
-  },
-  {
-    "id": "ost-047",
     "handle": "soft-crew-jumper",
     "name": "Soft Crew Jumper",
     "gender": "men",
@@ -2895,7 +2833,7 @@
       }
     ],
     "related": [
-      "loose-straight-jeans",
+      "baggy-jeans",
       "cotton-trench-coat"
     ]
   }

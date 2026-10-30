@@ -340,9 +340,6 @@ unaltered). Cropped to 4:5 (products), 7:10 (hero), 16:10 (editorial) or square 
 | `double-breasted-linen-blazer-3.webp` | https://www.pexels.com/photo/18054310/ |
 | `denim-shirt-1.webp` | https://www.pexels.com/photo/10004174/ |
 | `denim-shirt-2.webp` | https://www.pexels.com/photo/10004177/ |
-| `loose-straight-jeans-1.webp` | https://www.pexels.com/photo/24779116/ |
-| `loose-straight-jeans-2.webp` | https://www.pexels.com/photo/24779113/ |
-| `loose-straight-jeans-3.webp` | https://www.pexels.com/photo/24779115/ |
 | `soft-crew-jumper-1.webp` | https://www.pexels.com/photo/8499301/ |
 | `soft-crew-jumper-2.webp` | https://www.pexels.com/photo/8499300/ |
 | `soft-crew-jumper-3.webp` | https://www.pexels.com/photo/8499298/ |
