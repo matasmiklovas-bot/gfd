@@ -27,17 +27,21 @@ export function ProductGallery({ images, name }: { images: ProductImage[]; name:
     setZoom({ i, x, y });
   };
 
+  // Swipeable row on phones; one column on tablets. On large screens photos pair up two per row, an odd count leads
+  // with one full-width photo, and a pair stays stacked until xl so it is not shrunk beside a tall details column.
+  const n = images.length;
+  const grid = n === 1 ? 'lg:max-w-[640px]' : n === 2 ? 'xl:grid-cols-2' : 'lg:grid-cols-2';
+  const wide = (i: number) => n === 1 || (n % 2 === 1 && i === 0);
   return (
     <div className="relative">
-      {/* Swipeable row on phones; one column on tablets; two columns on large screens (one photo stays single). */}
       <ul
         ref={track}
         onScroll={onScroll}
-        className={`scroll-row gap-0 md:grid md:grid-cols-1 md:gap-1 md:overflow-visible ${images.length > 1 ? 'lg:grid-cols-2' : 'lg:max-w-[640px]'}`}
+        className={`scroll-row gap-0 md:grid md:grid-cols-1 md:gap-1 md:overflow-visible ${grid}`}
         aria-label={t('gallery.label', { name })}
       >
         {images.map((img, i) => (
-          <li key={img.src} className="w-full shrink-0 snap-center md:w-auto">
+          <li key={img.src} className={`w-full shrink-0 snap-center md:w-auto ${wide(i) && n > 1 ? 'lg:col-span-2' : ''}`}>
             <button
               type="button"
               onClick={(e) => openZoom(i, e)}
@@ -49,7 +53,13 @@ export function ProductGallery({ images, name }: { images: ProductImage[]; name:
                 alt={img.alt}
                 fill
                 priority={i === 0}
-                sizes={images.length > 1 ? '(min-width: 1024px) 31vw, (min-width: 768px) 58vw, 100vw' : '(min-width: 768px) 62vw, 100vw'}
+                sizes={
+                  wide(i)
+                    ? '(min-width: 768px) 62vw, 100vw'
+                    : n === 2
+                      ? '(min-width: 1280px) 31vw, (min-width: 768px) 62vw, 100vw'
+                      : '(min-width: 1024px) 31vw, (min-width: 768px) 58vw, 100vw'
+                }
                 className="object-cover"
               />
             </button>

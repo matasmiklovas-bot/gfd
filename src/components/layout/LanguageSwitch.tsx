@@ -3,13 +3,15 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { LOCALES, LOCALE_META, lp, splitLocale } from '@/lib/locale';
+import { useT } from '@/lib/i18n';
 
 /** Links to the same page in the other language (/women ↔ /lt/women). */
 export function LanguageSwitch() {
   const { locale, path } = splitLocale(usePathname() ?? '/');
+  const t = useT();
 
   return (
-    <nav aria-label="Language" className="flex items-center gap-1">
+    <nav aria-label={t('a11y.language')} className="flex items-center gap-1">
       {LOCALES.map((l, i) => (
         <span key={l} className="flex items-center gap-1">
           {i > 0 && <span aria-hidden="true" className="label text-concrete">/</span>}

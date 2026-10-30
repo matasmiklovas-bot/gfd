@@ -151,7 +151,8 @@ export function ProductDetail({
         <fieldset className="mt-8">
           <div className="mb-3 flex items-center justify-between">
             <legend className="label">
-              Size{size && <span className="text-muted">: {size}</span>}
+              {t('product.size')}
+              {size && <span className="text-muted">: {size}</span>}
             </legend>
             <SizeGuideModal tables={sizeTables} />
           </div>

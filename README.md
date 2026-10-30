@@ -140,6 +140,7 @@ npm run build && npm start               # in one terminal
 BASE_URL=http://localhost:3000 npm run qa:crawl     # every sitemap page at 1440px and 390px
 BASE_URL=http://localhost:3000 npm run qa:checkout  # demo purchase end to end, desktop and phone
 BASE_URL=http://localhost:3000 LOCALE=lt npm run qa:checkout  # the same purchase in Lithuanian
+BASE_URL=http://localhost:3000 npm run qa:i18n      # Lithuanian pages: any text identical to the English page
 ```
 
 Both need Playwright (`npm i -D playwright && npx playwright install chromium`). The crawl reports JavaScript errors,

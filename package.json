@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "qa:crawl": "node scripts/qa/crawl.js",
-    "qa:checkout": "node scripts/qa/checkout.js"
+    "qa:checkout": "node scripts/qa/checkout.js",
+    "qa:i18n": "node scripts/qa/untranslated.js"
   },
   "dependencies": {
     "@fontsource-variable/archivo": "^5.2.0",
