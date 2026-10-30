@@ -384,3 +384,8 @@ unaltered). Cropped to 4:5 (products), 7:10 (hero), 16:10 (editorial) or square 
 | `leather-satchel-1.webp` | https://www.pexels.com/photo/19354495/ |
 | `leather-satchel-2.webp` | https://www.pexels.com/photo/19354496/ |
 | `leather-satchel-3.webp` | https://www.pexels.com/photo/19354498/ |
+| `striped-knit-jumper-1.webp` | https://www.pexels.com/photo/6748637/ |
+| `striped-knit-jumper-2.webp` | https://www.pexels.com/photo/6748639/ |
+| `striped-popover-shirt-1.webp` | https://www.pexels.com/photo/7129365/ |
+| `striped-popover-shirt-2.webp` | https://www.pexels.com/photo/7129366/ |
+| `striped-popover-shirt-3.webp` | https://www.pexels.com/photo/7129368/ |

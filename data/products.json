@@ -3072,5 +3072,125 @@
       "wool-blend-coat",
       "chunky-rib-jumper"
     ]
+  },
+  {
+    "id": "ost-051",
+    "handle": "striped-knit-jumper",
+    "name": "Striped Knit Jumper",
+    "gender": "men",
+    "category": "knitwear",
+    "price": 3299,
+    "drop": "aw26",
+    "releasedAt": "2026-10-26",
+    "isNew": true,
+    "summary": "A navy crew-neck jumper with bold red stripes.",
+    "description": "A crew-neck jumper in a fine cotton-blend knit, with wide red stripes across the body and sleeves, a plain navy yoke and ribbed trims.",
+    "fit": "Regular fit.",
+    "material": "70% cotton, 30% acrylic.",
+    "care": [
+      "Hand wash cold or wool cycle",
+      "Dry flat",
+      "Do not tumble dry",
+      "Fold, do not hang"
+    ],
+    "colors": [
+      {
+        "name": "Navy with red stripes",
+        "slug": "navy-blue",
+        "hex": "#1F2A44"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock": {
+      "navy-blue": {
+        "S": 14,
+        "M": 22,
+        "L": 8,
+        "XL": 14,
+        "XXL": 2
+      }
+    },
+    "images": [
+      {
+        "src": "/images/striped-knit-jumper-1.webp",
+        "alt": "Striped Knit Jumper in navy with red stripes, front"
+      },
+      {
+        "src": "/images/striped-knit-jumper-2.webp",
+        "alt": "Striped Knit Jumper in navy with red stripes, portrait"
+      }
+    ],
+    "related": [
+      "wide-leg-chinos",
+      "wool-blend-overcoat"
+    ]
+  },
+  {
+    "id": "ost-052",
+    "handle": "striped-popover-shirt",
+    "name": "Striped Popover Shirt",
+    "gender": "men",
+    "category": "shirts",
+    "price": 3299,
+    "drop": "aw26",
+    "releasedAt": "2026-10-25",
+    "isNew": true,
+    "summary": "A relaxed striped cotton shirt with a half placket.",
+    "description": "A pull-on shirt in light cotton with blue and white stripes, a band collar, a half-button placket and long sleeves. Loose enough to wear untucked over trousers or jeans.",
+    "fit": "Relaxed fit.",
+    "material": "100% cotton.",
+    "care": [
+      "Machine wash at 30°C",
+      "Wash inside out with similar colours",
+      "Iron on medium",
+      "Do not tumble dry"
+    ],
+    "colors": [
+      {
+        "name": "Blue & white stripe",
+        "slug": "blue-stripe",
+        "hex": "#8EA7C2"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock": {
+      "blue-stripe": {
+        "S": 14,
+        "M": 18,
+        "L": 22,
+        "XL": 6,
+        "XXL": 4
+      }
+    },
+    "images": [
+      {
+        "src": "/images/striped-popover-shirt-1.webp",
+        "alt": "Striped Popover Shirt in blue & white stripe, front"
+      },
+      {
+        "src": "/images/striped-popover-shirt-2.webp",
+        "alt": "Striped Popover Shirt in blue & white stripe, detail"
+      },
+      {
+        "src": "/images/striped-popover-shirt-3.webp",
+        "alt": "Striped Popover Shirt in blue & white stripe, portrait"
+      }
+    ],
+    "related": [
+      "wide-leg-chinos",
+      "baggy-jeans"
+    ]
   }
 ]

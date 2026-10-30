@@ -2,6 +2,7 @@
   "colors": {
     "beige": "Smėlio",
     "black": "Juoda",
+    "blue-stripe": "Mėlyni ir balti dryžiai",
     "camel": "Kupranugario",
     "caramel": "Karamelinė",
     "champagne": "Šampano",
@@ -14,6 +15,7 @@
     "light-blue": "Šviesiai mėlyna",
     "light-grey": "Šviesiai pilka",
     "mid-blue": "Mėlyna",
+    "navy-blue": "Tamsiai mėlyna su raudonais dryžiais",
     "oat": "Avižinė",
     "pink": "Rožinė",
     "red": "Raudona",
@@ -428,6 +430,20 @@
       "description": "Tvirtos formos rankinė iš lygios odos, su per visą priekį krentančiu atvartu, dviem kišenėmis su spaudėmis po juo, pagrindiniu skyriumi su užtrauktuku ir reguliuojamu dirželiu per petį. Telpa telefonas, piniginė, raktai ir nedidelė užrašų knygelė.",
       "fit": "Vieno dydžio. 26 × 18 × 8 cm. Dirželio ilgis reguliuojamas nuo 45 iki 58 cm.",
       "material": "Išorė: 100 % oda. Pamušalas: 100 % medvilnė."
+    },
+    "striped-knit-jumper": {
+      "name": "Dryžuotas megztinis",
+      "summary": "Tamsiai mėlynas megztinis su ryškiais raudonais dryžiais.",
+      "description": "Megztinis apvalia iškirpte iš plono medvilnės mišinio mezgimo, su plačiais raudonais dryžiais per liemenį ir rankoves, vienspalve tamsiai mėlyna viršutine dalimi ir rantytais kraštais.",
+      "fit": "Įprastas kirpimas.",
+      "material": "70 % medvilnė, 30 % akrilas."
+    },
+    "striped-popover-shirt": {
+      "name": "Dryžuoti marškiniai su trumpu užsegimu",
+      "summary": "Laisvi dryžuoti medvilniniai marškiniai su užsegimu iki pusės.",
+      "description": "Per galvą velkami marškiniai iš lengvos medvilnės su mėlynais ir baltais dryžiais, stačia apykakle, užsegimu iki krūtinės vidurio ir ilgomis rankovėmis. Pakankamai laisvi, kad dėvėtumėte išleistus ant kelnių ar džinsų.",
+      "fit": "Laisvas kirpimas.",
+      "material": "100 % medvilnė."
     }
   }
 }
