@@ -351,3 +351,6 @@ unaltered). Cropped to 4:5 (products), 7:10 (hero), 16:10 (editorial) or square 
 | `straight-white-jeans-3.webp` | https://www.pexels.com/photo/7760236/ |
 | `cord-trousers-3.webp` | https://www.pexels.com/photo/6626751/ |
 | `wool-blend-blazer-3.webp` | https://www.pexels.com/photo/16825856/ |
+| `leather-shoulder-bag-2.webp` | https://www.pexels.com/photo/13055401/ (detail crop) |
+| `buckle-baguette-bag-2.webp` | https://www.pexels.com/photo/20591023/ (detail crop) |
+| `cotton-trench-coat-2.webp` | https://www.pexels.com/photo/10153584/ (detail crop) |

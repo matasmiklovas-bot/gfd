@@ -5,11 +5,11 @@ const normalize = (s: string) =>
 
 /** Extra words people search for, including Lithuanian, per category and gender. */
 const SYNONYMS: Record<string, string> = {
-  coats: 'coat jacket outerwear blazer paltas paltai striuke striukes svarkas',
-  knitwear: 'knit knitwear sweater jumper pullover cardigan megztinis megztiniai',
-  shirts: 'shirt shirts top tops tee t-shirt bodysuit marskiniai palaidine',
+  coats: 'coat jacket outerwear blazer trench puffer paltas paltai striuke striukes svarkas svarkai pukine',
+  knitwear: 'knit knitwear sweater jumper pullover cardigan megztinis megztiniai kardiganas megztukas',
+  shirts: 'shirt shirts top tops tee t-shirt bodysuit overshirt marskiniai marskineliai palaidine palaidines',
   dresses: 'dress dresses suknele sukneles',
-  trousers: 'trousers pants jeans denim kelnes dzinsai',
+  trousers: 'trousers pants jeans denim kelnes dzinsai dzinsines',
   accessories: 'bag bags handbag accessories rankine rankines krepsys',
   women: 'women woman womens ladies moterims moteriski',
   men: 'men man mens vyrams vyriski',
