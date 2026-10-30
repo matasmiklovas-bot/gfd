@@ -37,11 +37,13 @@ const FAMILIES: { value: string; label: Text; hex: string; match: (slug: string)
     value: 'neutral',
     label: { en: 'Beige & brown', lt: 'Smėlio ir ruda' },
     hex: '#C8B49A',
-    match: (s) => ['beige', 'oat', 'tan', 'camel', 'stone'].includes(s),
+    match: (s) => ['beige', 'oat', 'tan', 'camel', 'stone', 'champagne', 'caramel'].includes(s),
   },
   { value: 'grey', label: { en: 'Grey', lt: 'Pilka' }, hex: '#A6A8AB', match: (s) => s.includes('grey') },
   { value: 'blue', label: { en: 'Blue', lt: 'Mėlyna' }, hex: '#7C9CC4', match: (s) => s.includes('blue') },
   { value: 'green', label: { en: 'Green', lt: 'Žalia' }, hex: '#A9BFA8', match: (s) => s.includes('green') || s === 'sage' },
+  { value: 'pink', label: { en: 'Pink & red', lt: 'Rožinė ir raudona' }, hex: '#F2C6D3', match: (s) => s.includes('pink') || s === 'red' },
+  { value: 'yellow', label: { en: 'Yellow', lt: 'Geltona' }, hex: '#F2DF57', match: (s) => s === 'yellow' },
 ];
 
 export const CATEGORY_LABELS: Record<Category, Text> = {

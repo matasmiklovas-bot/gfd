@@ -736,6 +736,10 @@
       {
         "src": "/images/straight-white-jeans-2.webp",
         "alt": "Straight White Jeans in white, detail"
+      },
+      {
+        "src": "/images/straight-white-jeans-3.webp",
+        "alt": "Straight White Jeans in white, crouching"
       }
     ],
     "related": [
@@ -1550,6 +1554,10 @@
       {
         "src": "/images/oversized-cotton-t-shirt-2.webp",
         "alt": "Oversized Cotton T-shirt in white, side"
+      },
+      {
+        "src": "/images/oversized-cotton-t-shirt-3.webp",
+        "alt": "Oversized Cotton T-shirt in white, movement"
       }
     ],
     "related": [
@@ -1794,6 +1802,10 @@
       {
         "src": "/images/relaxed-straight-jeans-2.webp",
         "alt": "Relaxed Straight Jeans in light blue, seated"
+      },
+      {
+        "src": "/images/relaxed-straight-jeans-3.webp",
+        "alt": "Relaxed Straight Jeans in light blue, seated"
       }
     ],
     "related": [
@@ -1851,6 +1863,10 @@
       },
       {
         "src": "/images/cord-trousers-2.webp",
+        "alt": "Cord Trousers in ecru, detail"
+      },
+      {
+        "src": "/images/cord-trousers-3.webp",
         "alt": "Cord Trousers in ecru, detail"
       }
     ],
@@ -1972,6 +1988,10 @@
       {
         "src": "/images/wool-blend-blazer-2.webp",
         "alt": "Wool Blend Blazer in camel, arms crossed"
+      },
+      {
+        "src": "/images/wool-blend-blazer-3.webp",
+        "alt": "Wool Blend Blazer in camel, portrait"
       }
     ],
     "related": [
@@ -2151,6 +2171,720 @@
     "related": [
       "roll-neck-jumper",
       "cord-trousers"
+    ]
+  },
+  {
+    "id": "ost-037",
+    "handle": "satin-slip-dress",
+    "name": "Satin Slip Dress",
+    "gender": "women",
+    "category": "dresses",
+    "price": 3599,
+    "drop": "aw26",
+    "releasedAt": "2026-10-29",
+    "isNew": true,
+    "summary": "A short slip dress with a soft cowl neck.",
+    "description": "A mini slip dress in fluid satin, with a draped cowl neckline, thin adjustable straps and a bias cut that skims the body. Layer it under a big knit or a blazer when it gets cold.",
+    "fit": "Bias cut, close to the body. Mini length on a 168 cm model.",
+    "material": "100% polyester satin.",
+    "care": [
+      "Machine wash at 30°C on a delicate cycle",
+      "Iron on low, inside out",
+      "Do not tumble dry",
+      "Hang to dry"
+    ],
+    "colors": [
+      {
+        "name": "Champagne",
+        "slug": "champagne",
+        "hex": "#E5D3B3"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "champagne": {
+        "XS": 4,
+        "S": 18,
+        "M": 8,
+        "L": 8,
+        "XL": 6
+      }
+    },
+    "images": [
+      {
+        "src": "/images/satin-slip-dress-1.webp",
+        "alt": "Satin Slip Dress in champagne, front"
+      },
+      {
+        "src": "/images/satin-slip-dress-2.webp",
+        "alt": "Satin Slip Dress in champagne, seated"
+      },
+      {
+        "src": "/images/satin-slip-dress-3.webp",
+        "alt": "Satin Slip Dress in champagne, side"
+      }
+    ],
+    "related": [
+      "chunky-bobble-cardigan",
+      "oversized-blazer"
+    ]
+  },
+  {
+    "id": "ost-038",
+    "handle": "satin-midi-slip-dress",
+    "name": "Satin Midi Slip Dress",
+    "gender": "women",
+    "category": "dresses",
+    "price": 3999,
+    "drop": "aw26",
+    "releasedAt": "2026-10-27",
+    "isNew": true,
+    "summary": "The black satin dress, in midi length.",
+    "description": "A midi slip dress in heavy satin, with a V neckline, thin straps and a button detail at the front. Wear it with a coat and boots now, alone later.",
+    "fit": "Regular fit. Midi length on a 170 cm model.",
+    "material": "100% polyester satin.",
+    "care": [
+      "Machine wash at 30°C on a delicate cycle",
+      "Iron on low, inside out",
+      "Do not tumble dry",
+      "Hang to dry"
+    ],
+    "colors": [
+      {
+        "name": "Black",
+        "slug": "black",
+        "hex": "#111111"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "black": {
+        "XS": 2,
+        "S": 8,
+        "M": 22,
+        "L": 14,
+        "XL": 8
+      }
+    },
+    "images": [
+      {
+        "src": "/images/satin-midi-slip-dress-1.webp",
+        "alt": "Satin Midi Slip Dress in black, front"
+      },
+      {
+        "src": "/images/satin-midi-slip-dress-2.webp",
+        "alt": "Satin Midi Slip Dress in black, portrait"
+      },
+      {
+        "src": "/images/satin-midi-slip-dress-3.webp",
+        "alt": "Satin Midi Slip Dress in black, side"
+      }
+    ],
+    "related": [
+      "wool-blend-coat",
+      "quilted-chain-bag"
+    ]
+  },
+  {
+    "id": "ost-039",
+    "handle": "strappy-midi-dress",
+    "name": "Strappy Midi Dress",
+    "gender": "women",
+    "category": "dresses",
+    "price": 3599,
+    "drop": "aw26",
+    "releasedAt": "2026-10-20",
+    "isNew": false,
+    "summary": "A white cotton dress with a fitted bodice.",
+    "description": "A midi dress in textured cotton with a fitted, seamed bodice, thin straps and a gently flared skirt. Throw a chunky cardigan over it for autumn.",
+    "fit": "Fitted bodice, flared skirt. Midi length on a 170 cm model.",
+    "material": "100% cotton.",
+    "care": [
+      "Machine wash at 30°C",
+      "Wash inside out with similar colours",
+      "Iron on medium",
+      "Do not tumble dry"
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "slug": "white",
+        "hex": "#FFFFFF"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "white": {
+        "XS": 4,
+        "S": 22,
+        "M": 22,
+        "L": 11,
+        "XL": 6
+      }
+    },
+    "images": [
+      {
+        "src": "/images/strappy-midi-dress-1.webp",
+        "alt": "Strappy Midi Dress in white, full look"
+      },
+      {
+        "src": "/images/strappy-midi-dress-2.webp",
+        "alt": "Strappy Midi Dress in white, movement"
+      }
+    ],
+    "related": [
+      "chunky-bobble-cardigan",
+      "satin-slip-dress"
+    ]
+  },
+  {
+    "id": "ost-040",
+    "handle": "chunky-bobble-cardigan",
+    "name": "Chunky Bobble Cardigan",
+    "gender": "women",
+    "category": "knitwear",
+    "price": 4999,
+    "drop": "aw26",
+    "releasedAt": "2026-10-28",
+    "isNew": true,
+    "summary": "An oversized cardigan in a big bobble knit.",
+    "description": "A dropped-shoulder cardigan in a thick bobble stitch, with balloon sleeves and an open front. Big enough to wear over a dress or a hoodie.",
+    "fit": "Oversized fit. Take your usual size; size down for a closer fit.",
+    "material": "60% acrylic, 30% polyamide, 10% wool.",
+    "care": [
+      "Hand wash cold or wool cycle",
+      "Dry flat",
+      "Do not tumble dry",
+      "Fold, do not hang"
+    ],
+    "colors": [
+      {
+        "name": "Caramel",
+        "slug": "caramel",
+        "hex": "#B58A5E"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "caramel": {
+        "XS": 2,
+        "S": 11,
+        "M": 22,
+        "L": 3,
+        "XL": 18
+      }
+    },
+    "images": [
+      {
+        "src": "/images/chunky-bobble-cardigan-1.webp",
+        "alt": "Chunky Bobble Cardigan in caramel, worn on the shoulder"
+      },
+      {
+        "src": "/images/chunky-bobble-cardigan-2.webp",
+        "alt": "Chunky Bobble Cardigan in caramel, front"
+      },
+      {
+        "src": "/images/chunky-bobble-cardigan-3.webp",
+        "alt": "Chunky Bobble Cardigan in caramel, movement"
+      }
+    ],
+    "related": [
+      "strappy-midi-dress",
+      "satin-slip-dress"
+    ]
+  },
+  {
+    "id": "ost-041",
+    "handle": "cable-knit-jumper",
+    "name": "Cable Knit Jumper",
+    "gender": "women",
+    "category": "knitwear",
+    "price": 3599,
+    "drop": "aw26",
+    "releasedAt": "2026-10-26",
+    "isNew": true,
+    "summary": "A soft pink jumper with a single cable.",
+    "description": "A crew-neck jumper in a soft, chunky knit with one cable running down the front, dropped shoulders and ribbed trims.",
+    "fit": "Relaxed fit. Hip length on a 172 cm model.",
+    "material": "50% acrylic, 30% polyester, 20% wool.",
+    "care": [
+      "Hand wash cold or wool cycle",
+      "Dry flat",
+      "Do not tumble dry",
+      "Fold, do not hang"
+    ],
+    "colors": [
+      {
+        "name": "Pink",
+        "slug": "pink",
+        "hex": "#F2C6D3"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "pink": {
+        "XS": 6,
+        "S": 18,
+        "M": 3,
+        "L": 14,
+        "XL": 22
+      }
+    },
+    "images": [
+      {
+        "src": "/images/cable-knit-jumper-1.webp",
+        "alt": "Cable Knit Jumper in pink, front"
+      },
+      {
+        "src": "/images/cable-knit-jumper-2.webp",
+        "alt": "Cable Knit Jumper in pink, crouching"
+      }
+    ],
+    "related": [
+      "straight-white-jeans",
+      "long-knit-cardigan"
+    ]
+  },
+  {
+    "id": "ost-042",
+    "handle": "long-knit-cardigan",
+    "name": "Long Knit Cardigan",
+    "gender": "women",
+    "category": "knitwear",
+    "price": 4599,
+    "drop": "aw26",
+    "releasedAt": "2026-10-25",
+    "isNew": true,
+    "summary": "A long, loose cardigan in a bright colour.",
+    "description": "A knee-length cardigan in a textured moss stitch, with an open front, patch pockets and long sleeves. One bright piece that turns jeans and a T-shirt into an outfit.",
+    "fit": "Relaxed fit. Knee length on a 172 cm model.",
+    "material": "70% acrylic, 30% polyamide.",
+    "care": [
+      "Hand wash cold or wool cycle",
+      "Dry flat",
+      "Do not tumble dry",
+      "Fold, do not hang"
+    ],
+    "colors": [
+      {
+        "name": "Yellow",
+        "slug": "yellow",
+        "hex": "#F2DF57"
+      },
+      {
+        "name": "Red",
+        "slug": "red",
+        "hex": "#D62B2B"
+      },
+      {
+        "name": "Rose pink",
+        "slug": "rose-pink",
+        "hex": "#D98FBF"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "yellow": {
+        "XS": 4,
+        "S": 18,
+        "M": 3,
+        "L": 18,
+        "XL": 11
+      },
+      "red": {
+        "XS": 2,
+        "S": 22,
+        "M": 22,
+        "L": 18,
+        "XL": 11
+      },
+      "rose-pink": {
+        "XS": 2,
+        "S": 14,
+        "M": 8,
+        "L": 14,
+        "XL": 18
+      }
+    },
+    "images": [
+      {
+        "src": "/images/long-knit-cardigan-1.webp",
+        "alt": "Long Knit Cardigan in yellow, front"
+      },
+      {
+        "src": "/images/long-knit-cardigan-2.webp",
+        "alt": "Long Knit Cardigan in yellow, full look"
+      }
+    ],
+    "colorImages": {
+      "red": [
+        {
+          "src": "/images/long-knit-cardigan-red-1.webp",
+          "alt": "Long Knit Cardigan in red, front"
+        }
+      ],
+      "rose-pink": [
+        {
+          "src": "/images/long-knit-cardigan-rose-pink-1.webp",
+          "alt": "Long Knit Cardigan in rose pink, side"
+        }
+      ],
+      "yellow": [
+        {
+          "src": "/images/long-knit-cardigan-1.webp",
+          "alt": "Long Knit Cardigan in yellow, front"
+        },
+        {
+          "src": "/images/long-knit-cardigan-2.webp",
+          "alt": "Long Knit Cardigan in yellow, full look"
+        }
+      ]
+    },
+    "related": [
+      "cable-knit-jumper",
+      "wide-leg-jeans"
+    ]
+  },
+  {
+    "id": "ost-043",
+    "handle": "twill-overshirt",
+    "name": "Cotton Twill Overshirt",
+    "gender": "women",
+    "category": "shirts",
+    "price": 3999,
+    "drop": "aw26",
+    "releasedAt": "2026-10-23",
+    "isNew": false,
+    "summary": "A utility overshirt you wear as a light jacket.",
+    "description": "A boxy overshirt in sturdy cotton twill, with a spread collar, chest flap pockets, a cropped hem and snap cuffs. Wear it open over a top or buttoned as a shirt.",
+    "fit": "Boxy, slightly cropped fit.",
+    "material": "100% cotton twill.",
+    "care": [
+      "Machine wash at 30°C",
+      "Wash inside out with similar colours",
+      "Iron on medium",
+      "Do not tumble dry"
+    ],
+    "colors": [
+      {
+        "name": "Stone",
+        "slug": "stone",
+        "hex": "#CFC6B4"
+      }
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "stock": {
+      "stone": {
+        "XS": 6,
+        "S": 22,
+        "M": 14,
+        "L": 6,
+        "XL": 3
+      }
+    },
+    "images": [
+      {
+        "src": "/images/twill-overshirt-1.webp",
+        "alt": "Cotton Twill Overshirt in stone, seated"
+      },
+      {
+        "src": "/images/twill-overshirt-2.webp",
+        "alt": "Cotton Twill Overshirt in stone, portrait"
+      },
+      {
+        "src": "/images/twill-overshirt-3.webp",
+        "alt": "Cotton Twill Overshirt in stone, full look"
+      }
+    ],
+    "related": [
+      "pleated-trousers",
+      "oversized-trench-coat"
+    ]
+  },
+  {
+    "id": "ost-044",
+    "handle": "double-breasted-linen-blazer",
+    "name": "Double-Breasted Linen Blazer",
+    "gender": "men",
+    "category": "coats",
+    "price": 6999,
+    "drop": "aw26",
+    "releasedAt": "2026-10-22",
+    "isNew": false,
+    "summary": "A relaxed double-breasted blazer in linen blend.",
+    "description": "A double-breasted blazer in a crisp linen blend, with peak lapels, horn-effect buttons and patch pockets. Unlined, so it stays light over a knit or a printed shirt.",
+    "fit": "Relaxed fit with soft shoulders.",
+    "material": "55% linen, 45% viscose.",
+    "care": [
+      "Dry clean possible",
+      "Steam to remove creases",
+      "Iron on medium",
+      "Store on a wide hanger"
+    ],
+    "colors": [
+      {
+        "name": "Ecru",
+        "slug": "ecru",
+        "hex": "#EDE6D8"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock": {
+      "ecru": {
+        "S": 11,
+        "M": 22,
+        "L": 8,
+        "XL": 18,
+        "XXL": 2
+      }
+    },
+    "images": [
+      {
+        "src": "/images/double-breasted-linen-blazer-1.webp",
+        "alt": "Double-Breasted Linen Blazer in ecru, front"
+      },
+      {
+        "src": "/images/double-breasted-linen-blazer-2.webp",
+        "alt": "Double-Breasted Linen Blazer in ecru, seated"
+      },
+      {
+        "src": "/images/double-breasted-linen-blazer-3.webp",
+        "alt": "Double-Breasted Linen Blazer in ecru, full look"
+      }
+    ],
+    "related": [
+      "oxford-shirt",
+      "cord-trousers"
+    ]
+  },
+  {
+    "id": "ost-045",
+    "handle": "denim-shirt",
+    "name": "Denim Shirt",
+    "gender": "men",
+    "category": "shirts",
+    "price": 3599,
+    "drop": "aw26",
+    "releasedAt": "2026-10-26",
+    "isNew": true,
+    "summary": "A washed denim shirt with two chest pockets.",
+    "description": "A long-sleeve shirt in soft, washed denim, with a classic collar, two button-flap chest pockets and a curved hem. Wear it buttoned or open over a T-shirt.",
+    "fit": "Regular fit.",
+    "material": "100% cotton denim.",
+    "care": [
+      "Machine wash at 30°C, inside out",
+      "Wash with similar colours",
+      "Do not tumble dry",
+      "Iron on medium if needed"
+    ],
+    "colors": [
+      {
+        "name": "Mid blue",
+        "slug": "mid-blue",
+        "hex": "#5F86B3"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock": {
+      "mid-blue": {
+        "S": 22,
+        "M": 18,
+        "L": 14,
+        "XL": 3,
+        "XXL": 4
+      }
+    },
+    "images": [
+      {
+        "src": "/images/denim-shirt-1.webp",
+        "alt": "Denim Shirt in mid blue, portrait"
+      },
+      {
+        "src": "/images/denim-shirt-2.webp",
+        "alt": "Denim Shirt in mid blue, seated"
+      }
+    ],
+    "related": [
+      "loose-straight-jeans",
+      "cotton-trench-coat"
+    ]
+  },
+  {
+    "id": "ost-046",
+    "handle": "loose-straight-jeans",
+    "name": "Loose Straight Jeans",
+    "gender": "men",
+    "category": "trousers",
+    "price": 3999,
+    "drop": "aw26",
+    "releasedAt": "2026-10-28",
+    "isNew": true,
+    "summary": "Mid-blue jeans with a loose, straight leg.",
+    "description": "Five-pocket jeans in rigid cotton denim with a mid-rise waist, a loose straight leg and a long length that stacks at the ankle.",
+    "fit": "Loose fit through the hip and leg. Long length.",
+    "material": "100% cotton denim.",
+    "care": [
+      "Machine wash at 30°C, inside out",
+      "Wash with similar colours",
+      "Do not tumble dry",
+      "Iron on medium if needed"
+    ],
+    "colors": [
+      {
+        "name": "Mid blue",
+        "slug": "mid-blue",
+        "hex": "#5F86B3"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock": {
+      "mid-blue": {
+        "S": 18,
+        "M": 6,
+        "L": 8,
+        "XL": 14,
+        "XXL": 2
+      }
+    },
+    "images": [
+      {
+        "src": "/images/loose-straight-jeans-1.webp",
+        "alt": "Loose Straight Jeans in mid blue, front"
+      },
+      {
+        "src": "/images/loose-straight-jeans-2.webp",
+        "alt": "Loose Straight Jeans in mid blue, side"
+      },
+      {
+        "src": "/images/loose-straight-jeans-3.webp",
+        "alt": "Loose Straight Jeans in mid blue, crouching"
+      }
+    ],
+    "related": [
+      "oversized-cotton-t-shirt",
+      "denim-shirt"
+    ]
+  },
+  {
+    "id": "ost-047",
+    "handle": "soft-crew-jumper",
+    "name": "Soft Crew Jumper",
+    "gender": "men",
+    "category": "knitwear",
+    "price": 2999,
+    "drop": "aw26",
+    "releasedAt": "2026-10-24",
+    "isNew": false,
+    "summary": "A clean white jumper in a brushed knit.",
+    "description": "A crew-neck jumper in a soft brushed cotton-blend knit, with dropped shoulders and ribbed neck, cuffs and hem. The plain white layer under a coat or over a shirt.",
+    "fit": "Relaxed fit.",
+    "material": "60% cotton, 40% polyester.",
+    "care": [
+      "Machine wash at 30°C",
+      "Wash inside out with similar colours",
+      "Iron on medium",
+      "Do not tumble dry"
+    ],
+    "colors": [
+      {
+        "name": "White",
+        "slug": "white",
+        "hex": "#FFFFFF"
+      }
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "stock": {
+      "white": {
+        "S": 18,
+        "M": 3,
+        "L": 11,
+        "XL": 22,
+        "XXL": 4
+      }
+    },
+    "images": [
+      {
+        "src": "/images/soft-crew-jumper-1.webp",
+        "alt": "Soft Crew Jumper in white, arms crossed"
+      },
+      {
+        "src": "/images/soft-crew-jumper-2.webp",
+        "alt": "Soft Crew Jumper in white, seated"
+      },
+      {
+        "src": "/images/soft-crew-jumper-3.webp",
+        "alt": "Soft Crew Jumper in white, portrait"
+      }
+    ],
+    "related": [
+      "loose-straight-jeans",
+      "cotton-trench-coat"
     ]
   }
 ]
