@@ -5,6 +5,7 @@
     "camel": "Kupranugario",
     "caramel": "Karamelinė",
     "champagne": "Šampano",
+    "chocolate": "Šokoladinė",
     "cream": "Kreminė",
     "dusty-blue": "Pilkšvai mėlyna",
     "ecru": "Ekru",
@@ -420,6 +421,13 @@
       "description": "Chino kelnės iš minkšto medvilninio „twill“ audinio, vidutinio aukščio juosmeniu su guma nugaroje, klostėmis priekyje, šoninėmis kišenėmis ir plačiomis tiesiomis klešnėmis, ilgai krentančiomis ant batų.",
       "fit": "Laisvas kirpimas, plačios klešnės. Ilgos.",
       "material": "98 % medvilnė, 2 % elastanas."
+    },
+    "leather-satchel": {
+      "name": "Odinė rankinė su kišenėmis",
+      "summary": "Tvirtos formos odinė rankinė su dviem priekinėmis kišenėmis.",
+      "description": "Tvirtos formos rankinė iš lygios odos, su per visą priekį krentančiu atvartu, dviem kišenėmis su spaudėmis po juo, pagrindiniu skyriumi su užtrauktuku ir reguliuojamu dirželiu per petį. Telpa telefonas, piniginė, raktai ir nedidelė užrašų knygelė.",
+      "fit": "Vieno dydžio. 26 × 18 × 8 cm. Dirželio ilgis reguliuojamas nuo 45 iki 58 cm.",
+      "material": "Išorė: 100 % oda. Pamušalas: 100 % medvilnė."
     }
   }
 }

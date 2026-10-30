@@ -3018,5 +3018,59 @@
       "oversized-cotton-t-shirt",
       "denim-shirt"
     ]
+  },
+  {
+    "id": "ost-050",
+    "handle": "leather-satchel",
+    "name": "Leather Satchel",
+    "gender": "women",
+    "category": "accessories",
+    "price": 4999,
+    "drop": "aw26",
+    "releasedAt": "2026-10-28",
+    "isNew": true,
+    "summary": "A structured leather satchel with two front pockets.",
+    "description": "A structured satchel in smooth leather, with a full front flap, two snap pockets underneath, a main zip compartment and an adjustable shoulder strap. Fits a phone, wallet, keys and a small notebook.",
+    "fit": "One size. 26 × 18 × 8 cm. Strap drop adjustable from 45 to 58 cm.",
+    "material": "Outer: 100% leather. Lining: 100% cotton.",
+    "care": [
+      "Wipe clean with a dry cloth",
+      "Treat with leather balm when needed",
+      "Keep away from direct heat",
+      "Store stuffed"
+    ],
+    "colors": [
+      {
+        "name": "Chocolate brown",
+        "slug": "chocolate",
+        "hex": "#4E3328"
+      }
+    ],
+    "sizes": [
+      "ONE SIZE"
+    ],
+    "stock": {
+      "chocolate": {
+        "ONE SIZE": 14
+      }
+    },
+    "images": [
+      {
+        "src": "/images/leather-satchel-1.webp",
+        "alt": "Leather Satchel in chocolate brown, front"
+      },
+      {
+        "src": "/images/leather-satchel-2.webp",
+        "alt": "Leather Satchel in chocolate brown, detail"
+      },
+      {
+        "src": "/images/leather-satchel-3.webp",
+        "alt": "Leather Satchel in chocolate brown, side"
+      }
+    ],
+    "related": [
+      "wool-blend-coat",
+      "chunky-rib-jumper"
+    ]
   }
 ]

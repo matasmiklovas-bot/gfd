@@ -5,7 +5,7 @@ import path from 'node:path';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 type Img = { src: string; alt: string };
-type P = { id: string; handle: string; name: string; price: number; images: Img[]; colorImages?: Record<string, Img[]>; colors: { slug: string }[] };
+type P = { id: string; handle: string; name: string; gender: string; price: number; related: string[]; images: Img[]; colorImages?: Record<string, Img[]>; colors: { slug: string }[] };
 const products: P[] = JSON.parse(readFileSync(path.join(ROOT, 'data/products.json'), 'utf8'));
 const lt = JSON.parse(readFileSync(path.join(ROOT, 'data/products.lt.json'), 'utf8'));
 const imagesOf = (p: P) => [...p.images, ...Object.values(p.colorImages ?? {}).flat()];
@@ -42,6 +42,18 @@ test('no stock photo is used by two different products', () => {
       const prev = owner.get(id);
       assert.ok(!prev || prev === p.handle, `Pexels ${id} is used by both ${prev} and ${p.handle}`);
       owner.set(id, p.handle);
+    }
+  }
+});
+
+test('"Complete the look" links exist and stay within the same gender', () => {
+  const byHandle = new Map(products.map((p) => [p.handle, p]));
+  for (const p of products) {
+    for (const r of p.related) {
+      const other = byHandle.get(r);
+      assert.ok(other, `${p.handle}: related "${r}" does not exist`);
+      assert.equal(other.gender, p.gender, `${p.handle} (${p.gender}) links to ${r} (${other.gender})`);
+      assert.notEqual(r, p.handle, `${p.handle} links to itself`);
     }
   }
 });

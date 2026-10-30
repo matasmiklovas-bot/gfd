@@ -37,7 +37,7 @@ const FAMILIES: { value: string; label: Text; hex: string; match: (slug: string)
     value: 'neutral',
     label: { en: 'Beige & brown', lt: 'Smėlio ir ruda' },
     hex: '#C8B49A',
-    match: (s) => ['beige', 'oat', 'tan', 'camel', 'stone', 'champagne', 'caramel'].includes(s),
+    match: (s) => ['beige', 'oat', 'tan', 'camel', 'stone', 'champagne', 'caramel', 'chocolate'].includes(s),
   },
   { value: 'grey', label: { en: 'Grey', lt: 'Pilka' }, hex: '#A6A8AB', match: (s) => s.includes('grey') },
   { value: 'blue', label: { en: 'Blue', lt: 'Mėlyna' }, hex: '#7C9CC4', match: (s) => s.includes('blue') },

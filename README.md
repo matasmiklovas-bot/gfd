@@ -381,3 +381,6 @@ unaltered). Cropped to 4:5 (products), 7:10 (hero), 16:10 (editorial) or square 
 | `wide-leg-chinos-1.webp` | https://www.pexels.com/photo/9558929/ |
 | `wide-leg-chinos-2.webp` | https://www.pexels.com/photo/9558934/ |
 | `wide-leg-chinos-3.webp` | https://www.pexels.com/photo/9558932/ |
+| `leather-satchel-1.webp` | https://www.pexels.com/photo/19354495/ |
+| `leather-satchel-2.webp` | https://www.pexels.com/photo/19354496/ |
+| `leather-satchel-3.webp` | https://www.pexels.com/photo/19354498/ |
