@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
-import type { ProductSummary } from '@/lib/types';
+import { useProductIndex } from '@/lib/productIndex';
 import { searchProducts } from '@/lib/search';
 import { useT } from '@/lib/i18n';
 import { COUNT, plural } from '@/lib/dictionary';
@@ -20,7 +20,7 @@ const SUGGESTIONS = {
   lt: ['Paltas', 'Megztinis', 'Džinsai', 'Švarkas', 'Suknelė'],
 };
 
-export function SearchOverlay({ products }: { products: ProductSummary[] }) {
+export function SearchOverlay() {
   const t = useT();
   const locale = useLocale();
   const router = useRouter();
@@ -28,6 +28,7 @@ export function SearchOverlay({ products }: { products: ProductSummary[] }) {
   const ref = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const [query, setQuery] = useState('');
+  const products = useProductIndex(locale, open);
   const deferred = useDeferredValue(query);
   const close = useCallback(() => ui.close(), []);
   useScrollLock(open);
@@ -37,8 +38,9 @@ export function SearchOverlay({ products }: { products: ProductSummary[] }) {
     if (!open) setQuery('');
   }, [open]);
 
-  const results = useMemo(() => searchProducts(products, deferred).slice(0, 8), [products, deferred]);
-  const hasQuery = deferred.trim().length > 0;
+  const results = useMemo(() => (products ? searchProducts(products, deferred).slice(0, 8) : []), [products, deferred]);
+  // Results wait for the index; the full results page (Enter) works without it.
+  const hasQuery = deferred.trim().length > 0 && products !== null;
 
   return (
     <div

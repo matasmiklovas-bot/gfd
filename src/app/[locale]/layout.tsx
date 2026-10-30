@@ -4,7 +4,6 @@ import '../globals.css';
 import { SITE } from '@/lib/site';
 import { LOCALES, LOCALE_META, alternates, isLocale } from '@/lib/locale';
 import { getT } from '@/lib/dictionary';
-import { getAllSummaries } from '@/lib/commerce';
 import { AnnouncementBar } from '@/components/layout/AnnouncementBar';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
@@ -53,7 +52,6 @@ export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   const t = getT(locale);
-  const products = await getAllSummaries(locale);
 
   return (
     <html lang={LOCALE_META[locale].htmlLang}>
@@ -81,7 +79,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <Footer locale={locale} />
         </HideOnCheckout>
         <MobileMenu />
-        <SearchOverlay products={products} />
+        <SearchOverlay />
         <CartDrawer />
         <CookieBanner />
         <JsonLd

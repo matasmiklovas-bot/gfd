@@ -112,7 +112,7 @@ export default async function ProductPage({ params }: Props) {
 
       {related.length > 0 && <ProductSlider title={t('product.complete')} products={related} compact />}
       {similar.length > 0 && <ProductSlider title={t('product.similar')} products={similar} compact />}
-      <RecentlyViewed current={product.handle} products={all.map(summary)} />
+      <RecentlyViewed current={product.handle} />
 
       <JsonLd
         data={{
