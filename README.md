@@ -27,6 +27,14 @@ Node 20+ required (22.18+ to run `npm test`, which runs the TypeScript sources d
 
 Before taking real orders, work through the [launch checklist](#launch-checklist).
 
+### Static preview on GitHub Pages
+
+`.github/workflows/pages.yml` publishes a read-only preview to `https://<owner>.github.io/<repo>/` on every push: it
+builds the app, starts it, and `scripts/preview/export.py` saves every sitemap page as plain HTML (Lithuanian home
+page as `index.html`). It opens in any browser, including older iPads, but the bag, search, filters, forms and
+checkout need the Next.js server, so the preview shows a notice instead. One-time setup: **Settings → Pages → Build
+and deployment → Source: GitHub Actions**.
+
 ---
 
 ## What is real and what is not

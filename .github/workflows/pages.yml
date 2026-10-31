@@ -1,0 +1,47 @@
+name: Preview on GitHub Pages
+
+# Publishes the static preview (scripts/preview/export.py) to https://<owner>.github.io/<repo>/.
+# One-time setup: repository Settings → Pages → Build and deployment → Source: "GitHub Actions".
+on:
+  push:
+    branches: [claude/ostrev-ecommerce-site-zi420j]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Export static preview
+        run: |
+          npx next start -p 3000 &
+          for i in $(seq 1 30); do curl -sf http://localhost:3000/ > /dev/null && break; sleep 1; done
+          python3 scripts/preview/export.py site http://localhost:3000
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
