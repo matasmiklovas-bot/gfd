@@ -11,6 +11,7 @@ import { EU_COUNTRIES } from '@/lib/site';
 import { LOCALE_META, lp, type Locale } from '@/lib/locale';
 import { useLocale } from '@/lib/useLocale';
 import { useMounted } from '@/lib/hooks';
+import { CHECKOUT_MSG, checkContact, orderRef } from '@/lib/checkout';
 import { ChevronDownIcon } from '@/components/ui/Icons';
 import { Price } from '@/components/ui/Price';
 
@@ -23,6 +24,35 @@ const PAYMENT_METHODS = [
 ] as const;
 
 type FieldErrors = Partial<Record<string, string>>;
+
+type CheckoutPayload = Parameters<typeof checkContact>[0] & { locale: Locale };
+
+async function postCheckout(payload: CheckoutPayload) {
+  const res = await fetch('/api/checkout', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  });
+  return { ok: res.ok, data: await res.json() };
+}
+
+/**
+ * Static demo build (no server): the same contact checks as the API, then a demo order priced from the bag. Prices and
+ * stock are only re-checked by the real API, which is fine here because no money moves.
+ */
+function demoCheckout(payload: CheckoutPayload, subtotal: number, percent: number) {
+  const { fields } = checkContact(payload, payload.locale);
+  if (Object.keys(fields).length) return { ok: false, data: { error: CHECKOUT_MSG[payload.locale].check, fields } };
+  const id = orderRef();
+  return {
+    ok: true,
+    data: {
+      mode: 'demo',
+      url: lp(payload.locale, `/checkout/success?order=${id}&demo=1`),
+      order: { id, ...orderTotals(subtotal, percent) },
+    },
+  };
+}
 
 const COPY = {
   en: {
@@ -188,13 +218,20 @@ export function CheckoutForm() {
     setCodeLoading(true);
     setCodeError('');
     try {
-      const res = await fetch('/api/discount', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ code }),
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error);
+      let data;
+      if (process.env.NEXT_PUBLIC_STATIC_DEMO === '1') {
+        // The static demo has no server, so the code is checked in the browser.
+        data = (await import('@/lib/discountCodes')).lookupDiscount(code);
+        if (!data) throw new Error('invalid');
+      } else {
+        const res = await fetch('/api/discount', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ code }),
+        });
+        data = await res.json();
+        if (!res.ok) throw new Error(data.error);
+      }
       setDiscount(data);
     } catch {
       setDiscount(null);
@@ -233,13 +270,8 @@ export function CheckoutForm() {
     };
 
     try {
-      const res = await fetch('/api/checkout', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
-      const data = await res.json();
-      if (!res.ok) {
+      const { ok, data } = process.env.NEXT_PUBLIC_STATIC_DEMO === '1' ? demoCheckout(payload, subtotal, discount?.percent ?? 0) : await postCheckout(payload);
+      if (!ok) {
         setErrors(data.fields ?? {});
         setFormError(data.error ?? c.failed);
         setSubmitting(false);

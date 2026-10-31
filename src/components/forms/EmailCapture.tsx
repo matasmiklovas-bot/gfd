@@ -30,6 +30,11 @@ export function EmailCapture({
     const form = new FormData(e.currentTarget);
     setStatus('loading');
     setError('');
+    if (process.env.NEXT_PUBLIC_STATIC_DEMO === '1') {
+      setStatus('error');
+      setError(t('form.demoOff'));
+      return;
+    }
     try {
       const res = await fetch('/api/subscribe', {
         method: 'POST',

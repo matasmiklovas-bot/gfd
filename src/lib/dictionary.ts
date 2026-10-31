@@ -87,6 +87,7 @@ export const DICT = {
   'a11y.language': { en: 'Language', lt: 'Kalba' },
   'form.invalidEmail': { en: 'Enter a valid email address.', lt: 'Įveskite teisingą el. pašto adresą.' },
   'form.failed': { en: 'Something went wrong. Try again.', lt: 'Kažkas nepavyko. Bandykite dar kartą.' },
+  'form.demoOff': { en: 'Not sent: forms are switched off in this demo.', lt: 'Neišsiųsta: šioje demonstracinėje versijoje formos išjungtos.' },
   'form.email': { en: 'Email address', lt: 'El. pašto adresas' },
   'form.sending': { en: 'Sending', lt: 'Siunčiama' },
   'form.consent': { en: 'By signing up you agree to receive emails from OSTREV. Unsubscribe any time. See our', lt: 'Užsiprenumeravę sutinkate gauti OSTREV laiškus. Atsisakyti galite bet kada. Daugiau – mūsų' },

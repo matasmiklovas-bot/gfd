@@ -3,6 +3,9 @@ import { CATEGORIES, GENDERS, categoriesFor, getAllProducts, productUrl } from '
 import { absoluteUrl } from '@/lib/site';
 import { LOCALES, lp } from '@/lib/locale';
 
+// Generated once at build time (also required by the static demo export).
+export const dynamic = 'force-static';
+
 /** Every page in both languages, each entry listing its hreflang alternates. */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const products = await getAllProducts();

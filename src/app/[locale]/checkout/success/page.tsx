@@ -1,46 +1,15 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import { Suspense } from 'react';
 import { redirect } from 'next/navigation';
 import { getStripe } from '@/lib/server/stripe';
-import { formatPrice } from '@/lib/money';
-import { OrderConfirmation } from '@/components/checkout/OrderConfirmation';
+import { DemoSuccess, SuccessView } from '@/components/checkout/SuccessView';
+import { SUCCESS_COPY as COPY } from '@/components/checkout/successCopy';
 import { lp } from '@/lib/locale';
 import { pageLocale } from '@/lib/pageLocale';
 
 type Props = {
   params: Promise<{ locale: string }>;
   searchParams: Promise<{ session_id?: string; order?: string; demo?: string }>;
-};
-
-const COPY = {
-  en: {
-    meta: 'Order confirmed',
-    order: 'Order',
-    pendingTitle: 'Almost there',
-    title: 'Thank you',
-    pending: 'Your payment is being confirmed by the provider. We will email you as soon as it clears.',
-    confirmed: 'Your order is confirmed',
-    receipt: 'and a receipt is on its way to',
-    tracking: 'You will get a tracking link when it ships, usually within one working day.',
-    total: 'Total paid',
-    demo: 'Demo mode: no payment provider is configured, so no money was taken. Set STRIPE_SECRET_KEY to accept real payments.',
-    continue: 'Continue shopping',
-    history: 'Order history',
-  },
-  lt: {
-    meta: 'Užsakymas patvirtintas',
-    order: 'Užsakymas',
-    pendingTitle: 'Beveik viskas',
-    title: 'Ačiū',
-    pending: 'Mokėjimo tarpininkas tvirtina jūsų mokėjimą. Kai tik jis bus patvirtintas, parašysime el. laišką.',
-    confirmed: 'Jūsų užsakymas patvirtintas',
-    receipt: ', o kvitą išsiuntėme adresu',
-    tracking: 'Kai išsiųsime, gausite sekimo nuorodą – paprastai per vieną darbo dieną.',
-    total: 'Sumokėta',
-    demo: 'Demonstracinis režimas: mokėjimų tarpininkas nesukonfigūruotas, todėl pinigai nenuskaičiuoti. Tikriems mokėjimams nustatykite STRIPE_SECRET_KEY.',
-    continue: 'Tęsti apsipirkimą',
-    history: 'Užsakymų istorija',
-  },
 };
 
 export async function generateMetadata({ params }: Pick<Props, 'params'>): Promise<Metadata> {
@@ -50,6 +19,14 @@ export async function generateMetadata({ params }: Pick<Props, 'params'>): Promi
 export default async function SuccessPage({ params, searchParams }: Props) {
   const locale = await pageLocale(params);
   const c = COPY[locale];
+  // The static demo is plain files: the order number is read from the URL in the browser.
+  if (process.env.NEXT_PUBLIC_STATIC_DEMO === '1') {
+    return (
+      <Suspense>
+        <DemoSuccess locale={locale} copy={c} />
+      </Suspense>
+    );
+  }
   const { session_id, order, demo } = await searchParams;
 
   let orderId: string | undefined;
@@ -72,47 +49,5 @@ export default async function SuccessPage({ params, searchParams }: Props) {
     redirect(lp(locale, '/'));
   }
 
-  return (
-    <div className="container-site flex min-h-[70vh] flex-col justify-center py-20">
-      <OrderConfirmation orderId={orderId!} status={isDemo ? 'demo' : 'paid'} />
-      <p className="label mb-4 text-muted">
-        {c.order} {orderId}
-      </p>
-      <h1 className="heading-display">{pending ? c.pendingTitle : c.title}</h1>
-      <div className="mt-8 max-w-lg space-y-3 text-[15px] leading-7">
-        {pending ? (
-          <p>{c.pending}</p>
-        ) : (
-          <p>
-            {c.confirmed}
-            {email ? (
-              <>
-                {locale === 'lt' ? '' : ' '}
-                {c.receipt} <strong>{email}</strong>
-              </>
-            ) : null}
-            . {c.tracking}
-          </p>
-        )}
-        {total !== undefined && (
-          <p>
-            {c.total}: {formatPrice(total, locale)}
-          </p>
-        )}
-        {isDemo && (
-          <p className="border border-ink px-4 py-3 text-[13px]">
-            {c.demo}
-          </p>
-        )}
-      </div>
-      <div className="mt-10 flex flex-wrap gap-3">
-        <Link href={lp(locale, '/shop')} className="btn-primary">
-          {c.continue}
-        </Link>
-        <Link href={lp(locale, '/account')} className="btn-secondary">
-          {c.history}
-        </Link>
-      </div>
-    </div>
-  );
+  return <SuccessView locale={locale} copy={c} orderId={orderId!} email={email} total={total} pending={pending} isDemo={isDemo} />;
 }

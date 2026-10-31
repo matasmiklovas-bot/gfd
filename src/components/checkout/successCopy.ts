@@ -1,0 +1,31 @@
+// Order confirmation copy. A plain module (not 'use client') so the server page can read it too.
+export const SUCCESS_COPY = {
+  en: {
+    meta: 'Order confirmed',
+    order: 'Order',
+    pendingTitle: 'Almost there',
+    title: 'Thank you',
+    pending: 'Your payment is being confirmed by the provider. We will email you as soon as it clears.',
+    confirmed: 'Your order is confirmed',
+    receipt: 'and a receipt is on its way to',
+    tracking: 'You will get a tracking link when it ships, usually within one working day.',
+    total: 'Total paid',
+    demo: 'Demo mode: no payment provider is configured, so no money was taken. Set STRIPE_SECRET_KEY to accept real payments.',
+    continue: 'Continue shopping',
+    history: 'Order history',
+  },
+  lt: {
+    meta: 'Užsakymas patvirtintas',
+    order: 'Užsakymas',
+    pendingTitle: 'Beveik viskas',
+    title: 'Ačiū',
+    pending: 'Mokėjimo tarpininkas tvirtina jūsų mokėjimą. Kai tik jis bus patvirtintas, parašysime el. laišką.',
+    confirmed: 'Jūsų užsakymas patvirtintas',
+    receipt: ', o kvitą išsiuntėme adresu',
+    tracking: 'Kai išsiųsime, gausite sekimo nuorodą – paprastai per vieną darbo dieną.',
+    total: 'Sumokėta',
+    demo: 'Demonstracinis režimas: mokėjimų tarpininkas nesukonfigūruotas, todėl pinigai nenuskaičiuoti. Tikriems mokėjimams nustatykite STRIPE_SECRET_KEY.',
+    continue: 'Tęsti apsipirkimą',
+    history: 'Užsakymų istorija',
+  },
+};

@@ -3,13 +3,14 @@
 import { useEffect, useState } from 'react';
 import type { ProductSummary } from './types';
 import type { Locale } from './locale';
+import { withBase } from './basePath';
 
 // Every product as a summary, served statically by /api/search-index/[locale]. Fetched once per language per visit
 // and only by the features that need the whole catalog (search, recently viewed), so it stays out of page HTML.
 const indexes: Partial<Record<Locale, Promise<ProductSummary[]>>> = {};
 
 function loadIndex(locale: Locale) {
-  indexes[locale] ??= fetch(`/api/search-index/${locale}`)
+  indexes[locale] ??= fetch(withBase(`/api/search-index/${locale}`, { page: false }))
     .then((r) => (r.ok ? (r.json() as Promise<ProductSummary[]>) : Promise.reject(new Error(String(r.status)))))
     .catch((e) => {
       delete indexes[locale];

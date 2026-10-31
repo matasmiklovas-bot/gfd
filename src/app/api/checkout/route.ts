@@ -2,10 +2,11 @@ import type Stripe from 'stripe';
 import { getProductByHandle, productUrl } from '@/lib/commerce';
 import { lookupDiscount } from '@/lib/discounts';
 import { orderTotals } from '@/lib/pricing';
-import { absoluteUrl, EU_COUNTRIES } from '@/lib/site';
+import { absoluteUrl } from '@/lib/site';
 import type { Size } from '@/lib/types';
 import { getStripe } from '@/lib/server/stripe';
-import { isEmail, json, str } from '@/lib/server/validate';
+import { json, str } from '@/lib/server/validate';
+import { CHECKOUT_MSG, checkContact, orderRef } from '@/lib/checkout';
 import { isLocale, lp, type Locale } from '@/lib/locale';
 
 const METHODS: Record<string, Stripe.Checkout.SessionCreateParams.PaymentMethodType[]> = {
@@ -17,70 +18,17 @@ const METHODS: Record<string, Stripe.Checkout.SessionCreateParams.PaymentMethodT
   klarna: ['klarna'],
 };
 
-const COUNTRY_CODES = new Set<string>(EU_COUNTRIES.map(([code]) => code));
 const MAX_LINES = 20;
 const MAX_QTY = 10;
 
-function orderRef() {
-  const rand = crypto.getRandomValues(new Uint32Array(1))[0].toString(36).toUpperCase().padStart(6, '0');
-  return `OST-${rand.slice(0, 6)}`;
-}
-
-const MSG = {
-  en: {
-    invalid: 'Invalid request.',
-    email: 'Enter a valid email address.',
-    required: 'Required.',
-    country: 'We ship to EU countries only.',
-    check: 'Check the highlighted fields.',
-    empty: 'Your bag is empty.',
-    tooMany: 'Too many items in one order.',
-    unavailable: 'One of the items in your bag is no longer available. Remove it and try again.',
-    soldOut: (item: string) => `${item} just sold out.`,
-    onlyLeft: (n: number, item: string) => `Only ${n} left of ${item}.`,
-    payment: 'Could not start payment. Try again or choose another payment method.',
-  },
-  lt: {
-    invalid: 'Neteisinga užklausa.',
-    email: 'Įveskite teisingą el. pašto adresą.',
-    required: 'Privaloma.',
-    country: 'Siunčiame tik į ES šalis.',
-    check: 'Patikrinkite pažymėtus laukus.',
-    empty: 'Jūsų krepšelis tuščias.',
-    tooMany: 'Per daug prekių viename užsakyme.',
-    unavailable: 'Vienos iš krepšelio prekių nebėra. Pašalinkite ją ir bandykite dar kartą.',
-    soldOut: (item: string) => `${item} ką tik išparduota.`,
-    onlyLeft: (n: number, item: string) => `${item}: liko tik ${n}.`,
-    payment: 'Nepavyko pradėti mokėjimo. Bandykite dar kartą arba pasirinkite kitą mokėjimo būdą.',
-  },
-};
-
 export async function POST(req: Request) {
   const body = await req.json().catch(() => null);
-  if (!body) return json({ error: MSG.en.invalid }, 400);
+  if (!body) return json({ error: CHECKOUT_MSG.en.invalid }, 400);
   const locale: Locale = isLocale(body.locale) ? body.locale : 'en';
-  const m = MSG[locale];
+  const m = CHECKOUT_MSG[locale];
 
   /* ---- Contact & address ---- */
-  const a = body.address ?? {};
-  const address = {
-    firstName: str(a.firstName, 60),
-    lastName: str(a.lastName, 60),
-    line1: str(a.line1, 120),
-    line2: str(a.line2, 120),
-    city: str(a.city, 80),
-    postalCode: str(a.postalCode, 20),
-    country: str(a.country, 2).toUpperCase(),
-    phone: str(a.phone, 30),
-  };
-  const fields: Record<string, string> = {};
-  if (!isEmail(body.email)) fields.email = m.email;
-  if (!address.firstName) fields.firstName = m.required;
-  if (!address.lastName) fields.lastName = m.required;
-  if (!address.line1) fields.line1 = m.required;
-  if (!address.city) fields.city = m.required;
-  if (!address.postalCode) fields.postalCode = m.required;
-  if (!COUNTRY_CODES.has(address.country)) fields.country = m.country;
+  const { address, fields } = checkContact(body, locale);
   if (Object.keys(fields).length) return json({ error: m.check, fields }, 422);
 
   const methodKey = typeof body.paymentMethod === 'string' && body.paymentMethod in METHODS ? body.paymentMethod : 'card';

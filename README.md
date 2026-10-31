@@ -27,13 +27,15 @@ Node 20+ required (22.18+ to run `npm test`, which runs the TypeScript sources d
 
 Before taking real orders, work through the [launch checklist](#launch-checklist).
 
-### Static preview on GitHub Pages
+### Demo on GitHub Pages (no server)
 
-`.github/workflows/pages.yml` publishes a read-only preview to `https://<owner>.github.io/<repo>/` on every push: it
-builds the app, starts it, and `scripts/preview/export.py` saves every sitemap page as plain HTML (Lithuanian home
-page as `index.html`). It opens in any browser, including older iPads, but the bag, search, filters, forms and
-checkout need the Next.js server, so the preview shows a notice instead. One-time setup: **Settings → Pages → Build
-and deployment → Source: GitHub Actions**.
+`.github/workflows/pages.yml` publishes a working demo to `https://<owner>.github.io/<repo>/` on every push
+(Lithuanian at `/<repo>/lt/`). `scripts/static/build.sh` builds the same app with `STATIC_DEMO=1`: Next.js exports
+plain files under the repository's sub-path, and the parts that need a server switch to in-browser versions: search
+loads the static catalog index, checkout validates in the browser and ends in a demo order (no money moves, and the
+discount code check runs client-side), and the newsletter and contact forms say they are switched off. The middleware
+and API routes are removed for that build, so run the script only in CI or a throwaway copy. One-time setup:
+**Settings → Pages → Build and deployment → Source: GitHub Actions**.
 
 ---
 

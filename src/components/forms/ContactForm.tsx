@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useLocale } from '@/lib/useLocale';
+import { useT } from '@/lib/i18n';
 
 const COPY = {
   en: {
@@ -54,7 +55,8 @@ type FieldKey = keyof (typeof COPY)['en']['fields'];
 
 export function ContactForm() {
   const c = COPY[useLocale()];
-  const [status, setStatus] = useState<'idle' | 'loading' | 'sent' | 'error'>('idle');
+  const t = useT();
+  const [status, setStatus] = useState<'idle' | 'loading' | 'sent' | 'error' | 'demo'>('idle');
   const [fields, setFields] = useState<FieldKey[]>([]);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -62,6 +64,10 @@ export function ContactForm() {
     const data = Object.fromEntries(new FormData(e.currentTarget));
     setStatus('loading');
     setFields([]);
+    if (process.env.NEXT_PUBLIC_STATIC_DEMO === '1') {
+      setStatus('demo');
+      return;
+    }
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
@@ -148,9 +154,9 @@ export function ContactForm() {
         {err('message')}
       </div>
       <input type="text" name="company" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
-      {status === 'error' && fields.length === 0 && (
+      {(status === 'error' || status === 'demo') && fields.length === 0 && (
         <p role="alert" className="text-[14px] text-danger md:col-span-2">
-          {c.failed}
+          {status === 'demo' ? t('form.demoOff') : c.failed}
         </p>
       )}
       <div className="md:col-span-2">

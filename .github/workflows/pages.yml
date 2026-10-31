@@ -1,6 +1,6 @@
-name: Preview on GitHub Pages
+name: Demo on GitHub Pages
 
-# Publishes the static preview (scripts/preview/export.py) to https://<owner>.github.io/<repo>/.
+# Publishes the server-less demo store (scripts/static/build.sh) to https://<owner>.github.io/<repo>/.
 # One-time setup: repository Settings → Pages → Build and deployment → Source: "GitHub Actions".
 on:
   push:
@@ -26,15 +26,11 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm run build
-      - name: Export static preview
-        run: |
-          npx next start -p 3000 &
-          for i in $(seq 1 30); do curl -sf http://localhost:3000/ > /dev/null && break; sleep 1; done
-          python3 scripts/preview/export.py site http://localhost:3000
+      - name: Build static demo
+        run: BASE_PATH=/${{ github.event.repository.name }} bash scripts/static/build.sh
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: out
 
   deploy:
     needs: build
