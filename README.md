@@ -3,6 +3,9 @@
 Women’s and men’s fashion store for [ostrev.com](https://ostrev.com), in the style of Bershka / Mango. Next.js 15 (App Router) + TypeScript + Tailwind CSS.
 Mobile-first, statically generated, no UI or state libraries.
 
+**Live demo:** https://matasmiklovas-bot.github.io/gfd/lt/ (Lithuanian) · https://matasmiklovas-bot.github.io/gfd/ (English).
+Demo mode: checkout ends in a demo order and no money moves.
+
 ```bash
 npm install
 cp .env.example .env.local   # optional — everything runs without keys
@@ -35,7 +38,8 @@ plain files under the repository's sub-path, and the parts that need a server sw
 loads the static catalog index, checkout validates in the browser and ends in a demo order (no money moves, and the
 discount code check runs client-side), and the newsletter and contact forms say they are switched off. The middleware
 and API routes are removed for that build, so run the script only in CI or a throwaway copy. One-time setup:
-**Settings → Pages → Build and deployment → Source: GitHub Actions**.
+**Settings → Pages → Build and deployment → Source: Deploy from a branch, `gh-pages`** (the workflow pushes the
+build there; GitHub enables this automatically the first time the branch is pushed).
 
 ---
 

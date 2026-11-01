@@ -1,23 +1,21 @@
 name: Demo on GitHub Pages
 
-# Publishes the server-less demo store (scripts/static/build.sh) to https://<owner>.github.io/<repo>/.
-# One-time setup: repository Settings → Pages → Build and deployment → Source: "GitHub Actions".
+# Publishes the server-less demo store (scripts/static/build.sh) to https://<owner>.github.io/<repo>/ by pushing the
+# build to the gh-pages branch, which GitHub Pages serves (Settings → Pages → Source: Deploy from a branch, gh-pages).
 on:
   push:
     branches: [claude/ostrev-ecommerce-site-zi420j]
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: pages
   cancel-in-progress: true
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -28,16 +26,11 @@ jobs:
       - run: npm ci
       - name: Build static demo
         run: BASE_PATH=/${{ github.event.repository.name }} bash scripts/static/build.sh
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: out
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Push to gh-pages
+        run: |
+          cd out
+          git init -q -b gh-pages
+          git add -A
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -q -m "Static demo built from ${GITHUB_SHA::7}"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" gh-pages
