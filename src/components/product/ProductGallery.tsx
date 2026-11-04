@@ -6,6 +6,7 @@ import type { ProductImage } from '@/lib/types';
 import { CloseIcon } from '@/components/ui/Icons';
 import { useScrollLock } from '@/lib/hooks';
 import { useT } from '@/lib/i18n';
+import { PhotoMark } from './PhotoMark';
 
 export function ProductGallery({ images, name }: { images: ProductImage[]; name: string }) {
   const t = useT();
@@ -62,6 +63,7 @@ export function ProductGallery({ images, name }: { images: ProductImage[]; name:
                 }
                 className="object-cover"
               />
+              <PhotoMark className="bottom-4 left-4" />
             </button>
           </li>
         ))}

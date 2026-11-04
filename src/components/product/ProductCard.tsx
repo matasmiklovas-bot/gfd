@@ -4,6 +4,7 @@ import type { ProductSummary } from '@/lib/types';
 import { Price } from '@/components/ui/Price';
 import { T } from '@/components/layout/T';
 import { WishlistButton } from './WishlistButton';
+import { PhotoMark } from './PhotoMark';
 
 export function ProductCard({
   product,
@@ -39,6 +40,7 @@ export function ProductCard({
               className="hidden object-cover opacity-0 transition-opacity duration-500 ease-out md:block md:group-hover:opacity-100"
             />
           )}
+          <PhotoMark className="bottom-0 left-0" />
           {product.soldOut && (
             <span className="label absolute left-2 top-2 bg-white px-2 py-1 text-[10px] text-ink">
               <T k="product.soldOut" />
