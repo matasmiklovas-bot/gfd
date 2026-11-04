@@ -233,7 +233,7 @@ All catalog reads go through `src/lib/commerce/index.ts`. To switch:
 
 Placeholder photography from Pexels ([Pexels License](https://www.pexels.com/license/): free for commercial use,
 attribution not required; you may not imply that the people shown endorse OSTREV, and you may not resell the photos
-unaltered). Cropped to 4:5 (products), 7:10 (hero), 16:10 (editorial) or square (social). No other edits.
+unaltered). Cropped to 4:5 (products), 7:10 (hero), 16:10 (editorial) or square (social), from the neck down so no faces are shown. No other edits.
 
 **These are placeholders.** Replace every product photo with photography of your actual garments before launch.
 
@@ -255,10 +255,8 @@ unaltered). Cropped to 4:5 (products), 7:10 (hero), 16:10 (editorial) or square 
 | `chunky-turtleneck-jumper-3.webp` | https://www.pexels.com/photo/7760010/ |
 | `soft-knit-jumper-1.webp` | https://www.pexels.com/photo/7760234/ |
 | `soft-knit-jumper-2.webp` | https://www.pexels.com/photo/7760239/ |
-| `soft-knit-jumper-3.webp` | https://www.pexels.com/photo/7760229/ |
 | `soft-knit-jumper-4.webp` | https://www.pexels.com/photo/7760231/ |
 | `chunky-rib-jumper-1.webp` | https://www.pexels.com/photo/6630845/ |
-| `chunky-rib-jumper-2.webp` | https://www.pexels.com/photo/6630851/ |
 | `chunky-rib-jumper-3.webp` | https://www.pexels.com/photo/6630853/ |
 | `satin-shirt-dress-1.webp` | https://www.pexels.com/photo/7760031/ |
 | `satin-shirt-dress-2.webp` | https://www.pexels.com/photo/7760034/ |
@@ -271,7 +269,6 @@ unaltered). Cropped to 4:5 (products), 7:10 (hero), 16:10 (editorial) or square 
 | `wide-leg-jeans-3.webp` | https://www.pexels.com/photo/34977352/ |
 | `mom-jeans-1.webp` | https://www.pexels.com/photo/6769359/ |
 | `mom-jeans-2.webp` | https://www.pexels.com/photo/6769361/ |
-| `mom-jeans-3.webp` | https://www.pexels.com/photo/6769360/ |
 | `straight-white-jeans-1.webp` | https://www.pexels.com/photo/7760230/ |
 | `straight-white-jeans-2.webp` | https://www.pexels.com/photo/7760232/ |
 | `leather-shoulder-bag-1.webp` | https://www.pexels.com/photo/13055401/ |
@@ -300,10 +297,8 @@ unaltered). Cropped to 4:5 (products), 7:10 (hero), 16:10 (editorial) or square 
 | `quilted-chain-bag-2.webp` | https://www.pexels.com/photo/20591025/ |
 | `oversized-denim-jacket-1.webp` | https://www.pexels.com/photo/6769357/ |
 | `oversized-denim-jacket-2.webp` | https://www.pexels.com/photo/6769366/ |
-| `oversized-denim-jacket-3.webp` | https://www.pexels.com/photo/6769363/ |
 | `puffer-jacket-1.webp` | https://www.pexels.com/photo/6626747/ |
 | `puffer-jacket-2.webp` | https://www.pexels.com/photo/6626753/ |
-| `puffer-jacket-3.webp` | https://www.pexels.com/photo/6626749/ |
 | `corduroy-overshirt-1.webp` | https://www.pexels.com/photo/6626752/ |
 | `corduroy-overshirt-2.webp` | https://www.pexels.com/photo/6626750/ |
 | `corduroy-overshirt-3.webp` | https://www.pexels.com/photo/6626756/ |
@@ -348,8 +343,8 @@ unaltered). Cropped to 4:5 (products), 7:10 (hero), 16:10 (editorial) or square 
 | `social-5.webp` | https://www.pexels.com/photo/6626756/ |
 | `social-6.webp` | https://www.pexels.com/photo/13917244/ |
 | `about-1.webp` | https://www.pexels.com/photo/7760028/ |
-| `about-2.webp` | https://www.pexels.com/photo/6769353/ |
-| `about-3.webp` | https://www.pexels.com/photo/7760240/ |
+| `about-2.webp` | https://www.pexels.com/photo/24779113/ |
+| `about-3.webp` | https://www.pexels.com/photo/7760234/ |
 | `../og.jpg` | https://www.pexels.com/photo/7760005/ |
 | `satin-slip-dress-1.webp` | https://www.pexels.com/photo/20332983/ |
 | `satin-slip-dress-2.webp` | https://www.pexels.com/photo/20332986/ |
@@ -402,7 +397,6 @@ unaltered). Cropped to 4:5 (products), 7:10 (hero), 16:10 (editorial) or square 
 | `striped-knit-jumper-2.webp` | https://www.pexels.com/photo/6748639/ |
 | `striped-popover-shirt-1.webp` | https://www.pexels.com/photo/7129365/ |
 | `striped-popover-shirt-2.webp` | https://www.pexels.com/photo/7129366/ |
-| `striped-popover-shirt-3.webp` | https://www.pexels.com/photo/7129368/ |
 | `ruffle-sleeve-blouse-1.webp` | https://www.pexels.com/photo/11791521/ |
 | `ruffle-sleeve-blouse-2.webp` | https://www.pexels.com/photo/11791520/ |
 | `ruffle-sleeve-blouse-3.webp` | https://www.pexels.com/photo/11791522/ |

@@ -121,13 +121,13 @@ const LOOKBOOK = {
     eyebrow: 'Women · Men',
     title: 'Denim, all year',
     cta: 'Shop denim',
-    alt: 'Two models in oversized denim jackets and white T-shirts in a grey studio',
+    alt: 'Oversized denim jackets over white T-shirts in a grey studio',
   },
   lt: {
     eyebrow: 'Moterims · Vyrams',
     title: 'Džinsas ištisus metus',
     cta: 'Visi džinsai',
-    alt: 'Du modeliai su laisvomis džinsinėmis striukėmis ir baltais marškinėliais pilkoje studijoje',
+    alt: 'Laisvos džinsinės striukės ant baltų marškinėlių pilkoje studijoje',
   },
 };
 
@@ -161,7 +161,7 @@ const SOCIAL: { src: string; alt: Text }[] = [
     src: '/images/social-5.webp',
     alt: { en: 'Model in a green corduroy overshirt and ecru cord trousers', lt: 'Modelis su žaliais velvetiniais marškiniais-striuke ir ekru velvetinėmis kelnėmis' },
   },
-  { src: '/images/social-6.webp', alt: { en: 'Model in an ecru crew-neck jumper looking up', lt: 'Modelis su ekru megztiniu apvalia iškirpte žiūri aukštyn' } },
+  { src: '/images/social-6.webp', alt: { en: 'Ecru crew-neck jumper, close-up', lt: 'Ekru megztinis apvalia iškirpte iš arti' } },
 ];
 
 export function SocialGrid({ locale }: { locale: Locale }) {

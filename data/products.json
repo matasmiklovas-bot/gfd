@@ -361,10 +361,6 @@
         "alt": "Soft Knit Jumper in oat, movement"
       },
       {
-        "src": "/images/soft-knit-jumper-3.webp",
-        "alt": "Soft Knit Jumper in oat, close-up"
-      },
-      {
         "src": "/images/soft-knit-jumper-4.webp",
         "alt": "Soft Knit Jumper in oat, sleeve detail"
       }
@@ -421,10 +417,6 @@
       {
         "src": "/images/chunky-rib-jumper-1.webp",
         "alt": "Chunky Rib Jumper in cream, front"
-      },
-      {
-        "src": "/images/chunky-rib-jumper-2.webp",
-        "alt": "Chunky Rib Jumper in cream, close-up"
       },
       {
         "src": "/images/chunky-rib-jumper-3.webp",
@@ -674,10 +666,6 @@
       {
         "src": "/images/mom-jeans-2.webp",
         "alt": "Mom Jeans in mid blue, side"
-      },
-      {
-        "src": "/images/mom-jeans-3.webp",
-        "alt": "Mom Jeans in mid blue, detail"
       }
     ],
     "related": [
@@ -1376,10 +1364,6 @@
       {
         "src": "/images/oversized-denim-jacket-2.webp",
         "alt": "Oversized Denim Jacket in mid blue, side"
-      },
-      {
-        "src": "/images/oversized-denim-jacket-3.webp",
-        "alt": "Oversized Denim Jacket in mid blue, worn with a white T-shirt"
       }
     ],
     "related": [
@@ -1438,10 +1422,6 @@
       {
         "src": "/images/puffer-jacket-2.webp",
         "alt": "Puffer Jacket in ecru, close-up"
-      },
-      {
-        "src": "/images/puffer-jacket-3.webp",
-        "alt": "Puffer Jacket in ecru, collar detail"
       }
     ],
     "related": [
@@ -1627,7 +1607,7 @@
       },
       {
         "src": "/images/crew-neck-jumper-3.webp",
-        "alt": "Crew Neck Jumper in ecru, portrait"
+        "alt": "Crew Neck Jumper in ecru, close-up"
       }
     ],
     "related": [
@@ -1999,7 +1979,7 @@
       },
       {
         "src": "/images/wool-blend-blazer-3.webp",
-        "alt": "Wool Blend Blazer in camel, portrait"
+        "alt": "Wool Blend Blazer in camel, close-up"
       }
     ],
     "related": [
@@ -2643,7 +2623,7 @@
       },
       {
         "src": "/images/twill-overshirt-2.webp",
-        "alt": "Cotton Twill Overshirt in stone, portrait"
+        "alt": "Cotton Twill Overshirt in stone, close-up"
       },
       {
         "src": "/images/twill-overshirt-3.webp",
@@ -2763,7 +2743,7 @@
     "images": [
       {
         "src": "/images/denim-shirt-1.webp",
-        "alt": "Denim Shirt in mid blue, portrait"
+        "alt": "Denim Shirt in mid blue, close-up"
       },
       {
         "src": "/images/denim-shirt-2.webp",
@@ -2829,7 +2809,7 @@
       },
       {
         "src": "/images/soft-crew-jumper-3.webp",
-        "alt": "Soft Crew Jumper in white, portrait"
+        "alt": "Soft Crew Jumper in white, close-up"
       }
     ],
     "related": [
@@ -2891,7 +2871,7 @@
       },
       {
         "src": "/images/jersey-mini-dress-3.webp",
-        "alt": "Jersey Mini Dress in black, portrait"
+        "alt": "Jersey Mini Dress in black, close-up"
       }
     ],
     "related": [
@@ -3123,7 +3103,7 @@
       },
       {
         "src": "/images/striped-knit-jumper-2.webp",
-        "alt": "Striped Knit Jumper in navy with red stripes, portrait"
+        "alt": "Striped Knit Jumper in navy with red stripes, close-up"
       }
     ],
     "related": [
@@ -3182,10 +3162,6 @@
       {
         "src": "/images/striped-popover-shirt-2.webp",
         "alt": "Striped Popover Shirt in blue & white stripe, detail"
-      },
-      {
-        "src": "/images/striped-popover-shirt-3.webp",
-        "alt": "Striped Popover Shirt in blue & white stripe, portrait"
       }
     ],
     "related": [
@@ -3247,7 +3223,7 @@
       },
       {
         "src": "/images/ruffle-sleeve-blouse-3.webp",
-        "alt": "Ruffle Sleeve Blouse in red, portrait"
+        "alt": "Ruffle Sleeve Blouse in red, close-up"
       }
     ],
     "related": [

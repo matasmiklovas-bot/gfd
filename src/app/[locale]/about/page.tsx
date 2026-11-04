@@ -16,9 +16,9 @@ const COPY = {
     intro:
       'OSTREV is a fashion label for women and men. We design the pieces a wardrobe is built on — coats, knitwear, shirts and denim — and update them every season, so looking current never means paying designer prices.',
     images: 'Images',
-    alt1: 'Model in a black blazer and light jeans lying back against a yellow armchair',
-    alt2: 'Close-up portrait of a model in an oat knit jumper',
-    alt3: 'Model in a white T-shirt and mom jeans bending backwards in a grey studio',
+    alt1: 'Black blazer and light wide-leg jeans, lying back by an armchair',
+    alt2: 'Oat knit jumper, close-up',
+    alt3: 'White T-shirt and wide blue jeans in a white studio',
     how: 'How we work',
     principles: [
       ['Follow the season', 'New pieces every few weeks, built around what people actually wear this autumn and winter.'],
@@ -37,9 +37,9 @@ const COPY = {
     intro:
       'OSTREV – mados ženklas moterims ir vyrams. Kuriame drabužius, ant kurių laikosi visa spinta – paltus, megztinius, marškinius ir džinsus – ir atnaujiname juos kiekvieną sezoną, kad atrodyti madingai nereikštų mokėti dizainerių kainų.',
     images: 'Nuotraukos',
-    alt1: 'Modelis su juodu švarku ir šviesiais džinsais atsilošęs prie geltono fotelio',
-    alt2: 'Modelio portretas iš arti su avižinės spalvos megztiniu',
-    alt3: 'Modelis su baltais marškinėliais ir „mom“ džinsais atsilenkęs atgal pilkoje studijoje',
+    alt1: 'Juodas švarkas ir šviesūs platūs džinsai, atsilošus prie fotelio',
+    alt2: 'Avižinės spalvos megztinis iš arti',
+    alt3: 'Balti marškinėliai ir platūs mėlyni džinsai baltoje studijoje',
     how: 'Kaip dirbame',
     principles: [
       ['Sekame sezoną', 'Nauji drabužiai kas kelias savaites – tai, ką žmonės iš tiesų dėvi šį rudenį ir žiemą.'],
