@@ -1,0 +1,13 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /checkout
+Disallow: /account
+Disallow: /wishlist
+Disallow: /search
+Disallow: /lt/checkout
+Disallow: /lt/account
+Disallow: /lt/wishlist
+Disallow: /lt/search
+
+Sitemap: https://ostrev.com/sitemap.xml

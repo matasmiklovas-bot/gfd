@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[907],{907:(e,t,n)=>{n.r(t),n.d(t,{lookupDiscount:()=>u});let r={WELCOME10:{percent:10}};function u(e){if(!e)return null;let t=e.trim().toUpperCase(),n=r[t];return n?{code:t,percent:n.percent}:null}}}]);

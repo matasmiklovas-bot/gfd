@@ -1,0 +1,2145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<url>
+<loc>https://ostrev.com/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt" />
+<changefreq>weekly</changefreq>
+<priority>1</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt" />
+<changefreq>weekly</changefreq>
+<priority>1</priority>
+</url>
+<url>
+<loc>https://ostrev.com/women</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/women" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/women" />
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/women</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/women" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/women" />
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://ostrev.com/men</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/men" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/men" />
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/men</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/men" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/men" />
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop" />
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop" />
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://ostrev.com/new</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/new" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/new" />
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/new</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/new" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/new" />
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://ostrev.com/about</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/about" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/about" />
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/about</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/about" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/about" />
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://ostrev.com/help/shipping</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/help/shipping" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/help/shipping" />
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/help/shipping</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/help/shipping" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/help/shipping" />
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://ostrev.com/help/returns</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/help/returns" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/help/returns" />
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/help/returns</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/help/returns" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/help/returns" />
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://ostrev.com/help/faq</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/help/faq" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/help/faq" />
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/help/faq</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/help/faq" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/help/faq" />
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://ostrev.com/help/size-guide</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/help/size-guide" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/help/size-guide" />
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/help/size-guide</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/help/size-guide" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/help/size-guide" />
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://ostrev.com/help/contact</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/help/contact" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/help/contact" />
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/help/contact</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/help/contact" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/help/contact" />
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://ostrev.com/legal/privacy</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/legal/privacy" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/legal/privacy" />
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/legal/privacy</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/legal/privacy" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/legal/privacy" />
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://ostrev.com/legal/terms</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/legal/terms" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/legal/terms" />
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/legal/terms</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/legal/terms" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/legal/terms" />
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://ostrev.com/legal/cookies</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/legal/cookies" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/legal/cookies" />
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/legal/cookies</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/legal/cookies" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/legal/cookies" />
+<changefreq>weekly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/coats</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/coats</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/knitwear</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/knitwear" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/knitwear" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/knitwear</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/knitwear" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/knitwear" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/shirts</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/shirts" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/shirts" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/shirts</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/shirts" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/shirts" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/dresses</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/dresses" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/dresses" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/dresses</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/dresses" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/dresses" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/trousers</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/trousers" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/trousers" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/trousers</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/trousers" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/trousers" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/accessories</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/accessories" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/accessories" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/accessories</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/accessories" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/accessories" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/women/coats</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/women/coats" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/women/coats" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/women/coats</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/women/coats" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/women/coats" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/women/knitwear</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/women/knitwear" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/women/knitwear" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/women/knitwear</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/women/knitwear" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/women/knitwear" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/women/shirts</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/women/shirts" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/women/shirts" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/women/shirts</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/women/shirts" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/women/shirts" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/women/dresses</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/women/dresses" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/women/dresses" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/women/dresses</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/women/dresses" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/women/dresses" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/women/trousers</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/women/trousers" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/women/trousers" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/women/trousers</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/women/trousers" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/women/trousers" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/women/accessories</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/women/accessories" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/women/accessories" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/women/accessories</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/women/accessories" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/women/accessories" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/men/coats</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/men/coats" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/men/coats" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/men/coats</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/men/coats" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/men/coats" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/men/knitwear</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/men/knitwear" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/men/knitwear" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/men/knitwear</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/men/knitwear" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/men/knitwear" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/men/shirts</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/men/shirts" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/men/shirts" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/men/shirts</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/men/shirts" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/men/shirts" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/men/trousers</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/men/trousers" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/men/trousers" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/men/trousers</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/men/trousers" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/men/trousers" />
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/coats/oversized-trench-coat</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats/oversized-trench-coat" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats/oversized-trench-coat" />
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-trench-coat-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-trench-coat-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-trench-coat-3.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-trench-coat-4.webp</image:loc>
+</image:image>
+<lastmod>2026-10-24</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/coats/oversized-trench-coat</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats/oversized-trench-coat" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats/oversized-trench-coat" />
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-trench-coat-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-trench-coat-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-trench-coat-3.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-trench-coat-4.webp</image:loc>
+</image:image>
+<lastmod>2026-10-24</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/coats/wool-blend-coat</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats/wool-blend-coat" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats/wool-blend-coat" />
+<image:image>
+<image:loc>https://ostrev.com/images/wool-blend-coat-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/wool-blend-coat-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-17</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/coats/wool-blend-coat</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats/wool-blend-coat" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats/wool-blend-coat" />
+<image:image>
+<image:loc>https://ostrev.com/images/wool-blend-coat-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/wool-blend-coat-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-17</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/coats/oversized-blazer</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats/oversized-blazer" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats/oversized-blazer" />
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-blazer-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-blazer-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-blazer-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-10</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/coats/oversized-blazer</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats/oversized-blazer" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats/oversized-blazer" />
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-blazer-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-blazer-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-blazer-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-10</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/coats/faux-leather-biker-jacket</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats/faux-leather-biker-jacket" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats/faux-leather-biker-jacket" />
+<image:image>
+<image:loc>https://ostrev.com/images/faux-leather-biker-jacket-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/faux-leather-biker-jacket-2.webp</image:loc>
+</image:image>
+<lastmod>2026-09-26</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/coats/faux-leather-biker-jacket</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats/faux-leather-biker-jacket" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats/faux-leather-biker-jacket" />
+<image:image>
+<image:loc>https://ostrev.com/images/faux-leather-biker-jacket-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/faux-leather-biker-jacket-2.webp</image:loc>
+</image:image>
+<lastmod>2026-09-26</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/knitwear/chunky-turtleneck-jumper</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/knitwear/chunky-turtleneck-jumper" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/knitwear/chunky-turtleneck-jumper" />
+<image:image>
+<image:loc>https://ostrev.com/images/chunky-turtleneck-jumper-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/chunky-turtleneck-jumper-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/chunky-turtleneck-jumper-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-24</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/knitwear/chunky-turtleneck-jumper</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/knitwear/chunky-turtleneck-jumper" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/knitwear/chunky-turtleneck-jumper" />
+<image:image>
+<image:loc>https://ostrev.com/images/chunky-turtleneck-jumper-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/chunky-turtleneck-jumper-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/chunky-turtleneck-jumper-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-24</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/knitwear/soft-knit-jumper</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/knitwear/soft-knit-jumper" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/knitwear/soft-knit-jumper" />
+<image:image>
+<image:loc>https://ostrev.com/images/soft-knit-jumper-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/soft-knit-jumper-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/soft-knit-jumper-4.webp</image:loc>
+</image:image>
+<lastmod>2026-10-17</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/knitwear/soft-knit-jumper</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/knitwear/soft-knit-jumper" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/knitwear/soft-knit-jumper" />
+<image:image>
+<image:loc>https://ostrev.com/images/soft-knit-jumper-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/soft-knit-jumper-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/soft-knit-jumper-4.webp</image:loc>
+</image:image>
+<lastmod>2026-10-17</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/knitwear/chunky-rib-jumper</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/knitwear/chunky-rib-jumper" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/knitwear/chunky-rib-jumper" />
+<image:image>
+<image:loc>https://ostrev.com/images/chunky-rib-jumper-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/chunky-rib-jumper-3.webp</image:loc>
+</image:image>
+<lastmod>2026-09-26</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/knitwear/chunky-rib-jumper</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/knitwear/chunky-rib-jumper" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/knitwear/chunky-rib-jumper" />
+<image:image>
+<image:loc>https://ostrev.com/images/chunky-rib-jumper-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/chunky-rib-jumper-3.webp</image:loc>
+</image:image>
+<lastmod>2026-09-26</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/dresses/satin-shirt-dress</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/dresses/satin-shirt-dress" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/dresses/satin-shirt-dress" />
+<image:image>
+<image:loc>https://ostrev.com/images/satin-shirt-dress-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/satin-shirt-dress-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/satin-shirt-dress-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-24</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/dresses/satin-shirt-dress</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/dresses/satin-shirt-dress" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/dresses/satin-shirt-dress" />
+<image:image>
+<image:loc>https://ostrev.com/images/satin-shirt-dress-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/satin-shirt-dress-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/satin-shirt-dress-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-24</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/shirts/oversized-poplin-shirt</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/shirts/oversized-poplin-shirt" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/shirts/oversized-poplin-shirt" />
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-poplin-shirt-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-poplin-shirt-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-poplin-shirt-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-10</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/shirts/oversized-poplin-shirt</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/shirts/oversized-poplin-shirt" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/shirts/oversized-poplin-shirt" />
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-poplin-shirt-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-poplin-shirt-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-poplin-shirt-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-10</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/trousers/wide-leg-jeans</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/trousers/wide-leg-jeans" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/trousers/wide-leg-jeans" />
+<image:image>
+<image:loc>https://ostrev.com/images/wide-leg-jeans-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/wide-leg-jeans-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/wide-leg-jeans-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-17</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/trousers/wide-leg-jeans</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/trousers/wide-leg-jeans" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/trousers/wide-leg-jeans" />
+<image:image>
+<image:loc>https://ostrev.com/images/wide-leg-jeans-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/wide-leg-jeans-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/wide-leg-jeans-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-17</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/trousers/mom-jeans</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/trousers/mom-jeans" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/trousers/mom-jeans" />
+<image:image>
+<image:loc>https://ostrev.com/images/mom-jeans-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/mom-jeans-2.webp</image:loc>
+</image:image>
+<lastmod>2026-09-26</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/trousers/mom-jeans</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/trousers/mom-jeans" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/trousers/mom-jeans" />
+<image:image>
+<image:loc>https://ostrev.com/images/mom-jeans-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/mom-jeans-2.webp</image:loc>
+</image:image>
+<lastmod>2026-09-26</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/trousers/straight-white-jeans</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/trousers/straight-white-jeans" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/trousers/straight-white-jeans" />
+<image:image>
+<image:loc>https://ostrev.com/images/straight-white-jeans-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/straight-white-jeans-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/straight-white-jeans-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-17</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/trousers/straight-white-jeans</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/trousers/straight-white-jeans" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/trousers/straight-white-jeans" />
+<image:image>
+<image:loc>https://ostrev.com/images/straight-white-jeans-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/straight-white-jeans-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/straight-white-jeans-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-17</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/accessories/leather-shoulder-bag</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/accessories/leather-shoulder-bag" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/accessories/leather-shoulder-bag" />
+<image:image>
+<image:loc>https://ostrev.com/images/leather-shoulder-bag-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/leather-shoulder-bag-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-10</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/accessories/leather-shoulder-bag</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/accessories/leather-shoulder-bag" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/accessories/leather-shoulder-bag" />
+<image:image>
+<image:loc>https://ostrev.com/images/leather-shoulder-bag-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/leather-shoulder-bag-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-10</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/coats/faux-shearling-coat</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats/faux-shearling-coat" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats/faux-shearling-coat" />
+<image:image>
+<image:loc>https://ostrev.com/images/faux-shearling-coat-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/faux-shearling-coat-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-24</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/coats/faux-shearling-coat</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats/faux-shearling-coat" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats/faux-shearling-coat" />
+<image:image>
+<image:loc>https://ostrev.com/images/faux-shearling-coat-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/faux-shearling-coat-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-24</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/coats/printed-denim-jacket</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats/printed-denim-jacket" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats/printed-denim-jacket" />
+<image:image>
+<image:loc>https://ostrev.com/images/printed-denim-jacket-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/printed-denim-jacket-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/printed-denim-jacket-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-17</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/coats/printed-denim-jacket</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats/printed-denim-jacket" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats/printed-denim-jacket" />
+<image:image>
+<image:loc>https://ostrev.com/images/printed-denim-jacket-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/printed-denim-jacket-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/printed-denim-jacket-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-17</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/dresses/poplin-midi-dress</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/dresses/poplin-midi-dress" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/dresses/poplin-midi-dress" />
+<image:image>
+<image:loc>https://ostrev.com/images/poplin-midi-dress-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/poplin-midi-dress-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/poplin-midi-dress-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-24</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/dresses/poplin-midi-dress</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/dresses/poplin-midi-dress" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/dresses/poplin-midi-dress" />
+<image:image>
+<image:loc>https://ostrev.com/images/poplin-midi-dress-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/poplin-midi-dress-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/poplin-midi-dress-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-24</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/shirts/cropped-shirt</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/shirts/cropped-shirt" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/shirts/cropped-shirt" />
+<image:image>
+<image:loc>https://ostrev.com/images/cropped-shirt-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/cropped-shirt-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/cropped-shirt-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-17</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/shirts/cropped-shirt</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/shirts/cropped-shirt" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/shirts/cropped-shirt" />
+<image:image>
+<image:loc>https://ostrev.com/images/cropped-shirt-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/cropped-shirt-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/cropped-shirt-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-17</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/shirts/open-back-bodysuit</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/shirts/open-back-bodysuit" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/shirts/open-back-bodysuit" />
+<image:image>
+<image:loc>https://ostrev.com/images/open-back-bodysuit-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/open-back-bodysuit-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/open-back-bodysuit-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-24</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/shirts/open-back-bodysuit</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/shirts/open-back-bodysuit" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/shirts/open-back-bodysuit" />
+<image:image>
+<image:loc>https://ostrev.com/images/open-back-bodysuit-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/open-back-bodysuit-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/open-back-bodysuit-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-24</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/trousers/flared-trousers</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/trousers/flared-trousers" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/trousers/flared-trousers" />
+<image:image>
+<image:loc>https://ostrev.com/images/flared-trousers-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/flared-trousers-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/flared-trousers-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-24</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/trousers/flared-trousers</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/trousers/flared-trousers" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/trousers/flared-trousers" />
+<image:image>
+<image:loc>https://ostrev.com/images/flared-trousers-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/flared-trousers-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/flared-trousers-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-24</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/trousers/pleated-trousers</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/trousers/pleated-trousers" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/trousers/pleated-trousers" />
+<image:image>
+<image:loc>https://ostrev.com/images/pleated-trousers-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/pleated-trousers-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/pleated-trousers-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-10</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/trousers/pleated-trousers</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/trousers/pleated-trousers" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/trousers/pleated-trousers" />
+<image:image>
+<image:loc>https://ostrev.com/images/pleated-trousers-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/pleated-trousers-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/pleated-trousers-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-10</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/accessories/buckle-baguette-bag</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/accessories/buckle-baguette-bag" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/accessories/buckle-baguette-bag" />
+<image:image>
+<image:loc>https://ostrev.com/images/buckle-baguette-bag-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/buckle-baguette-bag-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-24</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/accessories/buckle-baguette-bag</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/accessories/buckle-baguette-bag" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/accessories/buckle-baguette-bag" />
+<image:image>
+<image:loc>https://ostrev.com/images/buckle-baguette-bag-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/buckle-baguette-bag-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-24</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/accessories/quilted-chain-bag</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/accessories/quilted-chain-bag" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/accessories/quilted-chain-bag" />
+<image:image>
+<image:loc>https://ostrev.com/images/quilted-chain-bag-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/quilted-chain-bag-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-17</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/accessories/quilted-chain-bag</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/accessories/quilted-chain-bag" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/accessories/quilted-chain-bag" />
+<image:image>
+<image:loc>https://ostrev.com/images/quilted-chain-bag-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/quilted-chain-bag-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-17</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/coats/oversized-denim-jacket</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats/oversized-denim-jacket" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats/oversized-denim-jacket" />
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-denim-jacket-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-denim-jacket-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-24</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/coats/oversized-denim-jacket</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats/oversized-denim-jacket" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats/oversized-denim-jacket" />
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-denim-jacket-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-denim-jacket-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-24</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/coats/puffer-jacket</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats/puffer-jacket" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats/puffer-jacket" />
+<image:image>
+<image:loc>https://ostrev.com/images/puffer-jacket-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/puffer-jacket-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-17</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/coats/puffer-jacket</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats/puffer-jacket" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats/puffer-jacket" />
+<image:image>
+<image:loc>https://ostrev.com/images/puffer-jacket-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/puffer-jacket-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-17</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/shirts/corduroy-overshirt</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/shirts/corduroy-overshirt" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/shirts/corduroy-overshirt" />
+<image:image>
+<image:loc>https://ostrev.com/images/corduroy-overshirt-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/corduroy-overshirt-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/corduroy-overshirt-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-10</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/shirts/corduroy-overshirt</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/shirts/corduroy-overshirt" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/shirts/corduroy-overshirt" />
+<image:image>
+<image:loc>https://ostrev.com/images/corduroy-overshirt-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/corduroy-overshirt-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/corduroy-overshirt-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-10</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/shirts/oversized-cotton-t-shirt</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/shirts/oversized-cotton-t-shirt" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/shirts/oversized-cotton-t-shirt" />
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-cotton-t-shirt-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-cotton-t-shirt-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-cotton-t-shirt-3.webp</image:loc>
+</image:image>
+<lastmod>2026-09-26</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/shirts/oversized-cotton-t-shirt</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/shirts/oversized-cotton-t-shirt" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/shirts/oversized-cotton-t-shirt" />
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-cotton-t-shirt-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-cotton-t-shirt-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/oversized-cotton-t-shirt-3.webp</image:loc>
+</image:image>
+<lastmod>2026-09-26</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/knitwear/crew-neck-jumper</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/knitwear/crew-neck-jumper" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/knitwear/crew-neck-jumper" />
+<image:image>
+<image:loc>https://ostrev.com/images/crew-neck-jumper-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/crew-neck-jumper-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/crew-neck-jumper-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-24</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/knitwear/crew-neck-jumper</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/knitwear/crew-neck-jumper" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/knitwear/crew-neck-jumper" />
+<image:image>
+<image:loc>https://ostrev.com/images/crew-neck-jumper-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/crew-neck-jumper-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/crew-neck-jumper-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-24</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/knitwear/fine-knit-jumper</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/knitwear/fine-knit-jumper" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/knitwear/fine-knit-jumper" />
+<image:image>
+<image:loc>https://ostrev.com/images/fine-knit-jumper-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/fine-knit-jumper-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/fine-knit-jumper-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-10</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/knitwear/fine-knit-jumper</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/knitwear/fine-knit-jumper" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/knitwear/fine-knit-jumper" />
+<image:image>
+<image:loc>https://ostrev.com/images/fine-knit-jumper-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/fine-knit-jumper-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/fine-knit-jumper-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-10</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/trousers/baggy-jeans</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/trousers/baggy-jeans" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/trousers/baggy-jeans" />
+<image:image>
+<image:loc>https://ostrev.com/images/baggy-jeans-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/baggy-jeans-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/baggy-jeans-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-17</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/trousers/baggy-jeans</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/trousers/baggy-jeans" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/trousers/baggy-jeans" />
+<image:image>
+<image:loc>https://ostrev.com/images/baggy-jeans-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/baggy-jeans-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/baggy-jeans-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-17</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/trousers/relaxed-straight-jeans</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/trousers/relaxed-straight-jeans" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/trousers/relaxed-straight-jeans" />
+<image:image>
+<image:loc>https://ostrev.com/images/relaxed-straight-jeans-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/relaxed-straight-jeans-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/relaxed-straight-jeans-3.webp</image:loc>
+</image:image>
+<lastmod>2026-09-26</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/trousers/relaxed-straight-jeans</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/trousers/relaxed-straight-jeans" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/trousers/relaxed-straight-jeans" />
+<image:image>
+<image:loc>https://ostrev.com/images/relaxed-straight-jeans-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/relaxed-straight-jeans-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/relaxed-straight-jeans-3.webp</image:loc>
+</image:image>
+<lastmod>2026-09-26</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/trousers/cord-trousers</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/trousers/cord-trousers" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/trousers/cord-trousers" />
+<image:image>
+<image:loc>https://ostrev.com/images/cord-trousers-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/cord-trousers-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/cord-trousers-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-10</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/trousers/cord-trousers</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/trousers/cord-trousers" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/trousers/cord-trousers" />
+<image:image>
+<image:loc>https://ostrev.com/images/cord-trousers-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/cord-trousers-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/cord-trousers-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-10</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/coats/linen-blend-blazer</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats/linen-blend-blazer" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats/linen-blend-blazer" />
+<image:image>
+<image:loc>https://ostrev.com/images/linen-blend-blazer-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/linen-blend-blazer-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/linen-blend-blazer-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-17</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/coats/linen-blend-blazer</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats/linen-blend-blazer" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats/linen-blend-blazer" />
+<image:image>
+<image:loc>https://ostrev.com/images/linen-blend-blazer-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/linen-blend-blazer-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/linen-blend-blazer-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-17</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/coats/wool-blend-blazer</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats/wool-blend-blazer" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats/wool-blend-blazer" />
+<image:image>
+<image:loc>https://ostrev.com/images/wool-blend-blazer-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/wool-blend-blazer-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/wool-blend-blazer-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-24</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/coats/wool-blend-blazer</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats/wool-blend-blazer" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats/wool-blend-blazer" />
+<image:image>
+<image:loc>https://ostrev.com/images/wool-blend-blazer-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/wool-blend-blazer-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/wool-blend-blazer-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-24</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/shirts/oxford-shirt</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/shirts/oxford-shirt" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/shirts/oxford-shirt" />
+<image:image>
+<image:loc>https://ostrev.com/images/oxford-shirt-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/oxford-shirt-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-10</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/shirts/oxford-shirt</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/shirts/oxford-shirt" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/shirts/oxford-shirt" />
+<image:image>
+<image:loc>https://ostrev.com/images/oxford-shirt-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/oxford-shirt-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-10</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/knitwear/roll-neck-jumper</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/knitwear/roll-neck-jumper" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/knitwear/roll-neck-jumper" />
+<image:image>
+<image:loc>https://ostrev.com/images/roll-neck-jumper-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/roll-neck-jumper-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/roll-neck-jumper-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-17</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/knitwear/roll-neck-jumper</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/knitwear/roll-neck-jumper" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/knitwear/roll-neck-jumper" />
+<image:image>
+<image:loc>https://ostrev.com/images/roll-neck-jumper-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/roll-neck-jumper-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/roll-neck-jumper-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-17</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/coats/cotton-trench-coat</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats/cotton-trench-coat" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats/cotton-trench-coat" />
+<image:image>
+<image:loc>https://ostrev.com/images/cotton-trench-coat-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/cotton-trench-coat-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-10</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/coats/cotton-trench-coat</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats/cotton-trench-coat" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats/cotton-trench-coat" />
+<image:image>
+<image:loc>https://ostrev.com/images/cotton-trench-coat-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/cotton-trench-coat-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-10</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/dresses/satin-slip-dress</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/dresses/satin-slip-dress" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/dresses/satin-slip-dress" />
+<image:image>
+<image:loc>https://ostrev.com/images/satin-slip-dress-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/satin-slip-dress-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/satin-slip-dress-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-29</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/dresses/satin-slip-dress</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/dresses/satin-slip-dress" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/dresses/satin-slip-dress" />
+<image:image>
+<image:loc>https://ostrev.com/images/satin-slip-dress-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/satin-slip-dress-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/satin-slip-dress-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-29</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/dresses/satin-midi-slip-dress</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/dresses/satin-midi-slip-dress" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/dresses/satin-midi-slip-dress" />
+<image:image>
+<image:loc>https://ostrev.com/images/satin-midi-slip-dress-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/satin-midi-slip-dress-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/satin-midi-slip-dress-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-27</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/dresses/satin-midi-slip-dress</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/dresses/satin-midi-slip-dress" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/dresses/satin-midi-slip-dress" />
+<image:image>
+<image:loc>https://ostrev.com/images/satin-midi-slip-dress-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/satin-midi-slip-dress-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/satin-midi-slip-dress-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-27</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/dresses/strappy-midi-dress</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/dresses/strappy-midi-dress" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/dresses/strappy-midi-dress" />
+<image:image>
+<image:loc>https://ostrev.com/images/strappy-midi-dress-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/strappy-midi-dress-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/dresses/strappy-midi-dress</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/dresses/strappy-midi-dress" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/dresses/strappy-midi-dress" />
+<image:image>
+<image:loc>https://ostrev.com/images/strappy-midi-dress-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/strappy-midi-dress-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-20</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/knitwear/chunky-bobble-cardigan</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/knitwear/chunky-bobble-cardigan" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/knitwear/chunky-bobble-cardigan" />
+<image:image>
+<image:loc>https://ostrev.com/images/chunky-bobble-cardigan-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/chunky-bobble-cardigan-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/chunky-bobble-cardigan-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-28</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/knitwear/chunky-bobble-cardigan</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/knitwear/chunky-bobble-cardigan" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/knitwear/chunky-bobble-cardigan" />
+<image:image>
+<image:loc>https://ostrev.com/images/chunky-bobble-cardigan-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/chunky-bobble-cardigan-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/chunky-bobble-cardigan-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-28</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/knitwear/cable-knit-jumper</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/knitwear/cable-knit-jumper" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/knitwear/cable-knit-jumper" />
+<image:image>
+<image:loc>https://ostrev.com/images/cable-knit-jumper-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/cable-knit-jumper-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-26</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/knitwear/cable-knit-jumper</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/knitwear/cable-knit-jumper" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/knitwear/cable-knit-jumper" />
+<image:image>
+<image:loc>https://ostrev.com/images/cable-knit-jumper-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/cable-knit-jumper-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-26</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/knitwear/long-knit-cardigan</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/knitwear/long-knit-cardigan" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/knitwear/long-knit-cardigan" />
+<image:image>
+<image:loc>https://ostrev.com/images/long-knit-cardigan-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/long-knit-cardigan-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-25</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/knitwear/long-knit-cardigan</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/knitwear/long-knit-cardigan" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/knitwear/long-knit-cardigan" />
+<image:image>
+<image:loc>https://ostrev.com/images/long-knit-cardigan-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/long-knit-cardigan-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-25</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/shirts/twill-overshirt</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/shirts/twill-overshirt" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/shirts/twill-overshirt" />
+<image:image>
+<image:loc>https://ostrev.com/images/twill-overshirt-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/twill-overshirt-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/twill-overshirt-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-23</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/shirts/twill-overshirt</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/shirts/twill-overshirt" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/shirts/twill-overshirt" />
+<image:image>
+<image:loc>https://ostrev.com/images/twill-overshirt-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/twill-overshirt-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/twill-overshirt-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-23</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/coats/double-breasted-linen-blazer</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats/double-breasted-linen-blazer" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats/double-breasted-linen-blazer" />
+<image:image>
+<image:loc>https://ostrev.com/images/double-breasted-linen-blazer-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/double-breasted-linen-blazer-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/double-breasted-linen-blazer-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-22</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/coats/double-breasted-linen-blazer</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats/double-breasted-linen-blazer" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats/double-breasted-linen-blazer" />
+<image:image>
+<image:loc>https://ostrev.com/images/double-breasted-linen-blazer-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/double-breasted-linen-blazer-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/double-breasted-linen-blazer-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-22</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/shirts/denim-shirt</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/shirts/denim-shirt" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/shirts/denim-shirt" />
+<image:image>
+<image:loc>https://ostrev.com/images/denim-shirt-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/denim-shirt-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-26</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/shirts/denim-shirt</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/shirts/denim-shirt" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/shirts/denim-shirt" />
+<image:image>
+<image:loc>https://ostrev.com/images/denim-shirt-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/denim-shirt-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-26</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/knitwear/soft-crew-jumper</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/knitwear/soft-crew-jumper" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/knitwear/soft-crew-jumper" />
+<image:image>
+<image:loc>https://ostrev.com/images/soft-crew-jumper-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/soft-crew-jumper-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/soft-crew-jumper-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-24</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/knitwear/soft-crew-jumper</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/knitwear/soft-crew-jumper" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/knitwear/soft-crew-jumper" />
+<image:image>
+<image:loc>https://ostrev.com/images/soft-crew-jumper-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/soft-crew-jumper-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/soft-crew-jumper-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-24</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/dresses/jersey-mini-dress</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/dresses/jersey-mini-dress" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/dresses/jersey-mini-dress" />
+<image:image>
+<image:loc>https://ostrev.com/images/jersey-mini-dress-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/jersey-mini-dress-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/jersey-mini-dress-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-29</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/dresses/jersey-mini-dress</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/dresses/jersey-mini-dress" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/dresses/jersey-mini-dress" />
+<image:image>
+<image:loc>https://ostrev.com/images/jersey-mini-dress-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/jersey-mini-dress-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/jersey-mini-dress-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-29</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/coats/wool-blend-overcoat</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats/wool-blend-overcoat" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats/wool-blend-overcoat" />
+<image:image>
+<image:loc>https://ostrev.com/images/wool-blend-overcoat-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/wool-blend-overcoat-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-29</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/coats/wool-blend-overcoat</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/coats/wool-blend-overcoat" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/coats/wool-blend-overcoat" />
+<image:image>
+<image:loc>https://ostrev.com/images/wool-blend-overcoat-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/wool-blend-overcoat-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-29</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/trousers/wide-leg-chinos</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/trousers/wide-leg-chinos" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/trousers/wide-leg-chinos" />
+<image:image>
+<image:loc>https://ostrev.com/images/wide-leg-chinos-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/wide-leg-chinos-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/wide-leg-chinos-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-27</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/trousers/wide-leg-chinos</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/trousers/wide-leg-chinos" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/trousers/wide-leg-chinos" />
+<image:image>
+<image:loc>https://ostrev.com/images/wide-leg-chinos-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/wide-leg-chinos-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/wide-leg-chinos-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-27</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/accessories/leather-satchel</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/accessories/leather-satchel" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/accessories/leather-satchel" />
+<image:image>
+<image:loc>https://ostrev.com/images/leather-satchel-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/leather-satchel-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/leather-satchel-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-28</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/accessories/leather-satchel</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/accessories/leather-satchel" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/accessories/leather-satchel" />
+<image:image>
+<image:loc>https://ostrev.com/images/leather-satchel-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/leather-satchel-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/leather-satchel-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-28</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/knitwear/striped-knit-jumper</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/knitwear/striped-knit-jumper" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/knitwear/striped-knit-jumper" />
+<image:image>
+<image:loc>https://ostrev.com/images/striped-knit-jumper-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/striped-knit-jumper-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-26</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/knitwear/striped-knit-jumper</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/knitwear/striped-knit-jumper" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/knitwear/striped-knit-jumper" />
+<image:image>
+<image:loc>https://ostrev.com/images/striped-knit-jumper-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/striped-knit-jumper-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-26</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/shirts/striped-popover-shirt</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/shirts/striped-popover-shirt" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/shirts/striped-popover-shirt" />
+<image:image>
+<image:loc>https://ostrev.com/images/striped-popover-shirt-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/striped-popover-shirt-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-25</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/shirts/striped-popover-shirt</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/shirts/striped-popover-shirt" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/shirts/striped-popover-shirt" />
+<image:image>
+<image:loc>https://ostrev.com/images/striped-popover-shirt-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/striped-popover-shirt-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-25</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/shirts/ruffle-sleeve-blouse</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/shirts/ruffle-sleeve-blouse" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/shirts/ruffle-sleeve-blouse" />
+<image:image>
+<image:loc>https://ostrev.com/images/ruffle-sleeve-blouse-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/ruffle-sleeve-blouse-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/ruffle-sleeve-blouse-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-28</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/shirts/ruffle-sleeve-blouse</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/shirts/ruffle-sleeve-blouse" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/shirts/ruffle-sleeve-blouse" />
+<image:image>
+<image:loc>https://ostrev.com/images/ruffle-sleeve-blouse-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/ruffle-sleeve-blouse-2.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/ruffle-sleeve-blouse-3.webp</image:loc>
+</image:image>
+<lastmod>2026-10-28</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/shop/trousers/wide-leg-suit-trousers</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/trousers/wide-leg-suit-trousers" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/trousers/wide-leg-suit-trousers" />
+<image:image>
+<image:loc>https://ostrev.com/images/wide-leg-suit-trousers-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/wide-leg-suit-trousers-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-27</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://ostrev.com/lt/shop/trousers/wide-leg-suit-trousers</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://ostrev.com/shop/trousers/wide-leg-suit-trousers" />
+<xhtml:link rel="alternate" hreflang="lt" href="https://ostrev.com/lt/shop/trousers/wide-leg-suit-trousers" />
+<image:image>
+<image:loc>https://ostrev.com/images/wide-leg-suit-trousers-1.webp</image:loc>
+</image:image>
+<image:image>
+<image:loc>https://ostrev.com/images/wide-leg-suit-trousers-2.webp</image:loc>
+</image:image>
+<lastmod>2026-10-27</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.9</priority>
+</url>
+</urlset>
